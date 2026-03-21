@@ -17,6 +17,8 @@ interface GlobalHeaderProps {
   viewer: Viewer | null;
   onLogin?: () => void;
   onLogout?: () => void;
+  onNavigateProfile?: () => void;
+  onNavigateSettings?: () => void;
 }
 
 const themeOptions: Array<{ value: ThemeMode; label: string; icon: React.ReactNode }> = [
@@ -43,6 +45,8 @@ export function GlobalHeader({
   viewer,
   onLogin,
   onLogout,
+  onNavigateProfile,
+  onNavigateSettings,
 }: GlobalHeaderProps) {
   const [themeMenuOpen, setThemeMenuOpen] = useState(false);
   const [accountMenuOpen, setAccountMenuOpen] = useState(false);
@@ -152,6 +156,7 @@ export function GlobalHeader({
                 <div className="my-1 h-px bg-border" />
                 <button
                   type="button"
+                  onClick={onNavigateProfile}
                   className="flex w-full items-center gap-2.5 px-3 py-2.5 text-sm text-foreground transition hover:bg-muted/50"
                 >
                   <Settings className="h-4 w-4 text-muted-foreground" />
@@ -159,6 +164,7 @@ export function GlobalHeader({
                 </button>
                 <button
                   type="button"
+                  onClick={onNavigateSettings}
                   className="flex w-full items-center gap-2.5 px-3 py-2.5 text-sm text-foreground transition hover:bg-muted/50"
                 >
                   <Mail className="h-4 w-4 text-muted-foreground" />
