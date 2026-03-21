@@ -1,43 +1,63 @@
+// apps/student-onboarding/src/components/student-onboarding/auth-wall.tsx
+// Figma-auth-wall-aligned login surface for the canonical student app.
+// Keeps the Make composition while routing the live email/password path into Better Auth.
 "use client";
 
 import { useState } from "react";
-import { ArrowRight, Compass, Loader2, Mail, Shield } from "lucide-react";
+import { useRouter } from "next/navigation";
+import { ArrowRight, Compass, Loader2, Lock, Mail, Shield, UserRound } from "lucide-react";
+import { authClient } from "@/lib/auth-client";
 import { type Locale, copy } from "@/lib/onboarding-data";
 import { FacebookIcon, GoogleIcon } from "./icons";
-import type { Viewer } from "./global-header";
+
+type AuthMode = "signIn" | "signUp";
 
 interface AuthWallProps {
   locale: Locale;
-  onAuthenticated: (viewer: Viewer) => void;
 }
 
-export function AuthWall({ locale, onAuthenticated }: AuthWallProps) {
+export function AuthWall({ locale }: AuthWallProps) {
+  const router = useRouter();
   const text = copy[locale];
+  const [mode, setMode] = useState<AuthMode>("signIn");
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [loading, setLoading] = useState<string | null>(null);
-  const [magicLinkSent, setMagicLinkSent] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  function simulateAuth(provider: string, viewer: Viewer) {
-    setLoading(provider);
-
-    window.setTimeout(() => {
-      setLoading(null);
-      onAuthenticated(viewer);
-    }, 1000);
-  }
-
-  function handleEmailSubmit(event: React.FormEvent<HTMLFormElement>) {
+  async function handleEmailSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
-    if (!email.trim()) {
+    if (!email.trim() || !password.trim() || (mode === "signUp" && !name.trim())) {
       return;
     }
 
+    setError(null);
     setLoading("email");
-    window.setTimeout(() => {
+
+    try {
+      if (mode === "signUp") {
+        await authClient.signUp.email({
+          name: name.trim(),
+          email: email.trim(),
+          password,
+        });
+      } else {
+        await authClient.signIn.email({
+          email: email.trim(),
+          password,
+          rememberMe: true,
+        });
+      }
+
+      router.replace("/");
+      router.refresh();
+    } catch (authError) {
+      setError(authError instanceof Error ? authError.message : "Unable to authenticate.");
+    } finally {
       setLoading(null);
-      setMagicLinkSent(true);
-    }, 900);
+    }
   }
 
   return (
@@ -73,103 +93,123 @@ export function AuthWall({ locale, onAuthenticated }: AuthWallProps) {
             </div>
             <div>
               <h1 className="text-2xl text-foreground">{text.authTitle}</h1>
-              <p className="mx-auto mt-1.5 max-w-xs text-sm text-muted-foreground">{text.authSubtitle}</p>
+              <p className="mx-auto mt-1.5 max-w-xs text-sm text-muted-foreground">
+                {text.authSubtitle}
+              </p>
             </div>
           </div>
 
-          {magicLinkSent ? (
-            <div className="space-y-4 py-4 text-center">
-              <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-emerald-50">
-                <Mail className="h-6 w-6 text-emerald-600" />
-              </div>
-              <div>
-                <p className="text-sm text-foreground">{text.authCheckEmail}</p>
-                <p className="mt-1 text-xs text-muted-foreground">
-                  {text.authMagicLinkSent} <span className="text-foreground">{email}</span>
-                </p>
-              </div>
-              <button
-                type="button"
-                onClick={() =>
-                  simulateAuth("magic", {
-                    name: email.split("@")[0] || "Student",
-                    email,
-                  })
-                }
-                disabled={loading === "magic"}
-                className="flex w-full cursor-pointer items-center justify-center gap-2 rounded-lg bg-primary py-2.5 text-sm text-primary-foreground transition-colors hover:bg-primary/90 disabled:opacity-70"
-              >
-                {loading === "magic" ? <Loader2 className="h-4 w-4 animate-spin" /> : null}
-                <span>{text.authSimulateMagic}</span>
-                <ArrowRight className="h-4 w-4" />
-              </button>
-              <button
-                type="button"
-                onClick={() => setMagicLinkSent(false)}
-                className="cursor-pointer text-xs text-muted-foreground transition hover:text-foreground"
-              >
-                {text.authDifferentEmail}
-              </button>
-            </div>
-          ) : (
-            <>
-              <div className="space-y-3">
-                <button
-                  type="button"
-                  onClick={() =>
-                    simulateAuth("google", {
-                      name: "Minh Nguyen",
-                      email: "minh.nguyen@gmail.com",
-                    })
-                  }
-                  disabled={loading !== null}
-                  className="flex w-full cursor-pointer items-center justify-center gap-3 rounded-lg border border-border bg-card px-4 py-3 text-sm text-foreground transition-colors hover:bg-muted/50 disabled:opacity-60"
-                >
-                  {loading === "google" ? <Loader2 className="h-5 w-5 animate-spin" /> : <GoogleIcon />}
-                  {text.authGoogle}
-                </button>
-                <button
-                  type="button"
-                  onClick={() =>
-                    simulateAuth("facebook", {
-                      name: "Minh Nguyen",
-                      email: "minh.nguyen@facebook.com",
-                    })
-                  }
-                  disabled={loading !== null}
-                  className="flex w-full cursor-pointer items-center justify-center gap-3 rounded-lg border border-border bg-card px-4 py-3 text-sm text-foreground transition-colors hover:bg-muted/50 disabled:opacity-60"
-                >
-                  {loading === "facebook" ? <Loader2 className="h-5 w-5 animate-spin" /> : <FacebookIcon />}
-                  {text.authFacebook}
-                </button>
-              </div>
+          <div className="flex rounded-xl bg-muted p-1">
+            <button
+              type="button"
+              onClick={() => setMode("signIn")}
+              className={`flex-1 rounded-lg px-3 py-2 text-sm transition ${
+                mode === "signIn" ? "bg-card text-foreground shadow-sm" : "text-muted-foreground"
+              }`}
+            >
+              Sign in
+            </button>
+            <button
+              type="button"
+              onClick={() => setMode("signUp")}
+              className={`flex-1 rounded-lg px-3 py-2 text-sm transition ${
+                mode === "signUp" ? "bg-card text-foreground shadow-sm" : "text-muted-foreground"
+              }`}
+            >
+              Create account
+            </button>
+          </div>
 
-              <div className="flex items-center gap-3">
-                <div className="h-px flex-1 bg-border" />
-                <span className="text-xs uppercase tracking-wider text-muted-foreground">{text.authOr}</span>
-                <div className="h-px flex-1 bg-border" />
-              </div>
+          <div className="space-y-3">
+            <button
+              type="button"
+              disabled
+              className="flex w-full items-center justify-center gap-3 rounded-lg border border-border bg-card px-4 py-3 text-sm text-muted-foreground opacity-60"
+            >
+              <GoogleIcon />
+              {text.authGoogle}
+            </button>
+            <button
+              type="button"
+              disabled
+              className="flex w-full items-center justify-center gap-3 rounded-lg border border-border bg-card px-4 py-3 text-sm text-muted-foreground opacity-60"
+            >
+              <FacebookIcon />
+              {text.authFacebook}
+            </button>
+          </div>
 
-              <form onSubmit={handleEmailSubmit} className="space-y-3">
+          <div className="flex items-center gap-3">
+            <div className="h-px flex-1 bg-border" />
+            <span className="text-xs uppercase tracking-wider text-muted-foreground">
+              {text.authOr}
+            </span>
+            <div className="h-px flex-1 bg-border" />
+          </div>
+
+          <form onSubmit={handleEmailSubmit} className="space-y-3">
+            {mode === "signUp" ? (
+              <div className="flex items-center gap-3 rounded-lg border border-border bg-panel px-4 py-3">
+                <UserRound className="h-4 w-4 text-muted-foreground" />
                 <input
-                  type="email"
-                  value={email}
-                  onChange={(event) => setEmail(event.target.value)}
-                  placeholder={text.authEmailPlaceholder}
-                  className="w-full rounded-lg border border-border bg-panel px-4 py-3 text-sm outline-none transition-all focus:border-primary focus:ring-2 focus:ring-primary/20"
+                  type="text"
+                  value={name}
+                  onChange={(event) => setName(event.target.value)}
+                  placeholder="Your display name"
+                  className="w-full bg-transparent text-sm outline-none placeholder:text-muted-foreground"
                   disabled={loading !== null}
+                  required
                 />
-                <button
-                  type="submit"
-                  disabled={!email.trim() || loading !== null}
-                  className="flex w-full cursor-pointer items-center justify-center gap-2 rounded-lg bg-primary py-3 text-sm text-primary-foreground transition-colors hover:bg-primary/90 disabled:cursor-not-allowed disabled:opacity-50"
-                >
-                  {loading === "email" ? <Loader2 className="h-4 w-4 animate-spin" /> : <Mail className="h-4 w-4" />}
-                  {text.authSendMagicLink}
-                </button>
-              </form>
-            </>
-          )}
+              </div>
+            ) : null}
+
+            <div className="flex items-center gap-3 rounded-lg border border-border bg-panel px-4 py-3">
+              <Mail className="h-4 w-4 text-muted-foreground" />
+              <input
+                type="email"
+                value={email}
+                onChange={(event) => setEmail(event.target.value)}
+                placeholder={text.authEmailPlaceholder}
+                className="w-full bg-transparent text-sm outline-none placeholder:text-muted-foreground"
+                disabled={loading !== null}
+                required
+              />
+            </div>
+
+            <div className="flex items-center gap-3 rounded-lg border border-border bg-panel px-4 py-3">
+              <Lock className="h-4 w-4 text-muted-foreground" />
+              <input
+                type="password"
+                value={password}
+                onChange={(event) => setPassword(event.target.value)}
+                placeholder="Password"
+                minLength={8}
+                className="w-full bg-transparent text-sm outline-none placeholder:text-muted-foreground"
+                disabled={loading !== null}
+                required
+              />
+            </div>
+
+            {error ? (
+              <div className="rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">
+                {error}
+              </div>
+            ) : null}
+
+            <button
+              type="submit"
+              disabled={loading !== null}
+              className="flex w-full cursor-pointer items-center justify-center gap-2 rounded-lg bg-primary py-3 text-sm text-primary-foreground transition-colors hover:bg-primary/90 disabled:cursor-not-allowed disabled:opacity-50"
+            >
+              {loading === "email" ? <Loader2 className="h-4 w-4 animate-spin" /> : <Mail className="h-4 w-4" />}
+              {mode === "signUp" ? "Create account" : "Sign in"}
+              <ArrowRight className="h-4 w-4" />
+            </button>
+          </form>
+
+          <div className="rounded-lg border border-dashed border-border px-3 py-2 text-xs text-muted-foreground">
+            Social login and magic-link flows are still visible from the Figma design, but the live backend path available in this build is email/password.
+          </div>
 
           <div className="flex items-start gap-2 border-t border-border pt-2">
             <Shield className="mt-0.5 h-4 w-4 shrink-0 text-muted-foreground" />
@@ -178,8 +218,14 @@ export function AuthWall({ locale, onAuthenticated }: AuthWallProps) {
         </div>
 
         <p className="mt-4 text-center text-xs text-muted-foreground">
-          {text.authTerms} <span className="cursor-pointer underline hover:text-foreground">{text.authTermsOfService}</span> {text.authAnd}{" "}
-          <span className="cursor-pointer underline hover:text-foreground">{text.authPrivacy}</span>
+          {text.authTerms}{" "}
+          <span className="cursor-pointer underline hover:text-foreground">
+            {text.authTermsOfService}
+          </span>{" "}
+          {text.authAnd}{" "}
+          <span className="cursor-pointer underline hover:text-foreground">
+            {text.authPrivacy}
+          </span>
         </p>
       </div>
     </div>

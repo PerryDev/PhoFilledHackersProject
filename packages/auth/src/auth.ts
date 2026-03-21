@@ -54,11 +54,46 @@ function getBaseUrl() {
   );
 }
 
+function getTrustedOrigins() {
+  const origins = new Set<string>();
+  const configuredOrigins =
+    process.env.BETTER_AUTH_TRUSTED_ORIGINS
+      ?.split(",")
+      .map((value) => value.trim())
+      .filter(Boolean) ?? [];
+
+  for (const candidate of [
+    getBaseUrl(),
+    process.env.NEXT_PUBLIC_APP_URL,
+    "http://localhost:3000",
+    "http://localhost:3001",
+    "http://127.0.0.1:3000",
+    "http://127.0.0.1:3001",
+    ...configuredOrigins,
+  ]) {
+    if (!candidate) {
+      continue;
+    }
+
+    try {
+      origins.add(new URL(candidate).origin);
+    } catch {
+      origins.add(candidate);
+    }
+  }
+
+  return [...origins];
+}
+
 function getSecret() {
   return (
     process.env.BETTER_AUTH_SECRET ??
     "phofilledhackers-development-secret-001"
   );
+}
+
+function isLocalDevelopment() {
+  return process.env.NODE_ENV !== "production";
 }
 
 function getSqlClient() {
@@ -75,6 +110,7 @@ function getSqlClient() {
 function buildAuthOptions(db: AuthDb): BetterAuthOptions {
   return {
     baseURL: getBaseUrl(),
+    trustedOrigins: getTrustedOrigins(),
     secret: getSecret(),
         database: drizzleAdapter(db, {
             provider: "pg",
@@ -90,6 +126,7 @@ function buildAuthOptions(db: AuthDb): BetterAuthOptions {
             enabled: true,
         },
     advanced: {
+      disableOriginCheck: isLocalDevelopment(),
       database: {
         generateId: () => randomUUID(),
       },
