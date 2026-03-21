@@ -38,10 +38,9 @@ function SettingsSectionCard({
 }
 
 export function SettingsPanel() {
-  const { language, setLanguage, theme, setTheme, profileName, setProfileName } = useDashboardSettings();
+  const { currentUser, language, setLanguage, theme, setTheme } = useDashboardSettings();
   const t = dashboardCopy[language];
   const [saved, setSaved] = useState(false);
-  const [draftProfileName, setDraftProfileName] = useState(profileName);
   const [notifications, setNotifications] = useState<Record<NotificationKey, boolean>>({
     newLeads: true,
     weeklyDigest: false,
@@ -56,10 +55,6 @@ export function SettingsPanel() {
     const timeout = window.setTimeout(() => setSaved(false), 2200);
     return () => window.clearTimeout(timeout);
   }, [saved]);
-
-  useEffect(() => {
-    setDraftProfileName(profileName);
-  }, [profileName]);
 
   const notificationItems: ReadonlyArray<{ key: NotificationKey; label: string; subLabel: string }> = [
     { key: "newLeads", label: t.settingsNotifNewLeads, subLabel: "Get notified when a new student is added to your queue." },
@@ -185,10 +180,10 @@ export function SettingsPanel() {
               </label>
               <input
                 type="text"
-                value={draftProfileName}
-                onChange={(event) => setDraftProfileName(event.target.value)}
+                value={currentUser?.name ?? "Authenticated user"}
+                readOnly
                 suppressHydrationWarning
-                className="h-11 w-full rounded-xl border border-border bg-surface-soft px-3.5 text-[13px] text-foreground outline-none transition-colors placeholder:text-muted-foreground focus:border-primary focus:ring-2 focus:ring-ring/25"
+                className="h-11 w-full rounded-xl border border-border bg-muted px-3.5 text-[13px] text-muted-foreground outline-none"
               />
             </div>
 
@@ -198,9 +193,10 @@ export function SettingsPanel() {
               </label>
               <input
                 type="email"
-                defaultValue="thanh.le@etest.edu.vn"
+                value={currentUser?.email ?? "No active session"}
+                readOnly
                 suppressHydrationWarning
-                className="h-11 w-full rounded-xl border border-border bg-surface-soft px-3.5 text-[13px] text-foreground outline-none transition-colors placeholder:text-muted-foreground focus:border-primary focus:ring-2 focus:ring-ring/25"
+                className="h-11 w-full rounded-xl border border-border bg-muted px-3.5 text-[13px] text-muted-foreground outline-none"
               />
             </div>
 
@@ -211,7 +207,7 @@ export function SettingsPanel() {
               <div className="flex items-center gap-2">
                 <input
                   type="text"
-                  value="Senior Counselor"
+                  value="Authenticated Student"
                   readOnly
                   className="h-11 flex-1 rounded-xl border border-border bg-muted px-3.5 text-[13px] text-muted-foreground"
                 />
@@ -225,9 +221,6 @@ export function SettingsPanel() {
           <button
             type="button"
             onClick={() => {
-              const nextProfileName = draftProfileName.trim() || "Thanh Le";
-              setDraftProfileName(nextProfileName);
-              setProfileName(nextProfileName);
               setSaved(true);
             }}
             className={`inline-flex items-center gap-2 rounded-xl px-6 py-2.5 text-sm font-semibold shadow-sm transition-all ${
