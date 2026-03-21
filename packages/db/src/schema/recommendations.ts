@@ -146,3 +146,80 @@ export const recommendationResults = pgTable(
     ).on(table.recommendationRunId, table.universityId),
   }),
 );
+
+export const recommendationShortlists = pgTable(
+  "recommendation_shortlists",
+  {
+    id: uuid("id").defaultRandom().primaryKey(),
+    recommendationRunId: uuid("recommendation_run_id")
+      .notNull()
+      .references(() => recommendationRuns.id, { onDelete: "cascade" }),
+    model: text("model").notNull(),
+    promptVersion: text("prompt_version").notNull(),
+    systemPrompt: text("system_prompt").notNull(),
+    shortlistedRecommendationResultIds: jsonb(
+      "shortlisted_recommendation_result_ids",
+    )
+      .$type<string[]>()
+      .notNull()
+      .default(sql`'[]'::jsonb`),
+    shortlistRationale: jsonb("shortlist_rationale")
+      .$type<string[]>()
+      .notNull()
+      .default(sql`'[]'::jsonb`),
+    createdAt: timestamp("created_at", { withTimezone: true })
+      .notNull()
+      .defaultNow(),
+  },
+  (table) => ({
+    runIdIdx: uniqueIndex("recommendation_shortlists_run_id_idx").on(
+      table.recommendationRunId,
+    ),
+  }),
+);
+
+export const recommendationExplanations = pgTable(
+  "recommendation_explanations",
+  {
+    id: uuid("id").defaultRandom().primaryKey(),
+    recommendationShortlistId: uuid("recommendation_shortlist_id")
+      .notNull()
+      .references(() => recommendationShortlists.id, { onDelete: "cascade" }),
+    recommendationResultId: uuid("recommendation_result_id")
+      .notNull()
+      .references(() => recommendationResults.id, { onDelete: "cascade" }),
+    whyRecommended: jsonb("why_recommended")
+      .$type<string[]>()
+      .notNull()
+      .default(sql`'[]'::jsonb`),
+    topBlockers: jsonb("top_blockers")
+      .$type<string[]>()
+      .notNull()
+      .default(sql`'[]'::jsonb`),
+    nextRecommendedActions: jsonb("next_recommended_actions")
+      .$type<string[]>()
+      .notNull()
+      .default(sql`'[]'::jsonb`),
+    budgetSummary: jsonb("budget_summary")
+      .$type<string[]>()
+      .notNull()
+      .default(sql`'[]'::jsonb`),
+    assumptionChanges: jsonb("assumption_changes")
+      .$type<string[]>()
+      .notNull()
+      .default(sql`'[]'::jsonb`),
+    explanationConfidence: confidenceLevelEnum("explanation_confidence")
+      .notNull(),
+    createdAt: timestamp("created_at", { withTimezone: true })
+      .notNull()
+      .defaultNow(),
+  },
+  (table) => ({
+    shortlistIdIdx: index("recommendation_explanations_shortlist_id_idx").on(
+      table.recommendationShortlistId,
+    ),
+    resultIdIdx: uniqueIndex("recommendation_explanations_result_id_idx").on(
+      table.recommendationResultId,
+    ),
+  }),
+);
