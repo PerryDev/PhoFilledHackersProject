@@ -71,6 +71,10 @@ test("engine persists a failed run when recommendation-blocking profile gaps rem
 
     assert.equal(result.run.runStatus, "failed");
     assert.equal(result.run.candidateSchoolCount, 0);
+    assert.equal(
+      result.run.scoringConfigSnapshot.tierThresholds.safetyMin,
+      80,
+    );
     assert.deepEqual(result.run.missingProfileFields, [
       "current.academic.classRankPercent",
       "projected.assumptions",
@@ -140,6 +144,10 @@ test("engine scores only publishable schools and persists deterministic rank ord
 
     assert.equal(result.run.runStatus, "succeeded");
     assert.equal(result.run.candidateSchoolCount, 2);
+    assert.equal(
+      result.run.scoringConfigSnapshot.tierThresholds.safetyMin,
+      80,
+    );
     assert.equal(result.results.length, 2);
     assert.deepEqual(
       result.results.map((row) => row.rankOrder),
@@ -158,6 +166,86 @@ test("engine scores only publishable schools and persists deterministic rank ord
 
     assert.equal(storedRuns.length, 1);
     assert.equal(storedResults.length, 2);
+  } finally {
+    await database.close();
+  }
+});
+
+test("engine scoring config overrides can change tiers and outlooks", async () => {
+  const database = await createCatalogTestDatabase();
+
+  try {
+    const seeded = await seedProfileState(database.db, {
+      userId: "user_configurable",
+      currentProfile: buildCurrentSnapshotProfile(),
+      projectedProfile: buildProjectedSnapshotProfile(),
+      projectedAssumptions: ["Raise GPA to 95", "Finalize essay drafts"],
+    });
+
+    await database.db.insert(universities).values([
+      buildUniversityInsert({
+        schoolName: "Configurable University",
+        validationStatus: "publishable",
+        admissionRateOverall: 0.42,
+        satAverageOverall: 1290,
+        annualCost: 52000,
+        averageNetPriceUsd: 32000,
+        programFitTags: ["computer_science", "engineering"],
+      }),
+    ]);
+
+    const defaultResult = await runRecommendationEngineForUser({
+      db: database.db,
+      userId: seeded.userId,
+      profileState: {
+        profile: {
+          id: seeded.profile.id,
+          userId: seeded.userId,
+        },
+        snapshots: seeded.snapshots,
+        missingFields: [],
+      },
+    });
+
+    const strictResult = await runRecommendationEngineForUser({
+      db: database.db,
+      userId: seeded.userId,
+      profileState: {
+        profile: {
+          id: seeded.profile.id,
+          userId: seeded.userId,
+        },
+        snapshots: seeded.snapshots,
+        missingFields: [],
+      },
+      scoringConfig: {
+        tierThresholds: {
+          safetyMin: 95,
+          targetMin: 90,
+        },
+        outlookThresholds: {
+          very_strong: 98,
+          strong: 92,
+          possible: 88,
+          stretch: 80,
+        },
+      },
+    });
+
+    assert.equal(defaultResult.results.length, 1);
+    assert.equal(strictResult.results.length, 1);
+    assert.notEqual(
+      defaultResult.results[0].tier,
+      strictResult.results[0].tier,
+    );
+    assert.notEqual(
+      defaultResult.results[0].currentOutlook,
+      strictResult.results[0].currentOutlook,
+    );
+    assert.equal(
+      strictResult.run.scoringConfigSnapshot.tierThresholds.safetyMin,
+      95,
+    );
   } finally {
     await database.close();
   }

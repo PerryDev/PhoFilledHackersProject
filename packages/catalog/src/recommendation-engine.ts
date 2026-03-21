@@ -23,6 +23,11 @@ import type { PgQueryResultHKT } from "drizzle-orm/pg-core";
 import type { PgDatabase } from "drizzle-orm/pg-core";
 
 import type { RecommendationCandidateSchool } from "./types.js";
+import {
+  resolveRecommendationEngineScoringConfig,
+  type RecommendationEngineScoringConfig,
+  type RecommendationEngineScoringConfigOverrides,
+} from "./recommendation-engine-config.js";
 import { listRecommendationCandidateSchools } from "./recommendation-catalog-read-path.js";
 
 export type RecommendationEngineDb = PgDatabase<
@@ -69,8 +74,12 @@ export async function runRecommendationEngineForUser(input: {
   db: RecommendationEngineDb;
   userId: string;
   profileState: RecommendationEngineProfileState;
+  scoringConfig?: RecommendationEngineScoringConfigOverrides;
 }): Promise<RecommendationEngineResult> {
   const { db, userId, profileState } = input;
+  const scoringConfig = resolveRecommendationEngineScoringConfig(
+    input.scoringConfig,
+  );
   const currentSnapshot = profileState.snapshots.current;
   const projectedSnapshot = profileState.snapshots.projected;
 
@@ -94,6 +103,7 @@ export async function runRecommendationEngineForUser(input: {
       currentSnapshotId: currentSnapshot.id,
       projectedSnapshotId: projectedSnapshot.id,
       runStatus: "pending",
+      scoringConfigSnapshot: scoringConfig,
       missingProfileFields,
       candidateSchoolCount: 0,
     })
@@ -131,6 +141,7 @@ export async function runRecommendationEngineForUser(input: {
         projectedProfile: projectedEnabled ? projectedSnapshot.profile : null,
         currentAssumptions: currentSnapshot.assumptions,
         projectedAssumptions: projectedSnapshot.assumptions,
+        scoringConfig,
       }),
     )
     .sort((left, right) => {
@@ -193,14 +204,17 @@ function scoreCandidateSchool(input: {
   projectedProfile: StudentProfileRecord | null;
   currentAssumptions: string[];
   projectedAssumptions: string[];
+  scoringConfig: RecommendationEngineScoringConfig;
 }) {
   const currentScoreBreakdown = scoreBreakdown({
     school: input.school,
     profile: input.currentProfile,
+    scoringConfig: input.scoringConfig,
     improvementUpside: scoreImprovementUpside({
       currentProfile: input.currentProfile,
       projectedProfile: input.projectedProfile,
       projectedAssumptions: input.projectedAssumptions,
+      scoringConfig: input.scoringConfig,
     }),
   });
 
@@ -209,6 +223,7 @@ function scoreCandidateSchool(input: {
     ? scoreBreakdown({
         school: input.school,
         profile: input.projectedProfile,
+        scoringConfig: input.scoringConfig,
         improvementUpside: 0,
       })
     : null;
@@ -218,11 +233,18 @@ function scoreCandidateSchool(input: {
 
   return {
     school: input.school,
-    tier: scoreToTier(currentScore),
-    currentOutlook: scoreToOutlook(currentScore),
-    projectedOutlook: projectedScore === null ? null : scoreToOutlook(projectedScore),
+    tier: scoreToTier(currentScore, input.scoringConfig),
+    currentOutlook: scoreToOutlook(currentScore, input.scoringConfig),
+    projectedOutlook:
+      projectedScore === null
+        ? null
+        : scoreToOutlook(projectedScore, input.scoringConfig),
     confidenceLevel: scoreConfidenceLevel(input.school),
-    budgetFit: scoreBudgetLabel(input.school, input.currentProfile),
+    budgetFit: scoreBudgetLabel(
+      input.school,
+      input.currentProfile,
+      input.scoringConfig,
+    ),
     deadlinePressure: scoreDeadlinePressure(input.currentProfile),
     currentScore,
     projectedScore,
@@ -238,13 +260,26 @@ function scoreCandidateSchool(input: {
 function scoreBreakdown(input: {
   school: RecommendationCandidateSchool;
   profile: StudentProfileRecord;
+  scoringConfig: RecommendationEngineScoringConfig;
   improvementUpside: number;
 }): ScoreComponentBreakdown {
   return {
-    admissionFit: scoreAdmissionFit(input.school, input.profile),
-    readinessFit: scoreReadinessFit(input.profile),
-    budgetFit: scoreBudgetComponent(input.school, input.profile),
-    preferenceFit: scorePreferenceFit(input.school, input.profile),
+    admissionFit: scoreAdmissionFit(
+      input.school,
+      input.profile,
+      input.scoringConfig,
+    ),
+    readinessFit: scoreReadinessFit(input.profile, input.scoringConfig),
+    budgetFit: scoreBudgetComponent(
+      input.school,
+      input.profile,
+      input.scoringConfig,
+    ),
+    preferenceFit: scorePreferenceFit(
+      input.school,
+      input.profile,
+      input.scoringConfig,
+    ),
     improvementUpside: clampScore(input.improvementUpside),
   };
 }
@@ -252,43 +287,50 @@ function scoreBreakdown(input: {
 function scoreAdmissionFit(
   school: RecommendationCandidateSchool,
   profile: StudentProfileRecord,
+  scoringConfig: RecommendationEngineScoringConfig,
 ) {
-  const studentIndex = scoreStudentIndex(profile);
-  const schoolIndex = scoreSchoolIndex(school);
-  let score = 12;
+  const studentIndex = scoreStudentIndex(profile, scoringConfig);
+  const schoolIndex = scoreSchoolIndex(school, scoringConfig);
+  let score = scoringConfig.admissionFit.defaultScore;
   const gap = studentIndex - schoolIndex;
 
-  if (gap >= 18) score = 20;
-  else if (gap >= 8) score = 17;
-  else if (gap >= -4) score = 14;
-  else if (gap >= -14) score = 10;
-  else if (gap >= -24) score = 6;
-  else score = 2;
+  for (const band of scoringConfig.admissionFit.scoreByMinGap) {
+    if (gap >= band.minGap) {
+      score = band.score;
+      break;
+    }
+  }
 
   const testingRequired =
     school.recommendationInputs.testingRequirements.minimumSatTotal !== null ||
     school.recommendationInputs.testingRequirements.minimumActComposite !== null;
 
   if (testingRequired && profile.testing.willSubmitTests === false) {
-    score -= 6;
+    score -= scoringConfig.admissionFit.testingRequiredNoSubmissionPenalty;
   }
 
   return clampScore(score);
 }
 
-function scoreReadinessFit(profile: StudentProfileRecord) {
+function scoreReadinessFit(
+  profile: StudentProfileRecord,
+  scoringConfig: RecommendationEngineScoringConfig,
+) {
   const readinessValues = [
     profile.readiness.hasTeacherRecommendationsReady,
     profile.readiness.hasCounselorDocumentsReady,
     profile.readiness.hasEssayDraftsStarted,
   ];
   const readyCount = readinessValues.filter(Boolean).length;
-  let score = readyCount * 5;
+  let score = readyCount * scoringConfig.readinessFit.perReadyItem;
 
   if (profile.readiness.wantsEarlyRound === false) {
-    score += 5;
-  } else if (profile.readiness.wantsEarlyRound === true && readyCount >= 2) {
-    score += 5;
+    score += scoringConfig.readinessFit.noEarlyRoundBonus;
+  } else if (
+    profile.readiness.wantsEarlyRound === true &&
+    readyCount >= scoringConfig.readinessFit.earlyRoundReadyThreshold
+  ) {
+    score += scoringConfig.readinessFit.earlyRoundReadyBonus;
   }
 
   return clampScore(score);
@@ -297,13 +339,18 @@ function scoreReadinessFit(profile: StudentProfileRecord) {
 function scoreBudgetComponent(
   school: RecommendationCandidateSchool,
   profile: StudentProfileRecord,
+  scoringConfig: RecommendationEngineScoringConfig,
 ) {
-  return budgetLabelToComponent(scoreBudgetLabel(school, profile));
+  return budgetLabelToComponent(
+    scoreBudgetLabel(school, profile, scoringConfig),
+    scoringConfig,
+  );
 }
 
 function scorePreferenceFit(
   school: RecommendationCandidateSchool,
   profile: StudentProfileRecord,
+  scoringConfig: RecommendationEngineScoringConfig,
 ) {
   let score = 0;
   const schoolTags = new Set(
@@ -312,13 +359,13 @@ function scorePreferenceFit(
   const intendedMajors = profile.preferences.intendedMajors.map(normalizeToken);
 
   if (intendedMajors.some((major) => schoolTags.has(major))) {
-    score += 8;
+    score += scoringConfig.preferenceFit.majorMatchScore;
   } else if (schoolTags.size > 0) {
-    score += 2;
+    score += scoringConfig.preferenceFit.majorFallbackScore;
   }
 
   if (profile.preferences.preferredStates.includes(school.state)) {
-    score += 4;
+    score += scoringConfig.preferenceFit.stateMatchScore;
   }
 
   const campusLocale = normalizeToken(school.recommendationInputs.campusLocale);
@@ -328,7 +375,7 @@ function scorePreferenceFit(
       campusLocale,
     )
   ) {
-    score += 3;
+    score += scoringConfig.preferenceFit.localeMatchScore;
   }
 
   if (
@@ -338,15 +385,18 @@ function scorePreferenceFit(
       school.recommendationInputs.schoolControl,
     )
   ) {
-    score += 2;
+    score += scoringConfig.preferenceFit.schoolControlMatchScore;
   }
 
   if (
     school.recommendationInputs.undergraduateSize !== null &&
-    schoolSizeBucket(school.recommendationInputs.undergraduateSize) ===
+    schoolSizeBucket(
+      school.recommendationInputs.undergraduateSize,
+      scoringConfig,
+    ) ===
       profile.preferences.preferredUndergraduateSize
   ) {
-    score += 3;
+    score += scoringConfig.preferenceFit.sizeMatchScore;
   }
 
   return clampScore(score);
@@ -356,6 +406,7 @@ function scoreImprovementUpside(input: {
   currentProfile: StudentProfileRecord;
   projectedProfile: StudentProfileRecord | null;
   projectedAssumptions: string[];
+  scoringConfig: RecommendationEngineScoringConfig;
 }) {
   if (
     !input.projectedProfile ||
@@ -368,41 +419,56 @@ function scoreImprovementUpside(input: {
   const gpaDelta =
     input.projectedProfile.academic.projectedGpa100 -
     input.currentProfile.academic.currentGpa100;
-  const assumptionBonus = Math.min(4, input.projectedAssumptions.length);
+  const assumptionBonus = Math.min(
+    input.scoringConfig.improvementUpside.assumptionBonusCap,
+    input.projectedAssumptions.length,
+  );
 
-  return clampScore(Math.max(0, Math.round(gpaDelta / 1.5)) + assumptionBonus);
+  return clampScore(
+    Math.max(
+      0,
+      Math.round(
+        gpaDelta / input.scoringConfig.improvementUpside.gpaDeltaDivisor,
+      ),
+    ) + assumptionBonus,
+  );
 }
 
-function scoreStudentIndex(profile: StudentProfileRecord) {
-  const gpaScore = (profile.academic.currentGpa100 ?? 0) * 0.6;
+function scoreStudentIndex(
+  profile: StudentProfileRecord,
+  scoringConfig: RecommendationEngineScoringConfig,
+) {
+  const gpaScore =
+    (profile.academic.currentGpa100 ?? 0) *
+    scoringConfig.studentIndex.gpaMultiplier;
   const curriculumBonus =
     profile.academic.curriculumStrength === "most_rigorous"
-      ? 14
+      ? scoringConfig.studentIndex.curriculumBonuses.most_rigorous
       : profile.academic.curriculumStrength === "rigorous"
-        ? 10
+        ? scoringConfig.studentIndex.curriculumBonuses.rigorous
         : profile.academic.curriculumStrength === "baseline"
-          ? 5
-          : 0;
+          ? scoringConfig.studentIndex.curriculumBonuses.baseline
+          : scoringConfig.studentIndex.curriculumBonuses.unknown;
   const classRankBonus =
     profile.academic.classRankPercent === null
       ? 0
-      : profile.academic.classRankPercent <= 5
-        ? 14
-        : profile.academic.classRankPercent <= 10
-          ? 11
-          : profile.academic.classRankPercent <= 20
-            ? 8
-            : profile.academic.classRankPercent <= 35
-              ? 4
-              : 0;
+      : (
+          scoringConfig.studentIndex.classRankBands.find(
+            (band) =>
+              (profile.academic.classRankPercent ?? Number.POSITIVE_INFINITY) <=
+              band.maxPercentile,
+          )?.bonus ?? 0
+        );
   const satScore =
     profile.testing.satTotal === null
       ? 0
-      : ((profile.testing.satTotal - 800) / 800) * 18;
+      : ((profile.testing.satTotal - 800) / 800) *
+        scoringConfig.studentIndex.satPointsMax;
   const actScore =
     profile.testing.actComposite === null
       ? 0
-      : ((profile.testing.actComposite - 15) / 21) * 18;
+      : ((profile.testing.actComposite - 15) / 21) *
+        scoringConfig.studentIndex.actPointsMax;
 
   return clampToRange(
     Math.round(
@@ -413,14 +479,17 @@ function scoreStudentIndex(profile: StudentProfileRecord) {
   );
 }
 
-function scoreSchoolIndex(school: RecommendationCandidateSchool) {
+function scoreSchoolIndex(
+  school: RecommendationCandidateSchool,
+  scoringConfig: RecommendationEngineScoringConfig,
+) {
   const admissionRateScore =
     school.recommendationInputs.admissionRateOverall === null
-      ? 50
+      ? scoringConfig.schoolIndex.admissionRateNullScore
       : clampToRange(
           Math.round((1 - school.recommendationInputs.admissionRateOverall) * 100),
-          10,
-          95,
+          scoringConfig.schoolIndex.admissionRateMinScore,
+          scoringConfig.schoolIndex.admissionRateMaxScore,
         );
   const satScore =
     school.recommendationInputs.satAverageOverall === null
@@ -429,8 +498,8 @@ function scoreSchoolIndex(school: RecommendationCandidateSchool) {
           Math.round(
             ((school.recommendationInputs.satAverageOverall - 800) / 800) * 100,
           ),
-          0,
-          100,
+          scoringConfig.schoolIndex.satScoreMin,
+          scoringConfig.schoolIndex.satScoreMax,
         );
   const actScore =
     school.recommendationInputs.actMidpointCumulative === null
@@ -439,8 +508,8 @@ function scoreSchoolIndex(school: RecommendationCandidateSchool) {
           Math.round(
             ((school.recommendationInputs.actMidpointCumulative - 15) / 21) * 100,
           ),
-          0,
-          100,
+          scoringConfig.schoolIndex.actScoreMin,
+          scoringConfig.schoolIndex.actScoreMax,
         );
 
   if (
@@ -456,6 +525,7 @@ function scoreSchoolIndex(school: RecommendationCandidateSchool) {
 function scoreBudgetLabel(
   school: RecommendationCandidateSchool,
   profile: StudentProfileRecord,
+  scoringConfig: RecommendationEngineScoringConfig,
 ): BudgetFitLabel {
   const budget = profile.budget.annualBudgetUsd;
 
@@ -477,9 +547,9 @@ function scoreBudgetLabel(
     school.scholarshipAvailabilityFlag;
   const flexibilityBuffer =
     profile.budget.budgetFlexibility === "high"
-      ? 12000
+      ? scoringConfig.budgetFit.flexibilityBufferHigh
       : profile.budget.budgetFlexibility === "medium"
-        ? 6000
+        ? scoringConfig.budgetFit.flexibilityBufferMedium
         : 0;
   const effectiveBudget = budget + flexibilityBuffer;
 
@@ -487,23 +557,30 @@ function scoreBudgetLabel(
     return "stretch";
   }
 
-  if (effectiveBudget + 5000 >= totalCost && aidAvailable) {
+  if (
+    effectiveBudget +
+      scoringConfig.budgetFit.stretchCoaGapBuffer >= totalCost &&
+    aidAvailable
+  ) {
     return "stretch";
   }
 
   return "high_risk";
 }
 
-function budgetLabelToComponent(label: BudgetFitLabel) {
+function budgetLabelToComponent(
+  label: BudgetFitLabel,
+  scoringConfig: RecommendationEngineScoringConfig,
+) {
   switch (label) {
     case "comfortable":
-      return 20;
+      return scoringConfig.budgetFit.componentScores.comfortable;
     case "stretch":
-      return 11;
+      return scoringConfig.budgetFit.componentScores.stretch;
     case "high_risk":
-      return 4;
+      return scoringConfig.budgetFit.componentScores.high_risk;
     default:
-      return 0;
+      return scoringConfig.budgetFit.componentScores.unknown;
   }
 }
 
@@ -578,44 +655,53 @@ function totalBreakdown(breakdown: ScoreComponentBreakdown) {
   );
 }
 
-function scoreToTier(score: number): RecommendationTier {
-  if (score >= 80) {
+function scoreToTier(
+  score: number,
+  scoringConfig: RecommendationEngineScoringConfig,
+): RecommendationTier {
+  if (score >= scoringConfig.tierThresholds.safetyMin) {
     return "safety";
   }
 
-  if (score >= 60) {
+  if (score >= scoringConfig.tierThresholds.targetMin) {
     return "target";
   }
 
   return "reach";
 }
 
-function scoreToOutlook(score: number): OutlookLabel {
-  if (score >= 85) {
+function scoreToOutlook(
+  score: number,
+  scoringConfig: RecommendationEngineScoringConfig,
+): OutlookLabel {
+  if (score >= scoringConfig.outlookThresholds.very_strong) {
     return "very_strong";
   }
 
-  if (score >= 70) {
+  if (score >= scoringConfig.outlookThresholds.strong) {
     return "strong";
   }
 
-  if (score >= 55) {
+  if (score >= scoringConfig.outlookThresholds.possible) {
     return "possible";
   }
 
-  if (score >= 40) {
+  if (score >= scoringConfig.outlookThresholds.stretch) {
     return "stretch";
   }
 
   return "unlikely";
 }
 
-function schoolSizeBucket(size: number) {
-  if (size < 5000) {
+function schoolSizeBucket(
+  size: number,
+  scoringConfig: RecommendationEngineScoringConfig,
+) {
+  if (size < scoringConfig.sizeBuckets.smallMaxExclusive) {
     return "small";
   }
 
-  if (size <= 15000) {
+  if (size <= scoringConfig.sizeBuckets.mediumMaxInclusive) {
     return "medium";
   }
 
@@ -656,6 +742,7 @@ function toRecommendationRunRecord(
     currentSnapshotId: row.currentSnapshotId,
     projectedSnapshotId: row.projectedSnapshotId,
     runStatus: row.runStatus as RecommendationRunStatus,
+    scoringConfigSnapshot: row.scoringConfigSnapshot,
     missingProfileFields: row.missingProfileFields,
     candidateSchoolCount: row.candidateSchoolCount,
     createdAt: row.createdAt.toISOString(),
