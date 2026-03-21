@@ -8,6 +8,13 @@
       "when": 1774110187778,
       "tag": "0000_catalog_schema",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1774113343760,
+      "tag": "0001_colossal_deadpool",
+      "breakpoints": true
     }
   ]
 }
