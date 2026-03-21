@@ -2,10 +2,11 @@
 // Sticky dashboard header aligned with the Figma dashboard interactions.
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { startTransition, useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { Bell, CheckCircle, ChevronDown, LogOut, Menu, X } from "lucide-react";
 import { dashboardCopy } from "@/lib/dashboard-copy";
+import { authClient } from "@/lib/auth-client";
 import { useDashboardSettings } from "@/components/dashboard/providers";
 
 export function Header({
@@ -18,7 +19,7 @@ export function Header({
   onCloseMenu: () => void;
 }>) {
   const router = useRouter();
-  const { language, profileName, signOut } = useDashboardSettings();
+  const { currentUser, language, setCurrentUser } = useDashboardSettings();
   const t = dashboardCopy[language];
   const [showNotifications, setShowNotifications] = useState(false);
   const [showProfile, setShowProfile] = useState(false);
@@ -27,6 +28,7 @@ export function Header({
   const profileButtonRef = useRef<HTMLDivElement>(null);
   const profilePopoverRef = useRef<HTMLDivElement>(null);
 
+  const profileName = currentUser?.name ?? "Student";
   const profileInitials = profileName
     .split(/\s+/)
     .filter(Boolean)
@@ -135,7 +137,9 @@ export function Header({
               </div>
               <div className="leading-tight">
                 <p className="text-[13px] font-semibold text-primary-foreground">{profileName}</p>
-                <p className="text-[11px] text-primary-foreground/50">Senior Counselor</p>
+                <p className="text-[11px] text-primary-foreground/50">
+                  {currentUser?.email ?? "Authenticated user"}
+                </p>
               </div>
               <ChevronDown
                 className={`ml-1 h-4 w-4 text-primary-foreground/50 transition-all group-hover:text-primary-foreground ${
@@ -153,9 +157,13 @@ export function Header({
                   <button
                     type="button"
                     onClick={() => {
-                      signOut();
-                      setShowProfile(false);
-                      router.push("/login");
+                      startTransition(async () => {
+                        await authClient.signOut();
+                        setCurrentUser(null);
+                        setShowProfile(false);
+                        router.replace("/login");
+                        router.refresh();
+                      });
                     }}
                     className="flex w-full items-center gap-3 rounded-md px-3 py-2.5 text-left transition-colors hover:bg-[#F1F5F9] dark:hover:bg-white/5"
                   >
