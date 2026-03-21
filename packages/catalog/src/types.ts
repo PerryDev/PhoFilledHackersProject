@@ -35,6 +35,21 @@ export interface NormalizedUniversityCatalogRecord {
   lastVerifiedAt: Date;
 }
 
+export interface RecommendationCandidateSchool {
+  universityId: string;
+  schoolName: string;
+  city: string;
+  state: string;
+  lastVerifiedAt: string;
+  tuitionAnnualUsd: number;
+  estimatedCostOfAttendanceUsd: number;
+  livingCostEstimateUsd: number;
+  scholarshipAvailabilityFlag: boolean;
+  scholarshipNotes: string;
+  recommendationInputs: UniversityRecommendationInputs;
+  explanationInputs: UniversityExplanationInputs;
+}
+
 export interface UniversityFieldProvenance {
   fieldKey: CatalogRequiredField | string;
   sourceKind: UniversitySourceKind;
