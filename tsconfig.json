@@ -1,0 +1,12 @@
+{
+  // Root TypeScript entrypoint for the monorepo.
+  // This stays empty for now because the app and package code will arrive in
+  // later branches, but it gives the workspace a stable root config today.
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "noEmit": true
+  },
+  "files": [],
+  "include": [],
+  "references": []
+}
