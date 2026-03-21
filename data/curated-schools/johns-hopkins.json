@@ -1,0 +1,508 @@
+{
+  "schoolSlug": "johns-hopkins",
+  "lastVerifiedAt": "2026-03-21",
+  "identity": {
+    "schoolName": "Johns Hopkins University",
+    "city": "Baltimore",
+    "state": "MD",
+    "officialAdmissionsUrl": "https://apply.jhu.edu/"
+  },
+  "applicationRounds": [
+    "early_decision",
+    "regular_decision"
+  ],
+  "deadlinesByRound": {
+    "early_action": null,
+    "early_decision": "2025-11-01",
+    "regular_decision": "2026-01-02",
+    "rolling_admission": null,
+    "priority": null
+  },
+  "englishRequirements": {
+    "minimumIelts": null,
+    "minimumToeflInternetBased": null,
+    "waiverNotes": "If your primary language is not English or you have not attended an English language school for the last three years, Johns Hopkins recommends TOEFL, IELTS, the Duolingo English Test, or the Cambridge English Exam. If you are applying for financial aid as an international student, you must also submit the CSS Profile and Certificate of Finances by the required deadlines."
+  },
+  "testPolicy": "required",
+  "requiredMaterials": [
+    "common_application",
+    "coalition_application",
+    "completed_application",
+    "high_school_transcript",
+    "activities_list",
+    "academic_achievements_and_honors",
+    "personal_essay",
+    "hopkins_supplement",
+    "parent_or_guardian_information",
+    "sat_or_act",
+    "application_fee_or_fee_waiver",
+    "early_decision_agreement",
+    "secondary_school_report",
+    "counselor_recommendation",
+    "teacher_evaluations",
+    "mid_year_report"
+  ],
+  "tuitionAnnualUsd": 63204,
+  "estimatedCostOfAttendanceUsd": 95612,
+  "livingCostEstimateUsd": 19876,
+  "scholarshipAvailabilityFlag": true,
+  "scholarshipNotes": "Johns Hopkins offers need-based scholarships and a limited number of merit scholarships. International applicants can be considered for both, but merit and need-based aid are limited.",
+  "recommendationInputs": {
+    "admissionRateOverall": 0.0587,
+    "satAverageOverall": 1545,
+    "actMidpointCumulative": 34,
+    "undergraduateSize": 10768,
+    "schoolControl": "private_nonprofit",
+    "campusLocale": "urban",
+    "internationalAidPolicy": "need_and_merit_available",
+    "hasNeedBasedAid": true,
+    "hasMeritAid": true,
+    "testingRequirements": {
+      "acceptedExams": [
+        "sat",
+        "act"
+      ],
+      "minimumSatTotal": null,
+      "minimumActComposite": null,
+      "latestSatTestDateNote": "No later than December of senior year for Regular Decision, and no later than October of senior year for Early Decision.",
+      "latestActTestDateNote": "No later than December of senior year for Regular Decision, and no later than October of senior year for Early Decision.",
+      "superscorePolicy": "both",
+      "writingEssayPolicy": "optional",
+      "scoreReportingPolicy": "official_required_after_admit",
+      "middle50SatTotal": {
+        "low": null,
+        "high": null
+      },
+      "middle50ActComposite": {
+        "low": null,
+        "high": null
+      }
+    },
+    "averageNetPriceUsd": null,
+    "programFitTags": [
+      "life_sciences",
+      "health_pre_med",
+      "engineering",
+      "research_intensive"
+    ],
+    "programAdmissionModel": "open",
+    "applicationStrategyTags": [
+      "binding_early_decision",
+      "multiple_early_rounds"
+    ]
+  },
+  "explanationInputs": {
+    "academicSelectivityBand": "ultra_selective",
+    "testingExpectation": "high_scores_expected",
+    "englishPolicySummary": "waiver_possible",
+    "aidModel": "need_and_merit",
+    "applicationComplexity": "high",
+    "deadlineUrgencyWindows": {
+      "earliestDeadline": "2025-11-01",
+      "latestMajorDeadline": "2026-01-02"
+    },
+    "internationalStudentConsiderations": [
+      "english_fluency_required",
+      "financial_certification_likely_required",
+      "need_based_aid_available",
+      "merit_aid_possible"
+    ],
+    "potentialFitTags": [
+      "research_or_innovation_oriented",
+      "urban_access",
+      "strong_need_based_aid_signal",
+      "strong_merit_aid_signal"
+    ],
+    "potentialRiskTags": [
+      "extremely_low_admission_rate",
+      "high_total_cost",
+      "limited_merit_aid",
+      "early_deadline_pressure",
+      "testing_required",
+      "limited_aid_for_international_students"
+    ],
+    "actionableApplicationSteps": [
+      "prepare_early_round_strategy",
+      "complete_standardized_testing_if_required",
+      "prepare_teacher_recommendations_early",
+      "prepare_counselor_documents_early",
+      "prepare_english_testing_or_waiver_plan",
+      "budget_for_need_based_aid_process",
+      "prioritize_financial_aid_forms",
+      "build_supplemental_essay_plan"
+    ]
+  },
+  "fieldProvenance": {
+    "identity.schoolName": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://apply.jhu.edu/how-to-apply/application-deadlines-requirements/",
+        "excerpt": "Deadlines & Requirements for First-Year Applicants"
+      }
+    ],
+    "identity.city": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.city\": \"Baltimore\""
+      }
+    ],
+    "identity.state": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.state\": \"MD\""
+      }
+    ],
+    "identity.officialAdmissionsUrl": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://apply.jhu.edu/",
+        "excerpt": "Johns Hopkins University Admissions"
+      }
+    ],
+    "applicationRounds": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://apply.jhu.edu/how-to-apply/application-deadlines-requirements/",
+        "excerpt": "Early Decision I Early Decision II Regular Decision Transfer"
+      }
+    ],
+    "deadlinesByRound": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://apply.jhu.edu/how-to-apply/application-deadlines-requirements/",
+        "excerpt": "Application Deadline November 1, 2025 January 2, 2026 January 2, 2026 March 1, 2026"
+      }
+    ],
+    "englishRequirements": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://apply.jhu.edu/how-to-apply/application-deadlines-requirements/standardized-testing/",
+        "excerpt": "TOEFL, IELTS, the Duolingo English Test (DET), or the Cambridge English Exam are recommended if your primary language is not English"
+      }
+    ],
+    "testPolicy": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://apply.jhu.edu/how-to-apply/application-deadlines-requirements/standardized-testing/",
+        "excerpt": "Johns Hopkins University requires first-year applicants to submit SAT or ACT scores to be considered for admission."
+      }
+    ],
+    "requiredMaterials": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://apply.jhu.edu/how-to-apply/application-deadlines-requirements/",
+        "excerpt": "A completed application ... includes your high school transcript, activities list, personal essay, parent or guardian information, the Hopkins supplement, and optional standardized test scores."
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://apply.jhu.edu/how-to-apply/application-deadlines-requirements/",
+        "excerpt": "Your secondary school report ... Two teacher evaluations ... Your mid-year report"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://apply.jhu.edu/how-to-apply/application-deadlines-requirements/",
+        "excerpt": "The $70 application fee or fee waiver"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://apply.jhu.edu/how-to-apply/application-deadlines-requirements/",
+        "excerpt": "If you are applying Early Decision, you must submit the Early Decision Agreement."
+      }
+    ],
+    "tuitionAnnualUsd": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.cost.tuition.in_state\": 63204"
+      }
+    ],
+    "estimatedCostOfAttendanceUsd": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.cost.attendance.academic_year\": 95612"
+      }
+    ],
+    "livingCostEstimateUsd": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.cost.attendance.academic_year\" budget components include housing and food; living estimate derived from the cost page structure."
+      }
+    ],
+    "scholarshipAvailabilityFlag": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://apply.jhu.edu/tuition-aid/types-of-financial-aid/",
+        "excerpt": "Our financial aid offers contain scholarships and work-study opportunities."
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://apply.jhu.edu/tuition-aid/types-of-financial-aid/merit-scholarships/",
+        "excerpt": "We award merit scholarships for academic and personal achievement."
+      }
+    ],
+    "scholarshipNotes": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://apply.jhu.edu/tuition-aid/types-of-financial-aid/need-based-scholarships/",
+        "excerpt": "We invest in our community with need-based scholarships"
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://apply.jhu.edu/tuition-aid/types-of-financial-aid/merit-scholarships/",
+        "excerpt": "We award merit scholarships for academic and personal achievement."
+      }
+    ],
+    "recommendationInputs.admissionRateOverall": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.admission_rate.overall\": 0.0587"
+      }
+    ],
+    "recommendationInputs.satAverageOverall": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.sat_scores.average.overall\": 1545"
+      }
+    ],
+    "recommendationInputs.actMidpointCumulative": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.act_scores.midpoint.cumulative\": 34"
+      }
+    ],
+    "recommendationInputs.undergraduateSize": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.student.size\": 10768"
+      }
+    ],
+    "recommendationInputs.schoolControl": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.ownership\": 2"
+      }
+    ],
+    "recommendationInputs.campusLocale": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.locale\": 11"
+      }
+    ],
+    "recommendationInputs.internationalAidPolicy": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://apply.jhu.edu/international-applicants/",
+        "excerpt": "Yes. Need-based and merit scholarships are available for international applicants, although both types of assistance are limited."
+      }
+    ],
+    "recommendationInputs.hasNeedBasedAid": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://apply.jhu.edu/tuition-aid/types-of-financial-aid/need-based-scholarships/",
+        "excerpt": "We invest in our community with need-based scholarships"
+      }
+    ],
+    "recommendationInputs.hasMeritAid": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://apply.jhu.edu/tuition-aid/types-of-financial-aid/merit-scholarships/",
+        "excerpt": "We award merit scholarships for academic and personal achievement."
+      }
+    ],
+    "recommendationInputs.programFitTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://apply.jhu.edu/academics/majors-minors-programs/",
+        "excerpt": "Because of the flexible and interdisciplinary nature of our curriculum, you can choose any major while pursuing our pre-health or pre-law advising tracks"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://apply.jhu.edu/academics/learning-at-hopkins/undergraduate-research/",
+        "excerpt": "All undergraduate students have the opportunity to pursue research throughout their time at Hopkins"
+      }
+    ],
+    "recommendationInputs.programAdmissionModel": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://apply.jhu.edu/academics/majors-minors-programs/",
+        "excerpt": "you are not required to declare a major when applying to Hopkins"
+      }
+    ],
+    "recommendationInputs.applicationStrategyTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://apply.jhu.edu/how-to-apply/application-deadlines-requirements/",
+        "excerpt": "Early Decision I Early Decision II Regular Decision"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://apply.jhu.edu/how-to-apply/application-deadlines-requirements/",
+        "excerpt": "After choosing an admissions plan (Early Decision I, Early Decision II, or Regular Decision)"
+      }
+    ],
+    "recommendationInputs.testingRequirements": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://apply.jhu.edu/how-to-apply/application-deadlines-requirements/standardized-testing/",
+        "excerpt": "requires first-year applicants to submit SAT or ACT scores"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://apply.jhu.edu/how-to-apply/application-deadlines-requirements/standardized-testing/",
+        "excerpt": "We review self-reported and official SAT or ACT scores ... if you are admitted and choose to enroll, you will be required to send official score reports."
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://apply.jhu.edu/how-to-apply/application-deadlines-requirements/standardized-testing/",
+        "excerpt": "we superscore ... highest section scores across all test dates"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://apply.jhu.edu/how-to-apply/application-deadlines-requirements/standardized-testing/",
+        "excerpt": "Testing beyond the SAT or ACT ... optional Science and Writing sections of the ACT, aren’t required but can add value"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://apply.jhu.edu/how-to-apply/application-deadlines-requirements/standardized-testing/",
+        "excerpt": "If you plan on applying Early Decision, we encourage you to complete your standardized tests no later than October ... Regular Decision ... no later than December"
+      }
+    ],
+    "explanationInputs.academicSelectivityBand": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.admission_rate.overall\": 0.0587"
+      }
+    ],
+    "explanationInputs.testingExpectation": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://apply.jhu.edu/how-to-apply/application-deadlines-requirements/standardized-testing/",
+        "excerpt": "requires first-year applicants to submit SAT or ACT scores"
+      }
+    ],
+    "explanationInputs.englishPolicySummary": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://apply.jhu.edu/how-to-apply/application-deadlines-requirements/standardized-testing/",
+        "excerpt": "TOEFL, IELTS, the Duolingo English Test (DET), or the Cambridge English Exam are recommended if your primary language is not English"
+      }
+    ],
+    "explanationInputs.aidModel": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://apply.jhu.edu/tuition-aid/types-of-financial-aid/",
+        "excerpt": "The majority of our financial aid comes in the form of need-based scholarships"
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://apply.jhu.edu/tuition-aid/types-of-financial-aid/merit-scholarships/",
+        "excerpt": "We award merit scholarships for academic and personal achievement."
+      }
+    ],
+    "explanationInputs.applicationComplexity": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://apply.jhu.edu/how-to-apply/application-deadlines-requirements/",
+        "excerpt": "completed application ... transcript ... activities list ... personal essay ... Hopkins supplement ... standardized test scores"
+      }
+    ],
+    "explanationInputs.deadlineUrgencyWindows": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://apply.jhu.edu/how-to-apply/application-deadlines-requirements/",
+        "excerpt": "Application Deadline November 1, 2025 January 2, 2026 January 2, 2026 March 1, 2026"
+      }
+    ],
+    "explanationInputs.internationalStudentConsiderations": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://apply.jhu.edu/international-applicants/",
+        "excerpt": "if you are an international student and think you will need financial aid, you must indicate this on the admissions application and submit the CSS Profile and COF"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://apply.jhu.edu/how-to-apply/application-deadlines-requirements/standardized-testing/",
+        "excerpt": "TOEFL, IELTS, the Duolingo English Test (DET), or the Cambridge English Exam are recommended if your primary language is not English"
+      }
+    ],
+    "explanationInputs.potentialFitTags": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.locale\": 11"
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://apply.jhu.edu/tuition-aid/types-of-financial-aid/need-based-scholarships/",
+        "excerpt": "We invest in our community with need-based scholarships"
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://apply.jhu.edu/tuition-aid/types-of-financial-aid/merit-scholarships/",
+        "excerpt": "We award merit scholarships for academic and personal achievement."
+      }
+    ],
+    "explanationInputs.potentialRiskTags": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.admission_rate.overall\": 0.0587"
+      },
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.cost.attendance.academic_year\": 95612"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://apply.jhu.edu/international-applicants/",
+        "excerpt": "need-based and merit scholarships are available for international applicants, although both types of assistance are limited"
+      }
+    ],
+    "explanationInputs.actionableApplicationSteps": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://apply.jhu.edu/how-to-apply/application-deadlines-requirements/",
+        "excerpt": "Early Decision I Early Decision II Regular Decision"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://apply.jhu.edu/how-to-apply/application-deadlines-requirements/standardized-testing/",
+        "excerpt": "We review self-reported and official SAT or ACT scores"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://apply.jhu.edu/how-to-apply/application-deadlines-requirements/",
+        "excerpt": "Two teacher evaluations"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://apply.jhu.edu/how-to-apply/application-deadlines-requirements/",
+        "excerpt": "The Hopkins supplement"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://apply.jhu.edu/international-applicants/",
+        "excerpt": "submit the CSS Profile and COF"
+      }
+    ]
+  },
+  "quality": {
+    "status": "publishable",
+    "missingFields": [],
+    "warnings": [
+      "Johns Hopkins offers Early Decision I and Early Decision II, but the curation schema only has a single early_decision slot."
+    ]
+  }
+}

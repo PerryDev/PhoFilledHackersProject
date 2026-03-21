@@ -1,0 +1,450 @@
+{
+  "schoolSlug": "university-of-texas-at-austin",
+  "lastVerifiedAt": "2026-03-21",
+  "identity": {
+    "schoolName": "The University of Texas at Austin",
+    "city": "Austin",
+    "state": "TX",
+    "officialAdmissionsUrl": "https://admissions.utexas.edu/apply/freshman/"
+  },
+  "applicationRounds": [
+    "early_action",
+    "regular_decision"
+  ],
+  "deadlinesByRound": {
+    "early_action": "2025-10-15",
+    "early_decision": null,
+    "regular_decision": "2025-12-01",
+    "rolling_admission": null,
+    "priority": null
+  },
+  "englishRequirements": {
+    "minimumIelts": 6.5,
+    "minimumToeflInternetBased": 79,
+    "waiverNotes": "International applicants are exempt from TOEFL or IELTS if they are from a qualifying country or graduated from a U.S. or qualifying-country high school after at least three years of study."
+  },
+  "testPolicy": "required",
+  "requiredMaterials": [
+    "common_app_or_applytexas_application",
+    "essay_and_short_answers",
+    "official_secondary_school_transcript",
+    "class_rank_or_rank_statement",
+    "application_fee_or_fee_waiver",
+    "sat_or_act_scores",
+    "toefl_or_ielts_if_required"
+  ],
+  "tuitionAnnualUsd": 12217,
+  "estimatedCostOfAttendanceUsd": 33748,
+  "livingCostEstimateUsd": 21531,
+  "scholarshipAvailabilityFlag": true,
+  "scholarshipNotes": "UT Austin offers need-based aid through programs such as Texas Advance Commitment and also provides scholarships. International applicants who indicate financial-aid interest are considered in a separate admission pool.",
+  "recommendationInputs": {
+    "admissionRateOverall": 0.2912,
+    "satAverageOverall": 1380,
+    "actMidpointCumulative": 30,
+    "undergraduateSize": 42100,
+    "schoolControl": "public",
+    "campusLocale": "urban",
+    "internationalAidPolicy": "need_based_aid_available",
+    "hasNeedBasedAid": true,
+    "hasMeritAid": true,
+    "testingRequirements": {
+      "acceptedExams": [
+        "sat",
+        "act"
+      ],
+      "minimumSatTotal": null,
+      "minimumActComposite": null,
+      "latestSatTestDateNote": "For Early Action, official scores from the testing agency must be received by October 22, 2025. For Regular Decision, official scores from the testing agency must be received by December 10, 2025.",
+      "latestActTestDateNote": "For Early Action, official scores from the testing agency must be received by October 22, 2025. For Regular Decision, official scores from the testing agency must be received by December 10, 2025.",
+      "superscorePolicy": "unknown",
+      "writingEssayPolicy": "not_considered",
+      "scoreReportingPolicy": "self_report_allowed",
+      "middle50SatTotal": {
+        "low": null,
+        "high": null
+      },
+      "middle50ActComposite": {
+        "low": null,
+        "high": null
+      }
+    },
+    "averageNetPriceUsd": null,
+    "programFitTags": [
+      "engineering",
+      "business",
+      "research_intensive"
+    ],
+    "programAdmissionModel": "capacity_limited",
+    "applicationStrategyTags": [
+      "non_binding_early_action"
+    ]
+  },
+  "explanationInputs": {
+    "academicSelectivityBand": "selective",
+    "testingExpectation": "scores_considered",
+    "englishPolicySummary": "minimum_scores_required",
+    "aidModel": "need_and_merit",
+    "applicationComplexity": "high",
+    "deadlineUrgencyWindows": {
+      "earliestDeadline": "2025-10-15",
+      "latestMajorDeadline": "2025-12-01"
+    },
+    "internationalStudentConsiderations": [
+      "english_fluency_required",
+      "need_aware_or_limited_aid_possible",
+      "need_based_aid_available",
+      "financial_certification_likely_required"
+    ],
+    "potentialFitTags": [
+      "large_public_environment",
+      "urban_access",
+      "value_for_budget_conscious_students",
+      "strong_need_based_aid_signal"
+    ],
+    "potentialRiskTags": [
+      "early_deadline_pressure",
+      "complex_application_requirements",
+      "limited_aid_for_international_students"
+    ],
+    "actionableApplicationSteps": [
+      "prepare_early_round_strategy",
+      "complete_standardized_testing_if_required",
+      "prepare_teacher_recommendations_early",
+      "prepare_counselor_documents_early",
+      "budget_for_need_based_aid_process",
+      "build_supplemental_essay_plan",
+      "prepare_english_testing_or_waiver_plan"
+    ]
+  },
+  "fieldProvenance": {
+    "identity.schoolName": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.utexas.edu/apply/freshman/",
+        "excerpt": "The University of Texas at Austin"
+      }
+    ],
+    "identity.city": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.city\": \"Austin\""
+      }
+    ],
+    "identity.state": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.state\": \"TX\""
+      }
+    ],
+    "identity.officialAdmissionsUrl": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.utexas.edu/apply/freshman/",
+        "excerpt": "Freshman - University of Texas Admissions"
+      }
+    ],
+    "applicationRounds": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.utexas.edu/apply/freshman/",
+        "excerpt": "Early Action Deadline to Apply ... Regular Deadline To Apply"
+      }
+    ],
+    "deadlinesByRound": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.utexas.edu/apply/freshman/",
+        "excerpt": "October 15 ... December 1"
+      }
+    ],
+    "englishRequirements": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.utexas.edu/info-for/international-students/",
+        "excerpt": "International applicants must submit either an official TOEFL or IELTS score report ... Minimum scores acceptable for admission are TOEFL: 79 and IELTS: 6.5"
+      }
+    ],
+    "testPolicy": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.utexas.edu/apply/freshman/",
+        "excerpt": "SAT and ACT official test scores must be submitted by the appropriate deadline to be considered."
+      }
+    ],
+    "requiredMaterials": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.utexas.edu/apply/freshman/",
+        "excerpt": "Application ... Essay and Short Answers ... SAT/ACT Scores ... High School Transcripts, Class Rank and College Transcripts"
+      }
+    ],
+    "tuitionAnnualUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://onestop.utexas.edu/managing-costs/cost-tuition-rates/cost-of-attendance/",
+        "excerpt": "Tuition $10,858-$13,576"
+      }
+    ],
+    "estimatedCostOfAttendanceUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://onestop.utexas.edu/managing-costs/cost-tuition-rates/cost-of-attendance/",
+        "excerpt": "Total Cost of Attendance $32,344-$35,152"
+      }
+    ],
+    "livingCostEstimateUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://onestop.utexas.edu/managing-costs/cost-tuition-rates/cost-of-attendance/",
+        "excerpt": "Housing and Food $15,420-$15,510 ... Transportation $1,786 ... Books ... $720 ... Personal / Miscellaneous $3,560"
+      }
+    ],
+    "scholarshipAvailabilityFlag": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.utexas.edu/cost-aid/",
+        "excerpt": "56% of all Longhorns receive some form of financial aid."
+      }
+    ],
+    "scholarshipNotes": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.utexas.edu/cost-aid/financial-aid/texas-advance-commitment/",
+        "excerpt": "The University is committed to reducing debt and making a UT education affordable for Texans from middle- and low-income families."
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.utexas.edu/financial-support/",
+        "excerpt": "Financial aid to Texas Exes scholarships"
+      }
+    ],
+    "recommendationInputs.admissionRateOverall": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.admission_rate.overall\": 0.2912"
+      }
+    ],
+    "recommendationInputs.satAverageOverall": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.sat_scores.average.overall\": 1380"
+      }
+    ],
+    "recommendationInputs.actMidpointCumulative": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.act_scores.midpoint.cumulative\": 30"
+      }
+    ],
+    "recommendationInputs.undergraduateSize": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.student.size\": 42100"
+      }
+    ],
+    "recommendationInputs.schoolControl": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.ownership\": 1"
+      }
+    ],
+    "recommendationInputs.campusLocale": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.locale\": 11"
+      }
+    ],
+    "recommendationInputs.internationalAidPolicy": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.utexas.edu/financial-support/",
+        "excerpt": "International applicants who indicate interest in financial aid are considered in a separate admission pool"
+      }
+    ],
+    "recommendationInputs.hasNeedBasedAid": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.utexas.edu/cost-aid/financial-aid/texas-advance-commitment/",
+        "excerpt": "The University is committed to reducing debt and making a UT education affordable"
+      }
+    ],
+    "recommendationInputs.hasMeritAid": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.utexas.edu/cost-aid/",
+        "excerpt": "financial aid to Texas Exes scholarships"
+      }
+    ],
+    "recommendationInputs.testingRequirements.acceptedExams": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.utexas.edu/apply/freshman/",
+        "excerpt": "SAT and ACT official test scores must be submitted by the appropriate deadline to be considered."
+      }
+    ],
+    "recommendationInputs.testingRequirements.minimumSatTotal": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.utexas.edu/apply/freshman/",
+        "excerpt": "SAT and ACT official test scores must be submitted by the appropriate deadline to be considered."
+      }
+    ],
+    "recommendationInputs.testingRequirements.minimumActComposite": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.utexas.edu/apply/freshman/",
+        "excerpt": "SAT and ACT official test scores must be submitted by the appropriate deadline to be considered."
+      }
+    ],
+    "recommendationInputs.testingRequirements.latestSatTestDateNote": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.utexas.edu/apply/freshman/",
+        "excerpt": "For Early Action, official scores ... by October 22, 2025 ... For regular decision ... by December 10, 2025."
+      }
+    ],
+    "recommendationInputs.testingRequirements.latestActTestDateNote": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.utexas.edu/apply/freshman/",
+        "excerpt": "For Early Action, official scores ... by October 22, 2025 ... For regular decision ... by December 10, 2025."
+      }
+    ],
+    "recommendationInputs.testingRequirements.superscorePolicy": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.utexas.edu/apply/freshman/",
+        "excerpt": "We will not accept self-reported test scores via transcripts or via the Common App."
+      }
+    ],
+    "recommendationInputs.testingRequirements.writingEssayPolicy": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.utexas.edu/apply/freshman/",
+        "excerpt": "We do not require the SAT Essay or ACT Writing scores or the ACT Science section."
+      }
+    ],
+    "recommendationInputs.testingRequirements.scoreReportingPolicy": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.utexas.edu/apply/freshman/",
+        "excerpt": "you may self-report your scores via the MyStatus admissions portal"
+      }
+    ],
+    "explanationInputs.academicSelectivityBand": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.admission_rate.overall\": 0.2912"
+      }
+    ],
+    "explanationInputs.testingExpectation": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.utexas.edu/apply/freshman/",
+        "excerpt": "SAT and ACT official test scores must be submitted by the appropriate deadline to be considered."
+      }
+    ],
+    "explanationInputs.englishPolicySummary": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.utexas.edu/info-for/international-students/",
+        "excerpt": "International applicants must submit either an official TOEFL or IELTS score report"
+      }
+    ],
+    "explanationInputs.aidModel": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.utexas.edu/cost-aid/financial-aid/texas-advance-commitment/",
+        "excerpt": "The University is committed to reducing debt and making a UT education affordable"
+      }
+    ],
+    "explanationInputs.applicationComplexity": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.utexas.edu/apply/freshman/",
+        "excerpt": "Application ... Essay and Short Answers ... SAT/ACT Scores ... High School Transcripts, Class Rank and College Transcripts"
+      }
+    ],
+    "explanationInputs.deadlineUrgencyWindows": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.utexas.edu/apply/freshman/",
+        "excerpt": "October 15 ... December 1"
+      }
+    ],
+    "explanationInputs.internationalStudentConsiderations": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.utexas.edu/apply/international-students/",
+        "excerpt": "International applicants must submit either an official TOEFL or IELTS"
+      }
+    ],
+    "explanationInputs.potentialFitTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.utexas.edu/cost-aid/",
+        "excerpt": "56% of all Longhorns receive some form of financial aid."
+      }
+    ],
+    "explanationInputs.potentialRiskTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.utexas.edu/apply/freshman/",
+        "excerpt": "October 15 ... December 1"
+      }
+    ],
+    "explanationInputs.actionableApplicationSteps": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.utexas.edu/apply/freshman/",
+        "excerpt": "Essay and Short Answers"
+      }
+    ],
+    "recommendationInputs.programFitTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://cockrell.utexas.edu/",
+        "excerpt": "Texas Engineers are at the center of research and innovation, addressing grand challenges that improve quality of life."
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.mccombs.utexas.edu/",
+        "excerpt": "The McCombs School of Business is a top-ranked business school welcoming the enterprising spirit of students everywhere."
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://research.utexas.edu/",
+        "excerpt": "The University of Texas at Austin is ranked No. 1 among U.S. universities for conducting the most research supported by the National Science Foundation."
+      }
+    ],
+    "recommendationInputs.programAdmissionModel": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.utexas.edu/apply/review-decision-process/",
+        "excerpt": "Due to the competitiveness of the applicant pool and limited space in high-demand programs, some applicants who meet the Early Action deadline may receive a notice of deferral."
+      }
+    ],
+    "recommendationInputs.applicationStrategyTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.utexas.edu/info-for/high-school-counselors/",
+        "excerpt": "The Early Action deadline does not provide an advantage in the review process nor is it binding."
+      }
+    ]
+  },
+  "quality": {
+    "status": "publishable",
+    "missingFields": [],
+    "warnings": []
+  }
+}

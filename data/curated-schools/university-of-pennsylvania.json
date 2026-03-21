@@ -1,0 +1,427 @@
+{
+  "schoolSlug": "university-of-pennsylvania",
+  "lastVerifiedAt": "2026-03-21",
+  "identity": {
+    "schoolName": "University of Pennsylvania",
+    "city": "Philadelphia",
+    "state": "PA",
+    "officialAdmissionsUrl": "https://admissions.upenn.edu/"
+  },
+  "applicationRounds": [
+    "early_decision",
+    "regular_decision"
+  ],
+  "deadlinesByRound": {
+    "early_action": null,
+    "early_decision": "2025-11-01",
+    "regular_decision": "2026-01-05",
+    "rolling_admission": null,
+    "priority": null
+  },
+  "englishRequirements": {
+    "minimumIelts": null,
+    "minimumToeflInternetBased": null,
+    "waiverNotes": "If English is your native language or the primary language of instruction throughout high school, Penn considers you proficient in English. Otherwise, TOEFL, IELTS, or Duolingo English Test results are required."
+  },
+  "testPolicy": "required",
+  "requiredMaterials": [
+    "common_application",
+    "penn_specific_short_answers",
+    "official_transcript",
+    "school_report",
+    "counselor_recommendation",
+    "teacher_recommendation_1",
+    "sat_or_act",
+    "application_fee_or_fee_waiver",
+    "early_decision_agreement",
+    "mid_year_report",
+    "final_transcript"
+  ],
+  "tuitionAnnualUsd": 63204,
+  "estimatedCostOfAttendanceUsd": 95612,
+  "livingCostEstimateUsd": 19876,
+  "scholarshipAvailabilityFlag": false,
+  "scholarshipNotes": "Penn awards only need-based financial aid and does not offer merit-based scholarships.",
+  "recommendationInputs": {
+    "admissionRateOverall": 0.0587,
+    "satAverageOverall": 1545,
+    "actMidpointCumulative": 34,
+    "undergraduateSize": 10768,
+    "schoolControl": "private_nonprofit",
+    "campusLocale": "urban",
+    "internationalAidPolicy": "meets_full_demonstrated_need_if_eligible",
+    "hasNeedBasedAid": true,
+    "hasMeritAid": false,
+    "testingRequirements": {
+      "acceptedExams": [
+        "sat",
+        "act"
+      ],
+      "minimumSatTotal": null,
+      "minimumActComposite": null,
+      "latestSatTestDateNote": "November 2025 for Early Decision; December 2025 for Regular Decision; March 2026 for Transfer.",
+      "latestActTestDateNote": "October 2025 for Early Decision; December 2025 for Regular Decision; February 2026 for Transfer.",
+      "superscorePolicy": "both",
+      "writingEssayPolicy": "unknown",
+      "scoreReportingPolicy": "official_required_after_admit",
+      "middle50SatTotal": {
+        "low": null,
+        "high": null
+      },
+      "middle50ActComposite": {
+        "low": null,
+        "high": null
+      }
+    },
+    "averageNetPriceUsd": null,
+    "programFitTags": [
+      "business",
+      "engineering",
+      "health_pre_med",
+      "humanities",
+      "social_sciences",
+      "research_intensive"
+    ],
+    "programAdmissionModel": "separate_school_application",
+    "applicationStrategyTags": [
+      "binding_early_decision"
+    ]
+  },
+  "explanationInputs": {
+    "academicSelectivityBand": "ultra_selective",
+    "testingExpectation": "high_scores_expected",
+    "englishPolicySummary": "english_fluency_required_no_exam_minimum_listed",
+    "aidModel": "need_based_only",
+    "applicationComplexity": "high",
+    "deadlineUrgencyWindows": {
+      "earliestDeadline": "2025-11-01",
+      "latestMajorDeadline": "2026-01-05"
+    },
+    "internationalStudentConsiderations": [
+      "english_fluency_required",
+      "need_aware_or_limited_aid_possible",
+      "need_based_aid_available"
+    ],
+    "potentialFitTags": [
+      "research_or_innovation_oriented",
+      "urban_access",
+      "strong_need_based_aid_signal"
+    ],
+    "potentialRiskTags": [
+      "extremely_low_admission_rate",
+      "high_total_cost",
+      "limited_merit_aid",
+      "early_deadline_pressure",
+      "testing_required",
+      "limited_aid_for_international_students"
+    ],
+    "actionableApplicationSteps": [
+      "prepare_early_round_strategy",
+      "complete_standardized_testing_if_required",
+      "prepare_teacher_recommendations_early",
+      "prepare_counselor_documents_early",
+      "prepare_english_testing_or_waiver_plan",
+      "budget_for_need_based_aid_process",
+      "prioritize_financial_aid_forms",
+      "build_supplemental_essay_plan"
+    ]
+  },
+  "fieldProvenance": {
+    "identity.schoolName": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.upenn.edu/how-to-apply/first-year-applicants/application-requirements",
+        "excerpt": "Application Requirements | Penn Admissions"
+      }
+    ],
+    "identity.city": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.city\": \"Philadelphia\""
+      }
+    ],
+    "identity.state": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.state\": \"PA\""
+      }
+    ],
+    "identity.officialAdmissionsUrl": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.upenn.edu/",
+        "excerpt": "Penn Admissions"
+      }
+    ],
+    "applicationRounds": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.upenn.edu/how-to-apply/first-year-applicants/application-requirements",
+        "excerpt": "Due: November 1 for Early Decision, January 5 for Regular Decision"
+      }
+    ],
+    "deadlinesByRound": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.upenn.edu/how-to-apply/first-year-applicants/application-requirements",
+        "excerpt": "Due: November 1 for Early Decision, January 5 for Regular Decision"
+      }
+    ],
+    "englishRequirements": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.upenn.edu/how-to-apply/preparing-your-application/testing",
+        "excerpt": "If neither of these statements is true, we require the TOEFL, IELTS, or Duolingo English Test"
+      }
+    ],
+    "testPolicy": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.upenn.edu/how-to-apply/preparing-your-application/testing",
+        "excerpt": "Penn applicants are required to submit the SAT or ACT for the 2025-26 application cycle."
+      }
+    ],
+    "requiredMaterials": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.upenn.edu/how-to-apply/first-year-applicants/application-requirements",
+        "excerpt": "Application forms, official high school transcript, letters of recommendation, Penn-specific short answer prompts, standardized testing scores"
+      }
+    ],
+    "tuitionAnnualUsd": [
+      {
+        "sourceKind": "official_tuition",
+        "sourceUrl": "https://srfs.upenn.edu/costs-budgeting/undergraduate-cost-attendance",
+        "excerpt": "Tuition $63,204"
+      }
+    ],
+    "estimatedCostOfAttendanceUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://srfs.upenn.edu/costs-budgeting/undergraduate-cost-attendance",
+        "excerpt": "Total Budget $95,612"
+      }
+    ],
+    "livingCostEstimateUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://srfs.upenn.edu/costs-budgeting/undergraduate-cost-attendance",
+        "excerpt": "Housing $13,132; Food $6,744"
+      }
+    ],
+    "scholarshipAvailabilityFlag": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.upenn.edu/affording-penn/financial-aid",
+        "excerpt": "All Penn financial aid awards are need-based, not merit based."
+      }
+    ],
+    "scholarshipNotes": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.upenn.edu/affording-penn/financial-aid",
+        "excerpt": "Penn does not offer merit-based scholarships."
+      }
+    ],
+    "recommendationInputs.admissionRateOverall": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.admission_rate.overall\": 0.0587"
+      }
+    ],
+    "recommendationInputs.satAverageOverall": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.sat_scores.average.overall\": 1545"
+      }
+    ],
+    "recommendationInputs.actMidpointCumulative": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.act_scores.midpoint.cumulative\": 34"
+      }
+    ],
+    "recommendationInputs.undergraduateSize": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.student.size\": 10768"
+      }
+    ],
+    "recommendationInputs.schoolControl": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.ownership\": 2"
+      }
+    ],
+    "recommendationInputs.campusLocale": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.locale\": 11"
+      }
+    ],
+    "recommendationInputs.internationalAidPolicy": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.upenn.edu/affording-penn/financial-aid",
+        "excerpt": "Penn is need-aware for international applicants and international students are eligible to receive financial aid."
+      }
+    ],
+    "recommendationInputs.hasNeedBasedAid": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.upenn.edu/affording-penn/financial-aid",
+        "excerpt": "All Penn financial aid awards are need-based"
+      }
+    ],
+    "recommendationInputs.hasMeritAid": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.upenn.edu/affording-penn/financial-aid",
+        "excerpt": "Penn does not offer merit-based scholarships."
+      }
+    ],
+    "recommendationInputs.programFitTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.upenn.edu/academics/four-schools",
+        "excerpt": "you don't technically apply to Penn, you apply to one of our four undergraduate schools"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.upenn.edu/academics/four-schools",
+        "excerpt": "College of Arts & Sciences, School of Engineering and Applied Science, School of Nursing, and Wharton"
+      }
+    ],
+    "recommendationInputs.programAdmissionModel": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.upenn.edu/how-to-apply/first-year-applicants",
+        "excerpt": "Penn is one University, but when you submit your application, it will be to one of our four undergraduate schools"
+      }
+    ],
+    "recommendationInputs.applicationStrategyTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.upenn.edu/how-to-apply/first-year-applicants",
+        "excerpt": "Our Early Decision program is binding"
+      }
+    ],
+    "recommendationInputs.testingRequirements": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.upenn.edu/how-to-apply/preparing-your-application/testing",
+        "excerpt": "Penn applicants are required to submit the SAT or ACT for the 2025-26 application cycle. Applicants may self-report test scores. No minimum score required. No preference is given to the SAT or the ACT. We will combine your highest scores across multiple tests to calculate a superscore. Admitted students must submit official test scores before enrollment."
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.upenn.edu/how-to-apply/first-year-applicants/application-requirements",
+        "excerpt": "Early Decision: Last Test Dates Accepted—October 2025 (ACT) or November 2025 (SAT); Regular Decision: December 2025"
+      }
+    ],
+    "explanationInputs.academicSelectivityBand": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.admission_rate.overall\": 0.0587"
+      }
+    ],
+    "explanationInputs.testingExpectation": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.upenn.edu/how-to-apply/preparing-your-application/testing",
+        "excerpt": "required to submit the SAT or ACT ... no minimum score required ... no preference is given"
+      }
+    ],
+    "explanationInputs.englishPolicySummary": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.upenn.edu/how-to-apply/preparing-your-application/testing",
+        "excerpt": "If neither ... is true, we require the TOEFL, IELTS, or Duolingo English Test"
+      }
+    ],
+    "explanationInputs.aidModel": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.upenn.edu/affording-penn/financial-aid",
+        "excerpt": "Financial aid at Penn is need-based, which means our awards are based entirely on financial need, not merit."
+      }
+    ],
+    "explanationInputs.applicationComplexity": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.upenn.edu/how-to-apply/first-year-applicants/application-requirements",
+        "excerpt": "application forms, transcript, letters of recommendation, Penn-specific short answer prompts, standardized testing scores"
+      }
+    ],
+    "explanationInputs.deadlineUrgencyWindows": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.upenn.edu/how-to-apply/first-year-applicants/application-requirements",
+        "excerpt": "Due: November 1 for Early Decision, January 5 for Regular Decision"
+      }
+    ],
+    "explanationInputs.internationalStudentConsiderations": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.upenn.edu/affording-penn/financial-aid",
+        "excerpt": "Penn is need-aware for international applicants and international students are eligible to receive financial aid."
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.upenn.edu/how-to-apply/preparing-your-application/testing",
+        "excerpt": "If neither of these statements is true, we require the TOEFL, IELTS, or Duolingo English Test"
+      }
+    ],
+    "explanationInputs.potentialFitTags": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.upenn.edu/affording-penn/financial-aid",
+        "excerpt": "Penn education accessible and affordable"
+      }
+    ],
+    "explanationInputs.potentialRiskTags": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.admission_rate.overall\": 0.0587"
+      },
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://srfs.upenn.edu/costs-budgeting/undergraduate-cost-attendance",
+        "excerpt": "Total Budget $95,612"
+      }
+    ],
+    "explanationInputs.actionableApplicationSteps": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.upenn.edu/how-to-apply/first-year-applicants/application-requirements",
+        "excerpt": "Due: November 1 for Early Decision, January 5 for Regular Decision"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.upenn.edu/how-to-apply/preparing-your-application/testing",
+        "excerpt": "Applicants may self-report test scores"
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.upenn.edu/affording-penn/financial-aid",
+        "excerpt": "Penn does not offer merit-based scholarships."
+      }
+    ]
+  },
+  "quality": {
+    "status": "publishable",
+    "missingFields": [],
+    "warnings": [
+      "Penn's official testing page does not publish middle-50 SAT/ACT ranges, so testingRequirements.middle50SatTotal and testingRequirements.middle50ActComposite are null."
+    ]
+  }
+}

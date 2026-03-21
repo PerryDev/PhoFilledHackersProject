@@ -1,0 +1,434 @@
+{
+  "schoolSlug": "california-institute-of-technology",
+  "lastVerifiedAt": "2026-03-21",
+  "identity": {
+    "schoolName": "California Institute of Technology",
+    "city": "Pasadena",
+    "state": "CA",
+    "officialAdmissionsUrl": "https://www.admissions.caltech.edu/apply/first-year-applicants"
+  },
+  "applicationRounds": [
+    "early_action",
+    "regular_decision"
+  ],
+  "deadlinesByRound": {
+    "early_action": "2025-11-01",
+    "early_decision": null,
+    "regular_decision": "2026-01-05",
+    "rolling_admission": null,
+    "priority": null
+  },
+  "englishRequirements": {
+    "minimumIelts": 7,
+    "minimumToeflInternetBased": 100,
+    "waiverNotes": "English proficiency exam scores are required of all international applicants unless the applicant's native language is English or English is the primary language of instruction at their secondary school."
+  },
+  "testPolicy": "required",
+  "requiredMaterials": [
+    "common_application_or_questbridge_application",
+    "application_fee_or_fee_waiver",
+    "sat_or_act",
+    "school_report",
+    "teacher_recommendation_stem",
+    "teacher_recommendation_humanities_social_sciences",
+    "official_transcript",
+    "mid_year_report",
+    "caltech_specific_questions",
+    "ap_or_ib_scores_if_taken",
+    "english_proficiency_exam_if_international"
+  ],
+  "tuitionAnnualUsd": 68574,
+  "estimatedCostOfAttendanceUsd": 98622,
+  "livingCostEstimateUsd": 21996,
+  "scholarshipAvailabilityFlag": true,
+  "scholarshipNotes": "Caltech scholarships and grants are based on demonstrated financial need. Named scholarships may include a merit component, but the aid program is primarily need-based.",
+  "recommendationInputs": {
+    "admissionRateOverall": 0.0314,
+    "satAverageOverall": null,
+    "actMidpointCumulative": null,
+    "undergraduateSize": 1023,
+    "schoolControl": "private_nonprofit",
+    "campusLocale": "city_midsize",
+    "internationalAidPolicy": "meets_full_demonstrated_need_if_eligible",
+    "hasNeedBasedAid": true,
+    "hasMeritAid": true,
+    "testingRequirements": {
+      "acceptedExams": [
+        "sat",
+        "act"
+      ],
+      "minimumSatTotal": null,
+      "minimumActComposite": null,
+      "latestSatTestDateNote": "Before November 30, 2025 for Restrictive Early Action; before December 31, 2025 for Regular Decision.",
+      "latestActTestDateNote": "Before November 30, 2025 for Restrictive Early Action; before December 31, 2025 for Regular Decision.",
+      "superscorePolicy": "both",
+      "writingEssayPolicy": "optional",
+      "scoreReportingPolicy": "official_required_after_admit",
+      "middle50SatTotal": {
+        "low": null,
+        "high": null
+      },
+      "middle50ActComposite": {
+        "low": null,
+        "high": null
+      }
+    },
+    "averageNetPriceUsd": null,
+    "programFitTags": [
+      "engineering",
+      "computer_science",
+      "life_sciences",
+      "research_intensive"
+    ],
+    "programAdmissionModel": "open",
+    "applicationStrategyTags": [
+      "restrictive_early_action"
+    ]
+  },
+  "explanationInputs": {
+    "academicSelectivityBand": "ultra_selective",
+    "testingExpectation": "high_scores_expected",
+    "englishPolicySummary": "minimum_scores_required",
+    "aidModel": "need_and_merit",
+    "applicationComplexity": "high",
+    "deadlineUrgencyWindows": {
+      "earliestDeadline": "2025-11-01",
+      "latestMajorDeadline": "2026-01-05"
+    },
+    "internationalStudentConsiderations": [
+      "english_fluency_required",
+      "financial_certification_likely_required",
+      "need_aware_or_limited_aid_possible",
+      "need_based_aid_available"
+    ],
+    "potentialFitTags": [
+      "strong_for_high_achieving_stem_students",
+      "research_or_innovation_oriented",
+      "smaller_private_environment",
+      "strong_need_based_aid_signal"
+    ],
+    "potentialRiskTags": [
+      "extremely_low_admission_rate",
+      "high_total_cost",
+      "limited_merit_aid",
+      "early_deadline_pressure",
+      "testing_required",
+      "complex_application_requirements"
+    ],
+    "actionableApplicationSteps": [
+      "prepare_early_round_strategy",
+      "complete_standardized_testing_if_required",
+      "prepare_teacher_recommendations_early",
+      "prepare_counselor_documents_early",
+      "budget_for_need_based_aid_process",
+      "build_supplemental_essay_plan",
+      "prepare_english_testing_or_waiver_plan"
+    ]
+  },
+  "fieldProvenance": {
+    "identity.schoolName": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.admissions.caltech.edu/apply/first-year-applicants",
+        "excerpt": "California Institute of Technology"
+      }
+    ],
+    "identity.city": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.city\": \"Pasadena\""
+      }
+    ],
+    "identity.state": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.state\": \"CA\""
+      }
+    ],
+    "identity.officialAdmissionsUrl": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.admissions.caltech.edu/apply/first-year-applicants",
+        "excerpt": "First-Year Applicants"
+      }
+    ],
+    "applicationRounds": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.admissions.caltech.edu/apply/first-year-applicants/deadlines",
+        "excerpt": "Caltech offers two decision plans: Restrictive Early Action and Regular Decision."
+      }
+    ],
+    "deadlinesByRound": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.admissions.caltech.edu/apply/first-year-applicants/deadlines",
+        "excerpt": "November 1, 2025 for Restrictive Early Action ... January 5, 2026 for Regular Decision"
+      }
+    ],
+    "englishRequirements": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.admissions.caltech.edu/apply/first-year-applicants/international-applicants",
+        "excerpt": "IELTS 7 ... TOEFL 100 ... Duolingo English Test 130"
+      }
+    ],
+    "testPolicy": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.admissions.caltech.edu/apply/first-year-applicants/standardized-tests",
+        "excerpt": "Caltech requires first-year applicants to submit either the SAT or the ACT for admissions to Caltech."
+      }
+    ],
+    "requiredMaterials": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.admissions.caltech.edu/apply/first-year-applicants",
+        "excerpt": "Common App or QuestBridge Application ... 2 letters of recommendation ... School Report ... Official transcripts ... Mid-Year Report ... SAT or ACT"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.admissions.caltech.edu/apply/first-year-applicants/supplemental-application-essays",
+        "excerpt": "Caltech Specific Questions ... Required STEM Academic Interest Question ... Required Short Essay Questions ... Required Short Answer Questions"
+      }
+    ],
+    "tuitionAnnualUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://www.finaid.caltech.edu/Costs",
+        "excerpt": "Tuition $68,574"
+      }
+    ],
+    "estimatedCostOfAttendanceUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://www.finaid.caltech.edu/Costs",
+        "excerpt": "Total Direct Costs $93,225 ... Total Indirect Costs $5,397"
+      }
+    ],
+    "livingCostEstimateUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://www.finaid.caltech.edu/Costs",
+        "excerpt": "Housing 12,711 ... Food/Meals 9,285"
+      }
+    ],
+    "scholarshipAvailabilityFlag": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://www.finaid.caltech.edu/typesofaid/grants",
+        "excerpt": "Undergraduate students who fill out a financial aid application will be automatically considered for scholarships and grants from Caltech and the federal government."
+      }
+    ],
+    "scholarshipNotes": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://www.finaid.caltech.edu/TypesofAid/grants/Caltech",
+        "excerpt": "Caltech Scholarships are gifts awarded from institutional or endowed funds ... the award amount depends entirely on your demonstrated financial need."
+      }
+    ],
+    "recommendationInputs.admissionRateOverall": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.admission_rate.overall\": 0.0314"
+      }
+    ],
+    "recommendationInputs.undergraduateSize": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.student.size\": 1023"
+      }
+    ],
+    "recommendationInputs.schoolControl": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.ownership\": 2"
+      }
+    ],
+    "recommendationInputs.campusLocale": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.locale\": 12"
+      }
+    ],
+    "recommendationInputs.internationalAidPolicy": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.admissions.caltech.edu/apply/first-year-applicants/international-applicants",
+        "excerpt": "Caltech is need-aware for international applicants because the total amount of financial aid funds is limited for these students, and we remain committed to meeting the demonstrated need of all admitted students."
+      }
+    ],
+    "recommendationInputs.hasNeedBasedAid": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://www.finaid.caltech.edu/",
+        "excerpt": "Caltech believes that qualified prospective and continuing students should not be prevented from attending Caltech because of financial concerns."
+      }
+    ],
+    "recommendationInputs.hasMeritAid": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://www.finaid.caltech.edu/TypesofAid/grants/Caltech",
+        "excerpt": "Named scholarships are also need-based, but some have a merit component."
+      }
+    ],
+    "recommendationInputs.programFitTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.admissions.caltech.edu/why-caltech/academics/majors-minors",
+        "excerpt": "Caltech majors include computer science, engineering and applied science, biology, and many other science-centered fields; research is an integral part of undergraduate education."
+      }
+    ],
+    "recommendationInputs.programAdmissionModel": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.admissions.caltech.edu/apply/first-year-applicants",
+        "excerpt": "First-year applicants apply to Caltech as a whole undergraduate institute rather than to a separate undergraduate school."
+      }
+    ],
+    "recommendationInputs.applicationStrategyTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.admissions.caltech.edu/apply/first-year-applicants/deadlines",
+        "excerpt": "Restrictive Early Action is non-binding."
+      }
+    ],
+    "recommendationInputs.testingRequirements.acceptedExams": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.admissions.caltech.edu/apply/first-year-applicants/standardized-tests",
+        "excerpt": "We accept both the SAT (paper and digital versions) and ACT tests."
+      }
+    ],
+    "recommendationInputs.testingRequirements.minimumSatTotal": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.admissions.caltech.edu/apply/first-year-applicants/standardized-tests",
+        "excerpt": "We do not have a minimum test score requirement."
+      }
+    ],
+    "recommendationInputs.testingRequirements.minimumActComposite": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.admissions.caltech.edu/apply/first-year-applicants/standardized-tests",
+        "excerpt": "We do not have a minimum test score requirement."
+      }
+    ],
+    "recommendationInputs.testingRequirements.latestSatTestDateNote": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.admissions.caltech.edu/apply/first-year-applicants/standardized-tests",
+        "excerpt": "Restrictive Early Action ... Before November 30, 2025 ... Regular Decisions ... Before December 31, 2025"
+      }
+    ],
+    "recommendationInputs.testingRequirements.latestActTestDateNote": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.admissions.caltech.edu/apply/first-year-applicants/standardized-tests",
+        "excerpt": "Restrictive Early Action ... Before November 30, 2025 ... Regular Decisions ... Before December 31, 2025"
+      }
+    ],
+    "recommendationInputs.testingRequirements.superscorePolicy": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.admissions.caltech.edu/apply/first-year-applicants/standardized-tests",
+        "excerpt": "Yes, Caltech will superscore your tests."
+      }
+    ],
+    "recommendationInputs.testingRequirements.writingEssayPolicy": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.admissions.caltech.edu/apply/first-year-applicants/standardized-tests",
+        "excerpt": "For fall 2026 applicants, Caltech does not require the ACT writing or science subscores."
+      }
+    ],
+    "recommendationInputs.testingRequirements.scoreReportingPolicy": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.admissions.caltech.edu/apply/first-year-applicants/standardized-tests",
+        "excerpt": "Only students who matriculate to Caltech are required to submit official exam scores."
+      }
+    ],
+    "explanationInputs.academicSelectivityBand": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.admissions.caltech.edu/apply/first-year-applicants/deadlines",
+        "excerpt": "Caltech's admit rate is under 5% for both Early Action and Regular Decision."
+      }
+    ],
+    "explanationInputs.testingExpectation": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.admissions.caltech.edu/apply/first-year-applicants/standardized-tests",
+        "excerpt": "Traditionally, successful applicants to Caltech have had a 700 or higher on each section of the SAT or a 30 or higher on each section of the ACT."
+      }
+    ],
+    "explanationInputs.englishPolicySummary": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.admissions.caltech.edu/apply/first-year-applicants/international-applicants",
+        "excerpt": "English Proficiency Exam scores are required of all international applicants unless ..."
+      }
+    ],
+    "explanationInputs.aidModel": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://www.finaid.caltech.edu/howitworks",
+        "excerpt": "Caltech will meet 100% of your demonstrated financial need."
+      }
+    ],
+    "explanationInputs.applicationComplexity": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.admissions.caltech.edu/apply/first-year-applicants",
+        "excerpt": "letters of recommendation ... academic requirements ... deadlines ... supplemental application essays"
+      }
+    ],
+    "explanationInputs.deadlineUrgencyWindows": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.admissions.caltech.edu/apply/first-year-applicants/deadlines",
+        "excerpt": "November 1, 2025 ... January 5, 2026"
+      }
+    ],
+    "explanationInputs.internationalStudentConsiderations": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.admissions.caltech.edu/apply/first-year-applicants/international-applicants",
+        "excerpt": "English Proficiency Exam scores are required of all international applicants unless ..."
+      }
+    ],
+    "explanationInputs.potentialFitTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.admissions.caltech.edu/apply/first-year-applicants",
+        "excerpt": "Caltech is looking for students with incredible potential in STEM."
+      }
+    ],
+    "explanationInputs.potentialRiskTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.admissions.caltech.edu/apply/first-year-applicants/deadlines",
+        "excerpt": "Caltech's admit rate is under 5% for both Early Action and Regular Decision."
+      }
+    ],
+    "explanationInputs.actionableApplicationSteps": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.admissions.caltech.edu/apply/first-year-applicants/letters-of-recommendation",
+        "excerpt": "We require letters of recommendation from two secondary school teachers."
+      }
+    ]
+  },
+  "quality": {
+    "status": "publishable",
+    "missingFields": [],
+    "warnings": []
+  }
+}

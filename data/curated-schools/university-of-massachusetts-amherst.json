@@ -1,0 +1,364 @@
+{
+  "schoolSlug": "university-of-massachusetts-amherst",
+  "lastVerifiedAt": "2026-03-21",
+  "identity": {
+    "schoolName": "University of Massachusetts-Amherst",
+    "city": "Amherst",
+    "state": "MA",
+    "officialAdmissionsUrl": "https://www.umass.edu/admissions/undergraduate-admissions/apply/first-year-students"
+  },
+  "applicationRounds": [
+    "early_action",
+    "regular_decision"
+  ],
+  "deadlinesByRound": {
+    "early_action": "2026-11-05",
+    "early_decision": null,
+    "regular_decision": "2027-01-15",
+    "rolling_admission": null,
+    "priority": null
+  },
+  "englishRequirements": {
+    "minimumIelts": 6.5,
+    "minimumToeflInternetBased": 80,
+    "waiverNotes": "UMass Amherst requires non-native speakers of English to demonstrate English proficiency. The admissions site accepts TOEFL, IELTS, Duolingo, and waiver pathways based on approved English-medium schooling or U.S. college coursework. English score reports must be official and no older than two years at the time of application."
+  },
+  "testPolicy": "test_optional",
+  "requiredMaterials": [
+    "common_application",
+    "application_fee_or_fee_waiver",
+    "common_app_school_report",
+    "official_high_school_transcript",
+    "academic_letter_of_recommendation",
+    "personal_essay",
+    "test_scores_if_provided"
+  ],
+  "tuitionAnnualUsd": 42985,
+  "estimatedCostOfAttendanceUsd": 63709,
+  "livingCostEstimateUsd": 18084,
+  "scholarshipAvailabilityFlag": true,
+  "scholarshipNotes": "UMass Amherst automatically considers admitted first-year and international students for merit scholarships through the admissions process. International students are generally not eligible for most need-based aid, but they may qualify for a limited amount of academic-based awards of up to $16,000 per academic year and can also pursue school, college, and outside scholarships.",
+  "recommendationInputs": {
+    "admissionRateOverall": 0.5777,
+    "satAverageOverall": 1393,
+    "actMidpointCumulative": 31,
+    "undergraduateSize": 23694,
+    "schoolControl": "public",
+    "campusLocale": null,
+    "internationalAidPolicy": "merit_aid_available",
+    "hasNeedBasedAid": true,
+    "hasMeritAid": true,
+    "testingRequirements": {
+      "acceptedExams": [
+        "sat",
+        "act"
+      ],
+      "minimumSatTotal": null,
+      "minimumActComposite": null,
+      "latestSatTestDateNote": null,
+      "latestActTestDateNote": null,
+      "superscorePolicy": "unknown",
+      "writingEssayPolicy": "not_considered",
+      "scoreReportingPolicy": "official_required_upfront",
+      "middle50SatTotal": {
+        "low": 1330,
+        "high": 1490
+      },
+      "middle50ActComposite": {
+        "low": 29,
+        "high": 34
+      }
+    },
+    "averageNetPriceUsd": null,
+    "programFitTags": [
+      "research_intensive",
+      "humanities",
+      "social_sciences",
+      "life_sciences",
+      "public_policy"
+    ],
+    "programAdmissionModel": "unknown",
+    "applicationStrategyTags": [
+      "non_binding_early_action"
+    ]
+  },
+  "explanationInputs": {
+    "academicSelectivityBand": "moderately_selective",
+    "testingExpectation": "tests_not_required",
+    "englishPolicySummary": "minimum_scores_required",
+    "aidModel": "need_and_merit",
+    "applicationComplexity": "medium",
+    "deadlineUrgencyWindows": {
+      "earliestDeadline": "2026-11-05",
+      "latestMajorDeadline": "2027-01-15"
+    },
+    "internationalStudentConsiderations": [
+      "english_fluency_required",
+      "english_test_may_be_required",
+      "financial_certification_likely_required",
+      "merit_aid_possible",
+      "need_based_aid_available"
+    ],
+    "potentialFitTags": [
+      "large_public_environment",
+      "research_or_innovation_oriented",
+      "value_for_budget_conscious_students",
+      "strong_merit_aid_signal"
+    ],
+    "potentialRiskTags": [
+      "high_total_cost",
+      "limited_aid_for_international_students",
+      "early_deadline_pressure",
+      "complex_application_requirements"
+    ],
+    "actionableApplicationSteps": [
+      "prepare_early_round_strategy",
+      "prepare_english_testing_or_waiver_plan",
+      "prioritize_financial_aid_forms",
+      "build_supplemental_essay_plan"
+    ]
+  },
+  "fieldProvenance": {
+    "identity.schoolName": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.umass.edu/admissions/undergraduate-admissions/apply/first-year-students",
+        "excerpt": "First-Year Students"
+      }
+    ],
+    "applicationRounds": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.umass.edu/admissions/undergraduate-admissions/apply/first-year-students",
+        "excerpt": "Early-Action Application Deadline"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.umass.edu/admissions/undergraduate-admissions/apply/first-year-students",
+        "excerpt": "Regular Decision Application Deadline"
+      }
+    ],
+    "deadlinesByRound": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.umass.edu/admissions/undergraduate-admissions/apply/first-year-students",
+        "excerpt": "November 5"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.umass.edu/admissions/undergraduate-admissions/apply/first-year-students",
+        "excerpt": "January 15"
+      }
+    ],
+    "englishRequirements": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.umass.edu/admissions/undergraduate-admissions/connect/information-policies/english-language-proficiency",
+        "excerpt": "all international students must demonstrate English language proficiency"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.umass.edu/uww/sites/default/files/InternationalStudentInfo-Jan%2022%202010.pdf",
+        "excerpt": "The minimum score to qualify for admission is 80 (internet-based TOEFL) ... An IELTS score of 6.5 is also accepted."
+      }
+    ],
+    "testPolicy": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.umass.edu/admissions/undergraduate-admissions/apply/first-year-students/first-year-application-instructions",
+        "excerpt": "At UMass Amherst, standardized tests are optional for first-year entering applicants."
+      }
+    ],
+    "requiredMaterials": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.umass.edu/admissions/undergraduate-admissions/apply/first-year-students/first-year-application-instructions",
+        "excerpt": "The Common Application"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.umass.edu/admissions/undergraduate-admissions/apply/first-year-students/checklist-first-year-applicants",
+        "excerpt": "Common Application School Report and Official High School Transcript"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.umass.edu/admissions/undergraduate-admissions/apply/first-year-students/checklist-first-year-applicants",
+        "excerpt": "Academic Letter of Recommendation"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.umass.edu/admissions/undergraduate-admissions/apply/first-year-students/first-year-application-instructions",
+        "excerpt": "Essay"
+      }
+    ],
+    "tuitionAnnualUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://www.umass.edu/financialaid/undergraduate-costs",
+        "excerpt": "Out-state students ... Tuition & Fees 42,985"
+      }
+    ],
+    "estimatedCostOfAttendanceUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://www.umass.edu/financialaid/undergraduate-costs",
+        "excerpt": "Estimated Estimated Cost 63,709"
+      }
+    ],
+    "livingCostEstimateUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://www.umass.edu/financialaid/undergraduate-costs",
+        "excerpt": "Average Housing 9,772 ... Food 8,312"
+      }
+    ],
+    "scholarshipAvailabilityFlag": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://www.umass.edu/financialaid/undergraduate/eligibility/international-students",
+        "excerpt": "International undergraduate students are considered for merit scholarships by the Admissions Office as part of their admission to the university."
+      }
+    ],
+    "scholarshipNotes": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://www.umass.edu/financialaid/undergraduate/eligibility/international-students",
+        "excerpt": "International students are not eligible for most types of financial aid."
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://www.umass.edu/admissions/undergraduate-admissions/apply/international-students/financial-and-visa-information",
+        "excerpt": "qualified international first-year undergraduate students for a limited amount of academic-based financial awards of up to $16,000 USD per academic year"
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://www.umass.edu/financialaid/undergraduate/undergraduate-scholarships/umass-admissions-scholarships-and-awards",
+        "excerpt": "UMass Amherst Undergraduate Admissions offers the Dean’s Award to admitted first-year students from Massachusetts"
+      }
+    ],
+    "recommendationInputs.admissionRateOverall": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools?id=166629",
+        "excerpt": "\"latest.admissions.admission_rate.overall\": 0.5777"
+      }
+    ],
+    "recommendationInputs.satAverageOverall": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools?id=166629",
+        "excerpt": "\"latest.admissions.sat_scores.average.overall\": 1393"
+      }
+    ],
+    "recommendationInputs.actMidpointCumulative": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools?id=166629",
+        "excerpt": "\"latest.admissions.act_scores.midpoint.cumulative\": 31"
+      }
+    ],
+    "recommendationInputs.undergraduateSize": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools?id=166629",
+        "excerpt": "\"latest.student.size\": 23694"
+      }
+    ],
+    "recommendationInputs.schoolControl": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools?id=166629",
+        "excerpt": "\"school.ownership\": 1"
+      }
+    ],
+    "recommendationInputs.internationalAidPolicy": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://www.umass.edu/admissions/undergraduate-admissions/apply/international-students/financial-and-visa-information",
+        "excerpt": "qualified international first-year undergraduate students for a limited amount of academic-based financial awards"
+      }
+    ],
+    "recommendationInputs.testingRequirements": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.umass.edu/admissions/undergraduate-admissions/apply/first-year-students/first-year-application-instructions",
+        "excerpt": "At UMass Amherst, standardized tests are optional for first-year entering applicants."
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.umass.edu/admissions/undergraduate-admissions/apply/first-year-students/first-year-application-instructions",
+        "excerpt": "The SAT essay and ACT writing component are neither recommended nor required."
+      }
+    ],
+    "recommendationInputs.programFitTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.umass.edu/uair/media/103/download",
+        "excerpt": "only public Carnegie very high research"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.umass.edu/social-sciences/academics",
+        "excerpt": "The College of Social and Behavioral Sciences (SBS) is home to the School of Public Policy as well as nine departments"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.umass.edu/humanities-arts/academics",
+        "excerpt": "College of Humanities & Fine Arts"
+      }
+    ],
+    "recommendationInputs.applicationStrategyTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.umass.edu/admissions/undergraduate-admissions/apply/first-year-students",
+        "excerpt": "Application to UMass Amherst is through the Common App for non-binding Early Action and Regular Decision deadlines."
+      }
+    ],
+    "explanationInputs.testingExpectation": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.umass.edu/admissions/undergraduate-admissions/apply/first-year-students/first-year-application-instructions",
+        "excerpt": "At UMass Amherst, standardized tests are optional for first-year entering applicants."
+      }
+    ],
+    "explanationInputs.englishPolicySummary": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.umass.edu/admissions/undergraduate-admissions/connect/information-policies/english-language-proficiency",
+        "excerpt": "all international students must demonstrate English language proficiency"
+      }
+    ],
+    "explanationInputs.aidModel": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://www.umass.edu/financialaid/undergraduate",
+        "excerpt": "committed to offering need-based financial aid and merit funding"
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://www.umass.edu/financialaid/undergraduate/eligibility/international-students",
+        "excerpt": "International undergraduate students are considered for merit scholarships"
+      }
+    ],
+    "explanationInputs.applicationComplexity": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.umass.edu/admissions/undergraduate-admissions/apply/first-year-students/first-year-application-instructions",
+        "excerpt": "First-year applicants require at least one academic letter of recommendation."
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.umass.edu/admissions/undergraduate-admissions/apply/first-year-students/first-year-application-instructions",
+        "excerpt": "Essay"
+      }
+    ]
+  },
+  "quality": {
+    "status": "publishable",
+    "missingFields": [],
+    "warnings": [
+      "UMass Amherst publishes different cost tables by residency; this artifact uses the out-of-state 2026-27 budget as the single published cost figure.",
+      "UMass Amherst is test optional, so testingRequirements intentionally captures SAT/ACT context only for applicants who choose to submit scores."
+    ]
+  }
+}

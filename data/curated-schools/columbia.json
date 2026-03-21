@@ -1,0 +1,422 @@
+{
+  "schoolSlug": "columbia",
+  "lastVerifiedAt": "2026-03-21",
+  "identity": {
+    "schoolName": "Columbia University",
+    "city": "New York",
+    "state": "NY",
+    "officialAdmissionsUrl": "https://undergrad.admissions.columbia.edu/apply/firstyear"
+  },
+  "applicationRounds": [
+    "early_decision",
+    "regular_decision"
+  ],
+  "deadlinesByRound": {
+    "early_action": null,
+    "early_decision": "2026-11-01",
+    "regular_decision": "2027-01-01",
+    "rolling_admission": null,
+    "priority": null
+  },
+  "englishRequirements": {
+    "minimumIelts": 7.5,
+    "minimumToeflInternetBased": 105,
+    "waiverNotes": "English proficiency can also be demonstrated if English is your home language, if English has been your primary language of instruction throughout secondary school, or through qualifying SAT/ACT subsection scores."
+  },
+  "testPolicy": "test_optional",
+  "requiredMaterials": [
+    "common_application",
+    "coalition_application",
+    "questbridge_application",
+    "application_fee_or_fee_waiver",
+    "school_report",
+    "counselor_recommendation",
+    "teacher_recommendation_1",
+    "teacher_recommendation_2",
+    "official_transcript",
+    "midyear_transcript",
+    "personal_essay",
+    "supplemental_essays"
+  ],
+  "tuitionAnnualUsd": 70170,
+  "estimatedCostOfAttendanceUsd": 96990,
+  "livingCostEstimateUsd": 18680,
+  "scholarshipAvailabilityFlag": true,
+  "scholarshipNotes": "Columbia's undergraduate financial aid is need-based only, and Columbia meets 100% of demonstrated need for admitted first-year students. There are no merit scholarships for academics, athletics, or other talents.",
+  "recommendationInputs": {
+    "admissionRateOverall": 0.0345,
+    "satAverageOverall": 1553,
+    "actMidpointCumulative": 35,
+    "undergraduateSize": 7755,
+    "schoolControl": "private_nonprofit",
+    "campusLocale": "urban",
+    "internationalAidPolicy": "meets_full_demonstrated_need_if_eligible",
+    "hasNeedBasedAid": true,
+    "hasMeritAid": false,
+    "testingRequirements": {
+      "acceptedExams": [
+        "sat",
+        "act"
+      ],
+      "minimumSatTotal": null,
+      "minimumActComposite": null,
+      "latestSatTestDateNote": "Standardized tests may be taken as late as November for Early Decision and February for Regular Decision.",
+      "latestActTestDateNote": "Standardized tests may be taken as late as November for Early Decision and February for Regular Decision.",
+      "superscorePolicy": "both",
+      "writingEssayPolicy": "optional",
+      "scoreReportingPolicy": "self_report_allowed",
+      "middle50SatTotal": {
+        "low": 1510,
+        "high": 1560
+      },
+      "middle50ActComposite": {
+        "low": 34,
+        "high": 36
+      }
+    },
+    "averageNetPriceUsd": null,
+    "programFitTags": [
+      "engineering",
+      "humanities",
+      "social_sciences",
+      "life_sciences",
+      "research_intensive"
+    ],
+    "programAdmissionModel": "separate_school_application",
+    "applicationStrategyTags": [
+      "binding_early_decision"
+    ]
+  },
+  "explanationInputs": {
+    "academicSelectivityBand": "ultra_selective",
+    "testingExpectation": "scores_considered",
+    "englishPolicySummary": "minimum_scores_required",
+    "aidModel": "need_based_only",
+    "applicationComplexity": "high",
+    "deadlineUrgencyWindows": {
+      "earliestDeadline": "2026-11-01",
+      "latestMajorDeadline": "2027-01-01"
+    },
+    "internationalStudentConsiderations": [
+      "english_test_may_be_required",
+      "financial_certification_likely_required",
+      "need_aware_or_limited_aid_possible"
+    ],
+    "potentialFitTags": [
+      "urban_access",
+      "research_or_innovation_oriented",
+      "strong_need_based_aid_signal",
+      "strong_for_liberal_arts_or_humanities_students"
+    ],
+    "potentialRiskTags": [
+      "extremely_low_admission_rate",
+      "high_total_cost",
+      "limited_merit_aid",
+      "complex_application_requirements"
+    ],
+    "actionableApplicationSteps": [
+      "prepare_early_round_strategy",
+      "complete_standardized_testing_if_required",
+      "prepare_teacher_recommendations_early",
+      "prepare_counselor_documents_early",
+      "budget_for_need_based_aid_process",
+      "build_supplemental_essay_plan"
+    ]
+  },
+  "fieldProvenance": {
+    "identity.schoolName": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://undergrad.admissions.columbia.edu/apply/firstyear",
+        "excerpt": "First-Year Applicants | Columbia Undergraduate Admissions"
+      }
+    ],
+    "identity.city": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.city\": \"New York\""
+      }
+    ],
+    "identity.state": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.state\": \"NY\""
+      }
+    ],
+    "identity.officialAdmissionsUrl": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://undergrad.admissions.columbia.edu/apply/firstyear",
+        "excerpt": "First-Year Applicants"
+      }
+    ],
+    "applicationRounds": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://undergrad.admissions.columbia.edu/apply/firstyear",
+        "excerpt": "November 1 | Early Decision ... January 1 | Regular Decision"
+      }
+    ],
+    "deadlinesByRound": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://undergrad.admissions.columbia.edu/apply/firstyear",
+        "excerpt": "November 1 | Early Decision ... January 1 | Regular Decision"
+      }
+    ],
+    "englishRequirements": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://undergrad.admissions.columbia.edu/apply/international/english-proficiency",
+        "excerpt": "A minimum score of 7.5 on the IELTS ... A minimum score of 105 on the internet-based test (iBT) of the TOEFL"
+      }
+    ],
+    "testPolicy": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://undergrad.admissions.columbia.edu/apply/process/testing",
+        "excerpt": "Columbia is test-optional for first-year applicants to Columbia College or Columbia Engineering."
+      }
+    ],
+    "requiredMaterials": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://undergrad.admissions.columbia.edu/apply/firstyear",
+        "excerpt": "Columbia accepts either the Coalition Application on Scoir or the Common Application"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://undergrad.admissions.columbia.edu/apply/firstyear",
+        "excerpt": "Columbia requires two teacher recommendations"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://undergrad.admissions.columbia.edu/apply/firstyear",
+        "excerpt": "An $85 nonrefundable application fee is required"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://undergrad.admissions.columbia.edu/contact",
+        "excerpt": "We will accept self-reported ACT and SAT scores on the testing section of the application"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://undergrad.admissions.columbia.edu/apply/firstyear",
+        "excerpt": "Secondary School Report"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://undergrad.admissions.columbia.edu/apply/firstyear/early-decision",
+        "excerpt": "You must submit a midyear school report and eventually a final transcript"
+      }
+    ],
+    "tuitionAnnualUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://cc-seas.financialaid.columbia.edu/eligibility/facts",
+        "excerpt": "Tuition $70,170"
+      }
+    ],
+    "estimatedCostOfAttendanceUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://cc-seas.financialaid.columbia.edu/eligibility/facts",
+        "excerpt": "Total Budget $96,990"
+      }
+    ],
+    "livingCostEstimateUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://cc-seas.financialaid.columbia.edu/eligibility/facts",
+        "excerpt": "Food $6,780 and Housing $11,900"
+      }
+    ],
+    "scholarshipAvailabilityFlag": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://cc-seas.financialaid.columbia.edu/eligibility/facts",
+        "excerpt": "Columbia College and Columbia Engineering awards more than $225 million annually in scholarships and grants"
+      }
+    ],
+    "scholarshipNotes": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://undergrad.admissions.columbia.edu/apply/international/aid",
+        "excerpt": "All financial aid at Columbia is need-based, and there are no merit scholarships awarded for academics, athletics or other talents."
+      }
+    ],
+    "recommendationInputs.admissionRateOverall": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.admission_rate.overall\": 0.0345"
+      }
+    ],
+    "recommendationInputs.satAverageOverall": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.sat_scores.average.overall\": 1553"
+      }
+    ],
+    "recommendationInputs.actMidpointCumulative": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.act_scores.midpoint.cumulative\": 35"
+      }
+    ],
+    "recommendationInputs.undergraduateSize": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.student.size\": 7755"
+      }
+    ],
+    "recommendationInputs.schoolControl": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.ownership\": 2"
+      }
+    ],
+    "recommendationInputs.campusLocale": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.locale\": 11"
+      }
+    ],
+    "recommendationInputs.internationalAidPolicy": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://undergrad.admissions.columbia.edu/apply/international/aid",
+        "excerpt": "Columbia is committed to meeting 100% of the demonstrated need of all admitted first-year students, regardless of citizenship."
+      }
+    ],
+    "recommendationInputs.hasNeedBasedAid": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://undergrad.admissions.columbia.edu/apply/international/aid",
+        "excerpt": "All financial aid at Columbia is need-based"
+      }
+    ],
+    "recommendationInputs.hasMeritAid": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://undergrad.admissions.columbia.edu/apply/international/aid",
+        "excerpt": "there are no merit scholarships awarded for academics, athletics or other talents"
+      }
+    ],
+    "recommendationInputs.programFitTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://undergrad.admissions.columbia.edu/academics/college/majors",
+        "excerpt": "Columbia College students choose from more than 80 areas of study"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://undergrad.admissions.columbia.edu/academics/engineering/majors",
+        "excerpt": "Columbia Engineering students"
+      }
+    ],
+    "recommendationInputs.programAdmissionModel": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://undergrad.admissions.columbia.edu/academics/college/majors",
+        "excerpt": "Columbia College students choose from more than 80 areas of study"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://undergrad.admissions.columbia.edu/academics/engineering/majors",
+        "excerpt": "Columbia Engineering students"
+      }
+    ],
+    "recommendationInputs.applicationStrategyTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://undergrad.admissions.columbia.edu/apply/firstyear/early-decision",
+        "excerpt": "binding commitment to attend if admitted"
+      }
+    ],
+    "recommendationInputs.testingRequirements": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://undergrad.admissions.columbia.edu/apply/process/testing",
+        "excerpt": "Columbia is test-optional for first-year applicants to Columbia College or Columbia Engineering."
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://undergrad.admissions.columbia.edu/apply/process/testing",
+        "excerpt": "You may choose to take either the ACT or the SAT."
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://undergrad.admissions.columbia.edu/apply/process/testing",
+        "excerpt": "You may take standardized tests as late as November for Early Decision and February for Regular Decision."
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://undergrad.admissions.columbia.edu/apply/process/testing",
+        "excerpt": "If you submit results from multiple test sittings, you will be evaluated on the highest score you received in any individual section of that test"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://undergrad.admissions.columbia.edu/apply/process/testing",
+        "excerpt": "You may self-report your scores on your application"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://undergrad.admissions.columbia.edu/sites/default/files/2025-08/Columbia%20Class%20of%202029%20Profile.pdf",
+        "excerpt": "the score range for the middle 50% of enrolling students who chose to submit scores was 1510–1560 on the SAT and 34–36 on the ACT"
+      }
+    ],
+    "explanationInputs.academicSelectivityBand": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.admission_rate.overall\": 0.0345"
+      }
+    ],
+    "explanationInputs.testingExpectation": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://undergrad.admissions.columbia.edu/apply/process/testing",
+        "excerpt": "Columbia is test-optional for first-year applicants"
+      }
+    ],
+    "explanationInputs.englishPolicySummary": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://undergrad.admissions.columbia.edu/apply/international/english-proficiency",
+        "excerpt": "A minimum score of 105 on the internet-based test (iBT) of the TOEFL is necessary for admission to Columbia."
+      }
+    ],
+    "explanationInputs.aidModel": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://undergrad.admissions.columbia.edu/apply/international/aid",
+        "excerpt": "All financial aid at Columbia is need-based"
+      }
+    ],
+    "explanationInputs.applicationComplexity": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://undergrad.admissions.columbia.edu/apply/firstyear",
+        "excerpt": "Columbia requires two teacher recommendations"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://undergrad.admissions.columbia.edu/apply/process/testing",
+        "excerpt": "You may self-report your scores on your application"
+      }
+    ]
+  },
+  "quality": {
+    "status": "publishable",
+    "missingFields": [],
+    "warnings": []
+  }
+}

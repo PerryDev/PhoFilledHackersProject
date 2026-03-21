@@ -1,0 +1,330 @@
+{
+  "schoolSlug": "stanford",
+  "lastVerifiedAt": "2026-03-21",
+  "identity": {
+    "schoolName": "Stanford University",
+    "city": "Stanford",
+    "state": "CA",
+    "officialAdmissionsUrl": "https://admission.stanford.edu/"
+  },
+  "applicationRounds": [
+    "early_action",
+    "regular_decision"
+  ],
+  "deadlinesByRound": {
+    "early_action": "2026-11-01",
+    "early_decision": null,
+    "regular_decision": "2027-01-05",
+    "rolling_admission": null,
+    "priority": null
+  },
+  "englishRequirements": {
+    "minimumIelts": null,
+    "minimumToeflInternetBased": null,
+    "waiverNotes": "English proficiency exams are not required, but fluency in English is a prerequisite for admission."
+  },
+  "testPolicy": "required",
+  "requiredMaterials": [
+    "common_application",
+    "application_fee_or_fee_waiver",
+    "sat_or_act",
+    "school_report",
+    "counselor_recommendation",
+    "official_transcript",
+    "midyear_transcript",
+    "teacher_recommendation_1",
+    "teacher_recommendation_2",
+    "personal_essay",
+    "supplemental_essays"
+  ],
+  "tuitionAnnualUsd": 67731,
+  "estimatedCostOfAttendanceUsd": 97545,
+  "livingCostEstimateUsd": 22944,
+  "scholarshipAvailabilityFlag": false,
+  "scholarshipNotes": "Stanford scholarship is awarded on the basis of financial need. Stanford does not offer merit scholarships outside of a limited number of athletic scholarships.",
+  "recommendationInputs": {
+    "admissionRateOverall": 0.0391,
+    "satAverageOverall": 1553,
+    "actMidpointCumulative": 35,
+    "undergraduateSize": 7841,
+    "averageNetPriceUsd": 12136,
+    "schoolControl": "private_nonprofit",
+    "campusLocale": null,
+    "internationalAidPolicy": "meets_full_demonstrated_need_if_eligible",
+    "hasNeedBasedAid": true,
+    "hasMeritAid": false,
+    "programFitTags": [
+      "engineering",
+      "computer_science",
+      "research_intensive"
+    ],
+    "programAdmissionModel": "open",
+    "applicationStrategyTags": [
+      "restrictive_early_action"
+    ],
+    "testingRequirements": {
+      "acceptedExams": [
+        "sat",
+        "act"
+      ],
+      "minimumSatTotal": null,
+      "minimumActComposite": null,
+      "latestSatTestDateNote": "by the end of October for Restrictive Early Action and by the end of December for Regular Decision",
+      "latestActTestDateNote": "by the end of September for Restrictive Early Action and by the end of December for Regular Decision",
+      "superscorePolicy": "both",
+      "writingEssayPolicy": "optional",
+      "scoreReportingPolicy": "official_required_after_admit",
+      "middle50SatTotal": {
+        "low": 1510,
+        "high": 1570
+      },
+      "middle50ActComposite": {
+        "low": 34,
+        "high": 35
+      }
+    }
+  },
+  "explanationInputs": {
+    "academicSelectivityBand": "ultra_selective",
+    "testingExpectation": "high_scores_expected",
+    "englishPolicySummary": "english_fluency_required_no_exam_minimum_listed",
+    "aidModel": "need_based_only",
+    "applicationComplexity": "high",
+    "deadlineUrgencyWindows": {
+      "earliestDeadline": "2026-11-01",
+      "latestMajorDeadline": "2027-01-05"
+    },
+    "internationalStudentConsiderations": [
+      "english_fluency_required",
+      "need_aware_or_limited_aid_possible",
+      "need_based_aid_available"
+    ],
+    "potentialFitTags": [
+      "strong_for_high_achieving_stem_students",
+      "research_or_innovation_oriented",
+      "smaller_private_environment",
+      "strong_need_based_aid_signal"
+    ],
+    "potentialRiskTags": [
+      "extremely_low_admission_rate",
+      "high_total_cost",
+      "limited_merit_aid",
+      "complex_application_requirements"
+    ],
+    "actionableApplicationSteps": [
+      "prepare_early_round_strategy",
+      "complete_standardized_testing_if_required",
+      "prepare_teacher_recommendations_early",
+      "prepare_counselor_documents_early",
+      "budget_for_need_based_aid_process",
+      "build_supplemental_essay_plan"
+    ]
+  },
+  "fieldProvenance": {
+    "identity.schoolName": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.stanford.edu/",
+        "excerpt": "Undergraduate Admission : Stanford University"
+      }
+    ],
+    "applicationRounds": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.stanford.edu/apply/first-year/",
+        "excerpt": "Restrictive Early Action ... Regular Decision"
+      }
+    ],
+    "deadlinesByRound": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.stanford.edu/apply/first-year/",
+        "excerpt": "Standard Application Deadline ... November 1 ... January 5"
+      }
+    ],
+    "englishRequirements": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.stanford.edu/apply/international/index.html",
+        "excerpt": "No, we do not require any English proficiency exams ... fluency in English is a prerequisite"
+      }
+    ],
+    "testPolicy": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.stanford.edu/apply/first-year/testing.html",
+        "excerpt": "ACT or SAT scores are required for first-year and transfer students."
+      }
+    ],
+    "requiredMaterials": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.stanford.edu/apply/first-year/",
+        "excerpt": "Common Application ... ACT or SAT ... School Report ... Official transcript(s) ... two teachers"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.stanford.edu/apply/first-year/apply.html",
+        "excerpt": "In addition to the personal essay, we also require the Stanford Questions"
+      }
+    ],
+    "tuitionAnnualUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://financialaid.stanford.edu/undergrad/budget/",
+        "excerpt": "Tuition ... 67,731"
+      }
+    ],
+    "estimatedCostOfAttendanceUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://financialaid.stanford.edu/undergrad/budget/",
+        "excerpt": "Total $97,545"
+      }
+    ],
+    "livingCostEstimateUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://financialaid.stanford.edu/undergrad/budget/",
+        "excerpt": "Housing and Food 22,944"
+      }
+    ],
+    "scholarshipAvailabilityFlag": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://financialaid.stanford.edu/undergrad/types/index.html",
+        "excerpt": "All university scholarship funds are awarded on the basis of financial need"
+      }
+    ],
+    "scholarshipNotes": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admission.stanford.edu/apply/international/index.html",
+        "excerpt": "We do not offer merit scholarships outside of a limited number of athletic scholarships."
+      }
+    ],
+    "recommendationInputs.admissionRateOverall": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.admission_rate.overall\": 0.0391"
+      }
+    ],
+    "recommendationInputs.satAverageOverall": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.sat_scores.average.overall\": 1553"
+      }
+    ],
+    "recommendationInputs.actMidpointCumulative": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.act_scores.midpoint.cumulative\": 35"
+      }
+    ],
+    "recommendationInputs.undergraduateSize": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.student.size\": 7841"
+      }
+    ],
+    "recommendationInputs.averageNetPriceUsd": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.cost.avg_net_price.overall\": 12136"
+      }
+    ],
+    "recommendationInputs.schoolControl": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.ownership\": 2"
+      }
+    ],
+    "recommendationInputs.applicationStrategyTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.stanford.edu/apply/first-year/",
+        "excerpt": "Restrictive Early Action ... Regular Decision"
+      }
+    ],
+    "recommendationInputs.programFitTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://engineering.stanford.edu/students-academics/academics/undergraduate-degree-programs",
+        "excerpt": "The School of Engineering is home to 10 departmental and six interdepartmental major programs, including Computer Science."
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.cs.stanford.edu/academics",
+        "excerpt": "Computer Science is one of the most popular majors at Stanford, and its department is a center for research and education."
+      }
+    ],
+    "recommendationInputs.programAdmissionModel": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.stanford.edu/apply/first-year/apply.html",
+        "excerpt": "When you apply to Stanford, you apply to the university as a whole, not to a particular major, department or school."
+      }
+    ],
+    "recommendationInputs.testingRequirements": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.stanford.edu/apply/first-year/testing.html",
+        "excerpt": "There are no minimum test scores required ... SAT scores ... between 1510 and 1570 ... ACT scores ... between 34 and 35."
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.stanford.edu/apply/first-year/testing.html",
+        "excerpt": "Latest Possible ACT Test Sitting: by the end of September ... Latest Possible SAT Test Sitting: by the end of October"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.stanford.edu/apply/first-year/testing.html",
+        "excerpt": "For the ACT, you may report the calculated ACT superscore ... For the SAT, we will superscore"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.stanford.edu/apply/first-year/testing.html",
+        "excerpt": "The writing/essay sections of the ACT or SAT are optional ... official scores ... will be required if you enroll."
+      }
+    ],
+    "explanationInputs.testingExpectation": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.stanford.edu/apply/first-year/testing.html",
+        "excerpt": "middle 50 percent scored between 1510 and 1570 ... ACT ... between 34 and 35"
+      }
+    ],
+    "explanationInputs.aidModel": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://financialaid.stanford.edu/undergrad/types/index.html",
+        "excerpt": "All university scholarship funds are awarded on the basis of financial need"
+      }
+    ],
+    "explanationInputs.applicationComplexity": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.stanford.edu/apply/first-year/",
+        "excerpt": "Common Application ... ACT or SAT ... School Report ... transcript(s) ... two teachers"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.stanford.edu/apply/first-year/apply.html",
+        "excerpt": "personal essay ... Stanford Questions ... three topics"
+      }
+    ]
+  },
+  "quality": {
+    "status": "publishable",
+    "missingFields": [],
+    "warnings": [
+      "campusLocale is still null because it was not sourced in this first artifact pass."
+    ]
+  }
+}

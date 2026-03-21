@@ -1,0 +1,500 @@
+{
+  "schoolSlug": "emory",
+  "lastVerifiedAt": "2026-03-21",
+  "identity": {
+    "schoolName": "Emory University",
+    "city": "Atlanta",
+    "state": "GA",
+    "officialAdmissionsUrl": "https://apply.emory.edu/apply/first-year/index.html"
+  },
+  "applicationRounds": [
+    "early_decision",
+    "regular_decision"
+  ],
+  "deadlinesByRound": {
+    "early_action": null,
+    "early_decision": "2025-11-01",
+    "regular_decision": "2026-01-01",
+    "rolling_admission": null,
+    "priority": null
+  },
+  "englishRequirements": {
+    "minimumIelts": 7.5,
+    "minimumToeflInternetBased": 100,
+    "waiverNotes": "Applicants who do not use English as their primary language must demonstrate the ability to succeed academically in a rigorous English-speaking classroom. Emory accepts SAT English evidence, ACT English evidence, four years of English-instruction schooling, or additional English proficiency tests such as TOEFL, IELTS, or Duolingo when needed."
+  },
+  "testPolicy": "test_optional",
+  "requiredMaterials": [
+    "common_application",
+    "emory_specific_short_answer_questions",
+    "official_high_school_transcript",
+    "secondary_school_report",
+    "two_academic_recommendations",
+    "midyear_report_and_transcript",
+    "application_fee_or_fee_waiver",
+    "english_proficiency_proof_if_needed",
+    "financial_certification_if_international"
+  ],
+  "tuitionAnnualUsd": 67080,
+  "estimatedCostOfAttendanceUsd": 97948,
+  "livingCostEstimateUsd": 22406,
+  "scholarshipAvailabilityFlag": true,
+  "scholarshipNotes": "Emory meets 100% of demonstrated financial need for first-degree domestic students, offers need-based aid to a select group of international students, and also awards merit-based scholar programs such as Woodruff Scholars and Goizueta Scholars.",
+  "recommendationInputs": {
+    "admissionRateOverall": 0.111,
+    "satAverageOverall": 1507,
+    "actMidpointCumulative": 33,
+    "undergraduateSize": 7275,
+    "schoolControl": "private_nonprofit",
+    "campusLocale": "Atlanta",
+    "internationalAidPolicy": "need_and_merit_available",
+    "hasNeedBasedAid": true,
+    "hasMeritAid": true,
+    "testingRequirements": {
+      "acceptedExams": [
+        "sat",
+        "act"
+      ],
+      "minimumSatTotal": null,
+      "minimumActComposite": null,
+      "latestSatTestDateNote": "For Early Decision I, November test dates typically arrive in time. For Early Decision II, exams must be taken and sent before January 1. For Regular Decision, January exams are typically considered, but February or later cannot be considered.",
+      "latestActTestDateNote": "For Early Decision I, November test dates typically arrive in time. For Early Decision II, exams must be taken and sent before January 1. For Regular Decision, January exams are typically considered, but February or later cannot be considered.",
+      "superscorePolicy": "both",
+      "writingEssayPolicy": "optional",
+      "scoreReportingPolicy": "self_report_allowed",
+      "middle50SatTotal": {
+        "low": null,
+        "high": null
+      },
+      "middle50ActComposite": {
+        "low": null,
+        "high": null
+      }
+    },
+    "averageNetPriceUsd": null,
+    "programFitTags": [],
+    "programAdmissionModel": "open",
+    "applicationStrategyTags": [
+      "binding_early_decision"
+    ]
+  },
+  "explanationInputs": {
+    "academicSelectivityBand": "highly_selective",
+    "testingExpectation": "scores_considered",
+    "englishPolicySummary": "minimum_scores_required",
+    "aidModel": "need_and_merit",
+    "applicationComplexity": "high",
+    "deadlineUrgencyWindows": {
+      "earliestDeadline": "2025-11-01",
+      "latestMajorDeadline": "2026-01-01"
+    },
+    "internationalStudentConsiderations": [
+      "english_fluency_required",
+      "english_test_may_be_required",
+      "financial_certification_likely_required",
+      "need_based_aid_available",
+      "merit_aid_possible"
+    ],
+    "potentialFitTags": [
+      "research_or_innovation_oriented",
+      "urban_access",
+      "smaller_private_environment",
+      "strong_need_based_aid_signal"
+    ],
+    "potentialRiskTags": [
+      "high_total_cost",
+      "early_deadline_pressure",
+      "complex_application_requirements",
+      "limited_aid_for_international_students"
+    ],
+    "actionableApplicationSteps": [
+      "prepare_early_round_strategy",
+      "prepare_regular_decision_timeline",
+      "prepare_english_testing_or_waiver_plan",
+      "prepare_teacher_recommendations_early",
+      "prepare_counselor_documents_early",
+      "budget_for_need_based_aid_process",
+      "prioritize_financial_aid_forms",
+      "build_supplemental_essay_plan"
+    ]
+  },
+  "fieldProvenance": {
+    "identity.officialAdmissionsUrl": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://apply.emory.edu/apply/first-year/index.html",
+        "excerpt": "First-Year Applicants | Emory University | Atlanta GA"
+      }
+    ],
+    "applicationRounds": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://apply.emory.edu/apply/first-year/index.html",
+        "excerpt": "First-year applicants can apply Early Decision I, Early Decision II, or Regular Decision."
+      }
+    ],
+    "deadlinesByRound": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://apply.emory.edu/apply/first-year/plans-deadlines/index.html",
+        "excerpt": "Early Decision I November 1, 2025 ... Early Decision II January 1, 2026 ... Regular Decision January 1, 2026"
+      }
+    ],
+    "englishRequirements.minimumIelts": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://apply.emory.edu/apply/first-year/tips/standardized-exam-policies.html",
+        "excerpt": "an overall band score of 7.5 on the IELTS is expected"
+      }
+    ],
+    "englishRequirements.minimumToeflInternetBased": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://apply.emory.edu/apply/first-year/tips/standardized-exam-policies.html",
+        "excerpt": "A score of 100 on the internet-based TOEFL ... is expected"
+      }
+    ],
+    "englishRequirements.waiverNotes": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://apply.emory.edu/apply/first-year/tips/standardized-exam-policies.html",
+        "excerpt": "Applicants who do not use English as their primary language must demonstrate the ability to be successful in a rigorous English-speaking environment."
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://apply.emory.edu/apply/international-applicants.html",
+        "excerpt": "international students must complete all the application requirements for first-year admission. Additionally, they must demonstrate English proficiency and provide financial certification."
+      }
+    ],
+    "testPolicy": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://apply.emory.edu/apply/first-year/tips/standardized-exam-policies.html",
+        "excerpt": "Emory University is test optional for first-year students who would start in Fall 2026. SAT/ACT scores are not required."
+      }
+    ],
+    "requiredMaterials": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://apply.emory.edu/apply/first-year/index.html",
+        "excerpt": "Common Application ... Personal Statement ... Emory-Specific Short Answer Questions ... Official High School Transcript ... Secondary School Report ... Two Academic Recommendations ... Midyear Report and Transcript ... Application Fee or Application Fee Waiver"
+      }
+    ],
+    "tuitionAnnualUsd": [
+      {
+        "sourceKind": "official_tuition",
+        "sourceUrl": "https://studentaccounts.emory.edu/_includes/documents/tuition_rates_25-26.pdf",
+        "excerpt": "Tuition $63,400 $67,080"
+      }
+    ],
+    "estimatedCostOfAttendanceUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://studentaid.emory.edu/_includes/documents/sections/undergraduate/apply/cost-of-attendance-worksheet.pdf",
+        "excerpt": "TOTAL (ESTIMATED) $48,974 *$97,948"
+      }
+    ],
+    "livingCostEstimateUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://studentaid.emory.edu/_includes/documents/sections/undergraduate/apply/cost-of-attendance-worksheet.pdf",
+        "excerpt": "Housing $13,222 ... Food $9,184"
+      }
+    ],
+    "scholarshipAvailabilityFlag": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://apply.emory.edu/financial-aid/index.html",
+        "excerpt": "Need-Based and Merit-Based Aid"
+      }
+    ],
+    "scholarshipNotes": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://apply.emory.edu/financial-aid/index.html",
+        "excerpt": "Emory meets 100% of demonstrated financial need for first-degree domestic students."
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://apply.emory.edu/financial-aid/index.html",
+        "excerpt": "Each year we offer need-based financial aid packages to a select group of international students."
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://apply.emory.edu/financial-aid/index.html",
+        "excerpt": "Scholar Programs include: Woodruff Scholars and Goizueta Scholars."
+      }
+    ],
+    "recommendationInputs.schoolControl": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools?api_key=DEMO_KEY&school.name=Emory%20University&fields=id,school.name,school.city,school.state,school.ownership,school.locale,latest.student.size,latest.admissions.admission_rate.overall,latest.admissions.sat_scores.average.overall,latest.admissions.act_scores.midpoint.cumulative&per_page=5",
+        "excerpt": "\"school.ownership\": 2"
+      }
+    ],
+    "recommendationInputs.programAdmissionModel": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://apply.emory.edu/apply/first-year/index.html",
+        "excerpt": "First-year applicants can apply Early Decision I, Early Decision II, or Regular Decision."
+      }
+    ],
+    "recommendationInputs.applicationStrategyTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://apply.emory.edu/apply/first-year/index.html",
+        "excerpt": "First-year applicants can apply Early Decision I, Early Decision II, or Regular Decision."
+      }
+    ],
+    "recommendationInputs.internationalAidPolicy": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://apply.emory.edu/financial-aid/index.html",
+        "excerpt": "Each year we offer need-based financial aid packages to a select group of international students."
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://apply.emory.edu/apply/international-applicants.html",
+        "excerpt": "Students ... must demonstrate English proficiency and provide financial certification."
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://apply.emory.edu/financial-aid/index.html",
+        "excerpt": "Emory's Scholar Programs include ... Woodruff Scholars and Goizueta Scholars."
+      }
+    ],
+    "recommendationInputs.hasNeedBasedAid": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://apply.emory.edu/financial-aid/index.html",
+        "excerpt": "Emory meets 100% of demonstrated financial need for first-degree domestic students."
+      }
+    ],
+    "recommendationInputs.hasMeritAid": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://apply.emory.edu/financial-aid/index.html",
+        "excerpt": "Scholar Programs include: Woodruff Scholars and Goizueta Scholars."
+      }
+    ],
+    "recommendationInputs.testingRequirements.acceptedExams": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://apply.emory.edu/apply/first-year/tips/standardized-exam-policies.html",
+        "excerpt": "Emory University accepts both the Classic ACT and the updated Core ACT ... SAT/ACT scores are not required."
+      }
+    ],
+    "recommendationInputs.testingRequirements.minimumSatTotal": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://apply.emory.edu/apply/first-year/tips/standardized-exam-policies.html",
+        "excerpt": "SAT/ACT scores are not required."
+      }
+    ],
+    "recommendationInputs.testingRequirements.minimumActComposite": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://apply.emory.edu/apply/first-year/tips/standardized-exam-policies.html",
+        "excerpt": "SAT/ACT scores are not required."
+      }
+    ],
+    "recommendationInputs.testingRequirements.latestSatTestDateNote": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://apply.emory.edu/apply/first-year/tips/standardized-exam-policies.html",
+        "excerpt": "Early Decision I November 1 ... Typically, scores from November exams arrive in time ... Early Decision II January 1 ... Exams must be taken and sent prior to the January 1 deadline ... Regular Decision January 1 ... Scores from February or later cannot be considered."
+      }
+    ],
+    "recommendationInputs.testingRequirements.latestActTestDateNote": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://apply.emory.edu/apply/first-year/tips/standardized-exam-policies.html",
+        "excerpt": "Early Decision I November 1 ... Typically, scores from November exams arrive in time ... Early Decision II January 1 ... Exams must be taken and sent prior to the January 1 deadline ... Regular Decision January 1 ... Scores from February or later cannot be considered."
+      }
+    ],
+    "recommendationInputs.testingRequirements.superscorePolicy": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://apply.emory.edu/apply/first-year/tips/standardized-exam-policies.html",
+        "excerpt": "Emory superscores both the SAT and the ACT."
+      }
+    ],
+    "recommendationInputs.testingRequirements.writingEssayPolicy": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://apply.emory.edu/apply/first-year/tips/standardized-exam-policies.html",
+        "excerpt": "The writing portion is not required by Emory University."
+      }
+    ],
+    "recommendationInputs.testingRequirements.scoreReportingPolicy": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://apply.emory.edu/apply/first-year/tips/standardized-exam-policies.html",
+        "excerpt": "Applicants who choose to submit test scores may submit either self-reported or official standardized test scores."
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://apply.emory.edu/apply/first-year/tips/standardized-exam-policies.html",
+        "excerpt": "students who are admitted on the basis of self-reported test scores and choose to enroll at Emory University will be required to submit official test scores."
+      }
+    ],
+    "recommendationInputs.testingRequirements.middle50SatTotal": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://apply.emory.edu/apply/first-year/tips/standardized-exam-policies.html",
+        "excerpt": "Emory does not publish Emory-wide SAT middle-50 ranges on the official sources used here."
+      }
+    ],
+    "recommendationInputs.testingRequirements.middle50ActComposite": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://apply.emory.edu/apply/first-year/tips/standardized-exam-policies.html",
+        "excerpt": "Emory does not publish Emory-wide ACT middle-50 ranges on the official sources used here."
+      }
+    ],
+    "recommendationInputs.admissionRateOverall": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools?api_key=DEMO_KEY&school.name=Emory%20University&fields=id,school.name,school.city,school.state,school.ownership,school.locale,latest.student.size,latest.admissions.admission_rate.overall,latest.admissions.sat_scores.average.overall,latest.admissions.act_scores.midpoint.cumulative&per_page=5",
+        "excerpt": "\"latest.admissions.admission_rate.overall\": 0.111"
+      }
+    ],
+    "recommendationInputs.satAverageOverall": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools?api_key=DEMO_KEY&school.name=Emory%20University&fields=id,school.name,school.city,school.state,school.ownership,school.locale,latest.student.size,latest.admissions.admission_rate.overall,latest.admissions.sat_scores.average.overall,latest.admissions.act_scores.midpoint.cumulative&per_page=5",
+        "excerpt": "\"latest.admissions.sat_scores.average.overall\": 1507"
+      }
+    ],
+    "recommendationInputs.actMidpointCumulative": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools?api_key=DEMO_KEY&school.name=Emory%20University&fields=id,school.name,school.city,school.state,school.ownership,school.locale,latest.student.size,latest.admissions.admission_rate.overall,latest.admissions.sat_scores.average.overall,latest.admissions.act_scores.midpoint.cumulative&per_page=5",
+        "excerpt": "\"latest.admissions.act_scores.midpoint.cumulative\": 33"
+      }
+    ],
+    "recommendationInputs.undergraduateSize": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools?api_key=DEMO_KEY&school.name=Emory%20University&fields=id,school.name,school.city,school.state,school.ownership,school.locale,latest.student.size,latest.admissions.admission_rate.overall,latest.admissions.sat_scores.average.overall,latest.admissions.act_scores.midpoint.cumulative&per_page=5",
+        "excerpt": "\"latest.student.size\": 7275"
+      }
+    ],
+    "recommendationInputs.campusLocale": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools?api_key=DEMO_KEY&school.name=Emory%20University&fields=id,school.name,school.city,school.state,school.ownership,school.locale,latest.student.size,latest.admissions.admission_rate.overall,latest.admissions.sat_scores.average.overall,latest.admissions.act_scores.midpoint.cumulative&per_page=5",
+        "excerpt": "\"school.locale\": 11"
+      }
+    ],
+    "explanationInputs.academicSelectivityBand": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools?api_key=DEMO_KEY&school.name=Emory%20University&fields=id,school.name,school.city,school.state,school.ownership,school.locale,latest.student.size,latest.admissions.admission_rate.overall,latest.admissions.sat_scores.average.overall,latest.admissions.act_scores.midpoint.cumulative&per_page=5",
+        "excerpt": "Admission rate 0.111 with SAT average 1507 and ACT midpoint 33"
+      }
+    ],
+    "explanationInputs.testingExpectation": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://apply.emory.edu/apply/first-year/tips/standardized-exam-policies.html",
+        "excerpt": "Emory University is test optional for first-year students who would start in Fall 2026. SAT/ACT scores are not required. If submitted, test scores will be reviewed as a demonstration of the applicant's academic preparation."
+      }
+    ],
+    "explanationInputs.englishPolicySummary": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://apply.emory.edu/apply/first-year/tips/standardized-exam-policies.html",
+        "excerpt": "Applicants who do not use English as their primary language must demonstrate the ability to be successful in a rigorous English-speaking environment. Applicants must be fluent in written and spoken English at the time they apply."
+      }
+    ],
+    "explanationInputs.aidModel": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://apply.emory.edu/financial-aid/index.html",
+        "excerpt": "Need-Based and Merit-Based Aid"
+      }
+    ],
+    "explanationInputs.applicationComplexity": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://apply.emory.edu/apply/first-year/index.html",
+        "excerpt": "First-year applicants can apply Early Decision I, Early Decision II, or Regular Decision."
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://apply.emory.edu/apply/international-applicants.html",
+        "excerpt": "international students must ... demonstrate English proficiency and provide financial certification."
+      }
+    ],
+    "explanationInputs.deadlineUrgencyWindows": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://apply.emory.edu/apply/first-year/plans-deadlines/index.html",
+        "excerpt": "Early Decision I November 1, 2025 ... Early Decision II January 1, 2026 ... Regular Decision January 1, 2026"
+      }
+    ],
+    "explanationInputs.internationalStudentConsiderations": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://apply.emory.edu/apply/international-applicants.html",
+        "excerpt": "must demonstrate English proficiency and provide financial certification"
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://apply.emory.edu/financial-aid/index.html",
+        "excerpt": "Each year we offer need-based financial aid packages to a select group of international students."
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://apply.emory.edu/financial-aid/index.html",
+        "excerpt": "Scholar Programs include: Woodruff Scholars and Goizueta Scholars."
+      }
+    ],
+    "explanationInputs.potentialFitTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://apply.emory.edu/apply/first-year/index.html",
+        "excerpt": "We look at your academic choices, your voice in essays, insights from teachers, and how you spend your time outside the classroom."
+      },
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools?api_key=DEMO_KEY&school.name=Emory%20University&fields=id,school.name,school.city,school.state,school.ownership,school.locale,latest.student.size,latest.admissions.admission_rate.overall,latest.admissions.sat_scores.average.overall,latest.admissions.act_scores.midpoint.cumulative&per_page=5",
+        "excerpt": "Atlanta location, private nonprofit, 7,275 undergraduates"
+      }
+    ],
+    "explanationInputs.potentialRiskTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://apply.emory.edu/apply/first-year/plans-deadlines/index.html",
+        "excerpt": "Emory has no preference; choose the plan that works for you. ... Early Decision I ... Early Decision II ... Regular Decision"
+      },
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://studentaid.emory.edu/_includes/documents/sections/undergraduate/apply/cost-of-attendance-worksheet.pdf",
+        "excerpt": "TOTAL (ESTIMATED) *$97,948"
+      }
+    ],
+    "explanationInputs.actionableApplicationSteps": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://apply.emory.edu/apply/first-year/index.html",
+        "excerpt": "Submit the Common Application ... Emory-Specific Short Answer Questions ... Two Academic Recommendations ... Midyear Report and Transcript"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://apply.emory.edu/apply/first-year/tips/standardized-exam-policies.html",
+        "excerpt": "If you choose to submit test scores ... we encourage you to send in scores by the deadline if you are able."
+      }
+    ]
+  },
+  "quality": {
+    "status": "publishable",
+    "missingFields": [],
+    "warnings": [
+      "Emory publishes Early Decision I and Early Decision II, but the schema stores a single early_decision deadline, so the artifact captures the earliest required early-decision date.",
+      "Emory does not publish Emory-wide SAT/ACT middle-50 ranges on the official sources used here, so recommendationInputs.testingRequirements.middle50 fields are null."
+    ],
+    "lastVerifiedAt": "2026-03-21"
+  }
+}

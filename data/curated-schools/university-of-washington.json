@@ -1,0 +1,402 @@
+{
+  "schoolSlug": "university-of-washington",
+  "lastVerifiedAt": "2026-03-21",
+  "identity": {
+    "schoolName": "University of Washington",
+    "city": "Seattle",
+    "state": "WA",
+    "officialAdmissionsUrl": "https://admit.washington.edu/"
+  },
+  "applicationRounds": [
+    "regular_decision"
+  ],
+  "deadlinesByRound": {
+    "early_action": null,
+    "early_decision": null,
+    "regular_decision": "2026-11-15",
+    "rolling_admission": null,
+    "priority": null
+  },
+  "englishRequirements": {
+    "minimumIelts": 6,
+    "minimumToeflInternetBased": 76,
+    "waiverNotes": "International first-year applicants must submit TOEFL, IELTS, or Duolingo English Test scores. Applicants educated in Australia, Canada (English-speaking provinces), the United Kingdom, Ireland, New Zealand, or the U.S. are exempt. SAT EBRW 580 or ACT English 22 can satisfy English proficiency with the required B average in English writing or literature."
+  },
+  "testPolicy": "test_optional",
+  "requiredMaterials": [
+    "common_application",
+    "application_fee_or_fee_waiver",
+    "self_reported_courses_and_cadrs",
+    "uw_writing_section",
+    "final_official_high_school_transcript_if_admitted",
+    "english_proficiency_test_for_international_applicants",
+    "sat_or_act_for_homeschool_or_nonstandard_grading_applicants"
+  ],
+  "tuitionAnnualUsd": 44460,
+  "estimatedCostOfAttendanceUsd": 67800,
+  "livingCostEstimateUsd": 18858,
+  "scholarshipAvailabilityFlag": true,
+  "scholarshipNotes": "Husky Promise covers full tuition and standard fees for eligible Washington residents. The UW says undergraduate international students do not receive UW financial aid or scholarships and should be prepared to cover all expenses.",
+  "recommendationInputs": {
+    "admissionRateOverall": 0.4253,
+    "satAverageOverall": null,
+    "actMidpointCumulative": null,
+    "undergraduateSize": 31588,
+    "schoolControl": "public",
+    "campusLocale": "urban",
+    "internationalAidPolicy": "limited_or_unclear",
+    "hasNeedBasedAid": true,
+    "hasMeritAid": null,
+    "testingRequirements": {
+      "acceptedExams": [
+        "sat",
+        "act"
+      ],
+      "minimumSatTotal": null,
+      "minimumActComposite": null,
+      "latestSatTestDateNote": "Send scores by December 31 of the application year.",
+      "latestActTestDateNote": "Send scores by December 31 of the application year.",
+      "superscorePolicy": "both",
+      "writingEssayPolicy": "not_considered",
+      "scoreReportingPolicy": "self_report_allowed",
+      "middle50SatTotal": {
+        "low": null,
+        "high": null
+      },
+      "middle50ActComposite": {
+        "low": null,
+        "high": null
+      }
+    },
+    "averageNetPriceUsd": null,
+    "programFitTags": [
+      "research_intensive",
+      "computer_science",
+      "engineering"
+    ],
+    "programAdmissionModel": "capacity_limited",
+    "applicationStrategyTags": []
+  },
+  "explanationInputs": {
+    "academicSelectivityBand": "selective",
+    "testingExpectation": "tests_not_required",
+    "englishPolicySummary": "minimum_scores_required",
+    "aidModel": "need_based_only",
+    "applicationComplexity": "high",
+    "deadlineUrgencyWindows": {
+      "earliestDeadline": "2026-11-15",
+      "latestMajorDeadline": "2026-12-31"
+    },
+    "internationalStudentConsiderations": [
+      "english_fluency_required",
+      "english_test_may_be_required",
+      "need_aware_or_limited_aid_possible"
+    ],
+    "potentialFitTags": [
+      "large_public_environment",
+      "urban_access",
+      "research_or_innovation_oriented",
+      "strong_for_high_achieving_stem_students",
+      "test_flexible_pathway",
+      "strong_need_based_aid_signal"
+    ],
+    "potentialRiskTags": [
+      "high_total_cost",
+      "limited_aid_for_international_students",
+      "english_requirement_barrier",
+      "complex_application_requirements"
+    ],
+    "actionableApplicationSteps": [
+      "prepare_regular_decision_timeline",
+      "complete_standardized_testing_if_required",
+      "prepare_english_testing_or_waiver_plan",
+      "prioritize_financial_aid_forms",
+      "build_supplemental_essay_plan"
+    ]
+  },
+  "fieldProvenance": {
+    "identity.schoolName": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admit.washington.edu/",
+        "excerpt": "This is the University of Washington"
+      }
+    ],
+    "applicationRounds": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admit.washington.edu/apply/",
+        "excerpt": "September 1: Application opens"
+      }
+    ],
+    "deadlinesByRound": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admit.washington.edu/apply/dates-deadlines/",
+        "excerpt": "November 15: Application deadline for summer and autumn quarters"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admit.washington.edu/apply/dates-deadlines/",
+        "excerpt": "December 31: Test score deadline for summer and autumn quarters"
+      }
+    ],
+    "englishRequirements": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admit.washington.edu/apply/first-year/how-to-apply/english-proficiency/",
+        "excerpt": "TOEFL, IELTS or Duolingo English Test (DET)"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admit.washington.edu/apply/first-year/how-to-apply/english-proficiency/",
+        "excerpt": "Minimum score required ... 76 ... 6.0 ... 110"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admit.washington.edu/apply/first-year/how-to-apply/english-proficiency/",
+        "excerpt": "SAT EBRW score of 580 or ACT English score of 22"
+      }
+    ],
+    "testPolicy": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admit.washington.edu/apply/first-year/how-to-apply/test-scores/",
+        "excerpt": "permanently removed the SAT/ACT requirement"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admit.washington.edu/apply/first-year/how-to-apply/test-scores/",
+        "excerpt": "you will not be disadvantaged for sending low scores or for not sending scores"
+      }
+    ],
+    "requiredMaterials": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admit.washington.edu/apply/first-year/how-to-apply/",
+        "excerpt": "The application; Self-report your courses and complete CADRs; The writing section; The application fee"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admit.washington.edu/apply/first-year/how-to-apply/",
+        "excerpt": "Send test scores? Send transcripts?"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admit.washington.edu/apply/first-year/how-to-apply/",
+        "excerpt": "final official high school transcript if you are admitted and plan to enroll"
+      }
+    ],
+    "tuitionAnnualUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://admit.washington.edu/costs/coa/",
+        "excerpt": "Non-resident tuition $44,460"
+      }
+    ],
+    "estimatedCostOfAttendanceUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://admit.washington.edu/costs/coa/",
+        "excerpt": "Non-resident total costs $67,800"
+      }
+    ],
+    "livingCostEstimateUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://admit.washington.edu/costs/coa/",
+        "excerpt": "Housing & food $18,858"
+      }
+    ],
+    "scholarshipAvailabilityFlag": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admit.washington.edu/costs/husky-promise/",
+        "excerpt": "full tuition and standard fees will be covered"
+      }
+    ],
+    "scholarshipNotes": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admit.washington.edu/costs/husky-promise/",
+        "excerpt": "financial challenges stand in the way"
+      },
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://admit.washington.edu/costs/coa/",
+        "excerpt": "The UW does not provide financial aid or scholarships to undergraduate international students"
+      }
+    ],
+    "recommendationInputs.admissionRateOverall": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.admission_rate.overall\": 0.4253"
+      }
+    ],
+    "recommendationInputs.undergraduateSize": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.student.size\": 31588"
+      }
+    ],
+    "recommendationInputs.programFitTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.washington.edu/research/",
+        "excerpt": "UW research spans the university and drives discovery in science, medicine, engineering and the arts."
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.engr.washington.edu/",
+        "excerpt": "The College of Engineering at the University of Washington is a national leader in engineering education and research."
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.cs.washington.edu/",
+        "excerpt": "The Paul G. Allen School is among the top computer science and engineering schools in the world."
+      }
+    ],
+    "recommendationInputs.programAdmissionModel": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admit.washington.edu/apply/freshman/how-to-apply/choosing-a-major/",
+        "excerpt": "Some majors are capacity constrained and may be more competitive for admission."
+      }
+    ],
+    "recommendationInputs.schoolControl": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.ownership\": 1"
+      }
+    ],
+    "recommendationInputs.campusLocale": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.locale\": 11"
+      }
+    ],
+    "recommendationInputs.testingRequirements": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admit.washington.edu/apply/first-year/how-to-apply/test-scores/",
+        "excerpt": "removed the SAT/ACT requirement ... will superscore ... send your test scores by December 31"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admit.washington.edu/apply/first-year/how-to-apply/test-scores/",
+        "excerpt": "self-report your test scores ... may be asked to provide official scores"
+      }
+    ],
+    "explanationInputs.testingExpectation": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admit.washington.edu/apply/first-year/how-to-apply/test-scores/",
+        "excerpt": "SAT/ACT no longer required"
+      }
+    ],
+    "explanationInputs.aidModel": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admit.washington.edu/costs/husky-promise/",
+        "excerpt": "full tuition and standard fees will be covered"
+      },
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://admit.washington.edu/costs/coa/",
+        "excerpt": "The UW does not provide financial aid or scholarships to undergraduate international students"
+      }
+    ],
+    "explanationInputs.applicationComplexity": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admit.washington.edu/apply/first-year/how-to-apply/",
+        "excerpt": "Self-report your courses and complete CADRs; The writing section; The application fee; Send test scores? Send transcripts?"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admit.washington.edu/apply/first-year/how-to-apply/english-proficiency/",
+        "excerpt": "official TOEFL, IELTS or Duolingo English Test"
+      }
+    ],
+    "explanationInputs.internationalStudentConsiderations": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admit.washington.edu/apply/first-year/how-to-apply/english-proficiency/",
+        "excerpt": "required to submit an official TOEFL, IELTS or Duolingo English Test"
+      },
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://admit.washington.edu/costs/coa/",
+        "excerpt": "The UW does not provide financial aid or scholarships to undergraduate international students"
+      }
+    ],
+    "explanationInputs.potentialFitTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admit.washington.edu/",
+        "excerpt": "stunning campus in the heart of an energetic, forward-thinking city"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admit.washington.edu/",
+        "excerpt": "U.S. Public University"
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admit.washington.edu/costs/husky-promise/",
+        "excerpt": "full tuition and standard fees will be covered"
+      }
+    ],
+    "explanationInputs.potentialRiskTags": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://admit.washington.edu/costs/coa/",
+        "excerpt": "Non-resident tuition $44,460"
+      },
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://admit.washington.edu/costs/coa/",
+        "excerpt": "The UW does not provide financial aid or scholarships to undergraduate international students"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admit.washington.edu/apply/first-year/how-to-apply/english-proficiency/",
+        "excerpt": "English proficiency is considered in the holistic review"
+      }
+    ],
+    "explanationInputs.actionableApplicationSteps": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admit.washington.edu/apply/dates-deadlines/",
+        "excerpt": "November 15: Application deadline"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admit.washington.edu/apply/dates-deadlines/",
+        "excerpt": "December 31: Test score deadline"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admit.washington.edu/apply/first-year/how-to-apply/english-proficiency/",
+        "excerpt": "Exams must be taken on or before December 31"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admit.washington.edu/apply/first-year/how-to-apply/writing-section/",
+        "excerpt": "The essay question must be answered within our application"
+      }
+    ]
+  },
+  "quality": {
+    "status": "publishable",
+    "missingFields": [],
+    "warnings": [
+      "UW does not publish official SAT/ACT middle-50 ranges on the reviewed pages; testingRequirements.middle50* are null.",
+      "Merit-aid availability is not clearly stated on the reviewed pages; hasMeritAid is left null."
+    ]
+  }
+}

@@ -1,0 +1,462 @@
+{
+  "schoolSlug": "carnegie-mellon",
+  "lastVerifiedAt": "2026-03-21",
+  "identity": {
+    "schoolName": "Carnegie Mellon University",
+    "city": "Pittsburgh",
+    "state": "PA",
+    "officialAdmissionsUrl": "https://www.cmu.edu/admission/"
+  },
+  "applicationRounds": [
+    "early_decision",
+    "regular_decision"
+  ],
+  "deadlinesByRound": {
+    "early_action": null,
+    "early_decision": "2026-11-03",
+    "regular_decision": "2027-01-05",
+    "rolling_admission": null,
+    "priority": null
+  },
+  "englishRequirements": {
+    "minimumIelts": 7.5,
+    "minimumToeflInternetBased": 102,
+    "waiverNotes": "For nonnative English speakers, Carnegie Mellon requires TOEFL, IELTS, Cambridge, or Duolingo English Test scores. Scores should be no more than two years old, and CMU prefers English results from the past two years."
+  },
+  "testPolicy": "test_flexible",
+  "requiredMaterials": [
+    "common_application",
+    "application_fee_or_fee_waiver",
+    "high_school_courses_and_grades",
+    "standardized_testing_scores",
+    "secondary_school_counselor_evaluation",
+    "teacher_recommendation",
+    "common_application_essay",
+    "common_application_writing_supplement",
+    "official_final_transcript",
+    "mid_year_report",
+    "early_decision_agreement"
+  ],
+  "tuitionAnnualUsd": 69702,
+  "estimatedCostOfAttendanceUsd": 93614,
+  "livingCostEstimateUsd": 19650,
+  "scholarshipAvailabilityFlag": true,
+  "scholarshipNotes": "CMU offers need-based and merit-based scholarships through university financial aid, but institutional aid for international undergraduates is limited and some official pages state it is not offered on the Pittsburgh campus.",
+  "recommendationInputs": {
+    "admissionRateOverall": 0.114,
+    "satAverageOverall": 1545,
+    "actMidpointCumulative": 34,
+    "undergraduateSize": 7187,
+    "schoolControl": "private_nonprofit",
+    "campusLocale": "urban",
+    "internationalAidPolicy": "limited_or_unclear",
+    "hasNeedBasedAid": true,
+    "hasMeritAid": true,
+    "testingRequirements": {
+      "acceptedExams": [
+        "sat",
+        "act"
+      ],
+      "minimumSatTotal": null,
+      "minimumActComposite": null,
+      "latestSatTestDateNote": "November 1 for Early Decision; January 3 for Regular Decision.",
+      "latestActTestDateNote": "November 1 for Early Decision; January 3 for Regular Decision.",
+      "superscorePolicy": "sat_only",
+      "writingEssayPolicy": "optional",
+      "scoreReportingPolicy": "self_report_allowed",
+      "middle50SatTotal": {
+        "low": null,
+        "high": null
+      },
+      "middle50ActComposite": {
+        "low": null,
+        "high": null
+      }
+    },
+    "averageNetPriceUsd": null,
+    "programFitTags": [
+      "computer_science",
+      "engineering",
+      "business",
+      "arts_design",
+      "research_intensive"
+    ],
+    "programAdmissionModel": "unknown",
+    "applicationStrategyTags": [
+      "binding_early_decision",
+      "multiple_early_rounds"
+    ]
+  },
+  "explanationInputs": {
+    "academicSelectivityBand": "highly_selective",
+    "testingExpectation": "scores_considered",
+    "englishPolicySummary": "minimum_scores_required",
+    "aidModel": "need_and_merit",
+    "applicationComplexity": "high",
+    "deadlineUrgencyWindows": {
+      "earliestDeadline": "2026-11-03",
+      "latestMajorDeadline": "2027-01-05"
+    },
+    "internationalStudentConsiderations": [
+      "english_fluency_required",
+      "financial_certification_likely_required",
+      "need_aware_or_limited_aid_possible"
+    ],
+    "potentialFitTags": [
+      "strong_for_high_achieving_stem_students",
+      "research_or_innovation_oriented",
+      "urban_access",
+      "test_flexible_pathway"
+    ],
+    "potentialRiskTags": [
+      "high_total_cost",
+      "early_deadline_pressure",
+      "testing_required",
+      "complex_application_requirements",
+      "limited_aid_for_international_students"
+    ],
+    "actionableApplicationSteps": [
+      "prepare_early_round_strategy",
+      "complete_standardized_testing_if_required",
+      "prepare_teacher_recommendations_early",
+      "prepare_counselor_documents_early",
+      "prepare_english_testing_or_waiver_plan",
+      "budget_for_need_based_aid_process",
+      "prioritize_financial_aid_forms",
+      "build_supplemental_essay_plan"
+    ]
+  },
+  "fieldProvenance": {
+    "identity.schoolName": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.cmu.edu/admission/admission/apply",
+        "excerpt": "Carnegie Mellon University"
+      }
+    ],
+    "identity.city": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.city\": \"Pittsburgh\""
+      }
+    ],
+    "identity.state": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.state\": \"PA\""
+      }
+    ],
+    "identity.officialAdmissionsUrl": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.cmu.edu/admission/",
+        "excerpt": "Undergraduate Admission"
+      }
+    ],
+    "applicationRounds": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.cmu.edu/admission/admission/application-plans-deadlines",
+        "excerpt": "Early Decision ... Regular Decision ... Transfer Admission"
+      }
+    ],
+    "deadlinesByRound": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.cmu.edu/admission/admission/application-plans-deadlines",
+        "excerpt": "Early Decision ... Deadline: November 3 ... Regular Decision ... Deadline: January 5"
+      }
+    ],
+    "englishRequirements": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.cmu.edu/admission/admission/standardized-testing",
+        "excerpt": "We require the TOEFL, IELTS, Cambridge or Duolingo English Test from all nonnative English speakers."
+      }
+    ],
+    "testPolicy": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.cmu.edu/admission/admission/standardized-testing",
+        "excerpt": "Carnegie Mellon's undergraduate admission test policy varies according to college or program."
+      }
+    ],
+    "requiredMaterials": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.cmu.edu/admission/admission/undergraduate-admission-requirements",
+        "excerpt": "Common Application, $75 application fee, high school courses and grades, standardized testing scores, counselor evaluation, teacher recommendation, Common Application essay, Common Application writing supplement"
+      }
+    ],
+    "tuitionAnnualUsd": [
+      {
+        "sourceKind": "official_tuition",
+        "sourceUrl": "https://www.cmu.edu/sfs/tuition/undergraduate/index.html",
+        "excerpt": "Tuition  | $69,702"
+      }
+    ],
+    "estimatedCostOfAttendanceUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://www.cmu.edu/sfs/tuition/undergraduate/index.html",
+        "excerpt": "TOTAL COST OF ATTENDANCE  | $93,614"
+      }
+    ],
+    "livingCostEstimateUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://www.cmu.edu/sfs/tuition/undergraduate/index.html",
+        "excerpt": "Housing  | $11,700 ... Food | $7,950"
+      }
+    ],
+    "scholarshipAvailabilityFlag": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://www.cmu.edu/sfs/financial-aid/types/scholarships-and-grants/",
+        "excerpt": "Scholarships and grants are a form of financial aid awarded to students for the purpose of paying all or part of their college expenses."
+      }
+    ],
+    "scholarshipNotes": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://www.cmu.edu/sfs/financial-aid/international/index.html",
+        "excerpt": "Merit-based scholarships and need-based grants are available to students of all nationalities."
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://www.cmu.edu/policies/student-and-student-life/financial-aid-statement.html",
+        "excerpt": "Carnegie Mellon does not award any institutional financial aid funds to undergraduate International Students."
+      }
+    ],
+    "recommendationInputs.admissionRateOverall": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.admission_rate.overall\": 0.114"
+      }
+    ],
+    "recommendationInputs.satAverageOverall": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.sat_scores.average.overall\": 1545"
+      }
+    ],
+    "recommendationInputs.actMidpointCumulative": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.act_scores.midpoint.cumulative\": 34"
+      }
+    ],
+    "recommendationInputs.undergraduateSize": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.student.size\": 7187"
+      }
+    ],
+    "recommendationInputs.schoolControl": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.ownership\": 2"
+      }
+    ],
+    "recommendationInputs.campusLocale": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.locale\": 11"
+      }
+    ],
+    "recommendationInputs.internationalAidPolicy": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://www.cmu.edu/sfs/financial-aid/international/index.html",
+        "excerpt": "Merit-based scholarships and need-based grants are available to students of all nationalities."
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://www.cmu.edu/policies/student-and-student-life/financial-aid-statement.html",
+        "excerpt": "Carnegie Mellon does not award any institutional financial aid funds to undergraduate International Students."
+      }
+    ],
+    "recommendationInputs.hasNeedBasedAid": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://www.cmu.edu/sfs/financial-aid/types/scholarships-and-grants/",
+        "excerpt": "Scholarships and grants are a form of financial aid"
+      }
+    ],
+    "recommendationInputs.hasMeritAid": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://www.cmu.edu/sfs/financial-aid/international/index.html",
+        "excerpt": "Merit-based scholarships and need-based grants are available to students of all nationalities."
+      }
+    ],
+    "recommendationInputs.programFitTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.enrollment.cmu.edu/academics",
+        "excerpt": "seven colleges and schools"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.enrollment.cmu.edu/academics",
+        "excerpt": "AI and robotics to the arts and public policy"
+      }
+    ],
+    "recommendationInputs.programAdmissionModel": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.cmu.edu/admission/admission-instructions.html",
+        "excerpt": "Carnegie Mellon uses the Common Application exclusively"
+      }
+    ],
+    "recommendationInputs.applicationStrategyTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.cmu.edu/admission/admission/admission-paths/early-decision.html",
+        "excerpt": "Early Decision at Carnegie Mellon is a binding plan"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.cmu.edu/admission/admission/admission-paths/early-decision.html",
+        "excerpt": "Early Decision I and Early Decision II"
+      }
+    ],
+    "recommendationInputs.testingRequirements": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.cmu.edu/admission/admission/standardized-testing",
+        "excerpt": "The School of Computer Science requires an SAT or an ACT score. College of Engineering, Dietrich College, Heinz College’s Information Systems program, Mellon College of Science, and Tepper School of Business operate on a test flexible policy. College of Fine Arts remains test optional."
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.cmu.edu/admission/admission/standardized-testing",
+        "excerpt": "If you choose to submit scores: note that we allow superscoring of SAT test results, but we are unable to accept superscored results for the ACT exam."
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.cmu.edu/admission/admission/standardized-testing",
+        "excerpt": "For students submitting standardized tests, we prefer that all testing is completed by November 1 for Early Decision applicants and by January 3 for Regular Decision applicants."
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.cmu.edu/admission/admission/standardized-testing",
+        "excerpt": "Both domestic and international applicants who submit SAT or ACT scores may share either official or self-reported SAT or ACT scores."
+      }
+    ],
+    "explanationInputs.academicSelectivityBand": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.admission_rate.overall\": 0.114"
+      }
+    ],
+    "explanationInputs.testingExpectation": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.cmu.edu/admission/admission/admission-consideration",
+        "excerpt": "Standardized test scores add to our knowledge of your ability"
+      }
+    ],
+    "explanationInputs.englishPolicySummary": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.cmu.edu/admission/admission/standardized-testing",
+        "excerpt": "We require the TOEFL, IELTS, Cambridge or Duolingo English Test from all nonnative English speakers."
+      }
+    ],
+    "explanationInputs.aidModel": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://www.cmu.edu/sfs/financial-aid/international/index.html",
+        "excerpt": "Merit-based scholarships and need-based grants are available to students of all nationalities."
+      }
+    ],
+    "explanationInputs.applicationComplexity": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.cmu.edu/admission/admission/undergraduate-admission-requirements",
+        "excerpt": "Common Application ... standardized testing scores ... counselor evaluation ... teacher recommendation ... Common Application essay ... Common Application writing supplement"
+      }
+    ],
+    "explanationInputs.deadlineUrgencyWindows": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.cmu.edu/admission/admission/application-plans-deadlines",
+        "excerpt": "Early Decision ... Deadline: November 3 ... Regular Decision ... Deadline: January 5"
+      }
+    ],
+    "explanationInputs.internationalStudentConsiderations": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.cmu.edu/admission/admission/standardized-testing",
+        "excerpt": "We require the TOEFL, IELTS, Cambridge or Duolingo English Test from all nonnative English speakers."
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://www.cmu.edu/sfs/financial-aid/international/index.html",
+        "excerpt": "Merit-based scholarships and need-based grants are available to students of all nationalities."
+      }
+    ],
+    "explanationInputs.potentialFitTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.cmu.edu/admission/admission/admission-consideration",
+        "excerpt": "Academic and Creative Potential"
+      }
+    ],
+    "explanationInputs.potentialRiskTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.cmu.edu/admission/admission/application-plans-deadlines",
+        "excerpt": "Early Decision ... Deadline: November 3 ... Regular Decision ... Deadline: January 5"
+      },
+      {
+        "sourceKind": "official_tuition",
+        "sourceUrl": "https://www.cmu.edu/sfs/tuition/undergraduate/index.html",
+        "excerpt": "TOTAL COST OF ATTENDANCE  | $93,614"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.cmu.edu/admission/admission/standardized-testing",
+        "excerpt": "The College of Fine Arts remains test optional and continues to require portfolios or auditions."
+      }
+    ],
+    "explanationInputs.actionableApplicationSteps": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.cmu.edu/admission/admission/application-plans-deadlines",
+        "excerpt": "If you'd like us to consider test scores, it's strongly preferred that Early Decision applicants complete all standardized testing by November 1."
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.cmu.edu/admission/admission/application-plans-deadlines",
+        "excerpt": "Regular Decision ... Deadline: January 5"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.cmu.edu/admission/admission/undergraduate-admission-requirements",
+        "excerpt": "Secondary School Counselor Evaluation"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.cmu.edu/admission/admission/undergraduate-admission-requirements",
+        "excerpt": "Common Application Writing Supplement"
+      }
+    ]
+  },
+  "quality": {
+    "status": "publishable",
+    "missingFields": [],
+    "warnings": [
+      "CMU has a mixed testing policy by college/program; the artifact uses a single test_flexible umbrella plus detailed testingRequirements."
+    ]
+  }
+}

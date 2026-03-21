@@ -1,0 +1,450 @@
+{
+  "schoolSlug": "university-of-maryland-college-park",
+  "lastVerifiedAt": "2026-03-21",
+  "identity": {
+    "schoolName": "University of Maryland, College Park",
+    "city": "College Park",
+    "state": "MD",
+    "officialAdmissionsUrl": "https://admissions.umd.edu/"
+  },
+  "applicationRounds": [
+    "early_action"
+  ],
+  "deadlinesByRound": {
+    "early_action": "2026-11-01",
+    "early_decision": null,
+    "regular_decision": null,
+    "rolling_admission": null,
+    "priority": null
+  },
+  "englishRequirements": {
+    "minimumIelts": 7,
+    "minimumToeflInternetBased": 95,
+    "waiverNotes": "International applicants and domestic applicants whose native language is not English must verify English proficiency. UMD accepts TOEFL, IELTS, IELTS Indicator, and Duolingo English Test. A waiver may be considered at the Office of Undergraduate Admissions' discretion based on the full application record."
+  },
+  "testPolicy": "test_optional",
+  "requiredMaterials": [
+    "common_app_or_applyweb",
+    "essay",
+    "activities_and_awards_list_or_resume",
+    "application_fee_or_fee_waiver",
+    "two_letters_of_recommendation",
+    "official_high_school_transcript",
+    "official_standardized_test_scores_optional",
+    "financial_aid_forms_if_applying_for_aid"
+  ],
+  "tuitionAnnualUsd": 41974,
+  "estimatedCostOfAttendanceUsd": 62374,
+  "livingCostEstimateUsd": 16436,
+  "scholarshipAvailabilityFlag": true,
+  "scholarshipNotes": "UMD offers freshman merit scholarships, including the Banneker/Key Scholarship, President's Scholarship, and Dean's Scholarship. The university also states that Terrapin Commitment covers remaining in-state tuition and mandatory fees for eligible Maryland residents with unmet need and income under $75,000 or Pell eligibility. Students who submit by the November 1 early-action deadline are automatically reviewed for merit scholarships.",
+  "recommendationInputs": {
+    "admissionRateOverall": 0.4484,
+    "satAverageOverall": 1463,
+    "actMidpointCumulative": 32,
+    "undergraduateSize": 30246,
+    "schoolControl": "public",
+    "campusLocale": "suburban",
+    "internationalAidPolicy": "limited_or_unclear",
+    "hasNeedBasedAid": true,
+    "hasMeritAid": true,
+    "testingRequirements": {
+      "acceptedExams": [
+        "sat",
+        "act"
+      ],
+      "minimumSatTotal": null,
+      "minimumActComposite": null,
+      "latestSatTestDateNote": "UMD is test-optional through the Spring and Fall 2027 application cycles; if you submit scores, they should be sent by the application deadline and may not be considered if received late.",
+      "latestActTestDateNote": "UMD is test-optional through the Spring and Fall 2027 application cycles; if you submit scores, they should be sent by the application deadline and may not be considered if received late.",
+      "superscorePolicy": "unknown",
+      "writingEssayPolicy": "not_considered",
+      "scoreReportingPolicy": "self_report_allowed",
+      "middle50SatTotal": {
+        "low": null,
+        "high": null
+      },
+      "middle50ActComposite": {
+        "low": null,
+        "high": null
+      }
+    },
+    "averageNetPriceUsd": null,
+    "programFitTags": [
+      "research_intensive"
+    ],
+    "programAdmissionModel": "capacity_limited",
+    "applicationStrategyTags": [
+      "non_binding_early_action"
+    ]
+  },
+  "explanationInputs": {
+    "academicSelectivityBand": "moderately_selective",
+    "testingExpectation": "scores_considered",
+    "englishPolicySummary": "minimum_scores_required",
+    "aidModel": "need_and_merit",
+    "applicationComplexity": "high",
+    "deadlineUrgencyWindows": {
+      "earliestDeadline": "2026-11-01",
+      "latestMajorDeadline": "2026-11-01"
+    },
+    "internationalStudentConsiderations": [
+      "english_fluency_required",
+      "english_test_may_be_required",
+      "financial_certification_likely_required",
+      "need_aware_or_limited_aid_possible"
+    ],
+    "potentialFitTags": [
+      "large_public_environment",
+      "research_or_innovation_oriented",
+      "value_for_budget_conscious_students",
+      "test_flexible_pathway",
+      "strong_need_based_aid_signal",
+      "strong_merit_aid_signal"
+    ],
+    "potentialRiskTags": [
+      "high_total_cost",
+      "limited_aid_for_international_students",
+      "complex_application_requirements",
+      "early_deadline_pressure"
+    ],
+    "actionableApplicationSteps": [
+      "prepare_early_round_strategy",
+      "prepare_english_testing_or_waiver_plan",
+      "prepare_teacher_recommendations_early",
+      "prioritize_financial_aid_forms",
+      "build_supplemental_essay_plan"
+    ]
+  },
+  "fieldProvenance": {
+    "identity.schoolName": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.umd.edu/",
+        "excerpt": "University of Maryland, College Park"
+      }
+    ],
+    "applicationRounds": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.umd.edu/",
+        "excerpt": "Early Action Deadlines"
+      }
+    ],
+    "deadlinesByRound": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.umd.edu/persona/counselors-advisors",
+        "excerpt": "Freshman students can apply using the Common App. ... the University of Maryland, College Park school code is 002103."
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.umd.edu/",
+        "excerpt": "Freshman Applying for Fall | November 1"
+      }
+    ],
+    "englishRequirements": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.umd.edu/apply/english-language-proficiency",
+        "excerpt": "UMD accepts official scores from the Duolingo English Test ... UMD passing score: 120"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.umd.edu/apply/english-language-proficiency",
+        "excerpt": "UMD passing score: 7"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.umd.edu/apply/english-language-proficiency",
+        "excerpt": "UMD passing score: 95"
+      }
+    ],
+    "testPolicy": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.umd.edu/apply/freshman-applicants",
+        "excerpt": "Official standardized test scores (optional)"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.umd.edu/apply/freshman-applicants",
+        "excerpt": "UMD is currently test-optional through to the Spring and Fall 2027 application cycles"
+      }
+    ],
+    "requiredMaterials": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.umd.edu/apply/freshman-applicants",
+        "excerpt": "Completed online application"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.umd.edu/apply/freshman-applicants",
+        "excerpt": "Essay"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.umd.edu/apply/freshman-applicants",
+        "excerpt": "Activities and awards list or resume"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.umd.edu/apply/freshman-applicants",
+        "excerpt": "Two letters of recommendation are required"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.umd.edu/apply/freshman-applicants",
+        "excerpt": "Official copy of your high school transcripts"
+      }
+    ],
+    "tuitionAnnualUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://admissions.umd.edu/tuition/cost-of-attendance",
+        "excerpt": "Nonresidents (Out-of-State) Tuition & Fees $41,974"
+      }
+    ],
+    "estimatedCostOfAttendanceUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://admissions.umd.edu/tuition/cost-of-attendance",
+        "excerpt": "TOTAL EST. COST OF ATTENDANCE $62,374"
+      }
+    ],
+    "livingCostEstimateUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://admissions.umd.edu/tuition/cost-of-attendance",
+        "excerpt": "On-Campus Housing & Food $16,436"
+      }
+    ],
+    "scholarshipAvailabilityFlag": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.umd.edu/tuition/freshman-merit-scholarships",
+        "excerpt": "Merit scholarships are offered to some of the University of Maryland’s most academically talented incoming students."
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.umd.edu/tuition/our-terrapin-commitment",
+        "excerpt": "Terrapin Commitment helps ensure tuition and mandatory fees don’t stand in the way"
+      }
+    ],
+    "scholarshipNotes": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.umd.edu/tuition/freshman-merit-scholarships",
+        "excerpt": "Students who submit their admission application and all required materials by the November 1 early action deadline are automatically reviewed for merit scholarships."
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.umd.edu/tuition/our-terrapin-commitment",
+        "excerpt": "Terrapin Commitment will cover UMD standard in-state tuition and mandatory fees ... for Maryland students with unmet financial need from families making $75,000 or less."
+      }
+    ],
+    "recommendationInputs.admissionRateOverall": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.admission_rate.overall\": 0.4484"
+      }
+    ],
+    "recommendationInputs.satAverageOverall": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.sat_scores.average.overall\": 1463"
+      }
+    ],
+    "recommendationInputs.actMidpointCumulative": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.act_scores.midpoint.cumulative\": 32"
+      }
+    ],
+    "recommendationInputs.undergraduateSize": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.student.size\": 30246"
+      }
+    ],
+    "recommendationInputs.schoolControl": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.ownership\": 1"
+      }
+    ],
+    "recommendationInputs.programFitTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.umd.edu/",
+        "excerpt": "a top-ranked public research university"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.umd.edu/",
+        "excerpt": "world-class leader in research, entrepreneurship and innovation"
+      }
+    ],
+    "recommendationInputs.programAdmissionModel": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.umd.edu/",
+        "excerpt": "Limited Enrollment Programs"
+      }
+    ],
+    "recommendationInputs.applicationStrategyTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.umd.edu/",
+        "excerpt": "Early Action Deadlines"
+      }
+    ],
+    "recommendationInputs.campusLocale": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.locale\": 21"
+      }
+    ],
+    "recommendationInputs.internationalAidPolicy": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.umd.edu/apply/financial-certification",
+        "excerpt": "As a publicly funded institution, UMD is unable to provide financial assistance to international students."
+      }
+    ],
+    "recommendationInputs.hasNeedBasedAid": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.umd.edu/tuition/our-terrapin-commitment",
+        "excerpt": "100% of tuition and fees are covered"
+      }
+    ],
+    "recommendationInputs.hasMeritAid": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.umd.edu/tuition/freshman-merit-scholarships",
+        "excerpt": "Merit scholarships are offered to some of the University of Maryland’s most academically talented incoming students."
+      }
+    ],
+    "recommendationInputs.testingRequirements": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.umd.edu/apply/freshman-applicants",
+        "excerpt": "Official standardized test scores (optional)"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.umd.edu/apply/freshman-applicants",
+        "excerpt": "UMD is currently test-optional through to the Spring and Fall 2027 application cycles"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.umd.edu/apply/english-language-proficiency",
+        "excerpt": "UMD passing score: 95 ... UMD passing score: 7"
+      }
+    ],
+    "explanationInputs.testingExpectation": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.umd.edu/apply/freshman-applicants",
+        "excerpt": "test-optional through to the Spring and Fall 2027 application cycles"
+      }
+    ],
+    "explanationInputs.aidModel": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.umd.edu/tuition/freshman-merit-scholarships",
+        "excerpt": "Merit scholarships are offered"
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.umd.edu/tuition/our-terrapin-commitment",
+        "excerpt": "Terrapin Commitment"
+      }
+    ],
+    "explanationInputs.applicationComplexity": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.umd.edu/apply/freshman-applicants",
+        "excerpt": "Two letters of recommendation are required"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.umd.edu/apply/freshman-applicants",
+        "excerpt": "Essay ... Activities and awards list or resume"
+      }
+    ],
+    "explanationInputs.internationalStudentConsiderations": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.umd.edu/apply/english-language-proficiency",
+        "excerpt": "you must provide the university with verification of your proficiency in English"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.umd.edu/apply/financial-certification",
+        "excerpt": "You are only required to provide this documentation after you are offered admission to UMD and have confirmed your enrollment."
+      }
+    ],
+    "explanationInputs.potentialFitTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.umd.edu/",
+        "excerpt": "flagship institution, a top-ranked public research university"
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.umd.edu/tuition/freshman-merit-scholarships",
+        "excerpt": "automatic review for merit scholarships"
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.umd.edu/tuition/our-terrapin-commitment",
+        "excerpt": "ensuring 100% of tuition and fees are covered for Maryland students"
+      }
+    ],
+    "explanationInputs.potentialRiskTags": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://admissions.umd.edu/tuition/cost-of-attendance",
+        "excerpt": "TOTAL EST. COST OF ATTENDANCE $62,374"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.umd.edu/apply/financial-certification",
+        "excerpt": "UMD is unable to provide financial assistance to international students"
+      }
+    ],
+    "explanationInputs.actionableApplicationSteps": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.umd.edu/",
+        "excerpt": "Freshman Applying for Fall | November 1"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.umd.edu/apply/freshman-applicants",
+        "excerpt": "two letters of recommendation are required"
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.umd.edu/tuition/freshman-merit-scholarships",
+        "excerpt": "Students who submit ... by the November 1 early action deadline are automatically reviewed for merit scholarships."
+      }
+    ]
+  },
+  "quality": {
+    "status": "publishable",
+    "missingFields": [],
+    "warnings": [
+      "UMD's testing policy is test-optional through Spring and Fall 2027, so the testingRequirements block records that the school accepts scores but does not require them."
+    ]
+  }
+}

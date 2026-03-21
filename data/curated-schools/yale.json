@@ -1,0 +1,445 @@
+{
+  "schoolSlug": "yale",
+  "lastVerifiedAt": "2026-03-21",
+  "identity": {
+    "schoolName": "Yale University",
+    "city": "New Haven",
+    "state": "CT",
+    "officialAdmissionsUrl": "https://admissions.yale.edu/requirements"
+  },
+  "applicationRounds": [
+    "early_action",
+    "regular_decision"
+  ],
+  "deadlinesByRound": {
+    "early_action": "2025-11-01",
+    "early_decision": null,
+    "regular_decision": "2026-01-02",
+    "rolling_admission": null,
+    "priority": null
+  },
+  "englishRequirements": {
+    "minimumIelts": 7,
+    "minimumToeflInternetBased": 100,
+    "waiverNotes": "Non-native English-speakers who have not taken at least two years of secondary education where English is the medium of instruction must submit English proficiency test results."
+  },
+  "testPolicy": "test_flexible",
+  "requiredMaterials": [
+    "common_application_or_coalition_application_or_questbridge_application",
+    "application_fee_or_fee_waiver",
+    "school_report",
+    "official_transcript",
+    "midyear_report",
+    "teacher_recommendation_1",
+    "teacher_recommendation_2",
+    "school_counselor_recommendation",
+    "standardized_test_scores",
+    "english_proficiency_test_if_required",
+    "supplemental_questions"
+  ],
+  "tuitionAnnualUsd": 72500,
+  "estimatedCostOfAttendanceUsd": 97985,
+  "livingCostEstimateUsd": 21600,
+  "scholarshipAvailabilityFlag": true,
+  "scholarshipNotes": "Yale awards undergraduate financial aid on the basis of demonstrated financial need, meets 100% of demonstrated need, and does not require loans in initial aid offers.",
+  "recommendationInputs": {
+    "admissionRateOverall": 0.045,
+    "satAverageOverall": 1534,
+    "actMidpointCumulative": 34,
+    "undergraduateSize": 6811,
+    "schoolControl": "private_nonprofit",
+    "campusLocale": "city_midsize",
+    "internationalAidPolicy": "meets_full_demonstrated_need_if_eligible",
+    "hasNeedBasedAid": true,
+    "hasMeritAid": false,
+    "testingRequirements": {
+      "acceptedExams": [
+        "sat",
+        "act"
+      ],
+      "minimumSatTotal": null,
+      "minimumActComposite": null,
+      "latestSatTestDateNote": "SAT exams completed in October or November are generally available for consideration in Yale's Single-Choice Early Action round; exams completed in January or February are generally available for consideration in Regular Decision.",
+      "latestActTestDateNote": "ACT exams completed in October or November are generally available for consideration in Yale's Single-Choice Early Action round; exams completed in January or February are generally available for consideration in Regular Decision.",
+      "superscorePolicy": "both",
+      "writingEssayPolicy": "not_considered",
+      "scoreReportingPolicy": "official_required_after_admit",
+      "middle50SatTotal": {
+        "low": null,
+        "high": null
+      },
+      "middle50ActComposite": {
+        "low": null,
+        "high": null
+      }
+    },
+    "averageNetPriceUsd": null,
+    "programFitTags": [
+      "humanities",
+      "social_sciences",
+      "life_sciences",
+      "research_intensive"
+    ],
+    "programAdmissionModel": "open",
+    "applicationStrategyTags": [
+      "single_choice_early_action"
+    ]
+  },
+  "explanationInputs": {
+    "academicSelectivityBand": "ultra_selective",
+    "testingExpectation": "scores_considered",
+    "englishPolicySummary": "minimum_scores_required",
+    "aidModel": "need_based_only",
+    "applicationComplexity": "high",
+    "deadlineUrgencyWindows": {
+      "earliestDeadline": "2025-11-01",
+      "latestMajorDeadline": "2026-01-02"
+    },
+    "internationalStudentConsiderations": [
+      "english_fluency_required",
+      "need_based_aid_available",
+      "financial_certification_likely_required"
+    ],
+    "potentialFitTags": [
+      "strong_for_liberal_arts_or_humanities_students",
+      "research_or_innovation_oriented",
+      "strong_need_based_aid_signal",
+      "urban_access"
+    ],
+    "potentialRiskTags": [
+      "extremely_low_admission_rate",
+      "high_total_cost",
+      "early_deadline_pressure",
+      "testing_required",
+      "complex_application_requirements"
+    ],
+    "actionableApplicationSteps": [
+      "prepare_early_round_strategy",
+      "complete_standardized_testing_if_required",
+      "prepare_teacher_recommendations_early",
+      "prepare_counselor_documents_early",
+      "budget_for_need_based_aid_process",
+      "build_supplemental_essay_plan"
+    ]
+  },
+  "fieldProvenance": {
+    "identity.schoolName": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.yale.edu/requirements",
+        "excerpt": "Yale requires letters of recommendation, a school report with transcript, and standardized test scores."
+      }
+    ],
+    "identity.city": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.city\": \"New Haven\""
+      }
+    ],
+    "identity.state": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.state\": \"CT\""
+      }
+    ],
+    "identity.officialAdmissionsUrl": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.yale.edu/requirements",
+        "excerpt": "Requirements | Undergraduate Admissions"
+      }
+    ],
+    "applicationRounds": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://dev.admissions.yale.edu/application-deadlines",
+        "excerpt": "Single-Choice Early Action ... Regular Decision"
+      }
+    ],
+    "deadlinesByRound": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://dev.admissions.yale.edu/application-deadlines",
+        "excerpt": "Single-Choice Early Action: November 1 ... Regular Decision: January 2"
+      }
+    ],
+    "englishRequirements": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.yale.edu/international",
+        "excerpt": "Non-native English-speakers who have not taken at least two years of secondary education where English is the medium of instruction are required to submit results from any of the proficiency tests below."
+      }
+    ],
+    "testPolicy": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.yale.edu/standardized-testing",
+        "excerpt": "Yale's test-flexible policy requires applicants to submit scores from one or more of the following exams: ACT, AP, IB, or SAT."
+      }
+    ],
+    "requiredMaterials": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.yale.edu/requirements",
+        "excerpt": "Request letters of recommendation from two teachers ... school counselor ... School Report with official transcript ... Mid-Year Report"
+      }
+    ],
+    "tuitionAnnualUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://finaid.yale.edu/coa",
+        "excerpt": "Tuition $72,500"
+      }
+    ],
+    "estimatedCostOfAttendanceUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://finaid.yale.edu/coa",
+        "excerpt": "Estimated Cost of Attendance for Yale Undergraduate Students $72,500"
+      }
+    ],
+    "livingCostEstimateUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://finaid.yale.edu/coa",
+        "excerpt": "Housing $12,080 ... Food $9,520"
+      }
+    ],
+    "scholarshipAvailabilityFlag": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://finaid.yale.edu/affordability",
+        "excerpt": "We award every dollar of undergraduate financial aid on the basis of a family’s demonstrated financial need"
+      }
+    ],
+    "scholarshipNotes": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://finaid.yale.edu/affordability",
+        "excerpt": "our aid offers meet 100% of demonstrated need - regardless of a student’s citizenship or immigration status - without requiring loans"
+      }
+    ],
+    "recommendationInputs.admissionRateOverall": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.admission_rate.overall\": 0.045"
+      }
+    ],
+    "recommendationInputs.satAverageOverall": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.sat_scores.average.overall\": 1534"
+      }
+    ],
+    "recommendationInputs.actMidpointCumulative": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.act_scores.midpoint.cumulative\": 34"
+      }
+    ],
+    "recommendationInputs.undergraduateSize": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.student.size\": 6811"
+      }
+    ],
+    "recommendationInputs.schoolControl": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.ownership\": 2"
+      }
+    ],
+    "recommendationInputs.campusLocale": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.locale\": 12"
+      }
+    ],
+    "recommendationInputs.internationalAidPolicy": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.yale.edu/international",
+        "excerpt": "Yale is one of only a handful of American universities that considers all applicants for admission without regard to their ability to pay and meets 100% of every family’s demonstrated financial need."
+      }
+    ],
+    "recommendationInputs.hasNeedBasedAid": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://finaid.yale.edu/affordability",
+        "excerpt": "we award every dollar of undergraduate financial aid on the basis of a family’s demonstrated financial need"
+      }
+    ],
+    "recommendationInputs.hasMeritAid": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://finaid.yale.edu/affordability",
+        "excerpt": "our aid offers meet 100% of demonstrated need"
+      }
+    ],
+    "recommendationInputs.programFitTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.yale.edu/majors-and-academic-programs",
+        "excerpt": "80 Majors, 2,000 Courses, 1 Unique Path"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.yale.edu/majors-and-academic-programs",
+        "excerpt": "Yale students have until the end of sophomore year to declare a major"
+      }
+    ],
+    "recommendationInputs.programAdmissionModel": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.yale.edu/majors-and-academic-programs",
+        "excerpt": "Yale students have until the end of sophomore year to declare a major"
+      }
+    ],
+    "recommendationInputs.applicationStrategyTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://dev.admissions.yale.edu/application-deadlines",
+        "excerpt": "Single-Choice Early Action"
+      }
+    ],
+    "recommendationInputs.testingRequirements.acceptedExams": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.yale.edu/standardized-testing",
+        "excerpt": "Yale's test-flexible policy requires applicants to submit scores from one or more of the following exams: ACT, AP, IB, or SAT."
+      }
+    ],
+    "recommendationInputs.testingRequirements.minimumSatTotal": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.yale.edu/standardized-testing",
+        "excerpt": "There is no minimum number of AP or IB scores required."
+      }
+    ],
+    "recommendationInputs.testingRequirements.minimumActComposite": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.yale.edu/standardized-testing",
+        "excerpt": "There is no minimum number of AP or IB scores required."
+      }
+    ],
+    "recommendationInputs.testingRequirements.latestSatTestDateNote": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.yale.edu/standardized-testing",
+        "excerpt": "ACT and SAT exams completed in October or November are generally available for consideration in Yale's Single-Choice Early Action round."
+      }
+    ],
+    "recommendationInputs.testingRequirements.latestActTestDateNote": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.yale.edu/standardized-testing",
+        "excerpt": "ACT and SAT exams completed in January or February are generally available for consideration in the Regular Decision round."
+      }
+    ],
+    "recommendationInputs.testingRequirements.superscorePolicy": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.yale.edu/standardized-testing",
+        "excerpt": "You may report 'super-scored' results from the SAT or ACT"
+      }
+    ],
+    "recommendationInputs.testingRequirements.writingEssayPolicy": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.yale.edu/standardized-testing",
+        "excerpt": "The Science and Writing sections are optional."
+      }
+    ],
+    "recommendationInputs.testingRequirements.scoreReportingPolicy": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.yale.edu/standardized-testing",
+        "excerpt": "Applicants who are admitted and matriculate at Yale will be required to provide official results of all self-reported scores prior to enrolling."
+      }
+    ],
+    "explanationInputs.academicSelectivityBand": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.yale.edu/international",
+        "excerpt": "Yale is one of only a handful of American universities that considers all applicants for admission without regard to their ability to pay"
+      }
+    ],
+    "explanationInputs.testingExpectation": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.yale.edu/standardized-testing",
+        "excerpt": "Yale’s test-flexible policy"
+      }
+    ],
+    "explanationInputs.englishPolicySummary": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.yale.edu/international",
+        "excerpt": "Fluency in written and spoken English is essential for all Yale students."
+      }
+    ],
+    "explanationInputs.aidModel": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://finaid.yale.edu/affordability",
+        "excerpt": "we award every dollar of undergraduate financial aid on the basis of a family’s demonstrated financial need"
+      }
+    ],
+    "explanationInputs.applicationComplexity": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.yale.edu/requirements",
+        "excerpt": "letters of recommendation, a school report with transcript, and standardized test scores"
+      }
+    ],
+    "explanationInputs.deadlineUrgencyWindows": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://dev.admissions.yale.edu/application-deadlines",
+        "excerpt": "Single-Choice Early Action: November 1 ... Regular Decision: January 2"
+      }
+    ],
+    "explanationInputs.internationalStudentConsiderations": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.yale.edu/international",
+        "excerpt": "International students are eligible for the same need-based financial aid as domestic applicants."
+      }
+    ],
+    "explanationInputs.potentialFitTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.yale.edu/international",
+        "excerpt": "Yale is one of only a handful of American universities that considers all applicants for admission without regard to their ability to pay"
+      }
+    ],
+    "explanationInputs.potentialRiskTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://dev.admissions.yale.edu/application-deadlines",
+        "excerpt": "Single-Choice Early Action: November 1 ... Regular Decision: January 2"
+      }
+    ],
+    "explanationInputs.actionableApplicationSteps": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.yale.edu/requirements",
+        "excerpt": "Request letters of recommendation from two teachers ... school counselor ... School Report with official transcript"
+      }
+    ]
+  },
+  "quality": {
+    "status": "publishable",
+    "missingFields": [],
+    "warnings": []
+  }
+}

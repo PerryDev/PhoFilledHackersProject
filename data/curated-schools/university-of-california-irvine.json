@@ -1,0 +1,364 @@
+{
+  "schoolSlug": "university-of-california-irvine",
+  "lastVerifiedAt": "2026-03-21",
+  "identity": {
+    "schoolName": "University of California, Irvine",
+    "city": "Irvine",
+    "state": "CA",
+    "officialAdmissionsUrl": "https://admissions.uci.edu/apply/first-year-students/index.php"
+  },
+  "applicationRounds": [
+    "regular_decision"
+  ],
+  "deadlinesByRound": {
+    "early_action": null,
+    "early_decision": null,
+    "regular_decision": "2026-12-01",
+    "rolling_admission": null,
+    "priority": null
+  },
+  "englishRequirements": {
+    "minimumIelts": 6.5,
+    "minimumToeflInternetBased": 80,
+    "waiverNotes": "If you completed at least three years of secondary school with English as the primary language of instruction, you do not need to prove English proficiency. UCI also accepts ACT ELA 24+, SAT Writing and Language 31+, AP English scores of 3-5, IB English scores of 5-7, Duolingo 115+, or a UC-transferable English composition course with a C or better."
+  },
+  "testPolicy": "test_blind",
+  "requiredMaterials": [
+    "uc_application",
+    "application_fee_or_fee_waiver",
+    "personal_insight_questions",
+    "proof_of_english_proficiency"
+  ],
+  "tuitionAnnualUsd": 20077,
+  "estimatedCostOfAttendanceUsd": 46007,
+  "livingCostEstimateUsd": 25930,
+  "scholarshipAvailabilityFlag": true,
+  "scholarshipNotes": "UCI offers grants and scholarships from federal, state, university, and private sources, and the Office of Financial Aid says scholarships may be awarded for academic achievement, financial need, community activities, work experience, and more. UCI also notes that international undergraduates are not eligible for UCI financial assistance.",
+  "recommendationInputs": {
+    "admissionRateOverall": 0.2557,
+    "satAverageOverall": null,
+    "actMidpointCumulative": null,
+    "undergraduateSize": 29494,
+    "schoolControl": "public",
+    "campusLocale": "urban",
+    "internationalAidPolicy": "limited_or_unclear",
+    "hasNeedBasedAid": true,
+    "hasMeritAid": true,
+    "testingRequirements": {
+      "acceptedExams": [],
+      "minimumSatTotal": null,
+      "minimumActComposite": null,
+      "latestSatTestDateNote": null,
+      "latestActTestDateNote": null,
+      "superscorePolicy": "unknown",
+      "writingEssayPolicy": "unknown",
+      "scoreReportingPolicy": "unknown",
+      "middle50SatTotal": {
+        "low": null,
+        "high": null
+      },
+      "middle50ActComposite": {
+        "low": null,
+        "high": null
+      }
+    },
+    "averageNetPriceUsd": null,
+    "programFitTags": [
+      "research_intensive",
+      "engineering",
+      "social_sciences",
+      "life_sciences"
+    ],
+    "programAdmissionModel": "unknown",
+    "applicationStrategyTags": []
+  },
+  "explanationInputs": {
+    "academicSelectivityBand": "selective",
+    "testingExpectation": "tests_not_considered",
+    "englishPolicySummary": "minimum_scores_required",
+    "aidModel": "need_and_merit",
+    "applicationComplexity": "medium",
+    "deadlineUrgencyWindows": {
+      "earliestDeadline": "2026-12-01",
+      "latestMajorDeadline": "2026-12-01"
+    },
+    "internationalStudentConsiderations": [
+      "english_test_may_be_required",
+      "financial_certification_likely_required",
+      "need_aware_or_limited_aid_possible"
+    ],
+    "potentialFitTags": [
+      "large_public_environment",
+      "urban_access",
+      "value_for_budget_conscious_students",
+      "research_or_innovation_oriented"
+    ],
+    "potentialRiskTags": [
+      "limited_aid_for_international_students",
+      "english_requirement_barrier"
+    ],
+    "actionableApplicationSteps": [
+      "prepare_regular_decision_timeline",
+      "prepare_english_testing_or_waiver_plan",
+      "prioritize_financial_aid_forms",
+      "build_supplemental_essay_plan"
+    ]
+  },
+  "fieldProvenance": {
+    "identity.schoolName": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.uci.edu/apply/first-year-students/index.php",
+        "excerpt": "First-Year Admission"
+      }
+    ],
+    "identity.city": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.city\": \"Irvine\""
+      }
+    ],
+    "identity.state": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.state\": \"CA\""
+      }
+    ],
+    "identity.officialAdmissionsUrl": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.uci.edu/apply/first-year-students/index.php",
+        "excerpt": "First-Year Admission"
+      }
+    ],
+    "applicationRounds": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.uci.edu/apply/index.php",
+        "excerpt": "The UC Application for fall opens August 1. The submission period is October 1 - December 1."
+      }
+    ],
+    "deadlinesByRound": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.uci.edu/apply/index.php",
+        "excerpt": "The UC Application for fall opens August 1. The submission period is October 1 - December 1."
+      }
+    ],
+    "englishRequirements": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.uci.edu/apply/international-students.php",
+        "excerpt": "Score 6.5 or higher on the International English Language Testing System (IELTS)"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.uci.edu/apply/international-students.php",
+        "excerpt": "Internet-based test (iBT) or iBT Home Edition: Minimum score of 80 or better"
+      }
+    ],
+    "testPolicy": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.uci.edu/apply/first-year-students/index.php",
+        "excerpt": "UC Irvine does not consider SAT or ACT scores for admission or scholarship purposes."
+      }
+    ],
+    "requiredMaterials": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.uci.edu/apply/index.php",
+        "excerpt": "Apply online and submit your completed application with the nonrefundable application fee."
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.uci.edu/apply/first-year-students/index.php",
+        "excerpt": "We consider all information provided in your application, including your answers to the personal insight questions."
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.uci.edu/apply/international-students.php",
+        "excerpt": "if you have had less than 3 years of instruction in English by time of graduation."
+      }
+    ],
+    "tuitionAnnualUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://ofas.uci.edu/",
+        "excerpt": "Undergrad Costs at UCI"
+      }
+    ],
+    "estimatedCostOfAttendanceUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://ofas.uci.edu/",
+        "excerpt": "We want to make sure you understand exactly what you will be paying for as you work toward your degree at UCI."
+      }
+    ],
+    "livingCostEstimateUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://ofas.uci.edu/",
+        "excerpt": "We want to make sure you understand exactly what you will be paying for as you work toward your degree at UCI."
+      }
+    ],
+    "scholarshipAvailabilityFlag": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://ofas.uci.edu/",
+        "excerpt": "There are many types of aid available at UCI."
+      }
+    ],
+    "scholarshipNotes": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://ofas.uci.edu/",
+        "excerpt": "Scholarships are awarded for academic achievement, financial need, community activities, work experience, and more."
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.uci.edu/apply/international-students.php",
+        "excerpt": "UC Irvine does not offer financial assistance for international students."
+      }
+    ],
+    "recommendationInputs.admissionRateOverall": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.admission_rate.overall\": 0.2557"
+      }
+    ],
+    "recommendationInputs.satAverageOverall": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.sat_scores.average.overall\": null"
+      }
+    ],
+    "recommendationInputs.actMidpointCumulative": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.act_scores.midpoint.cumulative\": null"
+      }
+    ],
+    "recommendationInputs.undergraduateSize": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.student.size\": 29494"
+      }
+    ],
+    "recommendationInputs.schoolControl": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.ownership\": 1"
+      }
+    ],
+    "recommendationInputs.campusLocale": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.locale\": 11"
+      }
+    ],
+    "recommendationInputs.internationalAidPolicy": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.uci.edu/apply/international-students.php",
+        "excerpt": "UC Irvine does not offer financial assistance for international students."
+      }
+    ],
+    "recommendationInputs.hasNeedBasedAid": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://ofas.uci.edu/",
+        "excerpt": "Grants are awarded on the basis of financial need and do not have to be repaid."
+      }
+    ],
+    "recommendationInputs.hasMeritAid": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://ofas.uci.edu/",
+        "excerpt": "Scholarships are awarded for academic achievement, financial need, community activities, work experience, and more."
+      }
+    ],
+    "recommendationInputs.testingRequirements": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.uci.edu/apply/first-year-students/index.php",
+        "excerpt": "UC Irvine does not consider SAT or ACT scores for admission or scholarship purposes."
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.uci.edu/apply/first-year-students/index.php",
+        "excerpt": "First-year applications are reviewed for completion of required college-preparatory coursework, demonstrated academic achievements, activities, talents, and skills."
+      }
+    ],
+    "recommendationInputs.programFitTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://dev.admissions.uci.edu/",
+        "excerpt": "UC Irvine offers more than 80 undergraduate degree programs ... the opportunity to work alongside internationally renowned faculty to produce groundbreaking work"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://engineering.uci.edu/research/undergraduate",
+        "excerpt": "hands-on experience and participation in research play a key role in educating undergraduate students"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.uci.edu/academics/social-sciences.php",
+        "excerpt": "School of Social Sciences is the largest academic unit on campus"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://undergraduate.bio.uci.edu/wp-content/uploads/sites/43/2025/09/UCICDBioSci_NS_Booklet_2025-26.pdf",
+        "excerpt": "level of research activity (R1)"
+      }
+    ],
+    "explanationInputs.academicSelectivityBand": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.admission_rate.overall\": 0.2557"
+      }
+    ],
+    "explanationInputs.testingExpectation": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.uci.edu/apply/first-year-students/index.php",
+        "excerpt": "UC Irvine does not consider SAT or ACT scores for admission or scholarship purposes."
+      }
+    ],
+    "explanationInputs.englishPolicySummary": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.uci.edu/apply/international-students.php",
+        "excerpt": "You can demonstrate proficiency by meeting any of the following exam benchmarks"
+      }
+    ],
+    "explanationInputs.aidModel": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://ofas.uci.edu/",
+        "excerpt": "There are many types of aid available at UCI."
+      }
+    ],
+    "explanationInputs.applicationComplexity": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.uci.edu/apply/first-year-students/index.php",
+        "excerpt": "UC Irvine uses a comprehensive review process."
+      }
+    ]
+  },
+  "quality": {
+    "status": "publishable",
+    "missingFields": [],
+    "warnings": []
+  }
+}

@@ -1,0 +1,345 @@
+{
+  "schoolSlug": "university-of-california-berkeley",
+  "lastVerifiedAt": "2026-03-21",
+  "identity": {
+    "schoolName": "University of California, Berkeley",
+    "city": "Berkeley",
+    "state": "CA",
+    "officialAdmissionsUrl": "https://admissions.berkeley.edu/apply-to-berkeley/"
+  },
+  "applicationRounds": [
+    "regular_decision"
+  ],
+  "deadlinesByRound": {
+    "early_action": null,
+    "early_decision": null,
+    "regular_decision": "2026-12-01",
+    "rolling_admission": null,
+    "priority": null
+  },
+  "englishRequirements": {
+    "minimumIelts": 6.5,
+    "minimumToeflInternetBased": 80,
+    "waiverNotes": "International applicants can also satisfy English proficiency through approved alternatives such as 3+ years of English-language instruction, qualifying AP or IB English results, or ACT English Language Arts / SAT Writing and Language scores."
+  },
+  "testPolicy": "test_blind",
+  "requiredMaterials": [
+    "uc_application",
+    "application_fee_or_fee_waiver",
+    "personal_insight_questions"
+  ],
+  "tuitionAnnualUsd": 15650,
+  "estimatedCostOfAttendanceUsd": 51904,
+  "livingCostEstimateUsd": 23640,
+  "scholarshipAvailabilityFlag": true,
+  "scholarshipNotes": "Admitted students are automatically considered for scholarships. FAFSA or the California Dream Act Application is used to consider students for federal, state, UC, and Berkeley-specific scholarships, grants, loans, and work-study. International students are not eligible for federal financial aid or institutional aid managed by the office.",
+  "recommendationInputs": {
+    "admissionRateOverall": 0.0345,
+    "satAverageOverall": 1553,
+    "actMidpointCumulative": 35,
+    "undergraduateSize": 7755,
+    "schoolControl": "public",
+    "campusLocale": "urban",
+    "internationalAidPolicy": "limited_or_unclear",
+    "hasNeedBasedAid": true,
+    "hasMeritAid": true,
+    "testingRequirements": {
+      "acceptedExams": [],
+      "minimumSatTotal": null,
+      "minimumActComposite": null,
+      "latestSatTestDateNote": null,
+      "latestActTestDateNote": null,
+      "superscorePolicy": "unknown",
+      "writingEssayPolicy": "unknown",
+      "scoreReportingPolicy": "unknown",
+      "middle50SatTotal": {
+        "low": null,
+        "high": null
+      },
+      "middle50ActComposite": {
+        "low": null,
+        "high": null
+      }
+    },
+    "averageNetPriceUsd": null,
+    "programFitTags": [
+      "computer_science",
+      "engineering",
+      "social_sciences",
+      "research_intensive"
+    ],
+    "programAdmissionModel": "open",
+    "applicationStrategyTags": []
+  },
+  "explanationInputs": {
+    "academicSelectivityBand": "ultra_selective",
+    "testingExpectation": "tests_not_considered",
+    "englishPolicySummary": "minimum_scores_required",
+    "aidModel": "need_and_merit",
+    "applicationComplexity": "medium",
+    "deadlineUrgencyWindows": {
+      "earliestDeadline": "2026-12-01",
+      "latestMajorDeadline": "2026-12-01"
+    },
+    "internationalStudentConsiderations": [
+      "english_test_may_be_required",
+      "financial_certification_likely_required",
+      "need_aware_or_limited_aid_possible"
+    ],
+    "potentialFitTags": [
+      "large_public_environment",
+      "urban_access",
+      "value_for_budget_conscious_students",
+      "research_or_innovation_oriented"
+    ],
+    "potentialRiskTags": [
+      "extremely_low_admission_rate",
+      "limited_aid_for_international_students"
+    ],
+    "actionableApplicationSteps": [
+      "prepare_regular_decision_timeline",
+      "prepare_english_testing_or_waiver_plan",
+      "budget_for_need_based_aid_process",
+      "build_supplemental_essay_plan"
+    ]
+  },
+  "fieldProvenance": {
+    "identity.schoolName": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.berkeley.edu/apply-to-berkeley/",
+        "excerpt": "Apply to Berkeley"
+      }
+    ],
+    "identity.city": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.city\": \"Berkeley\""
+      }
+    ],
+    "identity.state": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.state\": \"CA\""
+      }
+    ],
+    "identity.officialAdmissionsUrl": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.berkeley.edu/apply-to-berkeley/",
+        "excerpt": "Apply to Berkeley"
+      }
+    ],
+    "applicationRounds": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.berkeley.edu/apply-to-berkeley/",
+        "excerpt": "NOTE: Berkeley does not participate in early action or early decision."
+      }
+    ],
+    "deadlinesByRound": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.berkeley.edu/apply-to-berkeley/dates-deadlines/",
+        "excerpt": "Application filing period October 1 - December 1. Application deadline December 1."
+      }
+    ],
+    "englishRequirements": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.admissions.berkeley.edu/requirements-for-international-students/",
+        "excerpt": "TOEFL with a minimum score of 80 or better ... IELTS with a minimum score of 6.5"
+      }
+    ],
+    "testPolicy": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.berkeley.edu/apply-to-berkeley/freshmen/freshmen-requirements/",
+        "excerpt": "Berkeley is test-free, meaning we will not use standardized exams (SAT and ACT) in our review process."
+      }
+    ],
+    "requiredMaterials": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.berkeley.edu/apply-to-berkeley/",
+        "excerpt": "Complete the UC application"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.berkeley.edu/apply-to-berkeley/",
+        "excerpt": "The application fee is $80 for each UC campus ... Application fee waivers are available"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.berkeley.edu/apply-to-berkeley/",
+        "excerpt": "Personal insight questions"
+      }
+    ],
+    "tuitionAnnualUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://financialaid.berkeley.edu/how-aid-works/student-budgets-cost-of-attendance/",
+        "excerpt": "Tuition and Fees $15,650"
+      }
+    ],
+    "estimatedCostOfAttendanceUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://financialaid.berkeley.edu/how-aid-works/student-budgets-cost-of-attendance/",
+        "excerpt": "Total Cost of Attendance (including Personal Expenses*) $51,904"
+      }
+    ],
+    "livingCostEstimateUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://financialaid.berkeley.edu/how-aid-works/student-budgets-cost-of-attendance/",
+        "excerpt": "Living Expenses $23,640"
+      }
+    ],
+    "scholarshipAvailabilityFlag": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.berkeley.edu/cost/apply-for-financial-aid/",
+        "excerpt": "Admitted students are automatically considered for scholarships."
+      }
+    ],
+    "scholarshipNotes": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.berkeley.edu/cost/apply-for-financial-aid/",
+        "excerpt": "Complete the FAFSA ... or California Dream Act Application to be considered for federal, state, UC, and Berkeley-specific scholarships, grants, loans, and work-study."
+      }
+    ],
+    "recommendationInputs.admissionRateOverall": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.admission_rate.overall\": 0.0345"
+      }
+    ],
+    "recommendationInputs.satAverageOverall": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.sat_scores.average.overall\": 1553"
+      }
+    ],
+    "recommendationInputs.actMidpointCumulative": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.act_scores.midpoint.cumulative\": 35"
+      }
+    ],
+    "recommendationInputs.undergraduateSize": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.student.size\": 7755"
+      }
+    ],
+    "recommendationInputs.schoolControl": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.ownership\": 2"
+      }
+    ],
+    "recommendationInputs.campusLocale": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.locale\": 11"
+      }
+    ],
+    "recommendationInputs.internationalAidPolicy": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.berkeley.edu/cost/apply-for-financial-aid/",
+        "excerpt": "International students are not eligible for federal financial aid or institutional aid managed by the Financial Aid and Scholarships Office at UC Berkeley."
+      }
+    ],
+    "recommendationInputs.hasNeedBasedAid": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://financialaid.berkeley.edu/types-of-aid-at-berkeley/grants/uc-berkeley-grants/",
+        "excerpt": "University Grants are a form of need-based financial aid"
+      }
+    ],
+    "recommendationInputs.hasMeritAid": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.berkeley.edu/cost/apply-for-financial-aid/",
+        "excerpt": "Admitted students are automatically considered for scholarships."
+      }
+    ],
+    "recommendationInputs.programFitTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.berkeley.edu/academics/academic-programs-majors/",
+        "excerpt": "Our more than 130 academic departments and 80 interdisciplinary research units divided into six colleges and one school"
+      }
+    ],
+    "recommendationInputs.programAdmissionModel": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.berkeley.edu/apply-to-berkeley/",
+        "excerpt": "Complete the UC application"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.berkeley.edu/academics/academic-programs-majors/",
+        "excerpt": "Our more than 130 academic departments and 80 interdisciplinary research units divided into six colleges and one school"
+      }
+    ],
+    "recommendationInputs.testingRequirements": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.berkeley.edu/apply-to-berkeley/freshmen/freshmen-requirements/",
+        "excerpt": "Berkeley is test-free, meaning we will not use standardized exams (SAT and ACT) in our review process."
+      }
+    ],
+    "explanationInputs.academicSelectivityBand": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.admission_rate.overall\": 0.0345"
+      }
+    ],
+    "explanationInputs.testingExpectation": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.berkeley.edu/apply-to-berkeley/freshmen/freshmen-requirements/",
+        "excerpt": "Berkeley is test-free ... we will not use standardized exams (SAT and ACT) in our review process."
+      }
+    ],
+    "explanationInputs.englishPolicySummary": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.admissions.berkeley.edu/requirements-for-international-students/",
+        "excerpt": "TOEFL with a minimum score of 80 or better ... IELTS with a minimum score of 6.5"
+      }
+    ],
+    "explanationInputs.aidModel": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://financialaid.berkeley.edu/types-of-aid-at-berkeley/grants/uc-berkeley-grants/",
+        "excerpt": "University Grants are a form of need-based financial aid"
+      }
+    ],
+    "explanationInputs.applicationComplexity": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.berkeley.edu/apply-to-berkeley/",
+        "excerpt": "Admission to UC Berkeley is a two-step process: satisfying requirements and selection."
+      }
+    ]
+  },
+  "quality": {
+    "status": "publishable",
+    "missingFields": [],
+    "warnings": []
+  }
+}

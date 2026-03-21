@@ -1,0 +1,316 @@
+{
+  "schoolSlug": "princeton",
+  "lastVerifiedAt": "2026-03-21",
+  "identity": {
+    "schoolName": "Princeton University",
+    "city": "Princeton",
+    "state": "NJ",
+    "officialAdmissionsUrl": "https://admission.princeton.edu/apply"
+  },
+  "applicationRounds": [
+    "early_action",
+    "regular_decision"
+  ],
+  "deadlinesByRound": {
+    "early_action": "2026-11-01",
+    "early_decision": null,
+    "regular_decision": "2027-01-01",
+    "rolling_admission": null,
+    "priority": null
+  },
+  "englishRequirements": {
+    "minimumIelts": null,
+    "minimumToeflInternetBased": null,
+    "waiverNotes": "Princeton does not require English proficiency testing if English is your native language or if you have spent at least three years at a secondary school where English is the primary language of instruction."
+  },
+  "testPolicy": "test_optional",
+  "requiredMaterials": [
+    "common_application",
+    "princeton_specific_questions",
+    "graded_written_paper",
+    "school_report",
+    "school_counselor_letter",
+    "official_transcript",
+    "teacher_recommendation_1",
+    "teacher_recommendation_2",
+    "midyear_report",
+    "optional_arts_supplement"
+  ],
+  "tuitionAnnualUsd": 68140,
+  "estimatedCostOfAttendanceUsd": 94624,
+  "livingCostEstimateUsd": 22120,
+  "scholarshipAvailabilityFlag": true,
+  "scholarshipNotes": "Princeton meets full demonstrated need with grant aid instead of loans, applies the same financial aid policy to international students, and does not offer academic or athletic merit scholarships. The Princeton Financial Aid Application is free for U.S. and international applicants.",
+  "recommendationInputs": {
+    "admissionRateOverall": 0.0479,
+    "satAverageOverall": 1554,
+    "actMidpointCumulative": 34,
+    "undergraduateSize": 7540,
+    "schoolControl": "private_nonprofit",
+    "campusLocale": null,
+    "internationalAidPolicy": "meets_full_demonstrated_need_if_eligible",
+    "hasNeedBasedAid": true,
+    "hasMeritAid": false,
+    "testingRequirements": {
+      "acceptedExams": [
+        "sat",
+        "act"
+      ],
+      "minimumSatTotal": null,
+      "minimumActComposite": null,
+      "latestSatTestDateNote": "If submitted, SAT or ACT scores should be taken by the October test date for single-choice early action and the December date for regular decision.",
+      "latestActTestDateNote": "If submitted, SAT or ACT scores should be taken by the October test date for single-choice early action and the December date for regular decision.",
+      "superscorePolicy": "unknown",
+      "writingEssayPolicy": "unknown",
+      "scoreReportingPolicy": "official_required_upfront",
+      "middle50SatTotal": {
+        "low": null,
+        "high": null
+      },
+      "middle50ActComposite": {
+        "low": null,
+        "high": null
+      }
+    },
+    "averageNetPriceUsd": null,
+    "programFitTags": [
+      "engineering",
+      "humanities",
+      "social_sciences",
+      "public_policy",
+      "research_intensive"
+    ],
+    "programAdmissionModel": "open",
+    "applicationStrategyTags": [
+      "single_choice_early_action"
+    ]
+  },
+  "explanationInputs": {
+    "academicSelectivityBand": "ultra_selective",
+    "testingExpectation": "tests_not_required",
+    "englishPolicySummary": "waiver_possible",
+    "aidModel": "need_based_only",
+    "applicationComplexity": "high",
+    "deadlineUrgencyWindows": {
+      "earliestDeadline": "2026-11-01",
+      "latestMajorDeadline": "2027-01-01"
+    },
+    "internationalStudentConsiderations": [
+      "english_test_may_be_required",
+      "financial_certification_likely_required",
+      "need_based_aid_available"
+    ],
+    "potentialFitTags": [
+      "research_or_innovation_oriented",
+      "strong_need_based_aid_signal",
+      "value_for_budget_conscious_students",
+      "test_flexible_pathway"
+    ],
+    "potentialRiskTags": [
+      "extremely_low_admission_rate",
+      "high_total_cost",
+      "early_deadline_pressure",
+      "limited_merit_aid"
+    ],
+    "actionableApplicationSteps": [
+      "prepare_early_round_strategy",
+      "prepare_teacher_recommendations_early",
+      "budget_for_need_based_aid_process",
+      "prioritize_financial_aid_forms",
+      "build_supplemental_essay_plan"
+    ]
+  },
+  "fieldProvenance": {
+    "identity.schoolName": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.princeton.edu/apply",
+        "excerpt": "Princeton Admission"
+      }
+    ],
+    "applicationRounds": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.princeton.edu/apply/first-year-application-dates-deadlines",
+        "excerpt": "You can apply to Princeton as a first-year student through single-choice early action or regular decision."
+      }
+    ],
+    "deadlinesByRound": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.princeton.edu/apply/first-year-application-dates-deadlines",
+        "excerpt": "Nov. 1 ... Jan. 1"
+      }
+    ],
+    "englishRequirements": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.princeton.edu/apply/application-checklist",
+        "excerpt": "You are not required to take the TOEFL, IELTS, DET or PTE Academic if English is your native language or if you have spent at least three years at a secondary school where English is the primary language of instruction."
+      }
+    ],
+    "testPolicy": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.princeton.edu/apply/standardized-testing",
+        "excerpt": "For first-year and transfer applicants seeking to enroll in fall 2026 or fall 2027, Princeton remains test optional."
+      }
+    ],
+    "requiredMaterials": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.princeton.edu/apply/first-year-application-dates-deadlines",
+        "excerpt": "Common Application ... Princeton-specific Questions ... Graded Written Paper ... School Report, School Counselor Letter and Transcript ... Teacher Evaluation Form 1 ... Teacher Evaluation Form 2"
+      }
+    ],
+    "tuitionAnnualUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://admission.princeton.edu/cost-aid/fees-payment-options",
+        "excerpt": "Tuition: $68,140"
+      }
+    ],
+    "estimatedCostOfAttendanceUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://admission.princeton.edu/cost-aid/fees-payment-options",
+        "excerpt": "The estimated cost of attendance for 2026-27 is $94,624."
+      }
+    ],
+    "livingCostEstimateUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://admission.princeton.edu/cost-aid/fees-payment-options",
+        "excerpt": "Housing: $13,010 ... Food: $9,110"
+      }
+    ],
+    "scholarshipAvailabilityFlag": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admission.princeton.edu/cost-aid/fees-payment-options",
+        "excerpt": "It is our policy to meet full demonstrated need each year."
+      }
+    ],
+    "scholarshipNotes": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://www.princeton.edu/admission-aid/international-students",
+        "excerpt": "The full need of all admitted international students is met the same as it is for students from the United States."
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://www.princeton.edu/admission-aid/international-students",
+        "excerpt": "Princeton does not offer academic or athletic merit scholarships."
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admission.princeton.edu/cost-aid/how-financial-aid-works",
+        "excerpt": "We will meet 100% of the difference between the family contribution and Princeton’s cost of attendance with grant aid"
+      }
+    ],
+    "recommendationInputs.admissionRateOverall": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools?id=186131",
+        "excerpt": "\"latest.admissions.admission_rate.overall\": 0.0479"
+      }
+    ],
+    "recommendationInputs.satAverageOverall": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools?id=186131",
+        "excerpt": "\"latest.admissions.sat_scores.average.overall\": 1554"
+      }
+    ],
+    "recommendationInputs.actMidpointCumulative": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools?id=186131",
+        "excerpt": "\"latest.admissions.act_scores.midpoint.cumulative\": 34"
+      }
+    ],
+    "recommendationInputs.undergraduateSize": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools?id=186131",
+        "excerpt": "\"latest.student.size\": 7540"
+      }
+    ],
+    "recommendationInputs.schoolControl": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools?id=186131",
+        "excerpt": "\"school.ownership\": 2"
+      }
+    ],
+    "recommendationInputs.programFitTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.princeton.edu/academics/degrees-departments",
+        "excerpt": "Students apply to Princeton University, not to individual departments, programs or schools."
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.princeton.edu/academics/degrees-departments",
+        "excerpt": "engineering, humanities, social sciences, public policy"
+      }
+    ],
+    "recommendationInputs.programAdmissionModel": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.princeton.edu/academics/degrees-departments",
+        "excerpt": "Students apply to Princeton University, not to individual departments, programs or schools."
+      }
+    ],
+    "recommendationInputs.applicationStrategyTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.princeton.edu/apply/first-year-application-dates-deadlines",
+        "excerpt": "single-choice early action"
+      }
+    ],
+    "recommendationInputs.testingRequirements": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.princeton.edu/apply/standardized-testing",
+        "excerpt": "Princeton remains test optional ... If you choose to submit testing, applicants should take the SAT or the ACT by the October test date for single-choice early action and the December date for regular decision."
+      }
+    ],
+    "explanationInputs.testingExpectation": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.princeton.edu/apply/standardized-testing",
+        "excerpt": "Princeton remains test optional"
+      }
+    ],
+    "explanationInputs.englishPolicySummary": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.princeton.edu/apply/application-checklist",
+        "excerpt": "You are not required to take the TOEFL, IELTS, DET or PTE Academic if English is your native language or if you have spent at least three years at a secondary school where English is the primary language of instruction."
+      }
+    ],
+    "explanationInputs.aidModel": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admission.princeton.edu/cost-aid/how-financial-aid-works",
+        "excerpt": "We will meet 100% of the difference ... with grant aid"
+      }
+    ],
+    "explanationInputs.applicationComplexity": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.princeton.edu/apply/first-year-application-dates-deadlines",
+        "excerpt": "Common Application ... Princeton-specific Questions ... Graded Written Paper ... School Report ... Teacher Evaluation Form 1 ... Teacher Evaluation Form 2"
+      }
+    ]
+  },
+  "quality": {
+    "status": "publishable",
+    "missingFields": [],
+    "warnings": [
+      "The application deadlines page lists dates without a year; the artifact records the upcoming cycle dates as 2026-11-01 and 2027-01-01.",
+      "The cost page publishes a total cost of attendance and does not separate all indirect costs cleanly; livingCostEstimateUsd uses housing plus food."
+    ]
+  }
+}

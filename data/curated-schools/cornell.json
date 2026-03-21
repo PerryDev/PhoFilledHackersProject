@@ -1,0 +1,469 @@
+{
+  "schoolSlug": "cornell",
+  "lastVerifiedAt": "2026-03-21",
+  "identity": {
+    "schoolName": "Cornell University",
+    "city": "Ithaca",
+    "state": "NY",
+    "officialAdmissionsUrl": "https://admissions.cornell.edu/how-to-apply/first-year-applicants"
+  },
+  "applicationRounds": [
+    "early_decision",
+    "regular_decision"
+  ],
+  "deadlinesByRound": {
+    "early_action": null,
+    "early_decision": "2026-11-01",
+    "regular_decision": "2027-01-02",
+    "rolling_admission": null,
+    "priority": null
+  },
+  "englishRequirements": {
+    "minimumIelts": 7.5,
+    "minimumToeflInternetBased": 100,
+    "waiverNotes": "Applicants whose first language is English, who are U.S. citizens or permanent residents, or who have studied for at least four years at a school where English is the primary language of instruction may be exempt from submitting an English proficiency exam."
+  },
+  "testPolicy": "required",
+  "requiredMaterials": [
+    "common_application",
+    "cornell_writing_supplement",
+    "application_fee_or_fee_waiver",
+    "sat_or_act",
+    "school_report",
+    "counselor_recommendation",
+    "official_transcript",
+    "midyear_transcript",
+    "teacher_recommendation_1",
+    "teacher_recommendation_2"
+  ],
+  "tuitionAnnualUsd": 71266,
+  "estimatedCostOfAttendanceUsd": 96268,
+  "livingCostEstimateUsd": 20574,
+  "scholarshipAvailabilityFlag": true,
+  "scholarshipNotes": "Cornell meets 100 percent of demonstrated financial need for eligible undergraduates. Aid is need-based; Cornell does not offer merit, athletic, or talent-based aid.",
+  "recommendationInputs": {
+    "admissionRateOverall": 0.0816,
+    "satAverageOverall": 1520,
+    "actMidpointCumulative": 34,
+    "undergraduateSize": 15935,
+    "schoolControl": "private_nonprofit",
+    "campusLocale": "city",
+    "internationalAidPolicy": "need_based_aid_available",
+    "hasNeedBasedAid": true,
+    "hasMeritAid": false,
+    "testingRequirements": {
+      "acceptedExams": [
+        "sat",
+        "act"
+      ],
+      "minimumSatTotal": null,
+      "minimumActComposite": null,
+      "latestSatTestDateNote": "Cornell requires SAT or ACT for first-year applicants applying for Fall 2026 or beyond and says students should take tests early enough for scores to be considered.",
+      "latestActTestDateNote": "Cornell requires SAT or ACT for first-year applicants applying for Fall 2026 or beyond and says students should take tests early enough for scores to be considered.",
+      "superscorePolicy": "both",
+      "writingEssayPolicy": "optional",
+      "scoreReportingPolicy": "self_report_allowed",
+      "middle50SatTotal": {
+        "low": null,
+        "high": null
+      },
+      "middle50ActComposite": {
+        "low": null,
+        "high": null
+      }
+    },
+    "averageNetPriceUsd": null,
+    "programFitTags": [
+      "business",
+      "engineering",
+      "life_sciences",
+      "humanities",
+      "social_sciences",
+      "research_intensive"
+    ],
+    "programAdmissionModel": "separate_school_application",
+    "applicationStrategyTags": [
+      "binding_early_decision"
+    ]
+  },
+  "explanationInputs": {
+    "academicSelectivityBand": "highly_selective",
+    "testingExpectation": "scores_considered",
+    "englishPolicySummary": "minimum_scores_required",
+    "aidModel": "need_based_only",
+    "applicationComplexity": "high",
+    "deadlineUrgencyWindows": {
+      "earliestDeadline": "2026-11-01",
+      "latestMajorDeadline": "2027-01-02"
+    },
+    "internationalStudentConsiderations": [
+      "english_fluency_required",
+      "english_test_may_be_required",
+      "need_aware_or_limited_aid_possible",
+      "need_based_aid_available"
+    ],
+    "potentialFitTags": [
+      "strong_for_high_achieving_stem_students",
+      "research_or_innovation_oriented",
+      "strong_need_based_aid_signal"
+    ],
+    "potentialRiskTags": [
+      "high_total_cost",
+      "limited_merit_aid",
+      "testing_required",
+      "complex_application_requirements"
+    ],
+    "actionableApplicationSteps": [
+      "prepare_early_round_strategy",
+      "complete_standardized_testing_if_required",
+      "prepare_english_testing_or_waiver_plan",
+      "prepare_teacher_recommendations_early",
+      "prepare_counselor_documents_early",
+      "budget_for_need_based_aid_process",
+      "build_supplemental_essay_plan"
+    ]
+  },
+  "fieldProvenance": {
+    "identity.schoolName": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.name\": \"Cornell University\""
+      }
+    ],
+    "identity.city": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.cornell.edu/how-to-submit-your-standardized-test-scores",
+        "excerpt": "Cornell University 410 Thurston Avenue Ithaca, NY 14850"
+      }
+    ],
+    "identity.state": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.cornell.edu/how-to-submit-your-standardized-test-scores",
+        "excerpt": "Cornell University 410 Thurston Avenue Ithaca, NY 14850"
+      }
+    ],
+    "officialAdmissionsUrl": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.cornell.edu/how-to-apply/first-year-applicants",
+        "excerpt": "First-Year Applicants"
+      }
+    ],
+    "applicationRounds": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.cornell.edu/how-to-apply/first-year-international-applicants",
+        "excerpt": "Choose Early Decision or Regular Decision"
+      }
+    ],
+    "deadlinesByRound": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.cornell.edu/how-to-apply/first-year-international-applicants",
+        "excerpt": "Early Decision ... November 1 ... Regular Decision ... January 2"
+      }
+    ],
+    "englishRequirements": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.cornell.edu/resources/submit-english-language-proficiency",
+        "excerpt": "TOEFL iBT ... minimum competitive score ... 100 ... IELTS Academic ... minimum competitive score: 7.5"
+      }
+    ],
+    "testPolicy": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.cornell.edu/policies/standardized-testing-policy",
+        "excerpt": "first-year applicants will be required to submit standardized test scores"
+      }
+    ],
+    "requiredMaterials": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.cornell.edu/how-to-apply/first-year-applicants",
+        "excerpt": "The Common Application and Cornell Writing Supplement"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.cornell.edu/how-to-apply/first-year-applicants",
+        "excerpt": "Cornell’s application fee is $85"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.cornell.edu/resources/submit-school-report",
+        "excerpt": "School Report"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.cornell.edu/resources/submit-counselor-recommendation",
+        "excerpt": "counselor evaluations"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.cornell.edu/resources/submit-high-school-transcript",
+        "excerpt": "We require your official secondary/high school transcript(s)."
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.cornell.edu/how-to-apply/first-year-applicants",
+        "excerpt": "The two teacher recommendations"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.cornell.edu/how-to-submit-your-standardized-test-scores",
+        "excerpt": "For first-year applicants, Cornell University requires submission of standardized test scores (SAT or ACT)."
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.cornell.edu/resources/submit-high-school-transcript",
+        "excerpt": "Applicants will be required to submit mid-year grades from 12th grade when available."
+      }
+    ],
+    "tuitionAnnualUsd": [
+      {
+        "sourceKind": "official_tuition",
+        "sourceUrl": "https://finaid.cornell.edu/cost-to-attend",
+        "excerpt": "Tuition$71,266"
+      }
+    ],
+    "estimatedCostOfAttendanceUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://finaid.cornell.edu/cost-to-attend",
+        "excerpt": "Total, (Billed + Non-Billed)$96,268"
+      }
+    ],
+    "livingCostEstimateUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://finaid.cornell.edu/cost-to-attend",
+        "excerpt": "Housing$13,246 ... Food$7,328"
+      }
+    ],
+    "scholarshipAvailabilityFlag": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://finaid.cornell.edu/types-of-aid",
+        "excerpt": "Cornell meets 100 percent of demonstrated financial need for all eligible undergraduates"
+      }
+    ],
+    "scholarshipNotes": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://finaid.cornell.edu/types-of-aid",
+        "excerpt": "Cornell grants and endowed scholarships are need-based"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.cornell.edu/how-to-apply/first-year-international-applicants",
+        "excerpt": "We do not offer merit, athletic, or talent-based aid"
+      }
+    ],
+    "recommendationInputs.admissionRateOverall": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.admission_rate.overall\": 0.0816"
+      }
+    ],
+    "recommendationInputs.satAverageOverall": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.sat_scores.average.overall\": 1520"
+      }
+    ],
+    "recommendationInputs.actMidpointCumulative": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.act_scores.midpoint.cumulative\": 34"
+      }
+    ],
+    "recommendationInputs.undergraduateSize": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.student.size\": 15935"
+      }
+    ],
+    "recommendationInputs.schoolControl": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.ownership\": 2"
+      }
+    ],
+    "recommendationInputs.campusLocale": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.locale\": 13"
+      }
+    ],
+    "recommendationInputs.internationalAidPolicy": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.cornell.edu/how-to-apply/first-year-international-applicants",
+        "excerpt": "All financial aid awarded by Cornell is based on financial need. We do not offer merit, athletic, or talent-based aid to students."
+      }
+    ],
+    "recommendationInputs.hasNeedBasedAid": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://finaid.cornell.edu/types-of-aid",
+        "excerpt": "Cornell grants and endowed scholarships are need-based"
+      }
+    ],
+    "recommendationInputs.hasMeritAid": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.cornell.edu/how-to-apply/first-year-international-applicants",
+        "excerpt": "We do not offer merit, athletic, or talent-based aid to students."
+      }
+    ],
+    "recommendationInputs.programFitTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.cornell.edu/academics/colleges-schools-and-academic-areas-interest",
+        "excerpt": "Our eight admitting undergraduate colleges and schools offer more than 4,000 courses across 100 academic departments"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.cornell.edu/contact-us/college-and-school-contact-information",
+        "excerpt": "Cornell SC Johnson College of Business, College of Engineering, College of Arts & Sciences, College of Agriculture and Life Sciences"
+      }
+    ],
+    "recommendationInputs.programAdmissionModel": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.cornell.edu/how-to-apply/first-year-applicants",
+        "excerpt": "You will apply to only one undergraduate college or school at Cornell"
+      }
+    ],
+    "recommendationInputs.applicationStrategyTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.cornell.edu/how-to-apply/first-year-applicants",
+        "excerpt": "Early Decision is a binding commitment for students who have selected Cornell as their first choice"
+      }
+    ],
+    "recommendationInputs.testingRequirements": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.cornell.edu/policies/standardized-testing-policy",
+        "excerpt": "Cornell has reinstituted standardized testing requirements ... Students can self-report their scores ... For the SAT, Cornell considers the highest section scores across test dates ... For the ACT, Cornell can consider the ACT-provided superscore ... The science section of the ACT is not required."
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.cornell.edu/how-to-submit-your-standardized-test-scores",
+        "excerpt": "Self-reported scores are sufficient for application review."
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.cornell.edu/community/blog/cornells-standardized-testing-policy",
+        "excerpt": "Plan Ahead: Take the SAT or ACT early enough to allow your scores to be considered."
+      }
+    ],
+    "explanationInputs.academicSelectivityBand": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.admission_rate.overall\": 0.0816"
+      }
+    ],
+    "explanationInputs.testingExpectation": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.cornell.edu/policies/standardized-testing-policy",
+        "excerpt": "test scores help to create a more complete picture of an individual applicant"
+      }
+    ],
+    "explanationInputs.englishPolicySummary": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.cornell.edu/resources/submit-english-language-proficiency",
+        "excerpt": "Applicants who do not meet one of these criteria are required to submit an English proficiency exam score."
+      }
+    ],
+    "explanationInputs.aidModel": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://finaid.cornell.edu/types-of-aid",
+        "excerpt": "Cornell grants and endowed scholarships are need-based"
+      }
+    ],
+    "explanationInputs.applicationComplexity": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.cornell.edu/how-to-apply/first-year-applicants",
+        "excerpt": "The Common Application and Cornell Writing Supplement ... two teacher recommendations ... School Report ... official transcript ... standardized test scores"
+      }
+    ],
+    "explanationInputs.deadlineUrgencyWindows": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.cornell.edu/how-to-apply/first-year-international-applicants",
+        "excerpt": "Early Decision ... November 1 ... Regular Decision ... January 2"
+      }
+    ],
+    "explanationInputs.internationalStudentConsiderations": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.cornell.edu/how-to-apply/first-year-international-applicants",
+        "excerpt": "All financial aid awarded by Cornell is based on financial need. We do not offer merit, athletic, or talent-based aid to students."
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.cornell.edu/resources/submit-english-language-proficiency",
+        "excerpt": "Applicants may be exempt from submitting an English proficiency exam"
+      }
+    ],
+    "explanationInputs.potentialFitTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.cornell.edu/",
+        "excerpt": "research and learning"
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://finaid.cornell.edu/types-of-aid",
+        "excerpt": "Cornell meets 100 percent of demonstrated financial need for all eligible undergraduates"
+      }
+    ],
+    "explanationInputs.potentialRiskTags": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://finaid.cornell.edu/cost-to-attend",
+        "excerpt": "Total, (Billed + Non-Billed)$96,268"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.cornell.edu/policies/standardized-testing-policy",
+        "excerpt": "first-year applicants will be required to submit standardized test scores"
+      }
+    ],
+    "explanationInputs.actionableApplicationSteps": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.cornell.edu/how-to-apply/first-year-applicants",
+        "excerpt": "The two teacher recommendations"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.cornell.edu/resources/submit-english-language-proficiency",
+        "excerpt": "If you are admitted, you will be required to submit your official test scores"
+      }
+    ]
+  },
+  "quality": {
+    "status": "publishable",
+    "missingFields": [],
+    "warnings": [
+      "Cornell does not publish a Cornell-wide SAT/ACT middle-50 range on the sources used here, so the testingRequirements middle50 fields were left null."
+    ]
+  }
+}

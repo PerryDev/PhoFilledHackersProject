@@ -1,0 +1,350 @@
+{
+  "schoolSlug": "university-of-north-carolina-chapel-hill",
+  "lastVerifiedAt": "2026-03-21",
+  "identity": {
+    "schoolName": "University of North Carolina at Chapel Hill",
+    "city": "Chapel Hill",
+    "state": "NC",
+    "officialAdmissionsUrl": "https://admissions.unc.edu/apply/types-of-applications/first-year/"
+  },
+  "applicationRounds": [
+    "early_action",
+    "regular_decision"
+  ],
+  "deadlinesByRound": {
+    "early_action": "2026-10-15",
+    "early_decision": null,
+    "regular_decision": "2027-01-15",
+    "rolling_admission": null,
+    "priority": null
+  },
+  "englishRequirements": {
+    "minimumIelts": null,
+    "minimumToeflInternetBased": null,
+    "waiverNotes": "International applicants are asked to share English proficiency scores. UNC accepts TOEFL, IELTS, Duolingo, Cambridge English C1 Advanced, and Cambridge C2 Proficiency, and may waive the requirement if the applicant has lived in an English-speaking country or attended an English-speaking school for the last four years."
+  },
+  "testPolicy": "test_flexible",
+  "requiredMaterials": [
+    "common_application",
+    "essay_and_two_short_answers",
+    "application_fee_or_fee_waiver",
+    "letter_of_recommendation",
+    "official_transcript_and_school_report",
+    "sat_or_act_scores"
+  ],
+  "tuitionAnnualUsd": 47472,
+  "estimatedCostOfAttendanceUsd": 70166,
+  "livingCostEstimateUsd": 15870,
+  "scholarshipAvailabilityFlag": true,
+  "scholarshipNotes": "UNC offers scholarships, grants, loans, and work-study for eligible students. University scholarships and grants are need-based, Carolina Covenant can cover eligible students with substantial need, and a limited number of academic scholarships are available for entering first-year students. International students are not eligible for need-based federal or University funds and are not considered for academic scholarships.",
+  "recommendationInputs": {
+    "schoolControl": "public",
+    "internationalAidPolicy": "limited_or_unclear",
+    "hasNeedBasedAid": true,
+    "hasMeritAid": true,
+    "testingRequirements": {
+      "acceptedExams": [
+        "sat",
+        "act"
+      ],
+      "minimumSatTotal": 930,
+      "minimumActComposite": 17,
+      "latestSatTestDateNote": "For Early Action, supporting materials and test scores are due November 7. For Regular Decision, supporting materials and test scores are due February 21.",
+      "latestActTestDateNote": "For Early Action, supporting materials and test scores are due November 7. For Regular Decision, supporting materials and test scores are due February 21.",
+      "superscorePolicy": "both",
+      "writingEssayPolicy": "unknown",
+      "scoreReportingPolicy": "self_report_allowed",
+      "middle50SatTotal": {
+        "low": null,
+        "high": null
+      },
+      "middle50ActComposite": {
+        "low": null,
+        "high": null
+      }
+    },
+    "admissionRateOverall": 0.1874,
+    "satAverageOverall": 1454,
+    "actMidpointCumulative": 25,
+    "undergraduateSize": 20556,
+    "campusLocale": null,
+    "averageNetPriceUsd": null,
+    "programFitTags": [
+      "research_intensive",
+      "humanities",
+      "social_sciences"
+    ],
+    "programAdmissionModel": "open",
+    "applicationStrategyTags": [
+      "non_binding_early_action"
+    ]
+  },
+  "explanationInputs": {
+    "academicSelectivityBand": "highly_selective",
+    "testingExpectation": "scores_considered",
+    "englishPolicySummary": "waiver_possible",
+    "aidModel": "need_and_merit",
+    "applicationComplexity": "medium",
+    "deadlineUrgencyWindows": {
+      "earliestDeadline": "2026-10-15",
+      "latestMajorDeadline": "2027-01-15"
+    },
+    "internationalStudentConsiderations": [
+      "english_fluency_required",
+      "english_test_may_be_required",
+      "financial_certification_likely_required"
+    ],
+    "potentialFitTags": [
+      "large_public_environment",
+      "research_or_innovation_oriented",
+      "value_for_budget_conscious_students",
+      "strong_need_based_aid_signal"
+    ],
+    "potentialRiskTags": [
+      "early_deadline_pressure",
+      "high_total_cost",
+      "limited_aid_for_international_students",
+      "complex_application_requirements"
+    ],
+    "actionableApplicationSteps": [
+      "prepare_early_round_strategy",
+      "complete_standardized_testing_if_required",
+      "prepare_teacher_recommendations_early",
+      "prepare_counselor_documents_early",
+      "budget_for_need_based_aid_process",
+      "prioritize_financial_aid_forms",
+      "prepare_english_testing_or_waiver_plan",
+      "build_supplemental_essay_plan"
+    ]
+  },
+  "fieldProvenance": {
+    "identity.officialAdmissionsUrl": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.unc.edu/apply/types-of-applications/first-year/",
+        "excerpt": "First-Year Application - Undergraduate Admissions"
+      }
+    ],
+    "applicationRounds": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.unc.edu/apply/types-of-applications/first-year/",
+        "excerpt": "Early Action (Non-Binding) and Regular Decision"
+      }
+    ],
+    "deadlinesByRound": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.unc.edu/apply/decisions/",
+        "excerpt": "First-Year Early Action October 15 ... First-Year Regular Decision January 15"
+      }
+    ],
+    "englishRequirements.waiverNotes": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.unc.edu/apply/international-students/",
+        "excerpt": "We accept TOEFL, IELTS, Duolingo, Cambridge English C1 Advanced and Cambridge C2 Proficiency ... We’re able to waive this requirement if you have lived in an English-speaking country for the last four years or if you have attended an English-speaking school for at least the last four years."
+      }
+    ],
+    "testPolicy": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.unc.edu/apply/types-of-applications/first-year/",
+        "excerpt": "For students applying for the 2026-2027 academic year and beyond, students with a weighted GPA of 2.8 or above are not required to submit a test score. Students with a weighted GPA below 2.8 are required to submit either an ACT score of 17 or higher or an SAT score of 930 or higher."
+      }
+    ],
+    "requiredMaterials": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.unc.edu/apply/types-of-applications/first-year/",
+        "excerpt": "Essay and Two Short Answers; Letter of Recommendation; Official Transcript and School Report; SAT or ACT Scores (optional for 2025 admission)"
+      }
+    ],
+    "tuitionAnnualUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://studentaid.unc.edu/incoming/costs/",
+        "excerpt": "26-27 Out-Of-State Budget ... Tuition $47,472"
+      }
+    ],
+    "estimatedCostOfAttendanceUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://studentaid.unc.edu/incoming/costs/",
+        "excerpt": "26-27 Out-Of-State Budget ... Total $70,166"
+      }
+    ],
+    "livingCostEstimateUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://studentaid.unc.edu/incoming/costs/",
+        "excerpt": "26-27 Out-Of-State Budget ... Housing $9,168 ... Food $6,702"
+      }
+    ],
+    "scholarshipAvailabilityFlag": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://catalog.unc.edu/tuition-financial-aid/",
+        "excerpt": "Scholarships, grants, loans, and work-study funds are offered to help eligible students with their financial needs."
+      }
+    ],
+    "scholarshipNotes": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://catalog.unc.edu/tuition-financial-aid/",
+        "excerpt": "University scholarships and grants are combined with federal aid to provide a total offer of financial aid based on financial need. A limited number of academic scholarships are offered to entering first-year students."
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://studentaid.unc.edu/special-circumstances/international-students/",
+        "excerpt": "International students will not be considered for Academic Scholarships."
+      }
+    ],
+    "recommendationInputs.schoolControl": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools?school.name=University%20of%20North%20Carolina%20at%20Chapel%20Hill",
+        "excerpt": "\"school.ownership\": 1"
+      }
+    ],
+    "recommendationInputs.internationalAidPolicy": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://studentaid.unc.edu/special-circumstances/international-students/",
+        "excerpt": "Only Permanent Residents or citizens of the United States are eligible for need-based federal and University funds. International students will not be considered for Academic Scholarships."
+      }
+    ],
+    "recommendationInputs.hasNeedBasedAid": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://catalog.unc.edu/tuition-financial-aid/",
+        "excerpt": "Scholarships, grants, loans, and work-study funds are offered to help eligible students with their financial needs."
+      }
+    ],
+    "recommendationInputs.hasMeritAid": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://catalog.unc.edu/tuition-financial-aid/",
+        "excerpt": "A limited number of academic scholarships are available for entering first-year students."
+      }
+    ],
+    "recommendationInputs.testingRequirements.acceptedExams": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.unc.edu/apply/types-of-applications/first-year/",
+        "excerpt": "Students with a weighted GPA below 2.8 are required to submit either an ACT score of 17 or higher or an SAT score of 930 or higher."
+      }
+    ],
+    "recommendationInputs.testingRequirements.minimumSatTotal": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.unc.edu/apply/types-of-applications/first-year/",
+        "excerpt": "Students with a weighted GPA below 2.8 are required to submit either an ACT score of 17 or higher or an SAT score of 930 or higher."
+      }
+    ],
+    "recommendationInputs.testingRequirements.minimumActComposite": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.unc.edu/apply/types-of-applications/first-year/",
+        "excerpt": "Students with a weighted GPA below 2.8 are required to submit either an ACT score of 17 or higher or an SAT score of 930 or higher."
+      }
+    ],
+    "recommendationInputs.testingRequirements.latestSatTestDateNote": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.unc.edu/apply/types-of-applications/first-year/",
+        "excerpt": "For Early Action and Regular Decision, supporting materials and test scores are due November 7 and February 21."
+      }
+    ],
+    "recommendationInputs.testingRequirements.latestActTestDateNote": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.unc.edu/apply/types-of-applications/first-year/",
+        "excerpt": "For Early Action and Regular Decision, supporting materials and test scores are due November 7 and February 21."
+      }
+    ],
+    "recommendationInputs.testingRequirements.superscorePolicy": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.unc.edu/apply/types-of-applications/first-year/",
+        "excerpt": "If you self-report test scores from multiple testing dates, we will superscore."
+      }
+    ],
+    "recommendationInputs.testingRequirements.scoreReportingPolicy": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.unc.edu/apply/types-of-applications/first-year/",
+        "excerpt": "If you self-report test scores on your application, we will use them in your application review process, and if you are admitted, and choose to enroll, we will require that your official scores be sent directly from the testing service."
+      }
+    ],
+    "explanationInputs.academicSelectivityBand": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools?school.name=University%20of%20North%20Carolina%20at%20Chapel%20Hill",
+        "excerpt": "\"latest.admissions.admission_rate.overall\": 0.1874"
+      }
+    ],
+    "explanationInputs.testingExpectation": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.unc.edu/apply/types-of-applications/first-year/",
+        "excerpt": "At Carolina, testing is always one factor among many."
+      }
+    ],
+    "explanationInputs.englishPolicySummary": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.unc.edu/apply/international-students/",
+        "excerpt": "We’ll ask you to share your English proficiency exam scores when you apply ... We’re able to waive this requirement if you have lived in an English-speaking country for the last four years or if you have attended an English-speaking school for at least the last four years."
+      }
+    ],
+    "explanationInputs.aidModel": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://catalog.unc.edu/tuition-financial-aid/",
+        "excerpt": "University scholarships and grants are combined with federal aid to provide a total offer of financial aid based on financial need."
+      }
+    ],
+    "explanationInputs.deadlineUrgencyWindows": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.unc.edu/apply/types-of-applications/first-year/",
+        "excerpt": "Early Action Application Deadline – October 15; Regular Decision Application Deadline – January 15."
+      }
+    ],
+    "recommendationInputs.programFitTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://catalog.unc.edu/undergraduate/programs-study/programs-study.pdf",
+        "excerpt": "Undergraduate Programs of Study: Majors and Minors"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://catalog.unc.edu/undergraduate/academic-enrichment/undergraduate-research/undergraduate-research.pdf",
+        "excerpt": "facilitate and enrich undergraduate research opportunities for all students and academic disciplines at Carolina"
+      }
+    ],
+    "recommendationInputs.programAdmissionModel": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://catalog.unc.edu/undergraduate/programs-study/programs-study.pdf",
+        "excerpt": "Undergraduate Programs of Study: Majors and Minors"
+      }
+    ],
+    "recommendationInputs.applicationStrategyTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.unc.edu/apply/types-of-applications/first-year/",
+        "excerpt": "Early Action (Non-Binding) and Regular Decision"
+      }
+    ]
+  },
+  "quality": {
+    "status": "publishable",
+    "missingFields": [],
+    "warnings": [
+      "UNC does not publish Brown-style middle-50 score ranges on the sources used here, so testingRequirements middle50 fields are null."
+    ],
+    "lastVerifiedAt": "2026-03-21"
+  }
+}

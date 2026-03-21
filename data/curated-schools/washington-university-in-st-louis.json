@@ -1,0 +1,416 @@
+{
+  "schoolSlug": "washington-university-in-st-louis",
+  "lastVerifiedAt": "2026-03-21",
+  "identity": {
+    "schoolName": "Washington University in St. Louis",
+    "city": "St. Louis",
+    "state": "MO",
+    "officialAdmissionsUrl": "https://admissions.wustl.edu/"
+  },
+  "applicationRounds": [
+    "early_decision",
+    "regular_decision"
+  ],
+  "deadlinesByRound": {
+    "early_action": null,
+    "early_decision": "2026-11-01",
+    "regular_decision": "2027-01-02",
+    "rolling_admission": null,
+    "priority": null
+  },
+  "englishRequirements": {
+    "minimumIelts": null,
+    "minimumToeflInternetBased": null,
+    "waiverNotes": "WashU continues to require evidence of English language proficiency for international applicants for whom English is a second language. The reviewed official materials name TOEFL, IELTS, and Duolingo English Test as the accepted options, but they do not publish a WashU-specific minimum score on the pages reviewed."
+  },
+  "testPolicy": "test_optional",
+  "requiredMaterials": [
+    "common_application",
+    "coalition_application",
+    "application_fee_or_fee_waiver",
+    "washu_study_interest_response",
+    "midyear_report",
+    "final_transcript_if_admitted",
+    "english_proficiency_test_for_international_applicants",
+    "financial_aid_forms_if_applying_for_aid"
+  ],
+  "tuitionAnnualUsd": 64500,
+  "estimatedCostOfAttendanceUsd": 87644,
+  "livingCostEstimateUsd": 23854,
+  "scholarshipAvailabilityFlag": true,
+  "scholarshipNotes": "WashU says it meets 100% of demonstrated financial need for every admitted student, with no-loan packages for students whose families earn $75,000 or less. The admissions materials also note that the application fee is waived for students applying for need-based financial assistance.",
+  "recommendationInputs": {
+    "admissionRateOverall": 0.1196,
+    "satAverageOverall": 1530,
+    "actMidpointCumulative": 34,
+    "undergraduateSize": 7897,
+    "schoolControl": "private_nonprofit",
+    "campusLocale": "urban",
+    "internationalAidPolicy": "meets_full_demonstrated_need_if_eligible",
+    "hasNeedBasedAid": true,
+    "hasMeritAid": true,
+    "testingRequirements": {
+      "acceptedExams": [
+        "sat",
+        "act"
+      ],
+      "minimumSatTotal": null,
+      "minimumActComposite": null,
+      "latestSatTestDateNote": "WashU's published deadlines place the final application/test-score cadence in early January for Regular Decision. The reviewed materials do not publish a hard SAT test-date cutoff, so this field is left as a timing note instead of a minimum score rule.",
+      "latestActTestDateNote": "WashU's published deadlines place the final application/test-score cadence in early January for Regular Decision. The reviewed materials do not publish a hard ACT test-date cutoff, so this field is left as a timing note instead of a minimum score rule.",
+      "superscorePolicy": "unknown",
+      "writingEssayPolicy": "not_considered",
+      "scoreReportingPolicy": "self_report_allowed",
+      "middle50SatTotal": {
+        "low": null,
+        "high": null
+      },
+      "middle50ActComposite": {
+        "low": null,
+        "high": null
+      }
+    },
+    "averageNetPriceUsd": null,
+    "programFitTags": [
+      "research_intensive",
+      "humanities",
+      "social_sciences",
+      "life_sciences",
+      "engineering"
+    ],
+    "programAdmissionModel": "open",
+    "applicationStrategyTags": [
+      "binding_early_decision",
+      "multiple_early_rounds"
+    ]
+  },
+  "explanationInputs": {
+    "academicSelectivityBand": "highly_selective",
+    "testingExpectation": "scores_considered",
+    "englishPolicySummary": "minimum_scores_required",
+    "aidModel": "need_and_merit",
+    "applicationComplexity": "high",
+    "deadlineUrgencyWindows": {
+      "earliestDeadline": "2026-11-01",
+      "latestMajorDeadline": "2027-01-02"
+    },
+    "internationalStudentConsiderations": [
+      "english_fluency_required",
+      "english_test_may_be_required",
+      "need_based_aid_available"
+    ],
+    "potentialFitTags": [
+      "smaller_private_environment",
+      "urban_access",
+      "research_or_innovation_oriented",
+      "strong_for_high_achieving_stem_students",
+      "strong_need_based_aid_signal"
+    ],
+    "potentialRiskTags": [
+      "high_total_cost",
+      "limited_aid_for_international_students",
+      "complex_application_requirements",
+      "early_deadline_pressure"
+    ],
+    "actionableApplicationSteps": [
+      "prepare_early_round_strategy",
+      "prepare_english_testing_or_waiver_plan",
+      "prepare_teacher_recommendations_early",
+      "prioritize_financial_aid_forms",
+      "build_supplemental_essay_plan"
+    ]
+  },
+  "fieldProvenance": {
+    "identity.schoolName": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.wustl.edu/",
+        "excerpt": "Washington University in St. Louis"
+      }
+    ],
+    "applicationRounds": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.wustl.edu/app/uploads/2023/07/071123_WUADM_23AtAGlance_FINAL.pdf",
+        "excerpt": "Early Decision I | Early Decision II | Regular Decision"
+      }
+    ],
+    "deadlinesByRound": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.wustl.edu/app/uploads/2023/07/071123_WUADM_23AtAGlance_FINAL.pdf",
+        "excerpt": "Application Submitted ... November 1 ... January 2"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.wustl.edu/app/uploads/2023/07/071123_WUADM_23AtAGlance_FINAL.pdf",
+        "excerpt": "Admission Decision Released by ... December 15 ... February 14 ... April 1"
+      }
+    ],
+    "englishRequirements": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.wustl.edu/app/uploads/2023/07/071123_WUADM_23AtAGlance_FINAL.pdf",
+        "excerpt": "We will continue to require evidence of English Language proficiency (TOEFL, IELTS, or Duolingo English Test) for international applicants for whom English is a second language."
+      }
+    ],
+    "testPolicy": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.wustl.edu/app/uploads/2023/07/071123_WUADM_23AtAGlance_FINAL.pdf",
+        "excerpt": "all applicants for the class entering in Fall 2024 have the option of whether to submit standardized test scores"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.wustl.edu/app/uploads/2023/07/071123_WUADM_23AtAGlance_FINAL.pdf",
+        "excerpt": "All applicants, whether or not they submit standardized testing, will receive full consideration for admission."
+      }
+    ],
+    "requiredMaterials": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.wustl.edu/app/uploads/2023/07/071123_WUADM_23AtAGlance_FINAL.pdf",
+        "excerpt": "Common Application or Coalition Application"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.wustl.edu/app/uploads/2023/07/071123_WUADM_23AtAGlance_FINAL.pdf",
+        "excerpt": "including a 200-word response"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.wustl.edu/app/uploads/2023/07/071123_WUADM_23AtAGlance_FINAL.pdf",
+        "excerpt": "Midyear Report ... should send us a transcript and midyear report"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.wustl.edu/app/uploads/2023/07/071123_WUADM_23AtAGlance_FINAL.pdf",
+        "excerpt": "Applicants who are admitted and who choose to enroll will be required to have their high school submit an official final transcript"
+      }
+    ],
+    "tuitionAnnualUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://financialaid.wustl.edu/app/uploads/2024/03/WUADM_24FinancialInfoforParents.pdf",
+        "excerpt": "Tuition $64,500"
+      }
+    ],
+    "estimatedCostOfAttendanceUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://financialaid.wustl.edu/app/uploads/2024/03/WUADM_24FinancialInfoforParents.pdf",
+        "excerpt": "Total University Charges $87,644"
+      }
+    ],
+    "livingCostEstimateUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://financialaid.wustl.edu/app/uploads/2024/03/WUADM_24FinancialInfoforParents.pdf",
+        "excerpt": "Housing Charges ... $13,808 ... Food Service ... $8,046"
+      }
+    ],
+    "scholarshipAvailabilityFlag": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.wustl.edu/app/uploads/2023/07/071123_WUADM_23AtAGlance_FINAL.pdf",
+        "excerpt": "The application fee is waived for any student applying for need-based financial assistance."
+      }
+    ],
+    "scholarshipNotes": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.wustl.edu/wp-content/uploads/2020/08/Class2024_Profile-Final.pdf",
+        "excerpt": "we’re committed to meeting 100% of demonstrated financial need for every admitted student, with no-loan packages for students whose families earn $75,000 or less"
+      }
+    ],
+    "recommendationInputs.admissionRateOverall": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.admission_rate.overall\": 0.1196"
+      }
+    ],
+    "recommendationInputs.satAverageOverall": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.sat_scores.average.overall\": 1530"
+      }
+    ],
+    "recommendationInputs.actMidpointCumulative": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.act_scores.midpoint.cumulative\": 34"
+      }
+    ],
+    "recommendationInputs.undergraduateSize": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.student.size\": 7897"
+      }
+    ],
+    "recommendationInputs.schoolControl": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.ownership\": 2"
+      }
+    ],
+    "recommendationInputs.programFitTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.wustl.edu/",
+        "excerpt": "academic excellence and collaborative discovery"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.wustl.edu/",
+        "excerpt": "undergraduate programs across the arts, sciences, and engineering"
+      }
+    ],
+    "recommendationInputs.programAdmissionModel": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.wustl.edu/",
+        "excerpt": "We admit students to the university"
+      }
+    ],
+    "recommendationInputs.applicationStrategyTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.wustl.edu/app/uploads/2023/07/071123_WUADM_23AtAGlance_FINAL.pdf",
+        "excerpt": "Early Decision I | Early Decision II | Regular Decision"
+      }
+    ],
+    "recommendationInputs.campusLocale": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.locale\": 21"
+      }
+    ],
+    "recommendationInputs.internationalAidPolicy": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.wustl.edu/wp-content/uploads/2020/08/Class2024_Profile-Final.pdf",
+        "excerpt": "meet 100% of demonstrated financial need for every admitted student"
+      }
+    ],
+    "recommendationInputs.hasNeedBasedAid": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.wustl.edu/wp-content/uploads/2020/08/Class2024_Profile-Final.pdf",
+        "excerpt": "meeting 100% of demonstrated financial need"
+      }
+    ],
+    "recommendationInputs.hasMeritAid": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.wustl.edu/app/uploads/2023/07/071123_WUADM_23AtAGlance_FINAL.pdf",
+        "excerpt": "scholarship applications"
+      }
+    ],
+    "recommendationInputs.testingRequirements": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.wustl.edu/app/uploads/2023/07/071123_WUADM_23AtAGlance_FINAL.pdf",
+        "excerpt": "all applicants for the class entering in Fall 2024 have the option of whether to submit standardized test scores"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.wustl.edu/app/uploads/2023/07/071123_WUADM_23AtAGlance_FINAL.pdf",
+        "excerpt": "We will continue to require evidence of English Language proficiency (TOEFL, IELTS, or Duolingo English Test)"
+      }
+    ],
+    "explanationInputs.testingExpectation": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.wustl.edu/app/uploads/2023/07/071123_WUADM_23AtAGlance_FINAL.pdf",
+        "excerpt": "option of whether to submit standardized test scores"
+      }
+    ],
+    "explanationInputs.aidModel": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.wustl.edu/wp-content/uploads/2020/08/Class2024_Profile-Final.pdf",
+        "excerpt": "committed to meeting 100% of demonstrated financial need"
+      }
+    ],
+    "explanationInputs.applicationComplexity": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.wustl.edu/app/uploads/2023/07/071123_WUADM_23AtAGlance_FINAL.pdf",
+        "excerpt": "Early Decision I | Early Decision II | Regular Decision"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.wustl.edu/app/uploads/2023/07/071123_WUADM_23AtAGlance_FINAL.pdf",
+        "excerpt": "WashU Pathway is the single source of information about the status of your admission application"
+      }
+    ],
+    "explanationInputs.internationalStudentConsiderations": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.wustl.edu/app/uploads/2023/07/071123_WUADM_23AtAGlance_FINAL.pdf",
+        "excerpt": "require evidence of English Language proficiency"
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.wustl.edu/wp-content/uploads/2020/08/Class2024_Profile-Final.pdf",
+        "excerpt": "meet 100% of demonstrated financial need for every admitted student"
+      }
+    ],
+    "explanationInputs.potentialFitTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.wustl.edu/app/uploads/2023/07/071123_WUADM_23AtAGlance_FINAL.pdf",
+        "excerpt": "community of achievers who inspire us with their creativity and tenacity"
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.wustl.edu/wp-content/uploads/2020/08/Class2024_Profile-Final.pdf",
+        "excerpt": "meeting 100% of demonstrated financial need"
+      }
+    ],
+    "explanationInputs.potentialRiskTags": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://financialaid.wustl.edu/app/uploads/2024/03/WUADM_24FinancialInfoforParents.pdf",
+        "excerpt": "Total University Charges $87,644"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.wustl.edu/app/uploads/2023/07/071123_WUADM_23AtAGlance_FINAL.pdf",
+        "excerpt": "Early Decision I | Early Decision II | Regular Decision"
+      }
+    ],
+    "explanationInputs.actionableApplicationSteps": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.wustl.edu/app/uploads/2023/07/071123_WUADM_23AtAGlance_FINAL.pdf",
+        "excerpt": "If you are applying Early Decision I or II, you must submit your first marking period grades"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.wustl.edu/app/uploads/2023/07/071123_WUADM_23AtAGlance_FINAL.pdf",
+        "excerpt": "The application fee is waived for any student applying for need-based financial assistance"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.wustl.edu/app/uploads/2023/07/071123_WUADM_23AtAGlance_FINAL.pdf",
+        "excerpt": "students should submit an optional 90-second video"
+      }
+    ]
+  },
+  "quality": {
+    "status": "publishable",
+    "missingFields": [],
+    "warnings": [
+      "WashU has Early Decision I and Early Decision II; the validator schema only supports a single early_decision deadline, so the earlier ED I deadline is used.",
+      "WashU does not publish official SAT/ACT middle-50 ranges on the reviewed pages; testingRequirements.middle50* are null.",
+      "WashU does not publish a WashU-specific TOEFL/IELTS minimum on the reviewed pages; englishRequirements minimums are left null."
+    ]
+  }
+}

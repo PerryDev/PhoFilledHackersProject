@@ -1,0 +1,298 @@
+{
+  "schoolSlug": "university-of-california-san-diego",
+  "lastVerifiedAt": "2026-03-21",
+  "identity": {
+    "schoolName": "University of California-San Diego",
+    "city": "La Jolla",
+    "state": "CA",
+    "officialAdmissionsUrl": "https://admissions.ucsd.edu/first-year/application-requirements.html"
+  },
+  "applicationRounds": [
+    "regular_decision"
+  ],
+  "deadlinesByRound": {
+    "early_action": null,
+    "early_decision": null,
+    "regular_decision": "2026-12-01",
+    "rolling_admission": null,
+    "priority": null
+  },
+  "englishRequirements": {
+    "minimumIelts": 7,
+    "minimumToeflInternetBased": 83,
+    "waiverNotes": "Demonstration of English proficiency is required for international students whose native language is not English and whose secondary education was in a country where English is not the language of instruction."
+  },
+  "testPolicy": "test_blind",
+  "requiredMaterials": [
+    "uc_application",
+    "personal_insight_questions"
+  ],
+  "tuitionAnnualUsd": 54024,
+  "estimatedCostOfAttendanceUsd": 78429,
+  "livingCostEstimateUsd": 19629,
+  "scholarshipAvailabilityFlag": true,
+  "scholarshipNotes": "UC San Diego awards financial aid based on need, offers scholarships and grants, and provides merit scholarships such as Regents Scholarships and Chancellor's Scholarships. Non-California residents are eligible for federal aid and limited institutional scholarships, while international students may use private loans and have limited scholarship funding.",
+  "recommendationInputs": {
+    "admissionRateOverall": 0.2452,
+    "satAverageOverall": null,
+    "actMidpointCumulative": null,
+    "undergraduateSize": 33787,
+    "schoolControl": "public",
+    "campusLocale": null,
+    "internationalAidPolicy": "limited_or_unclear",
+    "hasNeedBasedAid": true,
+    "hasMeritAid": true,
+    "testingRequirements": {
+      "acceptedExams": [
+        "sat",
+        "act"
+      ],
+      "minimumSatTotal": null,
+      "minimumActComposite": null,
+      "latestSatTestDateNote": null,
+      "latestActTestDateNote": null,
+      "superscorePolicy": "unknown",
+      "writingEssayPolicy": "unknown",
+      "scoreReportingPolicy": "unknown",
+      "middle50SatTotal": {
+        "low": null,
+        "high": null
+      },
+      "middle50ActComposite": {
+        "low": null,
+        "high": null
+      }
+    },
+    "averageNetPriceUsd": null,
+    "programFitTags": [
+      "engineering",
+      "research_intensive"
+    ],
+    "programAdmissionModel": "capacity_limited",
+    "applicationStrategyTags": []
+  },
+  "explanationInputs": {
+    "academicSelectivityBand": "selective",
+    "testingExpectation": "tests_not_considered",
+    "englishPolicySummary": "minimum_scores_required",
+    "aidModel": "need_and_merit",
+    "applicationComplexity": "medium",
+    "deadlineUrgencyWindows": {
+      "earliestDeadline": "2026-12-01",
+      "latestMajorDeadline": "2026-12-01"
+    },
+    "internationalStudentConsiderations": [
+      "english_test_may_be_required",
+      "financial_certification_likely_required",
+      "need_aware_or_limited_aid_possible"
+    ],
+    "potentialFitTags": [
+      "large_public_environment",
+      "research_or_innovation_oriented",
+      "value_for_budget_conscious_students",
+      "strong_merit_aid_signal"
+    ],
+    "potentialRiskTags": [
+      "high_total_cost",
+      "limited_aid_for_international_students"
+    ],
+    "actionableApplicationSteps": [
+      "prepare_regular_decision_timeline",
+      "prepare_english_testing_or_waiver_plan",
+      "prioritize_financial_aid_forms",
+      "build_supplemental_essay_plan"
+    ]
+  },
+  "fieldProvenance": {
+    "identity.schoolName": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.ucsd.edu/first-year/application-requirements.html",
+        "excerpt": "UC San Diego"
+      }
+    ],
+    "applicationRounds": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.ucsd.edu/first-year/application-timeline.html",
+        "excerpt": "Submit the University of California Application by the December 1 deadline."
+      }
+    ],
+    "deadlinesByRound": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.ucsd.edu/first-year/application-timeline.html",
+        "excerpt": "October 1 - December 1 ... Submit Your Fall 2026 Application"
+      }
+    ],
+    "englishRequirements": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.ucsd.edu/first-year/application-requirements.html",
+        "excerpt": "Test of English as a Foreign Language (TOEFL) 83 ... International English Language Testing System (IELTS) 7"
+      }
+    ],
+    "testPolicy": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.ucsd.edu/first-year/application-requirements.html",
+        "excerpt": "UC San Diego does not consider SAT or ACT test scores as a factor in admissions or scholarship decisions."
+      }
+    ],
+    "requiredMaterials": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.ucsd.edu/first-year/application-requirements.html",
+        "excerpt": "Personal Insight Questions"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.ucsd.edu/first-year/application-timeline.html",
+        "excerpt": "Submit the University of California Application by the December 1 deadline."
+      }
+    ],
+    "tuitionAnnualUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://fas.ucsd.edu/applying/current-undergraduates/undergraduates_2024-2025_cont0.html",
+        "excerpt": "Components of CA Resident Tuition and Fees $19,824 ... Non-California Resident Supplemental Tuition $34,200"
+      }
+    ],
+    "estimatedCostOfAttendanceUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://fas.ucsd.edu/applying/current-undergraduates/undergraduates_2024-2025_cont0.html",
+        "excerpt": "Estimated Non-California Resident Cost Totals $78,429"
+      }
+    ],
+    "livingCostEstimateUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://fas.ucsd.edu/applying/current-undergraduates/undergraduates_2024-2025_cont0.html",
+        "excerpt": "Food & Housing for students without dependents ... $19,629"
+      }
+    ],
+    "scholarshipAvailabilityFlag": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://fas.ucsd.edu/types/index.html",
+        "excerpt": "Scholarships are gift aid ... awarded on merit, academic excellence, and additional criteria"
+      }
+    ],
+    "scholarshipNotes": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://fas.ucsd.edu/applying/undergraduates/packaging-policy.html",
+        "excerpt": "UC San Diego awards financial aid based on need."
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://fas.ucsd.edu/types/scholarships/regents-scholarships-for-entering-freshmen.html",
+        "excerpt": "The Regents Scholarship ... is a merit scholarship"
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://fas.ucsd.edu/types/scholarships/chancellors-scholarships-for-entering-freshmen.html",
+        "excerpt": "UC San Diego awards Chancellor's Scholarships to entering first-year students on the basis of outstanding academic achievement."
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://fas.ucsd.edu/applying/undergraduates/packaging-policy.html",
+        "excerpt": "Non-California residents ... are not eligible for university grants/loans ... limited institutional scholarships"
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://fas.ucsd.edu/applying/undergraduates/packaging-policy.html",
+        "excerpt": "Private Education Loans are available for domestic and international students."
+      }
+    ],
+    "recommendationInputs.admissionRateOverall": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools?id=110680",
+        "excerpt": "\"latest.admissions.admission_rate.overall\": 0.2452"
+      }
+    ],
+    "recommendationInputs.undergraduateSize": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools?id=110680",
+        "excerpt": "\"latest.student.size\": 33787"
+      }
+    ],
+    "recommendationInputs.schoolControl": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools?id=110680",
+        "excerpt": "\"school.ownership\": 1"
+      }
+    ],
+    "recommendationInputs.testingRequirements": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.ucsd.edu/first-year/application-requirements.html",
+        "excerpt": "UC San Diego does not consider SAT or ACT test scores as a factor in admissions or scholarship decisions."
+      }
+    ],
+    "explanationInputs.testingExpectation": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.ucsd.edu/first-year/application-requirements.html",
+        "excerpt": "UC San Diego does not consider SAT or ACT test scores as a factor in admissions or scholarship decisions."
+      }
+    ],
+    "explanationInputs.englishPolicySummary": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.ucsd.edu/first-year/application-requirements.html",
+        "excerpt": "Demonstration of English proficiency is required ... TOEFL 83 ... IELTS 7 ... Duolingo 115"
+      }
+    ],
+    "explanationInputs.aidModel": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://fas.ucsd.edu/applying/undergraduates/packaging-policy.html",
+        "excerpt": "UC San Diego awards financial aid based on need."
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://fas.ucsd.edu/types/index.html",
+        "excerpt": "Scholarships are gift aid ... awarded on merit, academic excellence, and additional criteria"
+      }
+    ],
+    "explanationInputs.applicationComplexity": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.ucsd.edu/first-year/application-requirements.html",
+        "excerpt": "College Preparatory 'A-G' Subject Requirement ... Grade Point Average (GPA) Requirement ... Testing ... Personal Insight Questions ... College Ranking"
+      }
+    ],
+    "recommendationInputs.programFitTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://jacobsschool.ucsd.edu/",
+        "excerpt": "The Jacobs School of Engineering at UC San Diego offers excellence at scale in research, education, industry collaboration and technology transfer."
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://ugresearch.ucsd.edu/students/research-directory.html",
+        "excerpt": "The Undergraduate Research Directory recognizes and inspires students who have conducted undergraduate research with a faculty mentor at UC San Diego."
+      }
+    ],
+    "recommendationInputs.programAdmissionModel": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://jacobsschool.ucsd.edu/academics/undergraduate-majors",
+        "excerpt": "First-year student applicants must indicate an engineering or computer science major as their first choice on their UC application in order to be considered for acceptance to the major."
+      }
+    ]
+  },
+  "quality": {
+    "status": "publishable",
+    "missingFields": [],
+    "warnings": [
+      "UC San Diego does not use SAT/ACT in admissions, so testingRequirements is intentionally sparse and marks score reporting as unknown.",
+      "The official cost page provides separate resident and nonresident totals; this artifact uses the nonresident total for a single published sticker price."
+    ]
+  }
+}

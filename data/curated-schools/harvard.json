@@ -1,0 +1,364 @@
+{
+  "schoolSlug": "harvard",
+  "lastVerifiedAt": "2026-03-21",
+  "identity": {
+    "schoolName": "Harvard University",
+    "city": "Cambridge",
+    "state": "MA",
+    "officialAdmissionsUrl": "https://college.harvard.edu/admissions"
+  },
+  "applicationRounds": [
+    "early_action",
+    "regular_decision"
+  ],
+  "deadlinesByRound": {
+    "early_action": "2026-11-01",
+    "early_decision": null,
+    "regular_decision": "2027-01-01",
+    "rolling_admission": null,
+    "priority": null
+  },
+  "englishRequirements": {
+    "minimumIelts": null,
+    "minimumToeflInternetBased": null,
+    "waiverNotes": null
+  },
+  "testPolicy": "required",
+  "requiredMaterials": [
+    "common_application",
+    "application_fee_or_fee_waiver",
+    "school_report",
+    "counselor_recommendation",
+    "teacher_recommendation_1",
+    "teacher_recommendation_2",
+    "sat_or_act",
+    "personal_essay",
+    "supplemental_essays"
+  ],
+  "tuitionAnnualUsd": 59320,
+  "estimatedCostOfAttendanceUsd": 95426,
+  "livingCostEstimateUsd": 22130,
+  "scholarshipAvailabilityFlag": false,
+  "scholarshipNotes": "Harvard financial aid is need-based only. There are no merit-based awards, and Harvard meets 100 percent of demonstrated financial need.",
+  "recommendationInputs": {
+    "admissionRateOverall": 0.0345,
+    "satAverageOverall": 1553,
+    "actMidpointCumulative": 35,
+    "undergraduateSize": 7755,
+    "schoolControl": "private_nonprofit",
+    "campusLocale": "urban",
+    "internationalAidPolicy": "meets_full_demonstrated_need_if_eligible",
+    "hasNeedBasedAid": true,
+    "hasMeritAid": false,
+    "testingRequirements": {
+      "acceptedExams": [
+        "sat",
+        "act"
+      ],
+      "minimumSatTotal": null,
+      "minimumActComposite": null,
+      "latestSatTestDateNote": "For Restrictive Early Action, Harvard would like testing results by the end of October. For Regular Decision, scores can be submitted as late as the February test date, though earlier is recommended.",
+      "latestActTestDateNote": "For Restrictive Early Action, Harvard would like testing results by the end of October. For Regular Decision, scores can be submitted as late as the February test date, though earlier is recommended.",
+      "superscorePolicy": "act_only",
+      "writingEssayPolicy": "unknown",
+      "scoreReportingPolicy": "self_report_allowed",
+      "middle50SatTotal": {
+        "low": null,
+        "high": null
+      },
+      "middle50ActComposite": {
+        "low": null,
+        "high": null
+      }
+    },
+    "averageNetPriceUsd": null,
+    "programFitTags": [
+      "humanities",
+      "social_sciences",
+      "life_sciences",
+      "research_intensive"
+    ],
+    "programAdmissionModel": "open",
+    "applicationStrategyTags": [
+      "restrictive_early_action"
+    ]
+  },
+  "explanationInputs": {
+    "academicSelectivityBand": "ultra_selective",
+    "testingExpectation": "high_scores_expected",
+    "englishPolicySummary": "not_clearly_stated",
+    "aidModel": "need_based_only",
+    "applicationComplexity": "high",
+    "deadlineUrgencyWindows": {
+      "earliestDeadline": "2026-11-01",
+      "latestMajorDeadline": "2027-01-01"
+    },
+    "internationalStudentConsiderations": [
+      "need_based_aid_available"
+    ],
+    "potentialFitTags": [
+      "research_or_innovation_oriented",
+      "urban_access",
+      "strong_need_based_aid_signal",
+      "strong_for_liberal_arts_or_humanities_students"
+    ],
+    "potentialRiskTags": [
+      "extremely_low_admission_rate",
+      "high_total_cost",
+      "limited_merit_aid",
+      "complex_application_requirements"
+    ],
+    "actionableApplicationSteps": [
+      "prepare_early_round_strategy",
+      "complete_standardized_testing_if_required",
+      "prepare_teacher_recommendations_early",
+      "prepare_counselor_documents_early",
+      "budget_for_need_based_aid_process",
+      "build_supplemental_essay_plan"
+    ]
+  },
+  "fieldProvenance": {
+    "identity.schoolName": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://college.harvard.edu/admissions/apply/application-requirements",
+        "excerpt": "Harvard College"
+      }
+    ],
+    "identity.city": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.city\": \"Cambridge\""
+      }
+    ],
+    "identity.state": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.state\": \"MA\""
+      }
+    ],
+    "identity.officialAdmissionsUrl": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://college.harvard.edu/admissions/apply/application-requirements",
+        "excerpt": "Application Requirements | Harvard"
+      }
+    ],
+    "applicationRounds": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://college.harvard.edu/admissions/apply/application-requirements",
+        "excerpt": "November 1 for Restrictive Early Action and January 1 for Regular Decision"
+      }
+    ],
+    "deadlinesByRound": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://college.harvard.edu/admissions/apply/application-requirements",
+        "excerpt": "Your portions of the application are due by the application deadlines (November 1 for Restrictive Early Action and January 1 for Regular Decision)"
+      }
+    ],
+    "testPolicy": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://college.harvard.edu/admissions/apply/application-requirements",
+        "excerpt": "Harvard requires the SAT or ACT to meet its standardized testing requirement."
+      }
+    ],
+    "requiredMaterials": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://college.harvard.edu/admissions/apply/application-requirements",
+        "excerpt": "Common Application ... School Report ... Teacher Recommendations ... Harvard Questions ... five required short-answer questions"
+      }
+    ],
+    "tuitionAnnualUsd": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://college.harvard.edu/financial-aid/how-aid-works",
+        "excerpt": "Tuition $59,320"
+      }
+    ],
+    "estimatedCostOfAttendanceUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://college.harvard.edu/financial-aid/how-aid-works",
+        "excerpt": "Total billed and unbilled costs $90,426-$95,426"
+      }
+    ],
+    "livingCostEstimateUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://college.harvard.edu/financial-aid/how-aid-works",
+        "excerpt": "Housing $13,532 and Food $8,598"
+      }
+    ],
+    "scholarshipAvailabilityFlag": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://college.harvard.edu/financial-aid/how-aid-works",
+        "excerpt": "We base aid awards on need, not on merit."
+      }
+    ],
+    "scholarshipNotes": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://college.harvard.edu/financial-aid/how-aid-works",
+        "excerpt": "There are no merit-based awards, and we have no preferential policies that give some students more attractive awards than others."
+      }
+    ],
+    "recommendationInputs.admissionRateOverall": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.admission_rate.overall\": 0.0345"
+      }
+    ],
+    "recommendationInputs.satAverageOverall": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.sat_scores.average.overall\": 1553"
+      }
+    ],
+    "recommendationInputs.actMidpointCumulative": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.act_scores.midpoint.cumulative\": 35"
+      }
+    ],
+    "recommendationInputs.undergraduateSize": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.student.size\": 7755"
+      }
+    ],
+    "recommendationInputs.schoolControl": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.ownership\": 2"
+      }
+    ],
+    "recommendationInputs.campusLocale": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.locale\": 12"
+      }
+    ],
+    "recommendationInputs.internationalAidPolicy": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://college.harvard.edu/financial-aid/how-aid-works",
+        "excerpt": "International students are eligible for exactly the same aid as American students."
+      }
+    ],
+    "recommendationInputs.hasNeedBasedAid": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://college.harvard.edu/financial-aid/how-aid-works",
+        "excerpt": "100% need-based aid"
+      }
+    ],
+    "recommendationInputs.hasMeritAid": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://college.harvard.edu/financial-aid/how-aid-works",
+        "excerpt": "There are no merit-based awards"
+      }
+    ],
+    "recommendationInputs.programFitTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://handbook.college.harvard.edu/sites/projects.iq.harvard.edu/files/collegehandbook/files/harvard_college_student_handbook_2024-2025.pdf",
+        "excerpt": "Fields of concentration include the humanities, social sciences, and life sciences, with research opportunities available to undergraduates."
+      }
+    ],
+    "recommendationInputs.programAdmissionModel": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://college.harvard.edu/academics/liberal-arts-sciences/concentrations",
+        "excerpt": "Harvard College students choose a concentration after admission rather than applying to a separate undergraduate school or major."
+      }
+    ],
+    "recommendationInputs.applicationStrategyTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://college.harvard.edu/sites/default/files/2024-02/Harvard_Admissions_FINAL.pdf",
+        "excerpt": "Restrictive Early Action is non-binding."
+      }
+    ],
+    "recommendationInputs.testingRequirements": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://college.harvard.edu/admissions/apply/application-requirements",
+        "excerpt": "Harvard requires the SAT or ACT to meet its standardized testing requirement."
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://college.harvard.edu/admissions/apply/application-requirements",
+        "excerpt": "There are no score cutoffs, and we do not admit by the numbers."
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://college.harvard.edu/admissions/apply/application-requirements",
+        "excerpt": "For the ACT, we will evaluate your highest composite score and any other scores you choose to share with us."
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://college.harvard.edu/admissions/apply/application-requirements",
+        "excerpt": "If you are applying Restrictive Early Action, we would like your testing results by the end of October; ... Regular Decision ... as late as the February"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://college.harvard.edu/admissions/apply/application-requirements",
+        "excerpt": "Applicants may provide self-reported SAT and ACT test scores ... Admitted students ... will be required to submit official test scores."
+      }
+    ],
+    "explanationInputs.academicSelectivityBand": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.admission_rate.overall\": 0.0345"
+      }
+    ],
+    "explanationInputs.testingExpectation": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://college.harvard.edu/admissions/apply/application-requirements",
+        "excerpt": "There are no score cutoffs, and we do not admit by the numbers."
+      }
+    ],
+    "explanationInputs.englishPolicySummary": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://college.harvard.edu/admissions/apply/application-requirements",
+        "excerpt": "Requirements are the same for domestic and international applicants"
+      }
+    ],
+    "explanationInputs.aidModel": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://college.harvard.edu/financial-aid/how-aid-works",
+        "excerpt": "We base aid awards on need, not on merit."
+      }
+    ],
+    "explanationInputs.applicationComplexity": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://college.harvard.edu/admissions/apply/application-requirements",
+        "excerpt": "Common Application ... School Report ... Teacher Recommendations ... Harvard Questions ... five required short-answer questions"
+      }
+    ]
+  },
+  "quality": {
+    "status": "publishable",
+    "missingFields": [],
+    "warnings": []
+  }
+}

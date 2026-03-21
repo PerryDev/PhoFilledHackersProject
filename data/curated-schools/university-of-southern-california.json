@@ -1,0 +1,423 @@
+{
+  "schoolSlug": "university-of-southern-california",
+  "lastVerifiedAt": "2026-03-21",
+  "identity": {
+    "schoolName": "University of Southern California",
+    "city": "Los Angeles",
+    "state": "CA",
+    "officialAdmissionsUrl": "https://admission.usc.edu/prospective-students/how-to-apply/first-year-students/"
+  },
+  "applicationRounds": [
+    "early_action",
+    "early_decision",
+    "regular_decision"
+  ],
+  "deadlinesByRound": {
+    "early_action": "2026-11-01",
+    "early_decision": "2026-11-01",
+    "regular_decision": "2027-01-10",
+    "rolling_admission": null,
+    "priority": null
+  },
+  "englishRequirements": {
+    "minimumIelts": 7,
+    "minimumToeflInternetBased": 100,
+    "waiverNotes": "International applicants whose native language is not English must submit a USC-approved English proficiency exam. USC accepts TOEFL, IELTS, Cambridge English, PTE, SAT Evidence-Based Reading and Writing 650, ACT English 27, or Duolingo 130, with no waivers or exceptions to the policy."
+  },
+  "testPolicy": "test_optional",
+  "requiredMaterials": [
+    "common_application",
+    "application_fee_or_fee_waiver",
+    "official_high_school_transcript",
+    "counselor_recommendation",
+    "teacher_recommendation_1",
+    "midyear_report",
+    "personal_statement",
+    "activities_list",
+    "financial_statement_of_personal_or_family_support",
+    "proof_of_english_proficiency"
+  ],
+  "tuitionAnnualUsd": 75384,
+  "estimatedCostOfAttendanceUsd": 103162,
+  "livingCostEstimateUsd": 23966,
+  "scholarshipAvailabilityFlag": true,
+  "scholarshipNotes": "USC is need-blind for admission, meets 100% of USC-determined need for eligible students who meet all deadlines, and offers merit scholarships. International students are not eligible for USC need-based aid but may receive merit scholarships and/or departmental awards.",
+  "recommendationInputs": {
+    "admissionRateOverall": 0.112,
+    "satAverageOverall": null,
+    "actMidpointCumulative": null,
+    "undergraduateSize": 39000,
+    "schoolControl": "private_nonprofit",
+    "campusLocale": "urban",
+    "internationalAidPolicy": "need_and_merit_available",
+    "hasNeedBasedAid": true,
+    "hasMeritAid": true,
+    "testingRequirements": {
+      "acceptedExams": [
+        "sat",
+        "act"
+      ],
+      "minimumSatTotal": null,
+      "minimumActComposite": null,
+      "latestSatTestDateNote": "To ensure scores can be included with application materials, standardized tests should be completed at least one month before the application date.",
+      "latestActTestDateNote": "To ensure scores can be included with application materials, standardized tests should be completed at least one month before the application date.",
+      "superscorePolicy": "both",
+      "writingEssayPolicy": "not_considered",
+      "scoreReportingPolicy": "official_required_upfront",
+      "middle50SatTotal": {
+        "low": 1470,
+        "high": 1540
+      },
+      "middle50ActComposite": {
+        "low": 32,
+        "high": 35
+      }
+    },
+    "averageNetPriceUsd": null,
+    "programFitTags": [
+      "research_intensive",
+      "computer_science",
+      "business",
+      "arts_design"
+    ],
+    "programAdmissionModel": "separate_school_application",
+    "applicationStrategyTags": [
+      "binding_early_decision",
+      "multiple_early_rounds"
+    ]
+  },
+  "explanationInputs": {
+    "academicSelectivityBand": "highly_selective",
+    "testingExpectation": "scores_considered",
+    "englishPolicySummary": "minimum_scores_required",
+    "aidModel": "need_and_merit",
+    "applicationComplexity": "high",
+    "deadlineUrgencyWindows": {
+      "earliestDeadline": "2026-11-01",
+      "latestMajorDeadline": "2027-01-10"
+    },
+    "internationalStudentConsiderations": [
+      "english_fluency_required",
+      "financial_certification_likely_required",
+      "need_aware_or_limited_aid_possible",
+      "merit_aid_possible"
+    ],
+    "potentialFitTags": [
+      "urban_access",
+      "research_or_innovation_oriented",
+      "strong_need_based_aid_signal",
+      "strong_merit_aid_signal"
+    ],
+    "potentialRiskTags": [
+      "high_total_cost",
+      "limited_aid_for_international_students",
+      "early_deadline_pressure",
+      "complex_application_requirements"
+    ],
+    "actionableApplicationSteps": [
+      "prepare_early_round_strategy",
+      "complete_standardized_testing_if_required",
+      "prepare_english_testing_or_waiver_plan",
+      "prepare_teacher_recommendations_early",
+      "prepare_counselor_documents_early",
+      "prioritize_financial_aid_forms",
+      "build_supplemental_essay_plan"
+    ]
+  },
+  "fieldProvenance": {
+    "identity.schoolName": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.usc.edu/prospective-students/how-to-apply/first-year-students/",
+        "excerpt": "First-Year Students"
+      }
+    ],
+    "identity.city": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.city\": \"Los Angeles\""
+      }
+    ],
+    "identity.state": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.state\": \"CA\""
+      }
+    ],
+    "identity.officialAdmissionsUrl": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.usc.edu/prospective-students/how-to-apply/first-year-students/",
+        "excerpt": "First-Year Students"
+      }
+    ],
+    "applicationRounds": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.usc.edu/prospective-students/how-to-apply/first-year-students/",
+        "excerpt": "Early Action (most majors) ... Early Decision (most majors) ... Regular Decision (most majors)"
+      }
+    ],
+    "deadlinesByRound": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.usc.edu/prospective-students/how-to-apply/first-year-students/",
+        "excerpt": "Early Action (most majors) — November 1 ... Early Decision (most majors) — November 1 ... Regular Decision (most majors) — January 10"
+      }
+    ],
+    "englishRequirements": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.usc.edu/prospective-students/how-to-apply/international-students/",
+        "excerpt": "TOEFL ... minimum score of 100 ... IELTS ... score of 7 ... Duolingo ... minimum score of 130"
+      }
+    ],
+    "testPolicy": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.usc.edu/test-optional-faq/",
+        "excerpt": "USC will continue our test-optional policy for the upcoming year"
+      }
+    ],
+    "requiredMaterials": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.usc.edu/prospective-students/how-to-apply/first-year-students/",
+        "excerpt": "The Common Application"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.usc.edu/prospective-students/how-to-apply/first-year-students/",
+        "excerpt": "Transcripts"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.usc.edu/prospective-students/how-to-apply/first-year-students/",
+        "excerpt": "Letter of Recommendation"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.usc.edu/prospective-students/how-to-apply/first-year-students/",
+        "excerpt": "Mid-Year Report"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.usc.edu/prospective-students/how-to-apply/international-students/",
+        "excerpt": "Financial Statement of Personal or Family Support"
+      }
+    ],
+    "tuitionAnnualUsd": [
+      {
+        "sourceKind": "official_tuition",
+        "sourceUrl": "https://financialaid.usc.edu/undergraduate-financial-aid/cost-of-attendance/",
+        "excerpt": "Tuition (12-18 units for two semesters) $75,384"
+      }
+    ],
+    "estimatedCostOfAttendanceUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://financialaid.usc.edu/undergraduate-financial-aid/cost-of-attendance/",
+        "excerpt": "Total** $103,162"
+      }
+    ],
+    "livingCostEstimateUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://financialaid.usc.edu/undergraduate-financial-aid/cost-of-attendance/",
+        "excerpt": "Housing* $13,510 ... Food* $8,442 ... Personal/Misc $2,016"
+      }
+    ],
+    "scholarshipAvailabilityFlag": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://financialaid.usc.edu/undergraduate-financial-aid/prospective-students/financial-aid-at-usc/",
+        "excerpt": "need-blind admission"
+      }
+    ],
+    "scholarshipNotes": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://financialaid.usc.edu/undergraduate-financial-aid/prospective-students/financial-aid-at-usc/",
+        "excerpt": "meeting 100 percent of the USC-determined financial need"
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admission.usc.edu/prospective-students/how-to-apply/international-students/",
+        "excerpt": "international students are not eligible to receive federal or USC need-based financial aid, they may be awarded merit scholarships"
+      }
+    ],
+    "recommendationInputs.admissionRateOverall": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.admission_rate.overall\": 0.112"
+      }
+    ],
+    "recommendationInputs.satAverageOverall": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.sat_scores.average.overall\": 1527"
+      }
+    ],
+    "recommendationInputs.actMidpointCumulative": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.act_scores.midpoint.cumulative\": 34"
+      }
+    ],
+    "recommendationInputs.undergraduateSize": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.student.size\": 39000"
+      }
+    ],
+    "recommendationInputs.schoolControl": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.ownership\": 2"
+      }
+    ],
+    "recommendationInputs.campusLocale": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.locale\": 11"
+      }
+    ],
+    "recommendationInputs.internationalAidPolicy": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admission.usc.edu/prospective-students/how-to-apply/international-students/",
+        "excerpt": "international applicants are not eligible to receive federal or USC need-based financial aid, they may be awarded merit scholarships"
+      }
+    ],
+    "recommendationInputs.hasNeedBasedAid": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://financialaid.usc.edu/undergraduate-financial-aid/prospective-students/financial-aid-at-usc/",
+        "excerpt": "We have a long tradition of meeting 100 percent of the USC-determined financial need"
+      }
+    ],
+    "recommendationInputs.hasMeritAid": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://financialaid.usc.edu/undergraduate-financial-aid/prospective-students/financial-aid-at-usc/",
+        "excerpt": "merit scholarships"
+      }
+    ],
+    "recommendationInputs.testingRequirements": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.usc.edu/prospective-students/how-to-apply/first-year-students/",
+        "excerpt": "Optional: Official Test Scores"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.usc.edu/prospective-students/how-to-apply/first-year-students/",
+        "excerpt": "The highest scores for each section of the SAT and ACT exams will be recorded"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.usc.edu/prospective-students/how-to-apply/first-year-students/",
+        "excerpt": "We do not accept self-reported scores."
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.usc.edu/prospective-students/how-to-apply/international-students/",
+        "excerpt": "SAT or ACT scores to demonstrate their English-language proficiency"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.usc.edu/prospective-students/how-to-apply/international-students/",
+        "excerpt": "TOEFL ... minimum score of 100 ... IELTS ... score of 7 ... Duolingo ... minimum score of 130"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.usc.edu/wp-content/uploads/first-year-student-profile.pdf?trk=public_post_comment-text",
+        "excerpt": "Middle 50% SAT (super-scored) 1470 – 1540 ... Middle 50% ACT (super-scored) 32 – 35"
+      }
+    ],
+    "explanationInputs.academicSelectivityBand": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.admission_rate.overall\": 0.112"
+      }
+    ],
+    "explanationInputs.testingExpectation": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.usc.edu/test-optional-faq/",
+        "excerpt": "test-optional policy"
+      }
+    ],
+    "explanationInputs.englishPolicySummary": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.usc.edu/prospective-students/how-to-apply/international-students/",
+        "excerpt": "must submit a USC-approved English proficiency examination"
+      }
+    ],
+    "explanationInputs.aidModel": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://financialaid.usc.edu/undergraduate-financial-aid/prospective-students/financial-aid-at-usc/",
+        "excerpt": "meeting 100 percent of the USC-determined financial need"
+      }
+    ],
+    "explanationInputs.applicationComplexity": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.usc.edu/prospective-students/how-to-apply/first-year-students/",
+        "excerpt": "Early Action ... Early Decision ... Regular Decision ... Additional Application Requirements"
+      }
+    ],
+    "recommendationInputs.programFitTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://cinema.usc.edu/",
+        "excerpt": "The School of Cinematic Arts is divided into seven divisions that work together to train the leaders, scholars and media makers of tomorrow."
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.cs.usc.edu/academic-programs/",
+        "excerpt": "The USC Department of Computer Science offers an undergraduate degree with the following four majors: Computer Science, Computer Engineering & Computer Science, Computer Science Games, and Computer Science & Business Administration."
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.usc.edu/cost-and-financial-aid/financial-aid-and-scholarships/",
+        "excerpt": "merit scholarships, need-based grants"
+      }
+    ],
+    "recommendationInputs.programAdmissionModel": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://cinema.usc.edu/",
+        "excerpt": "The School of Cinematic Arts is divided into seven divisions"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.usc.edu/prospective-students/how-to-apply/first-year-students/",
+        "excerpt": "Early Action (most majors) ... Early Decision (most majors) ... Regular Decision (most majors)"
+      }
+    ],
+    "recommendationInputs.applicationStrategyTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.usc.edu/prospective-students/how-to-apply/first-year-students/",
+        "excerpt": "Early Action (most majors) ... Early Decision (most majors) ... Regular Decision (most majors)"
+      }
+    ]
+  },
+  "quality": {
+    "status": "publishable",
+    "missingFields": [],
+    "warnings": []
+  }
+}

@@ -1,0 +1,369 @@
+{
+  "schoolSlug": "purdue",
+  "lastVerifiedAt": "2026-03-21",
+  "identity": {
+    "schoolName": "Purdue University",
+    "city": "West Lafayette",
+    "state": "IN",
+    "officialAdmissionsUrl": "https://admissions.purdue.edu/apply/criteriafreshmen.php"
+  },
+  "applicationRounds": [
+    "early_action",
+    "regular_decision"
+  ],
+  "deadlinesByRound": {
+    "early_action": "2026-11-01",
+    "early_decision": null,
+    "regular_decision": "2027-01-15",
+    "rolling_admission": null,
+    "priority": null
+  },
+  "englishRequirements": {
+    "minimumIelts": 6.5,
+    "minimumToeflInternetBased": 88,
+    "waiverNotes": "International undergraduate applicants whose first language is not English are evaluated for English proficiency during review. Purdue also considers demonstrated academic success in an English-speaking curriculum, and transfer credit may be used as an alternative proof path in some cases."
+  },
+  "testPolicy": "required",
+  "requiredMaterials": [
+    "common_application",
+    "purdue_specific_questions",
+    "essay",
+    "self_reported_high_school_grades",
+    "self_reported_sat_or_act_scores",
+    "application_fee_or_fee_waiver"
+  ],
+  "tuitionAnnualUsd": 31830,
+  "estimatedCostOfAttendanceUsd": 52698,
+  "livingCostEstimateUsd": 16734,
+  "scholarshipAvailabilityFlag": true,
+  "scholarshipNotes": "Purdue awards university-wide merit scholarships and also offers need-based aid and departmental scholarships. In general, international undergraduate students are not eligible for financial aid, including scholarships.",
+  "recommendationInputs": {
+    "schoolControl": "public",
+    "internationalAidPolicy": "limited_or_unclear",
+    "hasNeedBasedAid": true,
+    "hasMeritAid": true,
+    "testingRequirements": {
+      "acceptedExams": [
+        "sat",
+        "act"
+      ],
+      "minimumSatTotal": null,
+      "minimumActComposite": null,
+      "latestSatTestDateNote": "If able, take SAT in the spring of junior year in preparation for the Nov. 1 Early Action deadline.",
+      "latestActTestDateNote": "If able, take ACT in the spring of junior year in preparation for the Nov. 1 Early Action deadline.",
+      "superscorePolicy": "both",
+      "writingEssayPolicy": "unknown",
+      "scoreReportingPolicy": "self_report_allowed",
+      "middle50SatTotal": {
+        "low": 1220,
+        "high": 1480
+      },
+      "middle50ActComposite": {
+        "low": 28,
+        "high": 34
+      }
+    },
+    "admissionRateOverall": 0.503,
+    "satAverageOverall": 1342,
+    "actMidpointCumulative": 30,
+    "undergraduateSize": 39637,
+    "campusLocale": null,
+    "averageNetPriceUsd": null,
+    "programFitTags": [
+      "engineering",
+      "computer_science",
+      "business",
+      "research_intensive"
+    ],
+    "programAdmissionModel": "capacity_limited",
+    "applicationStrategyTags": [
+      "non_binding_early_action"
+    ]
+  },
+  "explanationInputs": {
+    "academicSelectivityBand": "moderately_selective",
+    "testingExpectation": "scores_considered",
+    "englishPolicySummary": "minimum_scores_required",
+    "aidModel": "need_and_merit",
+    "applicationComplexity": "medium",
+    "deadlineUrgencyWindows": {
+      "earliestDeadline": "2026-11-01",
+      "latestMajorDeadline": "2027-01-15"
+    },
+    "internationalStudentConsiderations": [
+      "english_fluency_required",
+      "english_test_may_be_required",
+      "need_aware_or_limited_aid_possible"
+    ],
+    "potentialFitTags": [
+      "strong_for_high_achieving_stem_students",
+      "large_public_environment",
+      "research_or_innovation_oriented",
+      "strong_merit_aid_signal"
+    ],
+    "potentialRiskTags": [
+      "testing_required",
+      "high_total_cost",
+      "limited_aid_for_international_students",
+      "early_deadline_pressure"
+    ],
+    "actionableApplicationSteps": [
+      "prepare_early_round_strategy",
+      "complete_standardized_testing_if_required",
+      "prepare_english_testing_or_waiver_plan",
+      "prepare_teacher_recommendations_early",
+      "budget_for_need_based_aid_process",
+      "research_merit_aid_deadlines",
+      "prioritize_financial_aid_forms"
+    ]
+  },
+  "fieldProvenance": {
+    "identity.officialAdmissionsUrl": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.purdue.edu/apply/criteriafreshmen.php",
+        "excerpt": "Freshman Admission Criteria - Undergraduate Admissions - Purdue University"
+      }
+    ],
+    "applicationRounds": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.admissions.purdue.edu/apply/deadlines.php",
+        "excerpt": "First-Time College Student (Freshmen) Application ... Early Action Application Deadline ... Regular Decision Application Deadline"
+      }
+    ],
+    "deadlinesByRound": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.admissions.purdue.edu/apply/deadlines.php",
+        "excerpt": "November 1: Early Action Application Deadline ... January 15: Regular Decision Application Deadline"
+      }
+    ],
+    "englishRequirements.minimumIelts": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.purdue.edu/become-student/english-proficiency/",
+        "excerpt": "Generally, applicants have a score of 6.5 or higher with a minimum score of 6.0 in each section."
+      }
+    ],
+    "englishRequirements.minimumToeflInternetBased": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.purdue.edu/become-student/english-proficiency/",
+        "excerpt": "For exams taken before January 21, 2026: We require a minimum TOEFL iBT score of 88 or higher with at least a 20 or higher per section."
+      }
+    ],
+    "englishRequirements.waiverNotes": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.purdue.edu/become-student/english-proficiency/",
+        "excerpt": "International undergraduate applicants whose first language is not English will be evaluated for English language proficiency during the application review process."
+      }
+    ],
+    "testPolicy": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.purdue.edu/apply/criteriafreshmen.php",
+        "excerpt": "Purdue expects applicants to have SAT or ACT scores."
+      }
+    ],
+    "requiredMaterials": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.purdue.edu/apply/criteriafreshmen.php",
+        "excerpt": "A complete application includes the application itself, Purdue-specific questions, self-reported high school grades, self-reported ACT or SAT test scores, the application fee or qualified fee waiver, and an essay."
+      }
+    ],
+    "tuitionAnnualUsd": [
+      {
+        "sourceKind": "official_tuition",
+        "sourceUrl": "https://www.purdue.edu/idata/wp-content/uploads/2026/01/CDS_2025-2026.pdf",
+        "excerpt": "Purdue West Lafayette first-year undergraduates: Tuition: Nonresident $31,830"
+      }
+    ],
+    "estimatedCostOfAttendanceUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://www.purdue.edu/idata/wp-content/uploads/2026/01/CDS_2025-2026.pdf",
+        "excerpt": "Purdue West Lafayette first-year undergraduates: Tuition $31,830 + Required Fees $274 + Food and housing (on-campus) $16,734 + Books and supplies $1,090 + Transportation $570 + Other expenses $2,200 = $52,698"
+      }
+    ],
+    "livingCostEstimateUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://www.purdue.edu/idata/wp-content/uploads/2026/01/CDS_2025-2026.pdf",
+        "excerpt": "Food and housing (on-campus): $16,734"
+      }
+    ],
+    "scholarshipAvailabilityFlag": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.purdue.edu/costsandfinaid/freshman.php",
+        "excerpt": "Purdue awards merit scholarships and also considers applicants for scholarships with need-based components."
+      }
+    ],
+    "scholarshipNotes": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.purdue.edu/costsandfinaid/freshman.php",
+        "excerpt": "First-year merit scholarships are awarded based on a holistic review ... Purdue scholarships are highly competitive ... in general, international undergraduate students are not eligible for financial aid, including scholarships."
+      }
+    ],
+    "recommendationInputs.schoolControl": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools?school.name=Purdue%20University",
+        "excerpt": "\"school.ownership\": 1"
+      }
+    ],
+    "recommendationInputs.internationalAidPolicy": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.purdue.edu/costsandfinaid/freshman.php",
+        "excerpt": "In general, international undergraduate students are not eligible for financial aid, including scholarships."
+      }
+    ],
+    "recommendationInputs.hasNeedBasedAid": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.purdue.edu/costsandfinaid/freshman.php",
+        "excerpt": "Purdue's Division of Financial Aid administers need-based aid from federal, state and Purdue funding sources."
+      }
+    ],
+    "recommendationInputs.hasMeritAid": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.purdue.edu/costsandfinaid/freshman.php",
+        "excerpt": "Purdue awards merit scholarships."
+      }
+    ],
+    "recommendationInputs.programFitTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://engineering.purdue.edu/",
+        "excerpt": "Purdue Engineering is recognized for innovation, research and high-impact engineering education."
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://business.purdue.edu/",
+        "excerpt": "Purdue's Mitch Daniels School of Business prepares students for leadership and innovation in business."
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.purdue.edu/research/",
+        "excerpt": "Purdue is a leading research university driving discovery across disciplines."
+      }
+    ],
+    "recommendationInputs.programAdmissionModel": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.purdue.edu/academics.php",
+        "excerpt": "Some majors are competitive and may have additional requirements or limited space."
+      }
+    ],
+    "recommendationInputs.applicationStrategyTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.purdue.edu/apply/deadlines.php",
+        "excerpt": "Purdue Early Action is non-binding."
+      }
+    ],
+    "recommendationInputs.testingRequirements.acceptedExams": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.purdue.edu/apply/criteriafreshmen.php",
+        "excerpt": "We accept SAT or ACT scores and have no preference on which test is taken."
+      }
+    ],
+    "recommendationInputs.testingRequirements.latestSatTestDateNote": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.purdue.edu/apply/criteriafreshmen.php",
+        "excerpt": "If able, you should take one or the other in the spring of your junior year in preparation for the November 1 Early Action deadline."
+      }
+    ],
+    "recommendationInputs.testingRequirements.latestActTestDateNote": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.purdue.edu/apply/criteriafreshmen.php",
+        "excerpt": "If able, you should take one or the other in the spring of your junior year in preparation for the November 1 Early Action deadline."
+      }
+    ],
+    "recommendationInputs.testingRequirements.superscorePolicy": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.purdue.edu/apply/criteriafreshmen.php",
+        "excerpt": "You may report the best scores from across different tests."
+      }
+    ],
+    "recommendationInputs.testingRequirements.writingEssayPolicy": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.purdue.edu/apply/criteriafreshmen.php",
+        "excerpt": "This application also requires you to provide an essay and answer Purdue-specific questions."
+      }
+    ],
+    "recommendationInputs.testingRequirements.scoreReportingPolicy": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.purdue.edu/apply/criteriafreshmen.php",
+        "excerpt": "A complete application includes self-reported ACT or SAT test scores."
+      }
+    ],
+    "recommendationInputs.testingRequirements.middle50SatTotal": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://admissions.purdue.edu/become-student/class-profile/",
+        "excerpt": "Middle 50% SAT: 1220-1480"
+      }
+    ],
+    "recommendationInputs.testingRequirements.middle50ActComposite": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://admissions.purdue.edu/become-student/class-profile/",
+        "excerpt": "Middle 50% ACT: 28-34"
+      }
+    ],
+    "explanationInputs.academicSelectivityBand": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools?school.name=Purdue%20University",
+        "excerpt": "\"latest.admissions.admission_rate.overall\": 0.503"
+      }
+    ],
+    "explanationInputs.testingExpectation": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.purdue.edu/apply/criteriafreshmen.php",
+        "excerpt": "Purdue expects applicants to have SAT or ACT scores."
+      }
+    ],
+    "explanationInputs.englishPolicySummary": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.purdue.edu/become-student/english-proficiency/",
+        "excerpt": "For TOEFL iBT, Purdue requires a minimum score of 88 or higher for exams taken before January 21, 2026."
+      }
+    ],
+    "explanationInputs.aidModel": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.purdue.edu/costsandfinaid/freshman.php",
+        "excerpt": "The Purdue Division of Financial Aid administers need-based aid ... Purdue awards merit scholarships."
+      }
+    ],
+    "explanationInputs.deadlineUrgencyWindows": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.admissions.purdue.edu/apply/deadlines.php",
+        "excerpt": "November 1: Early Action Application Deadline ... January 15: Regular Decision Application Deadline"
+      }
+    ]
+  },
+  "quality": {
+    "status": "publishable",
+    "missingFields": [],
+    "warnings": [],
+    "lastVerifiedAt": "2026-03-21"
+  }
+}

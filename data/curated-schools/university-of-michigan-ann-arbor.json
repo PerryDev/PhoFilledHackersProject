@@ -1,0 +1,318 @@
+{
+  "schoolSlug": "university-of-michigan-ann-arbor",
+  "lastVerifiedAt": "2026-03-21",
+  "identity": {
+    "schoolName": "University of Michigan-Ann Arbor",
+    "city": "Ann Arbor",
+    "state": "MI",
+    "officialAdmissionsUrl": "https://admissions.umich.edu/apply/first-year-applicants"
+  },
+  "applicationRounds": [
+    "early_action",
+    "early_decision",
+    "regular_decision"
+  ],
+  "deadlinesByRound": {
+    "early_action": "2026-11-01",
+    "early_decision": "2026-11-01",
+    "regular_decision": "2027-02-01",
+    "rolling_admission": null,
+    "priority": null
+  },
+  "englishRequirements": {
+    "minimumIelts": null,
+    "minimumToeflInternetBased": null,
+    "waiverNotes": "Non-native speakers of English should submit TOEFL, IELTS, MET, or similar scores. U-M notes that students who do not wish to have SAT or ACT scores considered can still apply without them."
+  },
+  "testPolicy": "test_optional",
+  "requiredMaterials": [
+    "common_application",
+    "high_school_transcript",
+    "school_report",
+    "teacher_recommendation_1",
+    "u_m_questions",
+    "common_application_personal_essay",
+    "early_decision_agreement"
+  ],
+  "tuitionAnnualUsd": 63962,
+  "estimatedCostOfAttendanceUsd": 84164,
+  "livingCostEstimateUsd": 16246,
+  "scholarshipAvailabilityFlag": true,
+  "scholarshipNotes": "U-M says it is committed to need-based affordability for Michigan residents, offers scholarships and grants through financial aid, and some scholarships are merit-based. International students on temporary visas are not eligible for financial aid and are expected to pay the full cost of attendance.",
+  "recommendationInputs": {
+    "admissionRateOverall": 0.1794,
+    "satAverageOverall": 1473,
+    "actMidpointCumulative": null,
+    "undergraduateSize": 33488,
+    "schoolControl": "public",
+    "campusLocale": null,
+    "internationalAidPolicy": "limited_or_unclear",
+    "hasNeedBasedAid": true,
+    "hasMeritAid": true,
+    "testingRequirements": {
+      "acceptedExams": [
+        "sat",
+        "act"
+      ],
+      "minimumSatTotal": null,
+      "minimumActComposite": null,
+      "latestSatTestDateNote": "Self-reported SAT or ACT scores for Early Decision/Early Action are optional and due by Nov. 1; for Regular Decision they are optional and due by Feb. 1.",
+      "latestActTestDateNote": "Self-reported SAT or ACT scores for Early Decision/Early Action are optional and due by Nov. 1; for Regular Decision they are optional and due by Feb. 1.",
+      "superscorePolicy": "unknown",
+      "writingEssayPolicy": "unknown",
+      "scoreReportingPolicy": "self_report_allowed",
+      "middle50SatTotal": {
+        "low": null,
+        "high": null
+      },
+      "middle50ActComposite": {
+        "low": null,
+        "high": null
+      }
+    },
+    "averageNetPriceUsd": null,
+    "programFitTags": [
+      "engineering",
+      "business",
+      "life_sciences",
+      "humanities",
+      "social_sciences",
+      "research_intensive"
+    ],
+    "programAdmissionModel": "separate_school_application",
+    "applicationStrategyTags": [
+      "non_binding_early_action"
+    ]
+  },
+  "explanationInputs": {
+    "academicSelectivityBand": "highly_selective",
+    "testingExpectation": "tests_not_required",
+    "englishPolicySummary": "waiver_possible",
+    "aidModel": "need_and_merit",
+    "applicationComplexity": "high",
+    "deadlineUrgencyWindows": {
+      "earliestDeadline": "2026-11-01",
+      "latestMajorDeadline": "2027-02-01"
+    },
+    "internationalStudentConsiderations": [
+      "english_test_may_be_required",
+      "financial_certification_likely_required",
+      "need_aware_or_limited_aid_possible"
+    ],
+    "potentialFitTags": [
+      "large_public_environment",
+      "research_or_innovation_oriented",
+      "strong_need_based_aid_signal",
+      "strong_merit_aid_signal",
+      "test_flexible_pathway"
+    ],
+    "potentialRiskTags": [
+      "high_total_cost",
+      "early_deadline_pressure",
+      "limited_aid_for_international_students"
+    ],
+    "actionableApplicationSteps": [
+      "prepare_early_round_strategy",
+      "prepare_teacher_recommendations_early",
+      "budget_for_need_based_aid_process",
+      "prioritize_financial_aid_forms",
+      "build_supplemental_essay_plan"
+    ]
+  },
+  "fieldProvenance": {
+    "identity.schoolName": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.umich.edu/apply/first-year-applicants",
+        "excerpt": "University of Michigan Office of Undergraduate Admissions"
+      }
+    ],
+    "applicationRounds": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.umich.edu/apply/first-year-applicants/first-year-application-plans",
+        "excerpt": "The University of Michigan offers three application plans for first-year applicants: Early Decision, Early Action, and Regular Decision."
+      }
+    ],
+    "deadlinesByRound": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.umich.edu/apply/first-year-applicants/requirements-deadlines",
+        "excerpt": "Nov 1 ... Early Decision for First-year Students Only ... Early Action for First-year Students Only ... Feb 1 ... Fall Term Application Deadline"
+      }
+    ],
+    "englishRequirements": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.umich.edu/apply/international-applicants/requirements-deadlines",
+        "excerpt": "TOEFL, IELTS, MET, etc. scores (for non-native speakers of English)"
+      }
+    ],
+    "testPolicy": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.umich.edu/apply/first-year-applicants/requirements-deadlines",
+        "excerpt": "SAT or ACT score, if available and you wish them to be considered"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.umich.edu/apply/first-year-applicants/requirements-deadlines/application-changes",
+        "excerpt": "students who do not wish to have SAT or ACT scores considered ... can still submit other optional forms of testing"
+      }
+    ],
+    "requiredMaterials": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.umich.edu/apply/first-year-applicants/requirements-deadlines",
+        "excerpt": "Completed Common Application with $75 application fee ... High school transcript ... School Report ... One Teacher Evaluation"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.umich.edu/apply/first-year-applicants/essay-questions",
+        "excerpt": "University of Michigan Questions ... Common Application Personal Essay"
+      }
+    ],
+    "tuitionAnnualUsd": [
+      {
+        "sourceKind": "official_tuition",
+        "sourceUrl": "https://admissions.umich.edu/costs-aid/costs",
+        "excerpt": "Nonresidents (Out-of-State) ... Tuition & Fees ... $63,962"
+      }
+    ],
+    "estimatedCostOfAttendanceUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://admissions.umich.edu/costs-aid/costs",
+        "excerpt": "Nonresidents (Out-of-State) ... Total Budget ... $84,164"
+      }
+    ],
+    "livingCostEstimateUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://admissions.umich.edu/costs-aid/costs",
+        "excerpt": "Living Expenses ... $16,246"
+      }
+    ],
+    "scholarshipAvailabilityFlag": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.umich.edu/costs-aid/financial-aid",
+        "excerpt": "Michigan has numerous resources and ways to help eligible students and their families pay for college."
+      }
+    ],
+    "scholarshipNotes": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.umich.edu/costs-aid/michigan-residents",
+        "excerpt": "U-M is the only public university in Michigan that covers 100 percent of demonstrated financial need of eligible Michigan residents."
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://finaid.umich.edu/getting-started/qualifying-aid/how-aid-awarded",
+        "excerpt": "financial aid may contain ... institutional scholarships and grants"
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://finaid.umich.edu/apply-aid/international-students",
+        "excerpt": "There is no federal financial aid and limited scholarship funding available to international students attending U-M"
+      }
+    ],
+    "recommendationInputs.admissionRateOverall": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools?id=170976",
+        "excerpt": "\"latest.admissions.admission_rate.overall\": 0.1794"
+      }
+    ],
+    "recommendationInputs.satAverageOverall": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools?id=170976",
+        "excerpt": "\"latest.admissions.sat_scores.average.overall\": 1473"
+      }
+    ],
+    "recommendationInputs.undergraduateSize": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools?id=170976",
+        "excerpt": "\"latest.student.size\": 33488"
+      }
+    ],
+    "recommendationInputs.schoolControl": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools?id=170976",
+        "excerpt": "\"school.ownership\": 1"
+      }
+    ],
+    "recommendationInputs.programFitTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.umich.edu/academics-majors/majors-degrees",
+        "excerpt": "At Michigan, you don’t apply to the university – you apply to one of our 14 undergraduate schools and colleges"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.umich.edu/academics-majors/research-entrepreneurship",
+        "excerpt": "research is central to the university's mission"
+      }
+    ],
+    "recommendationInputs.programAdmissionModel": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.umich.edu/academics-majors/majors-degrees",
+        "excerpt": "you apply to one of our 14 undergraduate schools and colleges"
+      }
+    ],
+    "recommendationInputs.applicationStrategyTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.umich.edu/apply/first-year-applicants/requirements-deadlines/early-action-applicants",
+        "excerpt": "Early Action is nonbinding"
+      }
+    ],
+    "recommendationInputs.testingRequirements": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.umich.edu/apply/first-year-applicants/requirements-deadlines",
+        "excerpt": "SAT or ACT score, if available and you wish them to be considered ... Deadline to self-report test scores for Early Decision/Early Action (optional) ... Deadline to self-report test scores for Regular Decision (optional)"
+      }
+    ],
+    "explanationInputs.testingExpectation": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.umich.edu/apply/first-year-applicants/requirements-deadlines/application-changes",
+        "excerpt": "Yes, students who do not wish to have SAT or ACT scores considered ... can still apply without the ACT/SAT score."
+      }
+    ],
+    "explanationInputs.englishPolicySummary": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.umich.edu/apply/international-applicants/requirements-deadlines",
+        "excerpt": "TOEFL, IELTS, MET, etc. scores (for non-native speakers of English)"
+      }
+    ],
+    "explanationInputs.aidModel": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://finaid.umich.edu/getting-started/qualifying-aid/how-aid-awarded",
+        "excerpt": "financial aid may contain a variety of funding sources ... institutional scholarships and grants"
+      }
+    ],
+    "explanationInputs.applicationComplexity": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.umich.edu/apply/first-year-applicants/requirements-deadlines",
+        "excerpt": "Completed Common Application ... High school transcript ... School Report ... One Teacher Evaluation ... SAT or ACT score, if available and you wish them to be considered"
+      }
+    ]
+  },
+  "quality": {
+    "status": "publishable",
+    "missingFields": [],
+    "warnings": [
+      "The admissions checklist allows test scores to be self-reported and only if the applicant wants them considered, so testingRequirements.scoreReportingPolicy is recorded as self_report_allowed.",
+      "The cost page publishes both resident and nonresident budgets; tuitionAnnualUsd and estimatedCostOfAttendanceUsd use the published nonresident lower-division figures for a single statewide sticker price."
+    ]
+  }
+}

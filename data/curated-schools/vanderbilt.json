@@ -1,0 +1,392 @@
+{
+  "schoolSlug": "vanderbilt",
+  "lastVerifiedAt": "2026-03-21",
+  "identity": {
+    "schoolName": "Vanderbilt University",
+    "city": "Nashville",
+    "state": "TN",
+    "officialAdmissionsUrl": "https://admissions.vanderbilt.edu/"
+  },
+  "applicationRounds": [
+    "early_decision",
+    "regular_decision"
+  ],
+  "deadlinesByRound": {
+    "early_action": null,
+    "early_decision": "2025-11-01",
+    "regular_decision": "2026-01-01",
+    "rolling_admission": null,
+    "priority": null
+  },
+  "englishRequirements": {
+    "minimumIelts": 7,
+    "minimumToeflInternetBased": 100,
+    "waiverNotes": "Applicants whose first language or language of instruction is English are not required to submit English proficiency scores. Applicants scoring above ACT English 26 or SAT Evidence-Based Reading and Writing 630 are also exempt."
+  },
+  "testPolicy": "test_optional",
+  "requiredMaterials": [
+    "common_application_or_coalition_application_or_questbridge_application",
+    "personal_essay",
+    "short_answer",
+    "application_fee_or_fee_waiver",
+    "official_high_school_transcript",
+    "counselor_letter_of_recommendation",
+    "teacher_letter_of_recommendation_1",
+    "teacher_letter_of_recommendation_2",
+    "english_proficiency_exam_if_applicable",
+    "css_profile_if_applicable"
+  ],
+  "tuitionAnnualUsd": 67934,
+  "estimatedCostOfAttendanceUsd": 97374,
+  "livingCostEstimateUsd": 23048,
+  "scholarshipAvailabilityFlag": true,
+  "scholarshipNotes": "Vanderbilt's Opportunity Vanderbilt program meets 100% of demonstrated need for admitted students without institutional loans. Merit scholarships are available, including the Ingram Scholars Program, the Cornelius Vanderbilt Scholarship, and the Chancellor's Scholarship. International citizens may be considered for limited need-based aid and select merit awards.",
+  "recommendationInputs": {
+    "admissionRateOverall": 0.0628,
+    "satAverageOverall": 1550,
+    "actMidpointCumulative": 35,
+    "undergraduateSize": 7143,
+    "schoolControl": "private_nonprofit",
+    "campusLocale": "urban",
+    "internationalAidPolicy": "limited_or_unclear",
+    "hasNeedBasedAid": true,
+    "hasMeritAid": true,
+    "testingRequirements": {
+      "acceptedExams": [
+        "sat",
+        "act"
+      ],
+      "minimumSatTotal": null,
+      "minimumActComposite": null,
+      "latestSatTestDateNote": "ED I preferred last SAT test date: October 4, 2025. ED II and Regular Decision preferred last SAT test date: December 6, 2025.",
+      "latestActTestDateNote": "ED I preferred last ACT test date: October 18, 2025. ED II and Regular Decision preferred last ACT test date: December 13, 2025.",
+      "superscorePolicy": "both",
+      "writingEssayPolicy": "optional",
+      "scoreReportingPolicy": "official_required_after_admit",
+      "middle50SatTotal": {
+        "low": null,
+        "high": null
+      },
+      "middle50ActComposite": {
+        "low": null,
+        "high": null
+      }
+    },
+    "averageNetPriceUsd": null,
+    "programFitTags": [
+      "research_intensive",
+      "engineering",
+      "humanities",
+      "social_sciences"
+    ],
+    "programAdmissionModel": "separate_school_application",
+    "applicationStrategyTags": [
+      "binding_early_decision",
+      "multiple_early_rounds"
+    ]
+  },
+  "explanationInputs": {
+    "academicSelectivityBand": "ultra_selective",
+    "testingExpectation": "scores_considered",
+    "englishPolicySummary": "minimum_scores_required",
+    "aidModel": "need_and_merit",
+    "applicationComplexity": "high",
+    "deadlineUrgencyWindows": {
+      "earliestDeadline": "2025-11-01",
+      "latestMajorDeadline": "2026-01-01"
+    },
+    "internationalStudentConsiderations": [
+      "english_fluency_required",
+      "english_test_may_be_required",
+      "financial_certification_likely_required",
+      "need_aware_or_limited_aid_possible",
+      "need_based_aid_available",
+      "merit_aid_possible"
+    ],
+    "potentialFitTags": [
+      "strong_for_high_achieving_stem_students",
+      "research_or_innovation_oriented",
+      "urban_access",
+      "strong_need_based_aid_signal",
+      "strong_merit_aid_signal"
+    ],
+    "potentialRiskTags": [
+      "extremely_low_admission_rate",
+      "high_total_cost",
+      "complex_application_requirements",
+      "limited_aid_for_international_students"
+    ],
+    "actionableApplicationSteps": [
+      "prepare_early_round_strategy",
+      "prepare_regular_decision_timeline",
+      "prepare_english_testing_or_waiver_plan",
+      "prepare_teacher_recommendations_early",
+      "prepare_counselor_documents_early",
+      "budget_for_need_based_aid_process",
+      "research_merit_aid_deadlines",
+      "prioritize_financial_aid_forms",
+      "build_supplemental_essay_plan"
+    ]
+  },
+  "fieldProvenance": {
+    "identity.schoolName": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.vanderbilt.edu/apply/",
+        "excerpt": "Apply | Undergraduate Admissions | Vanderbilt University"
+      }
+    ],
+    "applicationRounds": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.vanderbilt.edu/apply/",
+        "excerpt": "Vanderbilt offers three decision plans for first-year applicants: Early Decision I, Early Decision II, and Regular Decision."
+      }
+    ],
+    "deadlinesByRound": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.vanderbilt.edu/apply/",
+        "excerpt": "Early Decision I ... November 1, 2025 — Deadline for completed application ... Regular Decision ... January 1, 2026 — Deadline for completed application"
+      }
+    ],
+    "englishRequirements": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.vanderbilt.edu/apply/first-year-process/",
+        "excerpt": "TOEFL iBT 100; IELTS 7.0; applicants whose first language or language of instruction is English are not required to submit English proficiency exam scores."
+      }
+    ],
+    "testPolicy": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.vanderbilt.edu/apply/first-year-process/",
+        "excerpt": "For students applying for fall 2026 and 2027 entry, SAT or ACT scores are optional."
+      }
+    ],
+    "requiredMaterials": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.vanderbilt.edu/apply/first-year-process/",
+        "excerpt": "Common Application or Coalition application ... personal essay and short answer ... official high school transcript ... counselor letter of recommendation ... two academic teacher letters of recommendation."
+      }
+    ],
+    "tuitionAnnualUsd": [
+      {
+        "sourceKind": "official_tuition",
+        "sourceUrl": "https://admissions.vanderbilt.edu/affordability/",
+        "excerpt": "Tuition $67,934"
+      }
+    ],
+    "estimatedCostOfAttendanceUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://admissions.vanderbilt.edu/affordability/",
+        "excerpt": "Total Direct Cost of Attendance $94,274; Total Indirect Costs $3,100"
+      }
+    ],
+    "livingCostEstimateUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://admissions.vanderbilt.edu/affordability/",
+        "excerpt": "Housing $14,760; Food $8,288"
+      }
+    ],
+    "scholarshipAvailabilityFlag": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.vanderbilt.edu/affordability/",
+        "excerpt": "Merit Scholarship Programs"
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.vanderbilt.edu/affordability/opportunity-vanderbilt/",
+        "excerpt": "Vanderbilt will meet 100% of this need without loans"
+      }
+    ],
+    "scholarshipNotes": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.vanderbilt.edu/affordability/opportunity-vanderbilt/",
+        "excerpt": "meet 100% of demonstrated need ... without loans"
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.vanderbilt.edu/affordability/",
+        "excerpt": "Ingram Scholars Program, the Cornelius Vanderbilt Scholarship, and the Chancellor's Scholarship"
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.vanderbilt.edu/affordability/international-costs-and-finances/",
+        "excerpt": "merit-based scholarships are awarded only to a select few of our most exceptional applicants each year"
+      }
+    ],
+    "recommendationInputs.admissionRateOverall": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.admission_rate.overall\": 0.0628"
+      }
+    ],
+    "recommendationInputs.satAverageOverall": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.sat_scores.average.overall\": 1550"
+      }
+    ],
+    "recommendationInputs.actMidpointCumulative": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.act_scores.midpoint.cumulative\": 35"
+      }
+    ],
+    "recommendationInputs.undergraduateSize": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.student.size\": 7143"
+      }
+    ],
+    "recommendationInputs.schoolControl": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.ownership\": 2"
+      }
+    ],
+    "recommendationInputs.campusLocale": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.locale\": 11"
+      }
+    ],
+    "recommendationInputs.internationalAidPolicy": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.vanderbilt.edu/affordability/international-costs-and-finances/",
+        "excerpt": "need-blind admission and meet 100% of each student's demonstrated financial need"
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.vanderbilt.edu/affordability/international-costs-and-finances/",
+        "excerpt": "need-based scholarships to a limited number of first-year international undergraduate applicants"
+      }
+    ],
+    "recommendationInputs.hasNeedBasedAid": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.vanderbilt.edu/affordability/opportunity-vanderbilt/",
+        "excerpt": "meet 100% of demonstrated need"
+      }
+    ],
+    "recommendationInputs.hasMeritAid": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.vanderbilt.edu/affordability/",
+        "excerpt": "Merit Scholarship Programs"
+      }
+    ],
+    "recommendationInputs.testingRequirements": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.vanderbilt.edu/apply/first-year-process/",
+        "excerpt": "SAT or ACT scores are optional ... preferred last day to take the SAT ... preferred last day to take the ACT"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.vanderbilt.edu/apply/first-year-process/",
+        "excerpt": "For the ACT, Science and Writing sections are not required."
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.vanderbilt.edu/apply/first-year-process/",
+        "excerpt": "For students applying for fall 2026 and 2027 entry, SAT or ACT scores are optional."
+      }
+    ],
+    "recommendationInputs.programFitTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.vanderbilt.edu/profile/",
+        "excerpt": "innovative living and learning environment for students to explore their passions, engage in academic research with world-renowned faculty"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.vanderbilt.edu/vandybloggers/2018/05/academic-exploration/",
+        "excerpt": "College of Arts and Science"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.vanderbilt.edu/vandybloggers/2018/05/academic-exploration/",
+        "excerpt": "School of Engineering"
+      }
+    ],
+    "recommendationInputs.programAdmissionModel": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.vanderbilt.edu/myappvu",
+        "excerpt": "Update your decision plan or Vanderbilt school of choice"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.vanderbilt.edu/vandybloggers/2017/12/application-deadlines-approach/",
+        "excerpt": "The Vanderbilt School of Choice form let’s us know which of Vanderbilt’s undergraduate schools you are applying to."
+      }
+    ],
+    "recommendationInputs.applicationStrategyTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.vanderbilt.edu/apply/",
+        "excerpt": "Vanderbilt offers three decision plans for first-year applicants: Early Decision I, Early Decision II, and Regular Decision."
+      }
+    ],
+    "explanationInputs.academicSelectivityBand": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.admission_rate.overall\": 0.0628"
+      }
+    ],
+    "explanationInputs.testingExpectation": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.vanderbilt.edu/apply/first-year-process/",
+        "excerpt": "SAT or ACT scores are optional"
+      }
+    ],
+    "explanationInputs.aidModel": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.vanderbilt.edu/affordability/opportunity-vanderbilt/",
+        "excerpt": "meet 100% of this need without loans"
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.vanderbilt.edu/affordability/",
+        "excerpt": "Merit Scholarship Programs"
+      }
+    ],
+    "explanationInputs.applicationComplexity": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.vanderbilt.edu/apply/first-year-process/",
+        "excerpt": "Common Application or Coalition application ... personal essay and short answer ... counselor letter ... two academic teacher letters"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.vanderbilt.edu/apply/",
+        "excerpt": "Early Decision I, Early Decision II, and Regular Decision"
+      }
+    ]
+  },
+  "quality": {
+    "status": "publishable",
+    "missingFields": [],
+    "warnings": [
+      "Vanderbilt offers Early Decision I and II; the current schema has one early_decision slot, so this record uses the ED I deadline in deadlinesByRound.",
+      "The reviewed Vanderbilt admissions pages publish optional SAT/ACT policy and preferred test dates, but no official SAT composite middle-50 range; middle50SatTotal and middle50ActComposite remain null."
+    ]
+  }
+}
