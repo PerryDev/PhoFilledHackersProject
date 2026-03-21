@@ -4,12 +4,14 @@
 import { notFound } from "next/navigation";
 import { StudentDetail } from "@/components/dashboard/student-detail";
 import { getStudentById } from "@/lib/dashboard-data";
+import { requireAuthSession } from "@/lib/auth-session";
 
 export default async function StudentPage({
   params,
 }: Readonly<{
   params: Promise<{ id: string }>;
 }>) {
+  await requireAuthSession();
   const { id } = await params;
   const student = getStudentById(id);
 
