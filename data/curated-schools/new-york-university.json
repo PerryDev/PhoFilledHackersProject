@@ -1,0 +1,396 @@
+{
+  "schoolSlug": "new-york-university",
+  "lastVerifiedAt": "2026-03-21",
+  "identity": {
+    "schoolName": "New York University",
+    "city": "New York",
+    "state": "NY",
+    "officialAdmissionsUrl": "https://www.nyu.edu/admissions/undergraduate-admissions/how-to-apply/all-freshmen-applicants.html"
+  },
+  "applicationRounds": [
+    "early_decision",
+    "regular_decision"
+  ],
+  "deadlinesByRound": {
+    "early_action": null,
+    "early_decision": "2026-11-01",
+    "regular_decision": "2027-01-05",
+    "rolling_admission": null,
+    "priority": null
+  },
+  "englishRequirements": {
+    "minimumIelts": null,
+    "minimumToeflInternetBased": null,
+    "waiverNotes": "English language testing is required for applicants whose first language is not English and who have not completed at least 3 years of study where English is the sole language of instruction."
+  },
+  "testPolicy": "test_flexible",
+  "requiredMaterials": [
+    "common_application",
+    "application_fee_or_fee_waiver",
+    "school_report",
+    "teacher_recommendation_1",
+    "official_transcript",
+    "midyear_transcript",
+    "personal_essay",
+    "supplemental_essays"
+  ],
+  "tuitionAnnualUsd": 65622,
+  "estimatedCostOfAttendanceUsd": 96988,
+  "livingCostEstimateUsd": 25516,
+  "scholarshipAvailabilityFlag": true,
+  "scholarshipNotes": "NYU offers scholarships and grants, and for students who file on time NYU meets the full demonstrated need of admitted students as determined by the CSS Profile and expected family contribution. Students should also file the FAFSA and CSS Profile by the published deadlines.",
+  "recommendationInputs": {
+    "admissionRateOverall": 0.0941,
+    "satAverageOverall": 1527,
+    "actMidpointCumulative": 34,
+    "undergraduateSize": 29430,
+    "schoolControl": "private_nonprofit",
+    "campusLocale": "urban",
+    "internationalAidPolicy": "meets_full_demonstrated_need_if_eligible",
+    "hasNeedBasedAid": true,
+    "hasMeritAid": null,
+    "testingRequirements": {
+      "acceptedExams": [
+        "sat",
+        "act"
+      ],
+      "minimumSatTotal": null,
+      "minimumActComposite": null,
+      "latestSatTestDateNote": "NYU recommends standardized tests be completed in advance of the application deadline. Early Decision I is November 1, Early Decision II is January 1, and Regular Decision is January 5.",
+      "latestActTestDateNote": "NYU recommends standardized tests be completed in advance of the application deadline. Early Decision I is November 1, Early Decision II is January 1, and Regular Decision is January 5.",
+      "superscorePolicy": "unknown",
+      "writingEssayPolicy": "unknown",
+      "scoreReportingPolicy": "self_report_allowed",
+      "middle50SatTotal": {
+        "low": 1470,
+        "high": 1570
+      },
+      "middle50ActComposite": {
+        "low": 33,
+        "high": 35
+      }
+    },
+    "averageNetPriceUsd": null,
+    "programFitTags": [
+      "business",
+      "engineering",
+      "arts_design",
+      "humanities",
+      "social_sciences",
+      "research_intensive"
+    ],
+    "programAdmissionModel": "open",
+    "applicationStrategyTags": [
+      "binding_early_decision",
+      "multiple_early_rounds"
+    ]
+  },
+  "explanationInputs": {
+    "academicSelectivityBand": "highly_selective",
+    "testingExpectation": "scores_considered",
+    "englishPolicySummary": "waiver_possible",
+    "aidModel": "need_based_only",
+    "applicationComplexity": "medium",
+    "deadlineUrgencyWindows": {
+      "earliestDeadline": "2026-11-01",
+      "latestMajorDeadline": "2027-01-05"
+    },
+    "internationalStudentConsiderations": [
+      "english_test_may_be_required",
+      "financial_certification_likely_required",
+      "need_based_aid_available"
+    ],
+    "potentialFitTags": [
+      "urban_access",
+      "research_or_innovation_oriented",
+      "strong_need_based_aid_signal",
+      "strong_for_liberal_arts_or_humanities_students"
+    ],
+    "potentialRiskTags": [
+      "high_total_cost",
+      "complex_application_requirements"
+    ],
+    "actionableApplicationSteps": [
+      "prepare_early_round_strategy",
+      "complete_standardized_testing_if_required",
+      "prepare_teacher_recommendations_early",
+      "prepare_counselor_documents_early",
+      "budget_for_need_based_aid_process",
+      "build_supplemental_essay_plan"
+    ]
+  },
+  "fieldProvenance": {
+    "identity.schoolName": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.nyu.edu/admissions/undergraduate-admissions/how-to-apply/all-freshmen-applicants.html",
+        "excerpt": "First-Year Applicants"
+      }
+    ],
+    "identity.city": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.city\": \"New York\""
+      }
+    ],
+    "identity.state": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.state\": \"NY\""
+      }
+    ],
+    "identity.officialAdmissionsUrl": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.nyu.edu/admissions/undergraduate-admissions/how-to-apply/all-freshmen-applicants.html",
+        "excerpt": "First-Year Applicants"
+      }
+    ],
+    "applicationRounds": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.nyu.edu/admissions/undergraduate-admissions/how-to-apply/all-freshmen-applicants.html",
+        "excerpt": "Early Decision I ... Early Decision II ... Regular Decision"
+      }
+    ],
+    "deadlinesByRound": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.nyu.edu/admissions/undergraduate-admissions/how-to-apply/all-freshmen-applicants.html",
+        "excerpt": "Early Decision I  | November 1  | December 15 ... Early Decision II  | January 1  | February 15 ... Regular Decision  | January 5  | April 1"
+      }
+    ],
+    "englishRequirements": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.nyu.edu/admissions/undergraduate-admissions/how-to-apply/all-freshmen-applicants.html",
+        "excerpt": "English language testing if you have not completed at least 3 years of study where English is the sole language of instruction at the time of application submission and English is not your first language"
+      }
+    ],
+    "testPolicy": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://bulletins.nyu.edu/undergraduate/liberal-studies/admissions/admissions.pdf",
+        "excerpt": "NYU has one of the most flexible testing policies of any college or university."
+      }
+    ],
+    "requiredMaterials": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.nyu.edu/admissions/undergraduate-admissions/how-to-apply/all-freshmen-applicants.html",
+        "excerpt": "The Common Application is required"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.nyu.edu/admissions/undergraduate-admissions/how-to-apply/all-freshmen-applicants.html",
+        "excerpt": "Contact information for the counselor ... School Report"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.nyu.edu/admissions/undergraduate-admissions/how-to-apply/all-freshmen-applicants.html",
+        "excerpt": "NYU requires one letter of recommendation"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.nyu.edu/admissions/undergraduate-admissions/how-to-apply/all-freshmen-applicants.html",
+        "excerpt": "Nonrefundable $85.00 application fee"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.nyu.edu/admissions/undergraduate-admissions/how-to-apply/all-freshmen-applicants.html",
+        "excerpt": "Records of all college work that you have received academic credit for"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.nyu.edu/admissions/undergraduate-admissions/how-to-apply/all-freshmen-applicants.html",
+        "excerpt": "The Common Application Mid Year Report"
+      }
+    ],
+    "tuitionAnnualUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://bulletins.nyu.edu/undergraduate/arts-science/cost-attendance/",
+        "excerpt": "Tuition $65,622"
+      }
+    ],
+    "estimatedCostOfAttendanceUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://bulletins.nyu.edu/undergraduate/arts-science/cost-attendance/",
+        "excerpt": "Total $96,988"
+      }
+    ],
+    "livingCostEstimateUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://bulletins.nyu.edu/undergraduate/arts-science/cost-attendance/",
+        "excerpt": "Food and Housing $25,516"
+      }
+    ],
+    "scholarshipAvailabilityFlag": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://www.nyu.edu/admissions/undergraduate-admissions/aid-and-costs.html",
+        "excerpt": "As a student at New York University, you will likely tap into one or more types of financial aid that include: Scholarships and grants"
+      }
+    ],
+    "scholarshipNotes": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://www.nyu.edu/admissions/undergraduate-admissions/aid-and-costs.html",
+        "excerpt": "NYU meets the full demonstrated need of admitted students as determined by your expected family contribution"
+      }
+    ],
+    "recommendationInputs.admissionRateOverall": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.admission_rate.overall\": 0.0941"
+      }
+    ],
+    "recommendationInputs.satAverageOverall": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.sat_scores.average.overall\": 1527"
+      }
+    ],
+    "recommendationInputs.actMidpointCumulative": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.act_scores.midpoint.cumulative\": 34"
+      }
+    ],
+    "recommendationInputs.undergraduateSize": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.student.size\": 29430"
+      }
+    ],
+    "recommendationInputs.schoolControl": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.ownership\": 2"
+      }
+    ],
+    "recommendationInputs.campusLocale": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.locale\": 11"
+      }
+    ],
+    "recommendationInputs.internationalAidPolicy": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://www.nyu.edu/admissions/undergraduate-admissions/aid-and-costs.html",
+        "excerpt": "NYU meets the full demonstrated need of admitted students"
+      }
+    ],
+    "recommendationInputs.hasNeedBasedAid": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://www.nyu.edu/admissions/undergraduate-admissions/aid-and-costs.html",
+        "excerpt": "NYU meets the full demonstrated need of admitted students"
+      }
+    ],
+    "recommendationInputs.programFitTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.nyu.edu/academics/schools-and-colleges.html",
+        "excerpt": "Arts & Science is the founding school and academic heart of New York University"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.nyu.edu/academics/schools-and-colleges.html",
+        "excerpt": "The NYU Tandon School of Engineering is one of the nation's most comprehensive institutions of engineering"
+      }
+    ],
+    "recommendationInputs.programAdmissionModel": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.nyu.edu/admissions/undergraduate-admissions/how-to-apply/all-freshmen-applicants.html",
+        "excerpt": "The Common Application is required for students applying to any or all of NYU's three degree-granting campuses"
+      }
+    ],
+    "recommendationInputs.applicationStrategyTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.nyu.edu/admissions/undergraduate-admissions/how-to-apply/all-freshmen-applicants.html",
+        "excerpt": "Early Decision I ... Early Decision II ... Regular Decision"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.nyu.edu/admissions/undergraduate-admissions/how-to-apply.html",
+        "excerpt": "If NYU is your first-choice college, we encourage you to apply for admission as an early decision candidate"
+      }
+    ],
+    "recommendationInputs.testingRequirements": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.nyu.edu/admissions/undergraduate-admissions/how-to-apply/all-freshmen-applicants.html",
+        "excerpt": "NYU will accept official or unofficial transcripts and test scores for the purposes of our application review process."
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://bulletins.nyu.edu/undergraduate/liberal-studies/admissions/admissions.pdf",
+        "excerpt": "NYU has one of the most flexible testing policies of any college or university."
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.nyu.edu/admissions/undergraduate-admissions/nyu-facts.html",
+        "excerpt": "1470 to 1570 Middle 50% range of combined SAT scores of first-years ... 33 to 35 Middle 50% range of ACT scores of first-years"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.nyu.edu/admissions/undergraduate-admissions/how-to-apply/all-freshmen-applicants.html",
+        "excerpt": "Early Decision I  | November 1 ... Early Decision II  | January 1 ... Regular Decision  | January 5"
+      }
+    ],
+    "explanationInputs.academicSelectivityBand": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.admission_rate.overall\": 0.0941"
+      }
+    ],
+    "explanationInputs.testingExpectation": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://bulletins.nyu.edu/undergraduate/liberal-studies/admissions/admissions.pdf",
+        "excerpt": "NYU has one of the most flexible testing policies of any college or university."
+      }
+    ],
+    "explanationInputs.englishPolicySummary": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.nyu.edu/admissions/undergraduate-admissions/how-to-apply/all-freshmen-applicants.html",
+        "excerpt": "English language testing if you have not completed at least 3 years of study where English is the sole language of instruction"
+      }
+    ],
+    "explanationInputs.aidModel": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://www.nyu.edu/admissions/undergraduate-admissions/aid-and-costs.html",
+        "excerpt": "NYU meets the full demonstrated need of admitted students"
+      }
+    ],
+    "explanationInputs.applicationComplexity": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.nyu.edu/admissions/undergraduate-admissions/how-to-apply/all-freshmen-applicants.html",
+        "excerpt": "The Common Application is required ... NYU requires one letter of recommendation ... School Report ... Mid Year Report"
+      }
+    ]
+  },
+  "quality": {
+    "status": "publishable",
+    "missingFields": [],
+    "warnings": []
+  }
+}

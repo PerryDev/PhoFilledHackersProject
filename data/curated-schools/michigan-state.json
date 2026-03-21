@@ -1,0 +1,355 @@
+{
+  "schoolSlug": "michigan-state",
+  "lastVerifiedAt": "2026-03-21",
+  "identity": {
+    "schoolName": "Michigan State University",
+    "city": "East Lansing",
+    "state": "MI",
+    "officialAdmissionsUrl": "https://admissions.msu.edu/apply/first-year"
+  },
+  "applicationRounds": [
+    "early_action",
+    "regular_decision",
+    "rolling_admission"
+  ],
+  "deadlinesByRound": {
+    "early_action": "2025-11-01",
+    "early_decision": null,
+    "regular_decision": "2026-02-01",
+    "rolling_admission": "2026-04-01",
+    "priority": null
+  },
+  "englishRequirements": {
+    "minimumIelts": 6.5,
+    "minimumToeflInternetBased": null,
+    "waiverNotes": "MSU requires English proficiency for international applicants whose first language is not English. Accepted options include TOEFL iBT, IELTS, Duolingo, SAT Evidence-Based Reading and Writing, ACT English, MSUELT, MELAB, AP English, and certain English-medium schooling or transferable college coursework. Self-reported scores can be submitted with the application, and official scores are required before enrollment if reported."
+  },
+  "testPolicy": "test_optional",
+  "requiredMaterials": [
+    "msu_application",
+    "one_essay",
+    "self_reported_academic_record",
+    "official_transcripts",
+    "test_scores_if_provided",
+    "proof_of_english_proficiency_if_applicable"
+  ],
+  "tuitionAnnualUsd": 44758,
+  "estimatedCostOfAttendanceUsd": 65656,
+  "livingCostEstimateUsd": 12928,
+  "scholarshipAvailabilityFlag": true,
+  "scholarshipNotes": "MSU automatically considers admitted students for admissions scholarships, including first-year, out-of-state, international, and transfer awards. International students can be considered for the MSU Non-resident Scholarship, #YouAreWelcomeHere Scholarship, Honors College awards, and other limited scholarships. The admission application and required essay are usually sufficient for many awards, but some scholarships require supplemental steps.",
+  "recommendationInputs": {
+    "admissionRateOverall": 0.8392,
+    "satAverageOverall": 1261,
+    "actMidpointCumulative": 26,
+    "undergraduateSize": 40243,
+    "schoolControl": "public",
+    "campusLocale": null,
+    "internationalAidPolicy": "merit_aid_available",
+    "hasNeedBasedAid": true,
+    "hasMeritAid": true,
+    "testingRequirements": {
+      "acceptedExams": [
+        "sat",
+        "act"
+      ],
+      "minimumSatTotal": null,
+      "minimumActComposite": null,
+      "latestSatTestDateNote": "MSU advises students to submit any test scores well in advance of the application submission deadline if they want the scores considered.",
+      "latestActTestDateNote": "MSU advises students to submit any test scores well in advance of the application submission deadline if they want the scores considered.",
+      "superscorePolicy": "none",
+      "writingEssayPolicy": "not_considered",
+      "scoreReportingPolicy": "official_required_after_admit",
+      "middle50SatTotal": {
+        "low": 1100,
+        "high": 1320
+      },
+      "middle50ActComposite": {
+        "low": 26,
+        "high": 31
+      }
+    },
+    "averageNetPriceUsd": null,
+    "programFitTags": [
+      "engineering",
+      "life_sciences",
+      "business",
+      "research_intensive"
+    ],
+    "programAdmissionModel": "open",
+    "applicationStrategyTags": [
+      "rolling_or_extended_timeline"
+    ]
+  },
+  "explanationInputs": {
+    "academicSelectivityBand": "broad_access",
+    "testingExpectation": "tests_not_required",
+    "englishPolicySummary": "minimum_scores_required",
+    "aidModel": "need_and_merit",
+    "applicationComplexity": "medium",
+    "deadlineUrgencyWindows": {
+      "earliestDeadline": "2025-11-01",
+      "latestMajorDeadline": "2026-04-01"
+    },
+    "internationalStudentConsiderations": [
+      "english_fluency_required",
+      "english_test_may_be_required",
+      "financial_certification_likely_required",
+      "merit_aid_possible",
+      "need_based_aid_available"
+    ],
+    "potentialFitTags": [
+      "large_public_environment",
+      "value_for_budget_conscious_students",
+      "strong_merit_aid_signal",
+      "rolling_or_extended_timeline"
+    ],
+    "potentialRiskTags": [
+      "high_total_cost",
+      "limited_aid_for_international_students",
+      "early_deadline_pressure",
+      "english_requirement_barrier"
+    ],
+    "actionableApplicationSteps": [
+      "prepare_early_round_strategy",
+      "prepare_english_testing_or_waiver_plan",
+      "prioritize_financial_aid_forms",
+      "build_supplemental_essay_plan"
+    ]
+  },
+  "fieldProvenance": {
+    "identity.schoolName": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.msu.edu/apply/first-year",
+        "excerpt": "First-year applicants"
+      }
+    ],
+    "applicationRounds": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.msu.edu/apply/first-year/dates-and-deadlines",
+        "excerpt": "Early action (Nov. 1)"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.msu.edu/apply/first-year/dates-and-deadlines",
+        "excerpt": "Regular Decision or those whose applications are received after Nov. 1"
+      }
+    ],
+    "deadlinesByRound": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.msu.edu/apply/first-year/dates-and-deadlines",
+        "excerpt": "Early action (Nov. 1)"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.msu.edu/apply/first-year/dates-and-deadlines",
+        "excerpt": "Regular Decision - April 1"
+      }
+    ],
+    "englishRequirements": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.msu.edu/apply/international/language-requirements",
+        "excerpt": "IELTS ... Regular admission: Score of 6.5 or higher"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.msu.edu/apply/international/language-requirements",
+        "excerpt": "TOEFL iBT ... Regular admission: Score of 79 with no subscore below 17"
+      }
+    ],
+    "testPolicy": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.msu.edu/apply/first-year/act-sat-test-optional",
+        "excerpt": "MSU is test optional"
+      }
+    ],
+    "requiredMaterials": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.msu.edu/apply/first-year/how-to-apply",
+        "excerpt": "each applicant is required to submit one essay"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.msu.edu/apply/international/how-to-apply",
+        "excerpt": "Request that all secondary schools, colleges, universities attended and/or examination boards send ... transcripts, marks sheets, certificates and diplomas"
+      }
+    ],
+    "tuitionAnnualUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://finaid.msu.edu/sampbud",
+        "excerpt": "Tuition $44,300 ... Fees & Taxes $458"
+      }
+    ],
+    "estimatedCostOfAttendanceUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://finaid.msu.edu/sampbud",
+        "excerpt": "Total Cost of Attendance $65,656"
+      }
+    ],
+    "livingCostEstimateUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://finaid.msu.edu/sampbud",
+        "excerpt": "Food & Housing $12,928"
+      }
+    ],
+    "scholarshipAvailabilityFlag": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.msu.edu/cost-aid/scholarships",
+        "excerpt": "All admitted students are automatically considered for Admissions scholarships."
+      }
+    ],
+    "scholarshipNotes": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.msu.edu/cost-aid/scholarships/international",
+        "excerpt": "The MSU Non-resident Scholarship ... All international students admitted to MSU are automatically considered for this award."
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.msu.edu/cost-aid/scholarships/international",
+        "excerpt": "#YouAreWelcomeHere Scholarship ... covers $25,000 towards tuition annually"
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://finaid.msu.edu/prospective/getting-started/prospective-scholarship-searches",
+        "excerpt": "MSU Admissions Scholarships ... include awards for first-year students, out-of-state students, international students, transfer students, and more."
+      }
+    ],
+    "recommendationInputs.admissionRateOverall": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools?id=171100",
+        "excerpt": "\"latest.admissions.admission_rate.overall\": 0.8392"
+      }
+    ],
+    "recommendationInputs.satAverageOverall": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools?id=171100",
+        "excerpt": "\"latest.admissions.sat_scores.average.overall\": 1261"
+      }
+    ],
+    "recommendationInputs.actMidpointCumulative": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools?id=171100",
+        "excerpt": "\"latest.admissions.act_scores.midpoint.cumulative\": 26"
+      }
+    ],
+    "recommendationInputs.undergraduateSize": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools?id=171100",
+        "excerpt": "\"latest.student.size\": 40243"
+      }
+    ],
+    "recommendationInputs.schoolControl": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools?id=171100",
+        "excerpt": "\"school.ownership\": 1"
+      }
+    ],
+    "recommendationInputs.programFitTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.msu.edu/",
+        "excerpt": "We have top-ranked programs in business, engineering, education, and agriculture"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.msu.edu/",
+        "excerpt": "research opportunities"
+      }
+    ],
+    "recommendationInputs.programAdmissionModel": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.msu.edu/apply/first-year",
+        "excerpt": "first-year applicants"
+      }
+    ],
+    "recommendationInputs.applicationStrategyTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.msu.edu/apply/first-year/dates-and-deadlines",
+        "excerpt": "Rolling admission ... Early action"
+      }
+    ],
+    "recommendationInputs.internationalAidPolicy": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.msu.edu/cost-aid/scholarships/international",
+        "excerpt": "All international students admitted to MSU are automatically considered for this award."
+      }
+    ],
+    "recommendationInputs.testingRequirements": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.msu.edu/apply/first-year/act-sat-test-optional",
+        "excerpt": "MSU is test optional"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.msu.edu/apply/first-year/admission-criteria",
+        "excerpt": "Fall 2025 first-year profile ... Composite ACT: 26-31 ... Total SAT: 1100-1320"
+      }
+    ],
+    "explanationInputs.testingExpectation": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.msu.edu/apply/first-year/act-sat-test-optional",
+        "excerpt": "prospective first-year students have the opportunity to apply for admission without submitting an ACT or SAT score"
+      }
+    ],
+    "explanationInputs.englishPolicySummary": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.msu.edu/apply/international/language-requirements",
+        "excerpt": "MSU accepts the following tests as proof of English language proficiency"
+      }
+    ],
+    "explanationInputs.aidModel": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://finaid.msu.edu/prospective/getting-started",
+        "excerpt": "FAFSA evaluates eligibility for need-based aid, including federal loans, and gives students access to need-based grants, scholarships, loans and work-study."
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.msu.edu/cost-aid/scholarships",
+        "excerpt": "All admitted students are automatically considered for Admissions scholarships."
+      }
+    ],
+    "explanationInputs.applicationComplexity": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.msu.edu/apply/first-year/how-to-apply",
+        "excerpt": "each applicant is required to submit one essay"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.msu.edu/apply/first-year/dates-and-deadlines",
+        "excerpt": "these applications will be considered on a rolling basis"
+      }
+    ]
+  },
+  "quality": {
+    "status": "publishable",
+    "missingFields": [],
+    "warnings": [
+      "MSU is test optional, so testingRequirements is intentionally sparse and score reporting is modeled only for applicants who choose to submit scores.",
+      "The published sample budget is for the 2025-26 academic year and uses the out-of-state figure as the single published cost number here."
+    ]
+  }
+}

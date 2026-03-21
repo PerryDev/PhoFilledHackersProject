@@ -1,0 +1,446 @@
+{
+  "schoolSlug": "duke",
+  "lastVerifiedAt": "2026-03-21",
+  "identity": {
+    "schoolName": "Duke University",
+    "city": "Durham",
+    "state": "NC",
+    "officialAdmissionsUrl": "https://admissions.duke.edu/apply/"
+  },
+  "applicationRounds": [
+    "early_decision",
+    "regular_decision"
+  ],
+  "deadlinesByRound": {
+    "early_action": null,
+    "early_decision": "2025-11-03",
+    "regular_decision": "2026-01-05",
+    "rolling_admission": null,
+    "priority": null
+  },
+  "englishRequirements": {
+    "minimumIelts": null,
+    "minimumToeflInternetBased": null,
+    "waiverNotes": "Duke does not require English proficiency scores for applicants, but will consider them for non-native English speakers who want to demonstrate English ability beyond the application materials."
+  },
+  "testPolicy": "test_optional",
+  "requiredMaterials": [
+    "common_application_or_questbridge_application",
+    "duke_supplement",
+    "official_secondary_school_transcript",
+    "school_report",
+    "counselor_recommendation",
+    "teacher_recommendation_1",
+    "teacher_recommendation_2",
+    "application_fee_or_fee_waiver",
+    "standardized_test_scores_optional",
+    "english_proficiency_test_if_desired",
+    "early_decision_agreement_if_applying_ed"
+  ],
+  "tuitionAnnualUsd": 70265,
+  "estimatedCostOfAttendanceUsd": 98549,
+  "livingCostEstimateUsd": 21985,
+  "scholarshipAvailabilityFlag": true,
+  "scholarshipNotes": "Duke offers need-based financial aid and merit-based scholarships. International applicants who indicate financial aid interest are considered in a separate admission pool, and Duke issues four-year aid awards for international applicants.",
+  "recommendationInputs": {
+    "admissionRateOverall": 0.0678,
+    "satAverageOverall": 1539,
+    "actMidpointCumulative": 34,
+    "undergraduateSize": 6417,
+    "schoolControl": "private_nonprofit",
+    "campusLocale": "urban",
+    "internationalAidPolicy": "need_based_aid_available",
+    "hasNeedBasedAid": true,
+    "hasMeritAid": true,
+    "testingRequirements": {
+      "acceptedExams": [
+        "sat",
+        "act"
+      ],
+      "minimumSatTotal": null,
+      "minimumActComposite": null,
+      "latestSatTestDateNote": "SAT scores last day to take standardized tests is November 8 for the current cycle.",
+      "latestActTestDateNote": "ACT scores last day to take standardized tests is October 18 for the current cycle.",
+      "superscorePolicy": "both",
+      "writingEssayPolicy": "optional",
+      "scoreReportingPolicy": "self_report_allowed",
+      "middle50SatTotal": {
+        "low": null,
+        "high": null
+      },
+      "middle50ActComposite": {
+        "low": null,
+        "high": null
+      }
+    },
+    "averageNetPriceUsd": null,
+    "programFitTags": [
+      "engineering",
+      "research_intensive"
+    ],
+    "programAdmissionModel": "unknown",
+    "applicationStrategyTags": [
+      "binding_early_decision"
+    ]
+  },
+  "explanationInputs": {
+    "academicSelectivityBand": "highly_selective",
+    "testingExpectation": "tests_not_required",
+    "englishPolicySummary": "waiver_possible",
+    "aidModel": "need_and_merit",
+    "applicationComplexity": "high",
+    "deadlineUrgencyWindows": {
+      "earliestDeadline": "2025-11-03",
+      "latestMajorDeadline": "2026-01-05"
+    },
+    "internationalStudentConsiderations": [
+      "need_aware_or_limited_aid_possible",
+      "need_based_aid_available",
+      "merit_aid_possible",
+      "financial_certification_likely_required"
+    ],
+    "potentialFitTags": [
+      "research_or_innovation_oriented",
+      "urban_access",
+      "strong_need_based_aid_signal"
+    ],
+    "potentialRiskTags": [
+      "high_total_cost",
+      "early_deadline_pressure",
+      "testing_required",
+      "complex_application_requirements",
+      "limited_aid_for_international_students"
+    ],
+    "actionableApplicationSteps": [
+      "prepare_early_round_strategy",
+      "prepare_teacher_recommendations_early",
+      "prepare_counselor_documents_early",
+      "budget_for_need_based_aid_process",
+      "build_supplemental_essay_plan",
+      "prepare_english_testing_or_waiver_plan"
+    ]
+  },
+  "fieldProvenance": {
+    "identity.schoolName": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.duke.edu/apply/",
+        "excerpt": "Duke University"
+      }
+    ],
+    "identity.city": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.city\": \"Durham\""
+      }
+    ],
+    "identity.state": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.state\": \"NC\""
+      }
+    ],
+    "identity.officialAdmissionsUrl": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.duke.edu/apply/",
+        "excerpt": "Apply - Duke Undergraduate Admissions"
+      }
+    ],
+    "applicationRounds": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.duke.edu/apply/",
+        "excerpt": "Early Decision or Regular Decision?"
+      }
+    ],
+    "deadlinesByRound": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.duke.edu/apply/",
+        "excerpt": "Early Decision applications are due November 3. Regular Decision applications are due January 5."
+      }
+    ],
+    "englishRequirements": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.duke.edu/apply/",
+        "excerpt": "While we do not require any English proficiency scores, we are happy to consider them for non-native English speakers"
+      }
+    ],
+    "testPolicy": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.duke.edu/apply/",
+        "excerpt": "Duke University is test-optional for both first-year and transfer applicants in the 2026-2027 admissions cycle."
+      }
+    ],
+    "requiredMaterials": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.duke.edu/apply/",
+        "excerpt": "Common Application or QuestBridge Application ... Duke supplement ... Official secondary school transcript ... school report ... recommendation ... application fee"
+      }
+    ],
+    "tuitionAnnualUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://admissions.duke.edu/financial-support/",
+        "excerpt": "Tuition $70,265"
+      }
+    ],
+    "estimatedCostOfAttendanceUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://admissions.duke.edu/financial-support/",
+        "excerpt": "Estimated Cost $98,549"
+      }
+    ],
+    "livingCostEstimateUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://admissions.duke.edu/financial-support/",
+        "excerpt": "Housing $10,910 ... Food $10,075"
+      }
+    ],
+    "scholarshipAvailabilityFlag": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.duke.edu/apply/",
+        "excerpt": "Duke offers need-based financial aid and merit-based scholarships"
+      }
+    ],
+    "scholarshipNotes": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.duke.edu/financial-support/",
+        "excerpt": "International applicants who indicate interest in financial aid are considered in a separate admission pool"
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.duke.edu/financial-support/",
+        "excerpt": "Duke University issues four-year aid awards for international applicants"
+      }
+    ],
+    "recommendationInputs.admissionRateOverall": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.admission_rate.overall\": 0.0678"
+      }
+    ],
+    "recommendationInputs.satAverageOverall": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.sat_scores.average.overall\": 1539"
+      }
+    ],
+    "recommendationInputs.actMidpointCumulative": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.act_scores.midpoint.cumulative\": 34"
+      }
+    ],
+    "recommendationInputs.undergraduateSize": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.student.size\": 6417"
+      }
+    ],
+    "recommendationInputs.schoolControl": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.ownership\": 2"
+      }
+    ],
+    "recommendationInputs.campusLocale": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.locale\": 11"
+      }
+    ],
+    "recommendationInputs.internationalAidPolicy": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.duke.edu/financial-support/",
+        "excerpt": "International applicants who indicate interest in financial aid are considered in a separate admission pool"
+      }
+    ],
+    "recommendationInputs.hasNeedBasedAid": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.duke.edu/apply/",
+        "excerpt": "Duke offers need-based financial aid"
+      }
+    ],
+    "recommendationInputs.hasMeritAid": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.duke.edu/apply/",
+        "excerpt": "Duke offers ... merit-based scholarships"
+      }
+    ],
+    "recommendationInputs.testingRequirements.acceptedExams": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.duke.edu/apply/",
+        "excerpt": "SAT or ACT scores"
+      }
+    ],
+    "recommendationInputs.testingRequirements.minimumSatTotal": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.duke.edu/resources/",
+        "excerpt": "Duke University will be test-optional for both first-year and transfer applicants"
+      }
+    ],
+    "recommendationInputs.testingRequirements.minimumActComposite": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.duke.edu/resources/",
+        "excerpt": "Duke University will be test-optional for both first-year and transfer applicants"
+      }
+    ],
+    "recommendationInputs.testingRequirements.latestSatTestDateNote": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.duke.edu/checklist/",
+        "excerpt": "last day to take standardized tests is November 8 for SAT"
+      }
+    ],
+    "recommendationInputs.testingRequirements.latestActTestDateNote": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.duke.edu/checklist/",
+        "excerpt": "last day to take standardized tests is October 18 for ACT"
+      }
+    ],
+    "recommendationInputs.testingRequirements.superscorePolicy": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.duke.edu/apply/",
+        "excerpt": "Duke will continue to superscore the ACT across test dates"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.duke.edu/apply/",
+        "excerpt": "Duke will consider the highest scores on each section of the SAT, regardless of the test date"
+      }
+    ],
+    "recommendationInputs.testingRequirements.writingEssayPolicy": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.duke.edu/apply/",
+        "excerpt": "Submitting essay scores from the ACT and/or SAT is optional."
+      }
+    ],
+    "recommendationInputs.testingRequirements.scoreReportingPolicy": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.duke.edu/apply/",
+        "excerpt": "We will accept self-reported scores for purposes of assessing an application."
+      }
+    ],
+    "explanationInputs.academicSelectivityBand": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.admission_rate.overall\": 0.0678"
+      }
+    ],
+    "explanationInputs.testingExpectation": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.duke.edu/apply/",
+        "excerpt": "test-optional"
+      }
+    ],
+    "explanationInputs.englishPolicySummary": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.duke.edu/apply/",
+        "excerpt": "We do not require any English proficiency scores"
+      }
+    ],
+    "explanationInputs.aidModel": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.duke.edu/apply/",
+        "excerpt": "need-based financial aid and merit-based scholarships"
+      }
+    ],
+    "explanationInputs.applicationComplexity": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.duke.edu/apply/",
+        "excerpt": "Duke supplement ... School Report ... recommendation letters ... essays"
+      }
+    ],
+    "explanationInputs.deadlineUrgencyWindows": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.duke.edu/apply/",
+        "excerpt": "Early Decision applications are due November 3. Regular Decision applications are due January 5."
+      }
+    ],
+    "explanationInputs.internationalStudentConsiderations": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.duke.edu/financial-support/",
+        "excerpt": "International applicants who indicate interest in financial aid are considered in a separate admission pool"
+      }
+    ],
+    "explanationInputs.potentialFitTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.duke.edu/your-first-year/",
+        "excerpt": "all first-years live together on East Campus"
+      }
+    ],
+    "explanationInputs.potentialRiskTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.duke.edu/apply/",
+        "excerpt": "Early Decision applications are due November 3"
+      }
+    ],
+    "explanationInputs.actionableApplicationSteps": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.duke.edu/apply/",
+        "excerpt": "Duke supplement"
+      }
+    ],
+    "recommendationInputs.programFitTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://research.duke.edu/research/",
+        "excerpt": "At Duke University, our research mission spans diverse fields, from life sciences and engineering to humanities and social sciences."
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://pratt.duke.edu/academics/undergrad/research/pratt-fellows/",
+        "excerpt": "The Pratt Research Fellows Program is a unique opportunity for undergraduates to conduct authentic research with a faculty member."
+      }
+    ],
+    "recommendationInputs.applicationStrategyTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.duke.edu/wp-content/uploads/2024/11/EDAgreement2024-25.pdf",
+        "excerpt": "If you are accepted under Duke’s Early Decision plan, you must immediately withdraw any applications you have submitted to other colleges."
+      }
+    ]
+  },
+  "quality": {
+    "status": "publishable",
+    "missingFields": [],
+    "warnings": []
+  }
+}

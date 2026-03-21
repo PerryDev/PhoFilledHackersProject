@@ -1,0 +1,413 @@
+{
+  "schoolSlug": "rice",
+  "lastVerifiedAt": "2026-03-21",
+  "identity": {
+    "schoolName": "Rice University",
+    "city": "Houston",
+    "state": "TX",
+    "officialAdmissionsUrl": "https://admission.rice.edu/apply/first-year-domestic-applicants"
+  },
+  "applicationRounds": [
+    "early_decision",
+    "regular_decision"
+  ],
+  "deadlinesByRound": {
+    "early_action": null,
+    "early_decision": "2026-11-01",
+    "regular_decision": "2027-01-04",
+    "rolling_admission": null,
+    "priority": null
+  },
+  "englishRequirements": {
+    "minimumIelts": 7,
+    "minimumToeflInternetBased": 100,
+    "waiverNotes": "Applicants whose first language is not English can satisfy Rice's English proficiency requirement with at least two years of full-time study in an English-language curriculum or by submitting an approved score such as TOEFL, IELTS, Cambridge English, or Duolingo."
+  },
+  "testPolicy": "test_optional",
+  "requiredMaterials": [
+    "common_application",
+    "rice_writing_supplement",
+    "application_fee_or_fee_waiver",
+    "official_high_school_transcript",
+    "counselor_recommendation",
+    "teacher_recommendation_1",
+    "teacher_recommendation_2",
+    "rice_box",
+    "proof_of_english_proficiency",
+    "international_student_financial_statement"
+  ],
+  "tuitionAnnualUsd": 65280,
+  "estimatedCostOfAttendanceUsd": 91449,
+  "livingCostEstimateUsd": 20530,
+  "scholarshipAvailabilityFlag": true,
+  "scholarshipNotes": "Rice offers need-blind admission for domestic students and meets 100% of demonstrated need. Rice also awards merit scholarships automatically to admitted students, and international students can receive need-based financial aid in limited cases while also being considered for merit awards.",
+  "recommendationInputs": {
+    "admissionRateOverall": 0.0788,
+    "satAverageOverall": 1553,
+    "actMidpointCumulative": 35,
+    "undergraduateSize": 4562,
+    "schoolControl": "private_nonprofit",
+    "campusLocale": "urban",
+    "internationalAidPolicy": "need_and_merit_available",
+    "hasNeedBasedAid": true,
+    "hasMeritAid": true,
+    "testingRequirements": {
+      "acceptedExams": [
+        "sat",
+        "act"
+      ],
+      "minimumSatTotal": null,
+      "minimumActComposite": null,
+      "latestSatTestDateNote": "Last applicable SAT: October for Early Decision I; December for Early Decision II and Regular Decision.",
+      "latestActTestDateNote": "Last applicable ACT: September for Early Decision I; December for Early Decision II and Regular Decision.",
+      "superscorePolicy": "both",
+      "writingEssayPolicy": "not_considered",
+      "scoreReportingPolicy": "self_report_allowed",
+      "middle50SatTotal": {
+        "low": 1510,
+        "high": 1560
+      },
+      "middle50ActComposite": {
+        "low": 34,
+        "high": 36
+      }
+    },
+    "averageNetPriceUsd": null,
+    "programFitTags": [
+      "research_intensive",
+      "engineering",
+      "business",
+      "humanities"
+    ],
+    "programAdmissionModel": "open",
+    "applicationStrategyTags": [
+      "binding_early_decision"
+    ]
+  },
+  "explanationInputs": {
+    "academicSelectivityBand": "highly_selective",
+    "testingExpectation": "scores_considered",
+    "englishPolicySummary": "minimum_scores_required",
+    "aidModel": "need_and_merit",
+    "applicationComplexity": "high",
+    "deadlineUrgencyWindows": {
+      "earliestDeadline": "2026-11-01",
+      "latestMajorDeadline": "2027-01-04"
+    },
+    "internationalStudentConsiderations": [
+      "english_fluency_required",
+      "english_test_may_be_required",
+      "financial_certification_likely_required",
+      "need_aware_or_limited_aid_possible",
+      "merit_aid_possible"
+    ],
+    "potentialFitTags": [
+      "smaller_private_environment",
+      "urban_access",
+      "research_or_innovation_oriented",
+      "strong_need_based_aid_signal",
+      "test_flexible_pathway"
+    ],
+    "potentialRiskTags": [
+      "early_deadline_pressure",
+      "high_total_cost",
+      "limited_aid_for_international_students",
+      "complex_application_requirements"
+    ],
+    "actionableApplicationSteps": [
+      "prepare_early_round_strategy",
+      "complete_standardized_testing_if_required",
+      "prepare_english_testing_or_waiver_plan",
+      "prepare_teacher_recommendations_early",
+      "prepare_counselor_documents_early",
+      "prioritize_financial_aid_forms",
+      "build_supplemental_essay_plan"
+    ]
+  },
+  "fieldProvenance": {
+    "identity.schoolName": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.rice.edu/",
+        "excerpt": "Office of Admission"
+      }
+    ],
+    "identity.city": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.city\": \"Houston\""
+      }
+    ],
+    "identity.state": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.state\": \"TX\""
+      }
+    ],
+    "identity.officialAdmissionsUrl": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.rice.edu/apply/first-year-domestic-applicants",
+        "excerpt": "First-Year Domestic Applicants"
+      }
+    ],
+    "applicationRounds": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.rice.edu/apply/first-year-domestic-applicants",
+        "excerpt": "Early Decision Plan ... Regular Decision Plan"
+      }
+    ],
+    "deadlinesByRound": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.rice.edu/apply/first-year-domestic-applicants",
+        "excerpt": "Early Decision I must submit their materials by November 1 ... Early Decision II ... by January 4 ... Regular Decision ... by January 4"
+      }
+    ],
+    "englishRequirements": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.rice.edu/apply/first-year-international-applicants",
+        "excerpt": "TOEFL 100 ... IELTS 7 ... Cambridge English Exams 185 ... Duolingo English Test 130"
+      }
+    ],
+    "testPolicy": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.rice.edu/apply/first-year-domestic-applicants",
+        "excerpt": "Students applying to Rice University are recommended but not required to submit SAT or ACT for admission consideration."
+      }
+    ],
+    "requiredMaterials": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.rice.edu/apply/first-year-domestic-applicants",
+        "excerpt": "Common Application and Rice writing supplement"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.rice.edu/apply/first-year-domestic-applicants",
+        "excerpt": "Official high school transcript"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.rice.edu/apply/first-year-domestic-applicants",
+        "excerpt": "Recommendation Letters ... School Counselor ... Teacher 1 ... Teacher 2"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.rice.edu/blog/in-the-know/your-application-checklist",
+        "excerpt": "Rice Box"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.rice.edu/apply/first-year-international-applicants",
+        "excerpt": "International Student Financial Statement"
+      }
+    ],
+    "tuitionAnnualUsd": [
+      {
+        "sourceKind": "official_tuition",
+        "sourceUrl": "https://financialaid.rice.edu/cost-attendance",
+        "excerpt": "Tuition $65,280"
+      }
+    ],
+    "estimatedCostOfAttendanceUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://financialaid.rice.edu/cost-attendance",
+        "excerpt": "Total $91,449"
+      }
+    ],
+    "livingCostEstimateUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://financialaid.rice.edu/cost-attendance",
+        "excerpt": "On-Campus Living Expenses $20,530"
+      }
+    ],
+    "scholarshipAvailabilityFlag": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://financialaid.rice.edu/",
+        "excerpt": "We offer need-blind admission for domestic students"
+      }
+    ],
+    "scholarshipNotes": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://financialaid.rice.edu/",
+        "excerpt": "meet 100% of demonstrated need for undergraduate admitted students inclusive of International Students"
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admission.rice.edu/apply/first-year-international-applicants",
+        "excerpt": "Rice considers international applicants on a need-aware basis and offers need-based financial aid to a limited number of international first-year applicants."
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admission.rice.edu/apply/first-year-international-applicants",
+        "excerpt": "The Office of Admission offers merit-based scholarships to incoming first-year students"
+      }
+    ],
+    "recommendationInputs.admissionRateOverall": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.admission_rate.overall\": 0.0788"
+      }
+    ],
+    "recommendationInputs.satAverageOverall": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.sat_scores.average.overall\": 1553"
+      }
+    ],
+    "recommendationInputs.actMidpointCumulative": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.act_scores.midpoint.cumulative\": 35"
+      }
+    ],
+    "recommendationInputs.undergraduateSize": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.student.size\": 4562"
+      }
+    ],
+    "recommendationInputs.schoolControl": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.ownership\": 2"
+      }
+    ],
+    "recommendationInputs.campusLocale": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.locale\": 11"
+      }
+    ],
+    "recommendationInputs.internationalAidPolicy": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admission.rice.edu/apply/first-year-international-applicants",
+        "excerpt": "Rice considers international applicants on a need-aware basis and offers need-based financial aid to a limited number of international first-year applicants."
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admission.rice.edu/apply/first-year-international-applicants",
+        "excerpt": "Merit Scholarships"
+      }
+    ],
+    "recommendationInputs.hasNeedBasedAid": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://financialaid.rice.edu/",
+        "excerpt": "meet 100% of demonstrated need for undergraduate admitted students"
+      }
+    ],
+    "recommendationInputs.hasMeritAid": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admission.rice.edu/apply/first-year-international-applicants",
+        "excerpt": "The Office of Admission offers merit-based scholarships to incoming first-year students"
+      }
+    ],
+    "recommendationInputs.testingRequirements": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.rice.edu/apply/first-year-domestic-applicants",
+        "excerpt": "Students applying to Rice University are recommended but not required to submit SAT or ACT test scores"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.rice.edu/apply/first-year-domestic-applicants",
+        "excerpt": "We use the highest score from each section across all administrations."
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.rice.edu/apply/class-profile",
+        "excerpt": "SAT Composite 1510 1560 ... ACT Composite 34 36"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.rice.edu/apply/first-year-domestic-applicants",
+        "excerpt": "The ACT Essay and SAT Essay sections are not required and not considered for admission."
+      }
+    ],
+    "explanationInputs.academicSelectivityBand": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.admission_rate.overall\": 0.0788"
+      }
+    ],
+    "explanationInputs.testingExpectation": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.rice.edu/apply/first-year-domestic-applicants",
+        "excerpt": "recommended but not required to submit SAT or ACT test scores"
+      }
+    ],
+    "explanationInputs.englishPolicySummary": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.rice.edu/apply/first-year-international-applicants",
+        "excerpt": "Applicants whose first language is not English are required to demonstrate English proficiency"
+      }
+    ],
+    "explanationInputs.aidModel": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://financialaid.rice.edu/",
+        "excerpt": "meet 100% of demonstrated need for undergraduate admitted students"
+      }
+    ],
+    "explanationInputs.applicationComplexity": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.rice.edu/apply/first-year-domestic-applicants",
+        "excerpt": "letters of recommendation ... interviews ... Glimpse videos ... Early Decision I ... Early Decision II ... Regular Decision"
+      }
+    ],
+    "recommendationInputs.programFitTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.rice.edu/academics",
+        "excerpt": "seven divisions of study: architecture, business, engineering and computing, humanities, music, natural sciences, or social sciences"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.rice.edu/academics",
+        "excerpt": "you’ll have the opportunity to conduct research alongside experts"
+      }
+    ],
+    "recommendationInputs.programAdmissionModel": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.rice.edu/academics",
+        "excerpt": "your major will fall into one of our seven divisions of study"
+      }
+    ],
+    "recommendationInputs.applicationStrategyTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.rice.edu/apply/first-year-domestic-applicants",
+        "excerpt": "Early Decision Plan"
+      }
+    ]
+  },
+  "quality": {
+    "status": "publishable",
+    "missingFields": [],
+    "warnings": []
+  }
+}

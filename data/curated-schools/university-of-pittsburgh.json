@@ -1,0 +1,465 @@
+{
+  "schoolSlug": "university-of-pittsburgh",
+  "lastVerifiedAt": "2026-03-21",
+  "identity": {
+    "schoolName": "University of Pittsburgh",
+    "city": "Pittsburgh",
+    "state": "PA",
+    "officialAdmissionsUrl": "https://admissions.pitt.edu/audience/first-year-student/"
+  },
+  "applicationRounds": [
+    "rolling_admission"
+  ],
+  "deadlinesByRound": {
+    "early_action": null,
+    "early_decision": null,
+    "regular_decision": null,
+    "rolling_admission": null,
+    "priority": null
+  },
+  "englishRequirements": {
+    "minimumIelts": null,
+    "minimumToeflInternetBased": null,
+    "waiverNotes": "International first-year applicants are expected to submit official TOEFL, IELTS, or Duolingo scores when English proficiency documentation is needed. The Pitt brochure also says the SRAR is not required for international applicants."
+  },
+  "testPolicy": "test_optional",
+  "requiredMaterials": [
+    "online_application_or_common_app",
+    "short_answer_question_or_common_app_essay",
+    "official_high_school_transcript_or_srar",
+    "record_of_university_credits",
+    "application_fee_or_fee_waiver",
+    "official_toefl_ielts_or_duolingo_if_required"
+  ],
+  "tuitionAnnualUsd": 41662,
+  "estimatedCostOfAttendanceUsd": 63608,
+  "livingCostEstimateUsd": 15728,
+  "scholarshipAvailabilityFlag": true,
+  "scholarshipNotes": "The Pittsburgh campus brochure says Pitt offers a limited number of merit-based scholarships ranging from $5,000 to $10,000 USD per year for international first-year students, renewable for four years, and that applicants completed by February 1 are automatically considered. The university also maintains an Office of Admissions and Financial Aid for student financial options.",
+  "recommendationInputs": {
+    "admissionRateOverall": 0.497,
+    "satAverageOverall": 1371,
+    "actMidpointCumulative": 31,
+    "undergraduateSize": 20189,
+    "schoolControl": "public",
+    "campusLocale": null,
+    "internationalAidPolicy": "merit_aid_available",
+    "hasNeedBasedAid": true,
+    "hasMeritAid": true,
+    "testingRequirements": {
+      "acceptedExams": [
+        "sat",
+        "act"
+      ],
+      "minimumSatTotal": null,
+      "minimumActComposite": null,
+      "latestSatTestDateNote": "Pitt's current official test-optional page says SAT or ACT scores are not required for students applying for fall 2025, 2026, 2027, and 2028; no latest SAT test date is published on the reviewed official pages.",
+      "latestActTestDateNote": "Pitt's current official test-optional page says SAT or ACT scores are not required for students applying for fall 2025, 2026, 2027, and 2028; no latest ACT test date is published on the reviewed official pages.",
+      "superscorePolicy": "unknown",
+      "writingEssayPolicy": "unknown",
+      "scoreReportingPolicy": "unknown",
+      "middle50SatTotal": {
+        "low": null,
+        "high": null
+      },
+      "middle50ActComposite": {
+        "low": null,
+        "high": null
+      }
+    },
+    "averageNetPriceUsd": null,
+    "programFitTags": [
+      "research_intensive",
+      "engineering",
+      "life_sciences"
+    ],
+    "programAdmissionModel": "unknown",
+    "applicationStrategyTags": [
+      "rolling_or_extended_timeline"
+    ]
+  },
+  "explanationInputs": {
+    "academicSelectivityBand": "selective",
+    "testingExpectation": "scores_considered",
+    "englishPolicySummary": "english_fluency_required_no_exam_minimum_listed",
+    "aidModel": "need_and_merit",
+    "applicationComplexity": "medium",
+    "deadlineUrgencyWindows": {
+      "earliestDeadline": "2026-02-01",
+      "latestMajorDeadline": "2026-04-01"
+    },
+    "internationalStudentConsiderations": [
+      "english_fluency_required",
+      "english_test_may_be_required",
+      "financial_certification_likely_required",
+      "need_aware_or_limited_aid_possible",
+      "merit_aid_possible"
+    ],
+    "potentialFitTags": [
+      "large_public_environment",
+      "urban_access",
+      "rolling_or_extended_timeline",
+      "strong_merit_aid_signal"
+    ],
+    "potentialRiskTags": [
+      "high_total_cost",
+      "limited_merit_aid",
+      "complex_application_requirements",
+      "limited_aid_for_international_students"
+    ],
+    "actionableApplicationSteps": [
+      "research_merit_aid_deadlines",
+      "prepare_english_testing_or_waiver_plan",
+      "budget_for_need_based_aid_process",
+      "build_supplemental_essay_plan"
+    ]
+  },
+  "fieldProvenance": {
+    "identity.officialAdmissionsUrl": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.pitt.edu/audience/first-year-student/",
+        "excerpt": "Request Rejected"
+      }
+    ],
+    "applicationRounds": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.pitt.edu/wp-content/uploads/2024/09/InternationalRecruitmentBrochure_Digital-for-website-24-25.pdf",
+        "excerpt": "Rolling Admissions"
+      }
+    ],
+    "deadlinesByRound": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.pitt.edu/wp-content/uploads/2024/09/InternationalRecruitmentBrochure_Digital-for-website-24-25.pdf",
+        "excerpt": "Complete your application by April 1 for the fall term or October 1 for the spring term."
+      }
+    ],
+    "englishRequirements.waiverNotes": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.pitt.edu/wp-content/uploads/2024/09/InternationalRecruitmentBrochure_Digital-for-website-24-25.pdf",
+        "excerpt": "Official TOEFL, IELTS, or Duolingo scores. ... The SRAR is not required for international applicants."
+      }
+    ],
+    "testPolicy": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.pitt.edu/test-optional/",
+        "excerpt": "The University of Pittsburgh will continue its test-optional policy through fall 2028."
+      }
+    ],
+    "requiredMaterials": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.pitt.edu/wp-content/uploads/2024/09/InternationalRecruitmentBrochure_Digital-for-website-24-25.pdf",
+        "excerpt": "Fill out the online application ... submit your response to the short answer question or the Common App essay ... official high school transcript ... record of any university credits taken ... $55 application fee"
+      }
+    ],
+    "tuitionAnnualUsd": [
+      {
+        "sourceKind": "official_tuition",
+        "sourceUrl": "https://www.tuition.pitt.edu/undergraduate/tuition/pittsburgh",
+        "excerpt": "Dietrich School of Arts and Sciences ... $41,662"
+      }
+    ],
+    "estimatedCostOfAttendanceUsd": [
+      {
+        "sourceKind": "manual_note",
+        "sourceUrl": "https://www.tuition.pitt.edu/undergraduate/tuition/pittsburgh",
+        "excerpt": "Calculated from out-of-state tuition $41,662, mandatory fees $1,770, other estimated expenses $19,176, and the $1,000 international services fee."
+      }
+    ],
+    "livingCostEstimateUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://www.tuition.pitt.edu/undergraduate/tuition/pittsburgh",
+        "excerpt": "Housing $9,810 ... Food $5,918"
+      }
+    ],
+    "scholarshipAvailabilityFlag": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.pitt.edu/wp-content/uploads/2024/09/InternationalRecruitmentBrochure_Digital-for-website-24-25.pdf",
+        "excerpt": "The University of Pittsburgh offers a limited number of merit-based scholarships."
+      }
+    ],
+    "scholarshipNotes": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.pitt.edu/wp-content/uploads/2024/09/InternationalRecruitmentBrochure_Digital-for-website-24-25.pdf",
+        "excerpt": "merit-based scholarships ranging from $5,000 to $10,000 USD per year for international first-year students"
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.pitt.edu/wp-content/uploads/2024/09/InternationalRecruitmentBrochure_Digital-for-website-24-25.pdf",
+        "excerpt": "Complete your application by February 1 to be automatically considered for this scholarship"
+      }
+    ],
+    "recommendationInputs.schoolControl": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools?api_key=DEMO_KEY&school.name=University%20of%20Pittsburgh&fields=id,school.name,school.city,school.state,school.ownership,school.locale,latest.student.size,latest.admissions.admission_rate.overall,latest.admissions.sat_scores.average.overall,latest.admissions.act_scores.midpoint.cumulative&per_page=10",
+        "excerpt": "\"school.ownership\": 1"
+      }
+    ],
+    "recommendationInputs.internationalAidPolicy": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.pitt.edu/wp-content/uploads/2024/09/InternationalRecruitmentBrochure_Digital-for-website-24-25.pdf",
+        "excerpt": "The University of Pittsburgh offers a limited number of merit-based scholarships ... for international first-year students."
+      }
+    ],
+    "recommendationInputs.hasNeedBasedAid": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://www.cgs.pitt.edu/financial-assistance",
+        "excerpt": "The University of Pittsburgh Office of Admissions and Financial Aid (OAFA) manages need-based financial aid for all University students."
+      }
+    ],
+    "recommendationInputs.hasMeritAid": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.pitt.edu/wp-content/uploads/2024/09/InternationalRecruitmentBrochure_Digital-for-website-24-25.pdf",
+        "excerpt": "limited number of merit-based scholarships"
+      }
+    ],
+    "recommendationInputs.testingRequirements.acceptedExams": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.pitt.edu/test-optional/",
+        "excerpt": "Scores from the ACT or SAT exams will not be required for students applying to enter the university for fall 2025, 2026, 2027, and 2028."
+      }
+    ],
+    "recommendationInputs.testingRequirements.minimumSatTotal": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.pitt.edu/test-optional/",
+        "excerpt": "Scores from the ACT or SAT exams will not be required for students applying to enter the university for fall 2025, 2026, 2027, and 2028."
+      }
+    ],
+    "recommendationInputs.testingRequirements.minimumActComposite": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.pitt.edu/test-optional/",
+        "excerpt": "Scores from the ACT or SAT exams will not be required for students applying to enter the university for fall 2025, 2026, 2027, and 2028."
+      }
+    ],
+    "recommendationInputs.testingRequirements.latestSatTestDateNote": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.pitt.edu/test-optional/",
+        "excerpt": "Scores from the ACT or SAT exams will not be required for students applying to enter the university for fall 2025, 2026, 2027, and 2028."
+      }
+    ],
+    "recommendationInputs.testingRequirements.latestActTestDateNote": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.pitt.edu/test-optional/",
+        "excerpt": "Scores from the ACT or SAT exams will not be required for students applying to enter the university for fall 2025, 2026, 2027, and 2028."
+      }
+    ],
+    "recommendationInputs.testingRequirements.superscorePolicy": [
+      {
+        "sourceKind": "manual_note",
+        "sourceUrl": "https://admissions.pitt.edu/wp-content/uploads/2024/09/InternationalRecruitmentBrochure_Digital-for-website-24-25.pdf",
+        "excerpt": "No superscore policy was stated in the sources used here."
+      }
+    ],
+    "recommendationInputs.testingRequirements.writingEssayPolicy": [
+      {
+        "sourceKind": "manual_note",
+        "sourceUrl": "https://admissions.pitt.edu/wp-content/uploads/2024/09/InternationalRecruitmentBrochure_Digital-for-website-24-25.pdf",
+        "excerpt": "No ACT/SAT writing essay policy was stated in the sources used here."
+      }
+    ],
+    "recommendationInputs.testingRequirements.scoreReportingPolicy": [
+      {
+        "sourceKind": "manual_note",
+        "sourceUrl": "https://admissions.pitt.edu/wp-content/uploads/2024/09/InternationalRecruitmentBrochure_Digital-for-website-24-25.pdf",
+        "excerpt": "The brochure does not state a test-score reporting policy."
+      }
+    ],
+    "recommendationInputs.testingRequirements.middle50SatTotal": [
+      {
+        "sourceKind": "manual_note",
+        "sourceUrl": "https://admissions.pitt.edu/wp-content/uploads/2024/09/InternationalRecruitmentBrochure_Digital-for-website-24-25.pdf",
+        "excerpt": "No Pitt-wide SAT middle-50 range was published in the sources used here."
+      }
+    ],
+    "recommendationInputs.testingRequirements.middle50ActComposite": [
+      {
+        "sourceKind": "manual_note",
+        "sourceUrl": "https://admissions.pitt.edu/wp-content/uploads/2024/09/InternationalRecruitmentBrochure_Digital-for-website-24-25.pdf",
+        "excerpt": "No Pitt-wide ACT middle-50 range was published in the sources used here."
+      }
+    ],
+    "recommendationInputs.programFitTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.pitt.edu/about",
+        "excerpt": "top-ranked, public institution"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.pitt.edu/about",
+        "excerpt": "a member of the Association of American Universities"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.engineering.pitt.edu/academics/undergraduate/",
+        "excerpt": "hands-on labs, research opportunities, co-ops and real-world problem solving"
+      }
+    ],
+    "recommendationInputs.applicationStrategyTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.pitt.edu/wp-content/uploads/2024/09/InternationalRecruitmentBrochure_Digital-for-website-24-25.pdf",
+        "excerpt": "Complete your application by April 1 for the fall term or October 1 for the spring term."
+      }
+    ],
+    "recommendationInputs.admissionRateOverall": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools?api_key=DEMO_KEY&school.name=University%20of%20Pittsburgh&fields=id,school.name,school.city,school.state,school.ownership,school.locale,latest.student.size,latest.admissions.admission_rate.overall,latest.admissions.sat_scores.average.overall,latest.admissions.act_scores.midpoint.cumulative&per_page=10",
+        "excerpt": "\"latest.admissions.admission_rate.overall\": 0.497"
+      }
+    ],
+    "recommendationInputs.satAverageOverall": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools?api_key=DEMO_KEY&school.name=University%20of%20Pittsburgh&fields=id,school.name,school.city,school.state,school.ownership,school.locale,latest.student.size,latest.admissions.admission_rate.overall,latest.admissions.sat_scores.average.overall,latest.admissions.act_scores.midpoint.cumulative&per_page=10",
+        "excerpt": "\"latest.admissions.sat_scores.average.overall\": 1371"
+      }
+    ],
+    "recommendationInputs.actMidpointCumulative": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools?api_key=DEMO_KEY&school.name=University%20of%20Pittsburgh&fields=id,school.name,school.city,school.state,school.ownership,school.locale,latest.student.size,latest.admissions.admission_rate.overall,latest.admissions.sat_scores.average.overall,latest.admissions.act_scores.midpoint.cumulative&per_page=10",
+        "excerpt": "\"latest.admissions.act_scores.midpoint.cumulative\": 31"
+      }
+    ],
+    "recommendationInputs.undergraduateSize": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools?api_key=DEMO_KEY&school.name=University%20of%20Pittsburgh&fields=id,school.name,school.city,school.state,school.ownership,school.locale,latest.student.size,latest.admissions.admission_rate.overall,latest.admissions.sat_scores.average.overall,latest.admissions.act_scores.midpoint.cumulative&per_page=10",
+        "excerpt": "\"latest.student.size\": 20189"
+      }
+    ],
+    "explanationInputs.academicSelectivityBand": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools?api_key=DEMO_KEY&school.name=University%20of%20Pittsburgh&fields=id,school.name,school.city,school.state,school.ownership,school.locale,latest.student.size,latest.admissions.admission_rate.overall,latest.admissions.sat_scores.average.overall,latest.admissions.act_scores.midpoint.cumulative&per_page=10",
+        "excerpt": "Admission rate 0.497 with SAT average 1371 and ACT midpoint 31"
+      }
+    ],
+    "explanationInputs.testingExpectation": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.pitt.edu/test-optional/",
+        "excerpt": "The University of Pittsburgh will continue its test-optional policy through fall 2028."
+      }
+    ],
+    "explanationInputs.englishPolicySummary": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.pitt.edu/wp-content/uploads/2024/09/InternationalRecruitmentBrochure_Digital-for-website-24-25.pdf",
+        "excerpt": "Official TOEFL, IELTS, or Duolingo scores."
+      }
+    ],
+    "explanationInputs.aidModel": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.pitt.edu/wp-content/uploads/2024/09/InternationalRecruitmentBrochure_Digital-for-website-24-25.pdf",
+        "excerpt": "limited number of merit-based scholarships"
+      }
+    ],
+    "explanationInputs.applicationComplexity": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.pitt.edu/wp-content/uploads/2024/09/InternationalRecruitmentBrochure_Digital-for-website-24-25.pdf",
+        "excerpt": "online application ... short answer question or the Common App essay ... official high school transcript ... record of any university credits taken ... $55 application fee"
+      }
+    ],
+    "explanationInputs.deadlineUrgencyWindows": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.pitt.edu/wp-content/uploads/2024/09/InternationalRecruitmentBrochure_Digital-for-website-24-25.pdf",
+        "excerpt": "Complete your application by February 1 to be automatically considered for this scholarship."
+      }
+    ],
+    "explanationInputs.internationalStudentConsiderations": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.pitt.edu/wp-content/uploads/2024/09/InternationalRecruitmentBrochure_Digital-for-website-24-25.pdf",
+        "excerpt": "Official TOEFL, IELTS, or Duolingo scores."
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.pitt.edu/wp-content/uploads/2024/09/InternationalRecruitmentBrochure_Digital-for-website-24-25.pdf",
+        "excerpt": "The SRAR is not required for international applicants."
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.pitt.edu/wp-content/uploads/2024/09/InternationalRecruitmentBrochure_Digital-for-website-24-25.pdf",
+        "excerpt": "limited number of merit-based scholarships"
+      }
+    ],
+    "explanationInputs.potentialFitTags": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools?api_key=DEMO_KEY&school.name=University%20of%20Pittsburgh&fields=id,school.name,school.city,school.state,school.ownership,school.locale,latest.student.size,latest.admissions.admission_rate.overall,latest.admissions.sat_scores.average.overall,latest.admissions.act_scores.midpoint.cumulative&per_page=10",
+        "excerpt": "large public university in Pittsburgh"
+      }
+    ],
+    "explanationInputs.potentialRiskTags": [
+      {
+        "sourceKind": "official_tuition",
+        "sourceUrl": "https://www.tuition.pitt.edu/undergraduate/tuition/pittsburgh",
+        "excerpt": "The University of Pittsburgh charges $41,662 for out-of-state Dietrich School students, plus fees and living costs."
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.pitt.edu/wp-content/uploads/2024/09/InternationalRecruitmentBrochure_Digital-for-website-24-25.pdf",
+        "excerpt": "limited number of merit-based scholarships"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.pitt.edu/wp-content/uploads/2024/09/InternationalRecruitmentBrochure_Digital-for-website-24-25.pdf",
+        "excerpt": "online application ... short answer question or the Common App essay"
+      }
+    ],
+    "explanationInputs.actionableApplicationSteps": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.pitt.edu/wp-content/uploads/2024/09/InternationalRecruitmentBrochure_Digital-for-website-24-25.pdf",
+        "excerpt": "research_merit_aid_deadlines"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.pitt.edu/wp-content/uploads/2024/09/InternationalRecruitmentBrochure_Digital-for-website-24-25.pdf",
+        "excerpt": "prepare_english_testing_or_waiver_plan"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.pitt.edu/wp-content/uploads/2024/09/InternationalRecruitmentBrochure_Digital-for-website-24-25.pdf",
+        "excerpt": "budget_for_need_based_aid_process"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.pitt.edu/wp-content/uploads/2024/09/InternationalRecruitmentBrochure_Digital-for-website-24-25.pdf",
+        "excerpt": "build_supplemental_essay_plan"
+      }
+    ]
+  },
+  "quality": {
+    "status": "publishable",
+    "missingFields": [],
+    "warnings": [
+      "Pitt's live admissions pages were blocked by bot defense, so the admissions workflow here was sourced from Pitt's official admissions brochure and tuition page instead.",
+      "Pitt's current official test-optional page confirms test-optional status through Fall 2028, but the main first-year admissions page still has bot-defense issues and the reviewed official pages do not publish Pitt-wide superscore or middle-50 testing ranges."
+    ],
+    "lastVerifiedAt": "2026-03-21"
+  }
+}

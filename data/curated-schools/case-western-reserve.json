@@ -1,0 +1,570 @@
+{
+  "schoolSlug": "case-western-reserve",
+  "lastVerifiedAt": "2026-03-21",
+  "identity": {
+    "schoolName": "Case Western Reserve University",
+    "city": "Cleveland",
+    "state": "OH",
+    "officialAdmissionsUrl": "https://case.edu/admission/apply"
+  },
+  "applicationRounds": [
+    "early_action",
+    "early_decision",
+    "regular_decision"
+  ],
+  "deadlinesByRound": {
+    "early_action": "2025-11-01",
+    "early_decision": "2025-11-01",
+    "regular_decision": "2026-01-15",
+    "rolling_admission": null,
+    "priority": null
+  },
+  "englishRequirements": {
+    "minimumIelts": 7,
+    "minimumToeflInternetBased": 90,
+    "waiverNotes": "The English proficiency requirement can be automatically waived if the applicant attends a school where the language of instruction is English for two years by graduation, scores 630 or higher on the SAT Evidence-based Reading and Writing section, or scores 26 or higher on the ACT English exam."
+  },
+  "testPolicy": "test_optional",
+  "requiredMaterials": [
+    "common_application",
+    "coalition_with_scoir",
+    "official_high_school_transcript",
+    "school_report",
+    "counselor_recommendation",
+    "teacher_recommendation_1",
+    "teacher_recommendation_2",
+    "application_fee_or_fee_waiver",
+    "standardized_tests_optional",
+    "english_proficiency_assessment_if_international"
+  ],
+  "tuitionAnnualUsd": 64671,
+  "estimatedCostOfAttendanceUsd": 88491,
+  "livingCostEstimateUsd": 23820,
+  "scholarshipAvailabilityFlag": true,
+  "scholarshipNotes": "Case Western Reserve evaluates first-year applicants for several scholarships, offers additional scholarship competitions including full-tuition awards, and meets 100% of demonstrated need for admitted undergraduate students. International students can participate in many scholarship competitions, and the university offers a limited amount of need-based aid to first-year and transfer international applicants.",
+  "recommendationInputs": {
+    "admissionRateOverall": 0.2868,
+    "satAverageOverall": 1501,
+    "actMidpointCumulative": 34,
+    "undergraduateSize": 6108,
+    "schoolControl": "private_nonprofit",
+    "campusLocale": "urban",
+    "internationalAidPolicy": "need_and_merit_available",
+    "hasNeedBasedAid": true,
+    "hasMeritAid": true,
+    "testingRequirements": {
+      "acceptedExams": [
+        "sat",
+        "act"
+      ],
+      "minimumSatTotal": null,
+      "minimumActComposite": null,
+      "latestSatTestDateNote": "Ordinarily, scores from tests taken in November of senior year arrive in time for Early Action or Early Decision I, and scores from tests taken in January arrive in time for Early Decision II or Regular Decision consideration.",
+      "latestActTestDateNote": "Ordinarily, scores from tests taken in November of senior year arrive in time for Early Action or Early Decision I, and scores from tests taken in January arrive in time for Early Decision II or Regular Decision consideration.",
+      "superscorePolicy": "both",
+      "writingEssayPolicy": "unknown",
+      "scoreReportingPolicy": "self_report_allowed",
+      "middle50SatTotal": {
+        "low": 1440,
+        "high": 1520
+      },
+      "middle50ActComposite": {
+        "low": 32,
+        "high": 34
+      }
+    },
+    "averageNetPriceUsd": null,
+    "programFitTags": [
+      "research_intensive",
+      "engineering",
+      "life_sciences",
+      "health_pre_med"
+    ],
+    "programAdmissionModel": "unknown",
+    "applicationStrategyTags": [
+      "non_binding_early_action",
+      "binding_early_decision",
+      "multiple_early_rounds"
+    ]
+  },
+  "explanationInputs": {
+    "academicSelectivityBand": "selective",
+    "testingExpectation": "tests_not_required",
+    "englishPolicySummary": "waiver_possible",
+    "aidModel": "need_and_merit",
+    "applicationComplexity": "high",
+    "deadlineUrgencyWindows": {
+      "earliestDeadline": "2025-11-01",
+      "latestMajorDeadline": "2026-01-15"
+    },
+    "internationalStudentConsiderations": [
+      "english_fluency_required",
+      "english_test_may_be_required",
+      "need_based_aid_available",
+      "merit_aid_possible"
+    ],
+    "potentialFitTags": [
+      "strong_for_high_achieving_stem_students",
+      "research_or_innovation_oriented",
+      "smaller_private_environment",
+      "urban_access",
+      "strong_need_based_aid_signal",
+      "strong_merit_aid_signal"
+    ],
+    "potentialRiskTags": [
+      "high_total_cost",
+      "early_deadline_pressure",
+      "complex_application_requirements",
+      "limited_aid_for_international_students"
+    ],
+    "actionableApplicationSteps": [
+      "prepare_early_round_strategy",
+      "prepare_regular_decision_timeline",
+      "complete_standardized_testing_if_required",
+      "prepare_english_testing_or_waiver_plan",
+      "prepare_teacher_recommendations_early",
+      "prepare_counselor_documents_early",
+      "budget_for_need_based_aid_process",
+      "research_merit_aid_deadlines",
+      "prioritize_financial_aid_forms",
+      "build_supplemental_essay_plan"
+    ]
+  },
+  "fieldProvenance": {
+    "identity.schoolName": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://case.edu/admission/apply",
+        "excerpt": "Case Western Reserve University"
+      }
+    ],
+    "identity.city": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.city\": \"Cleveland\""
+      }
+    ],
+    "identity.state": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.state\": \"OH\""
+      }
+    ],
+    "identity.officialAdmissionsUrl": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://case.edu/admission/apply",
+        "excerpt": "Apply | Undergraduate Admission"
+      }
+    ],
+    "applicationRounds": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://case.edu/admission/apply/dates-deadlines",
+        "excerpt": "Early Action ... Early Decision I ... Early Decision II ... Regular Decision"
+      }
+    ],
+    "deadlinesByRound": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://case.edu/admission/apply/dates-deadlines",
+        "excerpt": "Early Action: November 1"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://case.edu/admission/apply/dates-deadlines",
+        "excerpt": "Early Decision I: November 1"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://case.edu/admission/apply/dates-deadlines",
+        "excerpt": "Regular Decision: January 15"
+      }
+    ],
+    "englishRequirements": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://case.edu/admission/apply/international-students",
+        "excerpt": "Duolingo English Test 115"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://case.edu/admission/apply/international-students",
+        "excerpt": "IELTS 7"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://case.edu/admission/apply/international-students",
+        "excerpt": "TOEFL iBT ... 90"
+      }
+    ],
+    "testPolicy": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://case.edu/admission/apply/application-requirements-enhancements/test-optional",
+        "excerpt": "Case Western Reserve University is test-optional."
+      }
+    ],
+    "requiredMaterials": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://case.edu/admission/apply",
+        "excerpt": "Official high school transcript, School Report, Counselor recommendation, Two teacher recommendations"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://case.edu/admission/apply",
+        "excerpt": "CWRU is test-optional."
+      }
+    ],
+    "tuitionAnnualUsd": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.cost.tuition.in_state\": 64671"
+      }
+    ],
+    "estimatedCostOfAttendanceUsd": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.cost.attendance.academic_year\": 81533"
+      }
+    ],
+    "livingCostEstimateUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://case.edu/housing/rates-and-dates/2024-2025-room-and-board-rates",
+        "excerpt": "The Village at 115 ... $13,690"
+      },
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://case.edu/housing/rates-and-dates/2024-2025-room-and-board-rates",
+        "excerpt": "Unlimited ... $7,950"
+      },
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://case.edu/studentaccounts/tuition-fees/undergraduate-tuition-fees",
+        "excerpt": "Books, Supplies, and Personal Expenses $2,550"
+      }
+    ],
+    "scholarshipAvailabilityFlag": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://case.edu/admission/tuition-aid/scholarships",
+        "excerpt": "we evaluate all first-year applicants for several scholarships"
+      }
+    ],
+    "scholarshipNotes": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://case.edu/admission/tuition-aid/scholarships",
+        "excerpt": "we evaluate all first-year applicants for several scholarships ... we offer need-based aid and meet 100 percent of demonstrated need"
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://case.edu/financialaid/undergraduates/international-students",
+        "excerpt": "Case Western Reserve University offers a limited amount of need-based aid to first-year and transfer international applicants"
+      }
+    ],
+    "recommendationInputs.admissionRateOverall": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.admission_rate.overall\": 0.2868"
+      }
+    ],
+    "recommendationInputs.satAverageOverall": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.sat_scores.average.overall\": 1501"
+      }
+    ],
+    "recommendationInputs.actMidpointCumulative": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.act_scores.midpoint.cumulative\": 34"
+      }
+    ],
+    "recommendationInputs.undergraduateSize": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.student.size\": 6108"
+      }
+    ],
+    "recommendationInputs.schoolControl": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.ownership\": 2"
+      }
+    ],
+    "recommendationInputs.campusLocale": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.locale\": 11"
+      }
+    ],
+    "recommendationInputs.internationalAidPolicy": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://case.edu/financialaid/undergraduates/international-students",
+        "excerpt": "offers a limited amount of need-based aid to first-year and transfer international applicants"
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://case.edu/admission/tuition-aid/scholarships",
+        "excerpt": "International students can participate in scholarship competitions"
+      }
+    ],
+    "recommendationInputs.hasNeedBasedAid": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://case.edu/financialaid/resources/net-price-calculator-and-myintuition",
+        "excerpt": "meets 100% of demonstrated need for all admitted undergraduate students"
+      }
+    ],
+    "recommendationInputs.hasMeritAid": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://case.edu/admission/tuition-aid/scholarships",
+        "excerpt": "we evaluate all first-year applicants for several scholarships"
+      }
+    ],
+    "recommendationInputs.programFitTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://case.edu/admission/academics/pre-professional-programs/",
+        "excerpt": "The Pre-Professional Scholars Program (PPSP) grants undergraduate admission and conditional admission to Case Western Reserve's School of Medicine or School of Dental Medicine."
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://bulletin.case.edu/engineering/engineering.pdf",
+        "excerpt": "Cooperative Education Program, on-campus research activities"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://case.edu/admission/academics/areas-study/pre-med",
+        "excerpt": "Case Western Reserve University's pre-med students study in one of the country's top medical communities."
+      }
+    ],
+    "recommendationInputs.applicationStrategyTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://case.edu/admission/apply/dates-deadlines",
+        "excerpt": "Early Action"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://case.edu/admission/apply/dates-deadlines",
+        "excerpt": "Early Decision I"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://case.edu/admission/apply/dates-deadlines",
+        "excerpt": "Early Decision II"
+      }
+    ],
+    "recommendationInputs.testingRequirements.acceptedExams": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://case.edu/admission/apply/international-students",
+        "excerpt": "SAT 1105 ... ACT 3244"
+      }
+    ],
+    "recommendationInputs.testingRequirements.minimumSatTotal": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://case.edu/admission/apply/application-requirements-enhancements/test-optional",
+        "excerpt": "CWRU is test-optional."
+      }
+    ],
+    "recommendationInputs.testingRequirements.minimumActComposite": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://case.edu/admission/apply/application-requirements-enhancements/test-optional",
+        "excerpt": "CWRU is test-optional."
+      }
+    ],
+    "recommendationInputs.testingRequirements.latestSatTestDateNote": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://case.edu/admission/apply/application-requirements-enhancements",
+        "excerpt": "Ordinarily, scores for tests taken in November of your senior year arrive in time for Early Action or Early Decision I deadlines, and scores for tests taken in January arrive in time for Early Decision II or Regular Decision consideration."
+      }
+    ],
+    "recommendationInputs.testingRequirements.latestActTestDateNote": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://case.edu/admission/apply/application-requirements-enhancements",
+        "excerpt": "Ordinarily, scores for tests taken in November of your senior year arrive in time for Early Action or Early Decision I deadlines, and scores for tests taken in January arrive in time for Early Decision II or Regular Decision consideration."
+      }
+    ],
+    "recommendationInputs.testingRequirements.superscorePolicy": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://case.edu/admission/apply/admission-statistics",
+        "excerpt": "SAT Scores (middle 50%) ... Composite (superscore)"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://case.edu/admission/apply/admission-statistics",
+        "excerpt": "ACT Scores (middle 50%) ... Composite (superscore)"
+      }
+    ],
+    "recommendationInputs.testingRequirements.writingEssayPolicy": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://case.edu/admission/apply/application-requirements-enhancements/test-optional",
+        "excerpt": "Case Western Reserve University is test-optional."
+      }
+    ],
+    "recommendationInputs.testingRequirements.scoreReportingPolicy": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://case.edu/admission/apply",
+        "excerpt": "You can report your scores on the Common or Coalition Application, have your official score reports sent from the testing agency or self-report your scores on your applicant portal"
+      }
+    ],
+    "recommendationInputs.testingRequirements.middle50SatTotal": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://case.edu/admission/apply/admission-statistics",
+        "excerpt": "SAT Scores (middle 50%) 1440-1520"
+      }
+    ],
+    "recommendationInputs.testingRequirements.middle50ActComposite": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://case.edu/admission/apply/admission-statistics",
+        "excerpt": "ACT Scores (middle 50%) 32-34"
+      }
+    ],
+    "explanationInputs.academicSelectivityBand": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.admission_rate.overall\": 0.2868"
+      }
+    ],
+    "explanationInputs.testingExpectation": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://case.edu/admission/apply/application-requirements-enhancements/test-optional",
+        "excerpt": "Case Western Reserve University is test-optional."
+      }
+    ],
+    "explanationInputs.englishPolicySummary": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://case.edu/admission/apply/international-students",
+        "excerpt": "The English proficiency requirement can be automatically waived"
+      }
+    ],
+    "explanationInputs.aidModel": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://case.edu/admission/tuition-aid/scholarships",
+        "excerpt": "we offer need-based aid and meet 100 percent of demonstrated need for admitted students"
+      }
+    ],
+    "explanationInputs.applicationComplexity": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://case.edu/admission/apply",
+        "excerpt": "Official high school transcript, School Report, Counselor recommendation, Two teacher recommendations"
+      }
+    ],
+    "explanationInputs.deadlineUrgencyWindows": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://case.edu/admission/apply/dates-deadlines",
+        "excerpt": "Early Action: November 1 ... Regular Decision: January 15"
+      }
+    ],
+    "explanationInputs.internationalStudentConsiderations": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://case.edu/admission/apply/international-students",
+        "excerpt": "International applicants to Case Western Reserve follow the same deadlines and process as domestic students"
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://case.edu/financialaid/undergraduates/international-students",
+        "excerpt": "Financial aid is available to international students"
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://case.edu/admission/tuition-aid/scholarships",
+        "excerpt": "International students can participate in scholarship competitions"
+      }
+    ],
+    "explanationInputs.potentialFitTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://case.edu/admission/apply/admission-statistics",
+        "excerpt": "85% Do research—often starting in their first year"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://case.edu/admission/apply/admission-statistics",
+        "excerpt": "98% Participate in hands-on learning"
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://case.edu/admission/tuition-aid/scholarships",
+        "excerpt": "we evaluate all first-year applicants for several scholarships"
+      }
+    ],
+    "explanationInputs.potentialRiskTags": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://case.edu/admission/tuition-aid/scholarships",
+        "excerpt": "meet 100 percent of demonstrated need"
+      },
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://case.edu/housing/rates-and-dates/2024-2025-room-and-board-rates",
+        "excerpt": "The Village at 115 ... $13,690"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://case.edu/admission/apply/dates-deadlines",
+        "excerpt": "Early Action ... November 1"
+      }
+    ],
+    "explanationInputs.actionableApplicationSteps": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://case.edu/admission/apply/dates-deadlines",
+        "excerpt": "Early Action: November 1 ... Regular Decision: January 15"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://case.edu/admission/apply",
+        "excerpt": "Counselor recommendation, Two teacher recommendations"
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://case.edu/admission/tuition-aid/scholarships",
+        "excerpt": "complete a scholarship application ... by Feb. 15"
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://case.edu/financialaid/undergraduates/international-students",
+        "excerpt": "offers a limited amount of need-based aid to first-year and transfer international applicants"
+      }
+    ]
+  },
+  "quality": {
+    "status": "publishable",
+    "missingFields": [],
+    "warnings": []
+  }
+}

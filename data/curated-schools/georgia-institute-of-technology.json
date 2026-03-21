@@ -1,0 +1,460 @@
+{
+  "schoolSlug": "georgia-institute-of-technology",
+  "lastVerifiedAt": "2026-03-21",
+  "identity": {
+    "schoolName": "Georgia Institute of Technology",
+    "city": "Atlanta",
+    "state": "GA",
+    "officialAdmissionsUrl": "https://admission.gatech.edu/"
+  },
+  "applicationRounds": [
+    "early_action",
+    "regular_decision"
+  ],
+  "deadlinesByRound": {
+    "early_action": "2026-10-15",
+    "early_decision": null,
+    "regular_decision": "2027-01-05",
+    "rolling_admission": null,
+    "priority": null
+  },
+  "englishRequirements": {
+    "minimumIelts": null,
+    "minimumToeflInternetBased": null,
+    "waiverNotes": "Georgia Tech requires international applicants to demonstrate English proficiency using a University System of Georgia-approved method. The reviewed Georgia Tech pages do not publish GT-specific minimum TOEFL or IELTS scores. Georgia Tech accepts Duolingo English Test, InitialView, and Vericant as supplementary materials, but they do not satisfy the USG requirement."
+  },
+  "testPolicy": "required",
+  "requiredMaterials": [
+    "common_application",
+    "application_fee_or_fee_waiver",
+    "transcript(s)_with_9-12th_courses_and_9-11th_grades",
+    "self_reported_or_official_sat_act_scores",
+    "additional_documents_requested_via_admission_portal"
+  ],
+  "tuitionAnnualUsd": 33596,
+  "estimatedCostOfAttendanceUsd": 54286,
+  "livingCostEstimateUsd": 14628,
+  "scholarshipAvailabilityFlag": true,
+  "scholarshipNotes": "Georgia Tech offers institutional scholarships, and Georgia residents may qualify for merit-based HOPE or Zell Miller scholarships. The Office of Scholarships and Financial Aid says scholarships are awarded annually and may be based on academic excellence, financial need, and major of study. International students are often not awarded institutional scholarships, though private and emergency options may exist.",
+  "recommendationInputs": {
+    "admissionRateOverall": 0.1646,
+    "satAverageOverall": 1447,
+    "actMidpointCumulative": 32,
+    "undergraduateSize": 18260,
+    "schoolControl": "public",
+    "campusLocale": "urban",
+    "internationalAidPolicy": "limited_or_unclear",
+    "hasNeedBasedAid": true,
+    "hasMeritAid": true,
+    "testingRequirements": {
+      "acceptedExams": [
+        "sat",
+        "act"
+      ],
+      "minimumSatTotal": null,
+      "minimumActComposite": null,
+      "latestSatTestDateNote": "Self-reported SAT scores are due by the round deadline: October 31 for EA1, November 17 for EA2, and January 23 for Regular Decision. Official scores are required before orientation if admitted and enrolled.",
+      "latestActTestDateNote": "Self-reported ACT scores are due by the round deadline: October 31 for EA1, November 17 for EA2, and January 23 for Regular Decision. Official scores are required before orientation if admitted and enrolled.",
+      "superscorePolicy": "both",
+      "writingEssayPolicy": "not_considered",
+      "scoreReportingPolicy": "self_report_allowed",
+      "middle50SatTotal": {
+        "low": null,
+        "high": null
+      },
+      "middle50ActComposite": {
+        "low": null,
+        "high": null
+      }
+    },
+    "averageNetPriceUsd": null,
+    "programFitTags": [
+      "engineering",
+      "computer_science",
+      "research_intensive"
+    ],
+    "programAdmissionModel": "capacity_limited",
+    "applicationStrategyTags": [
+      "non_binding_early_action",
+      "multiple_early_rounds"
+    ]
+  },
+  "explanationInputs": {
+    "academicSelectivityBand": "highly_selective",
+    "testingExpectation": "high_scores_expected",
+    "englishPolicySummary": "english_fluency_required_no_exam_minimum_listed",
+    "aidModel": "need_and_merit",
+    "applicationComplexity": "high",
+    "deadlineUrgencyWindows": {
+      "earliestDeadline": "2026-10-15",
+      "latestMajorDeadline": "2027-01-05"
+    },
+    "internationalStudentConsiderations": [
+      "english_fluency_required",
+      "english_test_may_be_required",
+      "need_aware_or_limited_aid_possible"
+    ],
+    "potentialFitTags": [
+      "large_public_environment",
+      "urban_access",
+      "research_or_innovation_oriented",
+      "strong_for_high_achieving_stem_students",
+      "strong_merit_aid_signal"
+    ],
+    "potentialRiskTags": [
+      "high_total_cost",
+      "limited_aid_for_international_students",
+      "testing_required",
+      "complex_application_requirements"
+    ],
+    "actionableApplicationSteps": [
+      "prepare_early_round_strategy",
+      "complete_standardized_testing_if_required",
+      "prepare_english_testing_or_waiver_plan",
+      "prioritize_financial_aid_forms",
+      "build_supplemental_essay_plan"
+    ]
+  },
+  "fieldProvenance": {
+    "identity.schoolName": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.gatech.edu/",
+        "excerpt": "Georgia Institute of Technology"
+      }
+    ],
+    "applicationRounds": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.gatech.edu/first-year/deadlines",
+        "excerpt": "Early Action 1 ... Early Action 2 ... Regular Decision"
+      }
+    ],
+    "deadlinesByRound": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.gatech.edu/first-year/deadlines",
+        "excerpt": "Early Action 1 ... October 15 ... November 15"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.gatech.edu/first-year/deadlines",
+        "excerpt": "Regular Decision ... January 5"
+      }
+    ],
+    "englishRequirements": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.gatech.edu/international/first-year",
+        "excerpt": "The University System of Georgia requires that all international applicants demonstrate English proficiency using one of the USG approved methods."
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.gatech.edu/international/first-year",
+        "excerpt": "Duolingo English Test, InitialView, or Vericant"
+      }
+    ],
+    "testPolicy": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.gatech.edu/first-year/standardized-tests",
+        "excerpt": "All first-year applicants must submit results from at least one SAT and/or the ACT"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.gatech.edu/first-year/standardized-tests",
+        "excerpt": "We do not require the ACT writing section or the SAT optional essay"
+      }
+    ],
+    "requiredMaterials": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.gatech.edu/first-year/deadlines",
+        "excerpt": "Common Application"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.gatech.edu/first-year/deadlines",
+        "excerpt": "Transcript(s) with 9-12th courses listed and 9-11th grades visible"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.gatech.edu/first-year/deadlines",
+        "excerpt": "Self-reported or official SAT/ACT scores"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.gatech.edu/first-year/application-fees",
+        "excerpt": "The non-refundable first-year application fee is $75 (international applicants: $85)"
+      }
+    ],
+    "tuitionAnnualUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://finaid.gatech.edu/costs/undergraduate-costs",
+        "excerpt": "Tuition ... Out of State ... $33,596"
+      }
+    ],
+    "estimatedCostOfAttendanceUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://finaid.gatech.edu/costs/undergraduate-costs",
+        "excerpt": "Out of State Cost ... Total per Year (2 semesters) $54,286"
+      }
+    ],
+    "livingCostEstimateUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://finaid.gatech.edu/costs/undergraduate-costs",
+        "excerpt": "Housing Allowance $8,318 ... Standard Food Service Plan $6,310"
+      }
+    ],
+    "scholarshipAvailabilityFlag": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://finaid.gatech.edu/undergraduate-types-aid/scholarships/",
+        "excerpt": "Georgia Tech is proud to offer awards from more than 850 institutional named scholarships"
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://finaid.gatech.edu/undergraduate-types-aid/zell-miller",
+        "excerpt": "The Zell Miller Scholarship is a merit-based scholarship program for Georgia residents"
+      }
+    ],
+    "scholarshipNotes": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://finaid.gatech.edu/undergraduate-types-aid/scholarships/",
+        "excerpt": "Academic excellence, financial need, and major of study are the primary criteria used for selecting recipients."
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://finaid.gatech.edu/apply/international",
+        "excerpt": "institutional scholarships ... are often not awarded to international students"
+      }
+    ],
+    "recommendationInputs.admissionRateOverall": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.admission_rate.overall\": 0.1646"
+      }
+    ],
+    "recommendationInputs.satAverageOverall": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.sat_scores.average.overall\": 1447"
+      }
+    ],
+    "recommendationInputs.actMidpointCumulative": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.act_scores.midpoint.cumulative\": 32"
+      }
+    ],
+    "recommendationInputs.undergraduateSize": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.student.size\": 18260"
+      }
+    ],
+    "recommendationInputs.schoolControl": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.ownership\": 1"
+      }
+    ],
+    "recommendationInputs.campusLocale": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.locale\": 11"
+      }
+    ],
+    "recommendationInputs.internationalAidPolicy": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://finaid.gatech.edu/apply/international",
+        "excerpt": "international students are not eligible for federal or state financial aid programs"
+      }
+    ],
+    "recommendationInputs.hasNeedBasedAid": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://finaid.gatech.edu/undergraduate-types-aid/scholarships/",
+        "excerpt": "financial need ... primary criteria used for selecting recipients"
+      }
+    ],
+    "recommendationInputs.hasMeritAid": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://finaid.gatech.edu/undergraduate-types-aid/scholarships/",
+        "excerpt": "HOPE Scholarship ... merit-based scholarship program"
+      }
+    ],
+    "recommendationInputs.testingRequirements": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.gatech.edu/first-year/standardized-tests",
+        "excerpt": "All first-year applicants must submit results from at least one SAT and/or the ACT"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.gatech.edu/first-year/standardized-tests",
+        "excerpt": "We highly recommend that you self-report your SAT and/or ACT scores"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.gatech.edu/first-year/standardized-tests",
+        "excerpt": "We do not require the ACT writing section or the SAT optional essay"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.gatech.edu/first-year/standardized-tests",
+        "excerpt": "SAT school code: 5248 ... ACT school code: 0818 ... official test scores before attending orientation"
+      }
+    ],
+    "explanationInputs.testingExpectation": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.gatech.edu/first-year/standardized-tests",
+        "excerpt": "All first-year applicants must submit results from at least one SAT and/or the ACT"
+      }
+    ],
+    "explanationInputs.aidModel": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://finaid.gatech.edu/undergraduate-types-aid/scholarships/",
+        "excerpt": "Academic excellence, financial need, and major of study are the primary criteria"
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://finaid.gatech.edu/undergraduate-types-aid/zell-miller",
+        "excerpt": "The Zell Miller Scholarship is a merit-based scholarship program"
+      }
+    ],
+    "explanationInputs.applicationComplexity": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.gatech.edu/first-year/deadlines",
+        "excerpt": "Early Action 1 ... Early Action 2 ... Regular Decision"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.gatech.edu/international/first-year",
+        "excerpt": "USG requires that all international applicants demonstrate English proficiency"
+      }
+    ],
+    "explanationInputs.internationalStudentConsiderations": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.gatech.edu/international/first-year",
+        "excerpt": "The University System of Georgia requires that all international applicants demonstrate English proficiency"
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://finaid.gatech.edu/apply/international",
+        "excerpt": "institutional scholarships ... are often not awarded to international students"
+      }
+    ],
+    "explanationInputs.potentialFitTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.gatech.edu/",
+        "excerpt": "Georgia Tech ... collaborate on innovation"
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://finaid.gatech.edu/undergraduate-types-aid/scholarships/",
+        "excerpt": "Academic excellence, financial need, and major of study are the primary criteria"
+      }
+    ],
+    "explanationInputs.potentialRiskTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.gatech.edu/first-year/standardized-tests",
+        "excerpt": "All first-year applicants must submit results from at least one SAT and/or the ACT"
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://finaid.gatech.edu/apply/international",
+        "excerpt": "institutional scholarships ... are often not awarded to international students"
+      }
+    ],
+    "explanationInputs.actionableApplicationSteps": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.gatech.edu/first-year/deadlines",
+        "excerpt": "Early Action 1 ... October 15 ... Early Action 2 ... November 3 ... Regular Decision January 5"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.gatech.edu/first-year/standardized-tests",
+        "excerpt": "We highly recommend that you self-report your SAT and/or ACT scores"
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://finaid.gatech.edu/undergraduate-types-aid/scholarships/",
+        "excerpt": "Students awarded scholarships will typically be expected to maintain a cumulative as well as a semester GPA of 3.0."
+      }
+    ],
+    "recommendationInputs.programFitTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.gatech.edu/first-year/major-selection",
+        "excerpt": "consideration of your major is an important part of our application review process"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://scs.gatech.edu/",
+        "excerpt": "Our research is at the forefront of AI Foundations, Computer Architecture, Data Systems, Programming Languages & Software Engineering, Networking, Systems, and Theory in computer science."
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://coe.gatech.edu/about/meet-dean",
+        "excerpt": "the nation’s largest engineering program of its kind"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://coe.gatech.edu/research/engineering-research",
+        "excerpt": "Engineering Research"
+      }
+    ],
+    "recommendationInputs.programAdmissionModel": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.gatech.edu/first-year/major-selection",
+        "excerpt": "consideration of your major is an important part of our application review process"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.gatech.edu/first-year/major-confirmation",
+        "excerpt": "Due to high-demand, first-year students who are admitted Summer 2024 and beyond will not have the option to confirm their major to the BS in Computer Science."
+      }
+    ],
+    "recommendationInputs.applicationStrategyTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.gatech.edu/first-year/deadlines/",
+        "excerpt": "An Early Action application to Georgia Tech is non-binding."
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.gatech.edu/first-year/deadlines/",
+        "excerpt": "Early Action 1 ... Early Action 2 ... Regular Decision"
+      }
+    ]
+  },
+  "quality": {
+    "status": "publishable",
+    "missingFields": [],
+    "warnings": [
+      "Georgia Tech has two early-action tracks (EA1 and EA2); the validator shape collapses them into a single early_action deadline, so the earliest deadline is used here.",
+      "Georgia Tech does not publish official SAT/ACT middle-50 ranges on the reviewed pages; testingRequirements.middle50* are null."
+    ]
+  }
+}

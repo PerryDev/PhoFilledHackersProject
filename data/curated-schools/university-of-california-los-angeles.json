@@ -1,0 +1,405 @@
+{
+  "schoolSlug": "university-of-california-los-angeles",
+  "lastVerifiedAt": "2026-03-21",
+  "identity": {
+    "schoolName": "University of California, Los Angeles",
+    "city": "Los Angeles",
+    "state": "CA",
+    "officialAdmissionsUrl": "https://admission.ucla.edu/apply/international-applicants"
+  },
+  "applicationRounds": [
+    "regular_decision"
+  ],
+  "deadlinesByRound": {
+    "early_action": null,
+    "early_decision": null,
+    "regular_decision": "2026-11-30",
+    "rolling_admission": null,
+    "priority": null
+  },
+  "englishRequirements": {
+    "minimumIelts": 7.5,
+    "minimumToeflInternetBased": 100,
+    "waiverNotes": "Applicants are considered proficient and do not need to satisfy the English requirement if all of their secondary education was completed in English; otherwise, UCLA requires English proficiency when the student has had less than 3 years of English instruction in a non-English-instruction setting."
+  },
+  "testPolicy": "test_blind",
+  "requiredMaterials": [
+    "uc_application",
+    "personal_insight_questions",
+    "self_reported_academic_history",
+    "official_transcript_after_admit",
+    "application_fee_or_fee_waiver",
+    "supplemental_application_if_required_by_school",
+    "english_proficiency_exam_if_applicable"
+  ],
+  "tuitionAnnualUsd": 15700,
+  "estimatedCostOfAttendanceUsd": 38517,
+  "livingCostEstimateUsd": 18960,
+  "scholarshipAvailabilityFlag": true,
+  "scholarshipNotes": "UCLA offers federal, state, and UCLA aid for tuition, housing, and other educational expenses. Undergrad aid can include scholarships, grants, work-study, and loans; international undergraduate students are not eligible for UCLA funding.",
+  "recommendationInputs": {
+    "admissionRateOverall": 0.0873,
+    "satAverageOverall": null,
+    "actMidpointCumulative": null,
+    "undergraduateSize": 33040,
+    "schoolControl": "public",
+    "campusLocale": "city",
+    "internationalAidPolicy": "limited_or_unclear",
+    "hasNeedBasedAid": true,
+    "hasMeritAid": true,
+    "testingRequirements": {
+      "acceptedExams": [],
+      "minimumSatTotal": null,
+      "minimumActComposite": null,
+      "latestSatTestDateNote": null,
+      "latestActTestDateNote": null,
+      "superscorePolicy": "none",
+      "writingEssayPolicy": "unknown",
+      "scoreReportingPolicy": "self_report_allowed",
+      "middle50SatTotal": {
+        "low": null,
+        "high": null
+      },
+      "middle50ActComposite": {
+        "low": null,
+        "high": null
+      }
+    },
+    "averageNetPriceUsd": null,
+    "programFitTags": [
+      "engineering",
+      "humanities",
+      "social_sciences",
+      "life_sciences",
+      "arts_design",
+      "research_intensive"
+    ],
+    "programAdmissionModel": "open",
+    "applicationStrategyTags": []
+  },
+  "explanationInputs": {
+    "academicSelectivityBand": "highly_selective",
+    "testingExpectation": "tests_not_considered",
+    "englishPolicySummary": "minimum_scores_required",
+    "aidModel": "need_and_merit",
+    "applicationComplexity": "high",
+    "deadlineUrgencyWindows": {
+      "earliestDeadline": "2026-11-30",
+      "latestMajorDeadline": "2026-11-30"
+    },
+    "internationalStudentConsiderations": [
+      "english_fluency_required",
+      "english_test_may_be_required",
+      "financial_certification_likely_required"
+    ],
+    "potentialFitTags": [
+      "large_public_environment",
+      "urban_access",
+      "research_or_innovation_oriented"
+    ],
+    "potentialRiskTags": [
+      "high_total_cost",
+      "complex_application_requirements",
+      "limited_aid_for_international_students"
+    ],
+    "actionableApplicationSteps": [
+      "prepare_regular_decision_timeline",
+      "prepare_english_testing_or_waiver_plan",
+      "prepare_counselor_documents_early",
+      "build_supplemental_essay_plan"
+    ]
+  },
+  "fieldProvenance": {
+    "identity.schoolName": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.name\": \"University of California-Los Angeles\""
+      }
+    ],
+    "identity.city": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.city\": \"Los Angeles\""
+      }
+    ],
+    "identity.state": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.state\": \"CA\""
+      }
+    ],
+    "officialAdmissionsUrl": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.ucla.edu/apply/international-applicants",
+        "excerpt": "International Applicants"
+      }
+    ],
+    "applicationRounds": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.ucla.edu/sites/default/files/documents/UCLA-Freshman-2024.pdf",
+        "excerpt": "UCLA does not offer early action/early decision"
+      }
+    ],
+    "deadlinesByRound": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.ucla.edu/sites/default/files/documents/UCLA-Freshman-2024.pdf",
+        "excerpt": "October 1–November 30: Application filing period"
+      }
+    ],
+    "englishRequirements": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.ucla.edu/apply/international-applicants",
+        "excerpt": "competitive score above 100 ... IELTS ... 7.5 or above ... Duolingo ... 130 or higher"
+      }
+    ],
+    "testPolicy": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.ucla.edu/sites/default/files/documents/UCLA-Freshman-2024.pdf",
+        "excerpt": "UCLA does not consider SAT or ACT scores for admission or scholarship purposes."
+      }
+    ],
+    "requiredMaterials": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.ucla.edu/sites/default/files/documents/UCLA-Freshman-2024.pdf",
+        "excerpt": "UC Application ... personal insight questions"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.ucla.edu/sites/default/files/documents/UCLA-Freshman-2024.pdf",
+        "excerpt": "Transcripts are not required at the time that you submit your application. Official transcripts will be required after a student has been admitted."
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.ucla.edu/sites/default/files/documents/UCLA-Freshman-2024.pdf",
+        "excerpt": "The University of California’s online application (UC Application) is used to apply to UCLA"
+      }
+    ],
+    "tuitionAnnualUsd": [
+      {
+        "sourceKind": "official_tuition",
+        "sourceUrl": "https://admission.ucla.edu/sites/default/files/documents/UCLA-Freshman-2024.pdf",
+        "excerpt": "University Fees $15,700"
+      }
+    ],
+    "estimatedCostOfAttendanceUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://financialaid.ucla.edu/affordability-initiative",
+        "excerpt": "The cost of attendance for a student who is a California residence is $38,517."
+      }
+    ],
+    "livingCostEstimateUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://admission.ucla.edu/sites/default/files/documents/UCLA-Freshman-2024.pdf",
+        "excerpt": "Food & Housing $18,960"
+      }
+    ],
+    "scholarshipAvailabilityFlag": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://financialaid.ucla.edu/affordability-initiative",
+        "excerpt": "offer federal, state, and UCLA aid"
+      }
+    ],
+    "scholarshipNotes": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://financialaid.ucla.edu/affordability-initiative",
+        "excerpt": "We seek to make a UCLA undergraduate degree more affordable"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.ucla.edu/apply/international-applicants",
+        "excerpt": "UCLA does not award scholarships or financial aid to undergraduate students who are not citizens or permanent residents of the United States."
+      }
+    ],
+    "recommendationInputs.admissionRateOverall": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.admission_rate.overall\": 0.0873"
+      }
+    ],
+    "recommendationInputs.undergraduateSize": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.student.size\": 33040"
+      }
+    ],
+    "recommendationInputs.schoolControl": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.ownership\": 1"
+      }
+    ],
+    "recommendationInputs.campusLocale": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.locale\": 11"
+      }
+    ],
+    "recommendationInputs.internationalAidPolicy": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.ucla.edu/apply/international-applicants",
+        "excerpt": "UCLA does not award scholarships or financial aid to undergraduate students who are not citizens or permanent residents of the United States."
+      }
+    ],
+    "recommendationInputs.hasNeedBasedAid": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://financialaid.ucla.edu/affordability-initiative",
+        "excerpt": "offer federal, state, and UCLA aid"
+      }
+    ],
+    "recommendationInputs.hasMeritAid": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://financialaid.ucla.edu/affordability-initiative",
+        "excerpt": "scholarships designed to eliminate the burden of student loans"
+      }
+    ],
+    "recommendationInputs.programFitTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.ucla.edu/apply/majors",
+        "excerpt": "With over 140 majors to choose from"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.ucla.edu/apply/majors",
+        "excerpt": "Most majors fall within the College of Letters and Science"
+      }
+    ],
+    "recommendationInputs.programAdmissionModel": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.ucla.edu/apply/majors",
+        "excerpt": "With over 140 majors to choose from"
+      }
+    ],
+    "recommendationInputs.testingRequirements": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.ucla.edu/sites/default/files/documents/UCLA-Freshman-2024.pdf",
+        "excerpt": "UCLA does not consider SAT or ACT scores for admission or scholarship purposes."
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.ucla.edu/apply/international-applicants",
+        "excerpt": "SAT or ACT scores are not an admission requirement"
+      }
+    ],
+    "explanationInputs.academicSelectivityBand": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.admission_rate.overall\": 0.0873"
+      }
+    ],
+    "explanationInputs.testingExpectation": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.ucla.edu/sites/default/files/documents/UCLA-Freshman-2024.pdf",
+        "excerpt": "UCLA does not consider SAT or ACT scores for admission or scholarship purposes."
+      }
+    ],
+    "explanationInputs.englishPolicySummary": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.ucla.edu/apply/international-applicants",
+        "excerpt": "if you've completed all or some high school or secondary school in a country where English was not the language of instruction, you will be required to demonstrate English proficiency"
+      }
+    ],
+    "explanationInputs.aidModel": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://financialaid.ucla.edu/affordability-initiative",
+        "excerpt": "offer federal, state, and UCLA aid"
+      }
+    ],
+    "explanationInputs.applicationComplexity": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.ucla.edu/sites/default/files/documents/UCLA-Freshman-2024.pdf",
+        "excerpt": "personal insight questions ... reviewed twice by two separate independent admission professionals"
+      }
+    ],
+    "explanationInputs.deadlineUrgencyWindows": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.ucla.edu/sites/default/files/documents/UCLA-Freshman-2024.pdf",
+        "excerpt": "October 1–November 30: Application filing period"
+      }
+    ],
+    "explanationInputs.internationalStudentConsiderations": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.ucla.edu/apply/international-applicants",
+        "excerpt": "UCLA doesn't provide funding to international students at the undergraduate level"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.ucla.edu/apply/international-applicants",
+        "excerpt": "English language proficiency is critical to your success at UCLA"
+      }
+    ],
+    "explanationInputs.potentialFitTags": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://financialaid.ucla.edu/affordability-initiative",
+        "excerpt": "a UCLA undergraduate degree more affordable"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.ucla.edu/sites/default/files/documents/UCLA-Freshman-2024.pdf",
+        "excerpt": "The review focuses on consistent and ongoing participation in extracurricular activities"
+      }
+    ],
+    "explanationInputs.potentialRiskTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.ucla.edu/apply/international-applicants",
+        "excerpt": "UCLA doesn't provide funding to international students at the undergraduate level"
+      },
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://financialaid.ucla.edu/affordability-initiative",
+        "excerpt": "The cost of attendance for a student who is a California residence is $38,517."
+      }
+    ],
+    "explanationInputs.actionableApplicationSteps": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.ucla.edu/sites/default/files/documents/UCLA-Freshman-2024.pdf",
+        "excerpt": "The University of California’s online application (UC Application) is used to apply to UCLA"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.ucla.edu/sites/default/files/documents/UCLA-Freshman-2024.pdf",
+        "excerpt": "select 4 out of the 8 questions"
+      }
+    ]
+  },
+  "quality": {
+    "status": "publishable",
+    "missingFields": [],
+    "warnings": [
+      "UCLA is test-blind for admission and scholarship purposes, so testingRequirements does not carry a required SAT/ACT value.",
+      "Middle-50 SAT and ACT score fields were left null because UCLA does not publish a UCLA-wide tested profile in the sources used here."
+    ]
+  }
+}

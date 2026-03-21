@@ -1,0 +1,536 @@
+{
+  "schoolSlug": "university-of-minnesota",
+  "lastVerifiedAt": "2026-03-21",
+  "identity": {
+    "schoolName": "University of Minnesota-Twin Cities",
+    "city": "Minneapolis",
+    "state": "MN",
+    "officialAdmissionsUrl": "https://admissions.tc.umn.edu/admissions/freshman-admission-university-minnesota-twin-cities"
+  },
+  "applicationRounds": [
+    "early_action",
+    "early_decision",
+    "regular_decision"
+  ],
+  "deadlinesByRound": {
+    "early_action": "2025-11-01",
+    "early_decision": "2025-12-01",
+    "regular_decision": "2026-01-01",
+    "rolling_admission": null,
+    "priority": null
+  },
+  "englishRequirements": {
+    "minimumIelts": 6.5,
+    "minimumToeflInternetBased": 79,
+    "waiverNotes": "International students and students who have studied in the U.S. for fewer than four years must demonstrate English proficiency unless they qualify for an alternate waiver path such as approved ACT/SAT results, transfer coursework, specific high-school curriculums, or country of origin. Some applicants may be considered for conditional admission if their scores are below the standard minimums."
+  },
+  "testPolicy": "test_optional",
+  "requiredMaterials": [
+    "application_for_admission",
+    "self_reported_academic_record",
+    "application_fee_or_fee_waiver",
+    "standardized_tests_optional",
+    "english_proficiency_test_scores_if_required",
+    "certification_of_finances_if_international",
+    "official_final_transcripts_before_enrollment",
+    "official_test_scores_before_enrollment_if_submitted"
+  ],
+  "tuitionAnnualUsd": 19174,
+  "estimatedCostOfAttendanceUsd": 37926,
+  "livingCostEstimateUsd": 15552,
+  "scholarshipAvailabilityFlag": true,
+  "scholarshipNotes": "The University of Minnesota awards need- and merit-based scholarships. Freshman applicants who apply by the regular deadline are automatically considered for merit scholarships. International students do not qualify for U.S. federal or Minnesota state financial aid, but limited international merit scholarships such as Global Excellence are available.",
+  "recommendationInputs": {
+    "admissionRateOverall": 0.7703,
+    "satAverageOverall": 1359,
+    "actMidpointCumulative": 30,
+    "undergraduateSize": 30469,
+    "schoolControl": "public",
+    "campusLocale": "urban",
+    "internationalAidPolicy": "merit_aid_available",
+    "hasNeedBasedAid": true,
+    "hasMeritAid": true,
+    "testingRequirements": {
+      "acceptedExams": [
+        "sat",
+        "act"
+      ],
+      "minimumSatTotal": null,
+      "minimumActComposite": null,
+      "latestSatTestDateNote": "If you submit ACT or SAT scores during the application process, official scores must be received by July 1 before enrollment.",
+      "latestActTestDateNote": "If you submit ACT or SAT scores during the application process, official scores must be received by July 1 before enrollment.",
+      "superscorePolicy": "none",
+      "writingEssayPolicy": "not_considered",
+      "scoreReportingPolicy": "official_required_after_admit",
+      "middle50SatTotal": {
+        "low": null,
+        "high": null
+      },
+      "middle50ActComposite": {
+        "low": null,
+        "high": null
+      }
+    },
+    "averageNetPriceUsd": null,
+    "programFitTags": [
+      "research_intensive"
+    ],
+    "programAdmissionModel": "unknown",
+    "applicationStrategyTags": [
+      "non_binding_early_action",
+      "multiple_early_rounds"
+    ]
+  },
+  "explanationInputs": {
+    "academicSelectivityBand": "broad_access",
+    "testingExpectation": "tests_not_required",
+    "englishPolicySummary": "minimum_scores_required",
+    "aidModel": "need_and_merit",
+    "applicationComplexity": "medium",
+    "deadlineUrgencyWindows": {
+      "earliestDeadline": "2025-11-01",
+      "latestMajorDeadline": "2026-01-01"
+    },
+    "internationalStudentConsiderations": [
+      "english_fluency_required",
+      "english_test_may_be_required",
+      "financial_certification_likely_required",
+      "merit_aid_possible",
+      "need_aware_or_limited_aid_possible"
+    ],
+    "potentialFitTags": [
+      "large_public_environment",
+      "urban_access",
+      "value_for_budget_conscious_students",
+      "strong_need_based_aid_signal",
+      "strong_merit_aid_signal"
+    ],
+    "potentialRiskTags": [
+      "high_total_cost",
+      "limited_aid_for_international_students",
+      "early_deadline_pressure"
+    ],
+    "actionableApplicationSteps": [
+      "prepare_early_round_strategy",
+      "prepare_regular_decision_timeline",
+      "complete_standardized_testing_if_required",
+      "prepare_english_testing_or_waiver_plan",
+      "budget_for_need_based_aid_process",
+      "research_merit_aid_deadlines",
+      "prioritize_financial_aid_forms"
+    ]
+  },
+  "fieldProvenance": {
+    "identity.schoolName": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.tc.umn.edu/admissions/freshman-admission-university-minnesota-twin-cities",
+        "excerpt": "Freshman Admission | University of Minnesota Twin Cities"
+      }
+    ],
+    "identity.city": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.city\": \"Minneapolis\""
+      }
+    ],
+    "identity.state": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.state\": \"MN\""
+      }
+    ],
+    "identity.officialAdmissionsUrl": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.tc.umn.edu/admissions/freshman-admission-university-minnesota-twin-cities",
+        "excerpt": "Freshman Admission | University of Minnesota Twin Cities"
+      }
+    ],
+    "applicationRounds": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.tc.umn.edu/admissions/freshman-admission-university-minnesota-twin-cities",
+        "excerpt": "November 1: Early Action I Deadline"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.tc.umn.edu/admissions/freshman-admission-university-minnesota-twin-cities",
+        "excerpt": "December 1: Early Action II Deadline"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.tc.umn.edu/admissions/freshman-admission-university-minnesota-twin-cities",
+        "excerpt": "January 1: Regular Deadline"
+      }
+    ],
+    "deadlinesByRound": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.tc.umn.edu/admissions/freshman-admission-university-minnesota-twin-cities",
+        "excerpt": "November 1: Early Action I Deadline"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.tc.umn.edu/admissions/freshman-admission-university-minnesota-twin-cities",
+        "excerpt": "December 1: Early Action II Deadline"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.tc.umn.edu/admissions/freshman-admission-university-minnesota-twin-cities",
+        "excerpt": "January 1: Regular Deadline"
+      }
+    ],
+    "englishRequirements": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.tc.umn.edu/admissions/international-admission/english-proficiency-information",
+        "excerpt": "IELTS Academic 6.5"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.tc.umn.edu/admissions/international-admission/english-proficiency-information",
+        "excerpt": "TOEFL iBT 79"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.tc.umn.edu/admissions/international-admission/english-proficiency-information",
+        "excerpt": "Applicants can find out if they need to take an English proficiency test by checking their Application Tracker."
+      }
+    ],
+    "testPolicy": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.tc.umn.edu/admissions/freshman-admission-university-minnesota-twin-cities",
+        "excerpt": "Freshman applicants through fall 2027 are not required to submit an ACT or SAT test score."
+      }
+    ],
+    "requiredMaterials": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.tc.umn.edu/admissions/freshman-admission-university-minnesota-twin-cities",
+        "excerpt": "the application to the University of Minnesota Twin Cities only requires three items: an application, $55 application fee and self-reported academic record"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.tc.umn.edu/apply/application-checklist/application-checklist-international-freshman",
+        "excerpt": "English proficiency test scores (Required)"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.tc.umn.edu/apply/application-checklist/application-checklist-international-freshman",
+        "excerpt": "Applicants who are currently on temporary visas or who will need a visa ... will be asked to complete a Certification of Finances form."
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.tc.umn.edu/apply/application-checklist/application-checklist-international-freshman",
+        "excerpt": "ACT and/or SAT scores (Not Required)"
+      }
+    ],
+    "tuitionAnnualUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://admissions.tc.umn.edu/cost-aid/cost-aid-scholarships/cost-attendance",
+        "excerpt": "Tuition & Fees $19,174"
+      }
+    ],
+    "estimatedCostOfAttendanceUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://admissions.tc.umn.edu/cost-aid/cost-aid-scholarships/cost-attendance",
+        "excerpt": "Total $37,926"
+      }
+    ],
+    "livingCostEstimateUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://admissions.tc.umn.edu/cost-aid/cost-aid-scholarships/cost-attendance",
+        "excerpt": "Housing & Food $15,552"
+      },
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://admissions.tc.umn.edu/cost-aid/cost-aid-scholarships/cost-attendance",
+        "excerpt": "Personal/Misc $2,000"
+      }
+    ],
+    "scholarshipAvailabilityFlag": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.tc.umn.edu/cost-aid/cost-aid-and-scholarships",
+        "excerpt": "The University also awards a number of merit-based scholarships"
+      }
+    ],
+    "scholarshipNotes": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.tc.umn.edu/cost-aid/scholarships",
+        "excerpt": "When you apply for freshman admission ... by our regular deadline, you will automatically be considered for these merit-based awards."
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.tc.umn.edu/cost-aid/cost-aid-scholarships/costs-scholarships-and-visas-international-students",
+        "excerpt": "International students do not qualify for U.S. or Minnesota state financial aid programs."
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.tc.umn.edu/global-excellence-scholarships",
+        "excerpt": "Freshmen may receive scholarships ranging from $5,000 to $20,000 each year for up to four years."
+      }
+    ],
+    "recommendationInputs.admissionRateOverall": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.admission_rate.overall\": 0.7703"
+      }
+    ],
+    "recommendationInputs.satAverageOverall": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.sat_scores.average.overall\": 1359"
+      }
+    ],
+    "recommendationInputs.actMidpointCumulative": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.act_scores.midpoint.cumulative\": 30"
+      }
+    ],
+    "recommendationInputs.undergraduateSize": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.student.size\": 30469"
+      }
+    ],
+    "recommendationInputs.schoolControl": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.ownership\": 1"
+      }
+    ],
+    "recommendationInputs.programFitTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.tc.umn.edu/admissions/freshman-admission-university-minnesota-twin-cities",
+        "excerpt": "Research Rankings"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.tc.umn.edu/admissions/freshman-admission-university-minnesota-twin-cities",
+        "excerpt": "The University of Minnesota Twin Cities offers more than 150 majors."
+      }
+    ],
+    "recommendationInputs.applicationStrategyTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.tc.umn.edu/admissions/freshman-admission-university-minnesota-twin-cities",
+        "excerpt": "November 1: Early Action I Deadline"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.tc.umn.edu/admissions/freshman-admission-university-minnesota-twin-cities",
+        "excerpt": "December 1: Early Action II Deadline"
+      }
+    ],
+    "recommendationInputs.campusLocale": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.locale\": 11"
+      }
+    ],
+    "recommendationInputs.internationalAidPolicy": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.tc.umn.edu/global-excellence-scholarships",
+        "excerpt": "Freshmen may receive scholarships ranging from $5,000 to $20,000 each year for up to four years."
+      }
+    ],
+    "recommendationInputs.hasNeedBasedAid": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.tc.umn.edu/cost-aid/cost-aid-and-scholarships",
+        "excerpt": "Using the University's Net Price Calculator, you can get a sense of the types of need-based aid for which you may be eligible."
+      }
+    ],
+    "recommendationInputs.hasMeritAid": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.tc.umn.edu/cost-aid/cost-aid-and-scholarships",
+        "excerpt": "The University also awards a number of merit-based scholarships"
+      }
+    ],
+    "recommendationInputs.testingRequirements.acceptedExams": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.tc.umn.edu/apply/application-checklist/application-checklist-international-freshman",
+        "excerpt": "ACT and/or SAT scores (Not Required)"
+      }
+    ],
+    "recommendationInputs.testingRequirements.minimumSatTotal": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.tc.umn.edu/apply/application-checklist/application-checklist-international-freshman",
+        "excerpt": "ACT and/or SAT scores (Not Required)"
+      }
+    ],
+    "recommendationInputs.testingRequirements.minimumActComposite": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.tc.umn.edu/apply/application-checklist/application-checklist-international-freshman",
+        "excerpt": "ACT and/or SAT scores (Not Required)"
+      }
+    ],
+    "recommendationInputs.testingRequirements.latestSatTestDateNote": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.tc.umn.edu/apply/application-checklist/application-checklist-international-freshman",
+        "excerpt": "Test scores must match the highest reported score on your Self-Reported Academic Record, and must be received by the Office of Admissions by July 1."
+      }
+    ],
+    "recommendationInputs.testingRequirements.latestActTestDateNote": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.tc.umn.edu/apply/application-checklist/application-checklist-international-freshman",
+        "excerpt": "Test scores must match the highest reported score on your Self-Reported Academic Record, and must be received by the Office of Admissions by July 1."
+      }
+    ],
+    "recommendationInputs.testingRequirements.superscorePolicy": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.tc.umn.edu/apply/application-checklist/application-checklist-international-freshman",
+        "excerpt": "Do not \"superscore\" your tests."
+      }
+    ],
+    "recommendationInputs.testingRequirements.writingEssayPolicy": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.tc.umn.edu/admissions/freshman-admission-university-minnesota-twin-cities",
+        "excerpt": "no letters of recommendation or essays required!"
+      }
+    ],
+    "recommendationInputs.testingRequirements.scoreReportingPolicy": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.tc.umn.edu/admissions/freshman-admission-university-minnesota-twin-cities",
+        "excerpt": "self-reported academic record"
+      }
+    ],
+    "explanationInputs.academicSelectivityBand": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.admission_rate.overall\": 0.7703"
+      }
+    ],
+    "explanationInputs.testingExpectation": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.tc.umn.edu/admissions/freshman-admission-university-minnesota-twin-cities",
+        "excerpt": "Freshman applicants through fall 2027 are not required to submit an ACT or SAT test score."
+      }
+    ],
+    "explanationInputs.englishPolicySummary": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.tc.umn.edu/admissions/international-admission/english-proficiency-information",
+        "excerpt": "International students ... require English language proficiency test results"
+      }
+    ],
+    "explanationInputs.aidModel": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.tc.umn.edu/cost-aid/cost-aid-and-scholarships",
+        "excerpt": "The University also awards a number of merit-based scholarships"
+      }
+    ],
+    "explanationInputs.applicationComplexity": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.tc.umn.edu/admissions/freshman-admission-university-minnesota-twin-cities",
+        "excerpt": "only requires three items: an application, $55 application fee and self-reported academic record"
+      }
+    ],
+    "explanationInputs.deadlineUrgencyWindows": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.tc.umn.edu/admissions/freshman-admission-university-minnesota-twin-cities",
+        "excerpt": "November 1: Early Action I Deadline"
+      }
+    ],
+    "explanationInputs.internationalStudentConsiderations": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.tc.umn.edu/apply/application-checklist/application-checklist-international-freshman",
+        "excerpt": "Certification of Finances form"
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.tc.umn.edu/global-excellence-scholarships",
+        "excerpt": "Freshmen may receive scholarships ranging from $5,000 to $20,000 each year for up to four years."
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.tc.umn.edu/global-excellence-scholarships",
+        "excerpt": "The University of Minnesota Twin Cities does not offer a full tuition waiver or scholarship"
+      }
+    ],
+    "explanationInputs.potentialFitTags": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.locale\": 11"
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.tc.umn.edu/cost-aid/cost-aid-and-scholarships",
+        "excerpt": "The University also awards a number of merit-based scholarships"
+      }
+    ],
+    "explanationInputs.potentialRiskTags": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.tc.umn.edu/global-excellence-scholarships",
+        "excerpt": "The University of Minnesota Twin Cities does not offer a full tuition waiver or scholarship"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.tc.umn.edu/admissions/freshman-admission-university-minnesota-twin-cities",
+        "excerpt": "November 1: Early Action I Deadline"
+      }
+    ],
+    "explanationInputs.actionableApplicationSteps": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.tc.umn.edu/admissions/freshman-admission-university-minnesota-twin-cities",
+        "excerpt": "self-reported academic record"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.tc.umn.edu/apply/application-checklist/application-checklist-international-freshman",
+        "excerpt": "Certification of Finances form"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.tc.umn.edu/admissions/international-admission/english-proficiency-information",
+        "excerpt": "English proficiency test results"
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.tc.umn.edu/cost-aid/scholarships",
+        "excerpt": "When you apply for freshman admission ... by our regular deadline, you will automatically be considered"
+      }
+    ]
+  },
+  "quality": {
+    "status": "publishable",
+    "missingFields": [],
+    "warnings": []
+  }
+}

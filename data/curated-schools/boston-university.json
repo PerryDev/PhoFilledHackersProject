@@ -1,0 +1,543 @@
+{
+  "schoolSlug": "boston-university",
+  "lastVerifiedAt": "2026-03-21",
+  "identity": {
+    "schoolName": "Boston University",
+    "city": "Boston",
+    "state": "MA",
+    "officialAdmissionsUrl": "https://www.bu.edu/admissions/apply/first-year/"
+  },
+  "applicationRounds": [
+    "early_decision",
+    "regular_decision"
+  ],
+  "deadlinesByRound": {
+    "early_action": null,
+    "early_decision": "2025-11-02",
+    "regular_decision": "2026-01-05",
+    "rolling_admission": null,
+    "priority": null
+  },
+  "englishRequirements": {
+    "minimumIelts": 7,
+    "minimumToeflInternetBased": 90,
+    "waiverNotes": "BU requires English proficiency testing for international applicants whose first language is not English. Waiver requests are discretionary, must be received by the application deadline, and must accompany a complete application."
+  },
+  "testPolicy": "test_optional",
+  "requiredMaterials": [
+    "common_application_or_questbridge_application",
+    "high_school_transcript",
+    "senior_year_grades",
+    "counselor_recommendation_and_school_report_form",
+    "teacher_evaluation",
+    "standardized_tests_optional",
+    "application_fee_or_fee_waiver",
+    "essay_and_short_answers",
+    "english_proficiency_testing_if_international",
+    "documentation_of_financial_support_if_international",
+    "copy_of_passport_data_page_if_international",
+    "glimpse_video_submission_optional"
+  ],
+  "tuitionAnnualUsd": 69870,
+  "estimatedCostOfAttendanceUsd": 94427,
+  "livingCostEstimateUsd": 23055,
+  "scholarshipAvailabilityFlag": true,
+  "scholarshipNotes": "BU meets 100% of demonstrated need for eligible first-year and transfer US citizens and permanent residents, offers need-based aid without loans for first-year students, and provides merit scholarships. International first-year students are eligible for merit scholarships.",
+  "recommendationInputs": {
+    "admissionRateOverall": 0.1085,
+    "satAverageOverall": 1473,
+    "actMidpointCumulative": 33,
+    "undergraduateSize": 17850,
+    "schoolControl": "private_nonprofit",
+    "campusLocale": "urban",
+    "internationalAidPolicy": "need_and_merit_available",
+    "hasNeedBasedAid": true,
+    "hasMeritAid": true,
+    "testingRequirements": {
+      "acceptedExams": [
+        "sat",
+        "act"
+      ],
+      "minimumSatTotal": null,
+      "minimumActComposite": null,
+      "latestSatTestDateNote": "For Early Decision applicants who choose to submit scores, SAT test dates should be no later than November. For Early Decision 2 and Regular Decision applicants, official score timing is tied to the January 5 deadline. Self-reported scores are accepted, but official scores are required before enrollment.",
+      "latestActTestDateNote": "For Early Decision applicants who choose to submit scores, ACT test dates should be no later than the October test date. For Early Decision 2 and Regular Decision applicants, official score timing is tied to the January 5 deadline. BU only accepts ACT scores that include the Science subsection.",
+      "superscorePolicy": "both",
+      "writingEssayPolicy": "optional",
+      "scoreReportingPolicy": "self_report_allowed",
+      "middle50SatTotal": {
+        "low": null,
+        "high": null
+      },
+      "middle50ActComposite": {
+        "low": null,
+        "high": null
+      }
+    },
+    "averageNetPriceUsd": null,
+    "programFitTags": [
+      "research_intensive",
+      "business",
+      "health_pre_med",
+      "humanities"
+    ],
+    "programAdmissionModel": "separate_school_application",
+    "applicationStrategyTags": [
+      "binding_early_decision"
+    ]
+  },
+  "explanationInputs": {
+    "academicSelectivityBand": "highly_selective",
+    "testingExpectation": "scores_considered",
+    "englishPolicySummary": "minimum_scores_required",
+    "aidModel": "need_and_merit",
+    "applicationComplexity": "high",
+    "deadlineUrgencyWindows": {
+      "earliestDeadline": "2025-11-02",
+      "latestMajorDeadline": "2026-01-05"
+    },
+    "internationalStudentConsiderations": [
+      "english_fluency_required",
+      "english_test_may_be_required",
+      "financial_certification_likely_required",
+      "merit_aid_possible",
+      "need_aware_or_limited_aid_possible"
+    ],
+    "potentialFitTags": [
+      "urban_access",
+      "value_for_budget_conscious_students",
+      "strong_need_based_aid_signal",
+      "strong_merit_aid_signal",
+      "test_flexible_pathway"
+    ],
+    "potentialRiskTags": [
+      "high_total_cost",
+      "early_deadline_pressure",
+      "complex_application_requirements",
+      "limited_aid_for_international_students"
+    ],
+    "actionableApplicationSteps": [
+      "prepare_early_round_strategy",
+      "prepare_regular_decision_timeline",
+      "complete_standardized_testing_if_required",
+      "prepare_english_testing_or_waiver_plan",
+      "prepare_teacher_recommendations_early",
+      "prepare_counselor_documents_early",
+      "budget_for_need_based_aid_process",
+      "research_merit_aid_deadlines",
+      "prioritize_financial_aid_forms",
+      "build_supplemental_essay_plan"
+    ]
+  },
+  "fieldProvenance": {
+    "identity.schoolName": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.bu.edu/admissions/apply/first-year/",
+        "excerpt": "Boston University"
+      }
+    ],
+    "identity.city": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.city\": \"Boston\""
+      }
+    ],
+    "identity.state": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.state\": \"MA\""
+      }
+    ],
+    "identity.officialAdmissionsUrl": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.bu.edu/admissions/apply/first-year/",
+        "excerpt": "First-Year Applicants"
+      }
+    ],
+    "applicationRounds": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.bu.edu/admissions/apply/first-year/",
+        "excerpt": "Early Decision applicants"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.bu.edu/admissions/apply/deadlines/",
+        "excerpt": "Early Decision 2 Deadlines"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.bu.edu/admissions/apply/deadlines/",
+        "excerpt": "First-Year Regular Admission Deadlines"
+      }
+    ],
+    "deadlinesByRound": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.bu.edu/admissions/apply/deadlines/",
+        "excerpt": "Early Decision ... November 2"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.bu.edu/admissions/apply/deadlines/",
+        "excerpt": "Regular Admission ... January 5"
+      }
+    ],
+    "englishRequirements": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.bu.edu/admissions/apply/international/",
+        "excerpt": "BU accepts ... IELTS Academic ... A total/overall score of 7 or higher will satisfy BU's English Language proficiency requirement"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.bu.edu/admissions/apply/international/",
+        "excerpt": "BU accepts results for the Test of English as a Foreign Language Internet Based Test ... Students who are most competitive for admission will have a composite score of at least 90-100"
+      }
+    ],
+    "testPolicy": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.bu.edu/admissions/apply/first-year/",
+        "excerpt": "Boston University is test optional for first-year applicants applying through fall 2028 and spring 2029."
+      }
+    ],
+    "requiredMaterials": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.bu.edu/admissions/apply/first-year/",
+        "excerpt": "Common Application or QuestBridge Application, High School Transcript, Senior Year Grades, Counselor Recommendation and School Report Form, Teacher Evaluation"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.bu.edu/admissions/apply/first-year/",
+        "excerpt": "Standardized Tests (Optional)"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.bu.edu/admissions/apply/first-year/",
+        "excerpt": "Application Fee: Our application fee is $80"
+      }
+    ],
+    "tuitionAnnualUsd": [
+      {
+        "sourceKind": "official_tuition",
+        "sourceUrl": "https://www.bu.edu/admissions/tuition-aid/",
+        "excerpt": "Tuition $69,870"
+      }
+    ],
+    "estimatedCostOfAttendanceUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://www.bu.edu/admissions/tuition-aid/",
+        "excerpt": "Total Cost of Attendance $94,427"
+      }
+    ],
+    "livingCostEstimateUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://www.bu.edu/admissions/tuition-aid/",
+        "excerpt": "Housing $12,790, Food $7,180, Other Expenses $3,085"
+      }
+    ],
+    "scholarshipAvailabilityFlag": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://www.bu.edu/admissions/tuition-aid/",
+        "excerpt": "100% need met for first-year and transfer students who are US citizens or permanent residents"
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://www.bu.edu/admissions/tuition-aid/",
+        "excerpt": "BU offers a wide variety of first-year merit scholarships"
+      }
+    ],
+    "scholarshipNotes": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://www.bu.edu/admissions/tuition-aid/",
+        "excerpt": "BU will meet 100% of your demonstrated financial need"
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://www.bu.edu/admissions/apply/international/",
+        "excerpt": "First-Year international students are eligible to apply for merit scholarships"
+      }
+    ],
+    "recommendationInputs.admissionRateOverall": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.admission_rate.overall\": 0.1085"
+      }
+    ],
+    "recommendationInputs.satAverageOverall": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.sat_scores.average.overall\": 1473"
+      }
+    ],
+    "recommendationInputs.actMidpointCumulative": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.act_scores.midpoint.cumulative\": 33"
+      }
+    ],
+    "recommendationInputs.undergraduateSize": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.student.size\": 17850"
+      }
+    ],
+    "recommendationInputs.programFitTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.bu.edu/research/",
+        "excerpt": "Boston University is a major research university with extensive research activity across disciplines."
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.bu.edu/met/",
+        "excerpt": "BU offers programs across business, health, and the humanities through its schools and colleges."
+      }
+    ],
+    "recommendationInputs.programAdmissionModel": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.bu.edu/admissions/apply/first-year/",
+        "excerpt": "Applicants may apply to specific schools or colleges at BU, and some programs have their own admission processes."
+      }
+    ],
+    "recommendationInputs.applicationStrategyTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.bu.edu/admissions/apply/deadlines/",
+        "excerpt": "Early Decision applicants submit a binding application."
+      }
+    ],
+    "recommendationInputs.schoolControl": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.ownership\": 2"
+      }
+    ],
+    "recommendationInputs.campusLocale": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.locale\": 11"
+      }
+    ],
+    "recommendationInputs.internationalAidPolicy": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://www.bu.edu/admissions/tuition-aid/",
+        "excerpt": "BU offers a wide variety of first-year merit scholarships"
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://www.bu.edu/admissions/tuition-aid/",
+        "excerpt": "All admitted first-year and transfer US citizens and permanent residents are eligible for financial aid"
+      }
+    ],
+    "recommendationInputs.hasNeedBasedAid": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://www.bu.edu/admissions/tuition-aid/",
+        "excerpt": "BU will meet 100% of your demonstrated financial need"
+      }
+    ],
+    "recommendationInputs.hasMeritAid": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://www.bu.edu/admissions/tuition-aid/",
+        "excerpt": "BU offers a wide variety of first-year merit scholarships"
+      }
+    ],
+    "recommendationInputs.testingRequirements.acceptedExams": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.bu.edu/admissions/apply/first-year/",
+        "excerpt": "SAT and ACT"
+      }
+    ],
+    "recommendationInputs.testingRequirements.latestSatTestDateNote": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.bu.edu/admissions/apply/deadlines/",
+        "excerpt": "Early Decision ... November 2"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.bu.edu/admissions/apply/deadlines/",
+        "excerpt": "Regular Admission ... January 5"
+      }
+    ],
+    "recommendationInputs.testingRequirements.latestActTestDateNote": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.bu.edu/admissions/apply/deadlines/",
+        "excerpt": "Early Decision ... November 2"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.bu.edu/admissions/apply/deadlines/",
+        "excerpt": "Regular Admission ... January 5"
+      }
+    ],
+    "recommendationInputs.testingRequirements.superscorePolicy": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.bu.edu/admissions/apply/first-year/",
+        "excerpt": "BU superscores both the SAT and ACT"
+      }
+    ],
+    "recommendationInputs.testingRequirements.writingEssayPolicy": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.bu.edu/admissions/apply/first-year/",
+        "excerpt": "The Writing subsection continues to remain optional"
+      }
+    ],
+    "recommendationInputs.testingRequirements.scoreReportingPolicy": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.bu.edu/admissions/apply/first-year/",
+        "excerpt": "Boston University accepts self-reported standardized test scores"
+      }
+    ],
+    "explanationInputs.academicSelectivityBand": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.admission_rate.overall\": 0.1085"
+      }
+    ],
+    "explanationInputs.testingExpectation": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.bu.edu/admissions/apply/first-year/",
+        "excerpt": "Boston University is test optional for first-year applicants applying through fall 2028 and spring 2029."
+      }
+    ],
+    "explanationInputs.englishPolicySummary": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.bu.edu/admissions/apply/international/",
+        "excerpt": "If your first language is not English, you must take the TOEFL iBT, IELTS, or the Duolingo English Test"
+      }
+    ],
+    "explanationInputs.aidModel": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://www.bu.edu/admissions/tuition-aid/",
+        "excerpt": "BU will meet 100% of your demonstrated financial need"
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://www.bu.edu/admissions/tuition-aid/",
+        "excerpt": "BU offers a wide variety of first-year merit scholarships"
+      }
+    ],
+    "explanationInputs.applicationComplexity": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.bu.edu/admissions/apply/first-year/",
+        "excerpt": "Common Application or QuestBridge Application, High School Transcript, Senior Year Grades, Counselor Recommendation and School Report Form, Teacher Evaluation"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.bu.edu/admissions/apply/international/",
+        "excerpt": "Documentation of Financial Support, Copy of Data Page of Passport, English Proficiency Testing"
+      }
+    ],
+    "explanationInputs.deadlineUrgencyWindows": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.bu.edu/admissions/apply/deadlines/",
+        "excerpt": "Early Decision ... November 2 ... Regular Admission ... January 5"
+      }
+    ],
+    "explanationInputs.internationalStudentConsiderations": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.bu.edu/admissions/apply/international/",
+        "excerpt": "If your first language is not English, you must take the TOEFL iBT, IELTS, or the Duolingo English Test"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.bu.edu/admissions/apply/international/",
+        "excerpt": "Documentation of Financial Support"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.bu.edu/admissions/apply/international/",
+        "excerpt": "First-Year international students are eligible to apply for merit scholarships"
+      }
+    ],
+    "explanationInputs.potentialFitTags": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.locale\": 11"
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://www.bu.edu/admissions/tuition-aid/",
+        "excerpt": "BU offers a wide variety of first-year merit scholarships"
+      }
+    ],
+    "explanationInputs.potentialRiskTags": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://www.bu.edu/admissions/tuition-aid/",
+        "excerpt": "Total Cost of Attendance $94,427"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.bu.edu/admissions/apply/deadlines/",
+        "excerpt": "Early Decision ... November 2"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.bu.edu/admissions/apply/international/",
+        "excerpt": "Documentation of Financial Support"
+      }
+    ],
+    "explanationInputs.actionableApplicationSteps": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.bu.edu/admissions/apply/deadlines/",
+        "excerpt": "Early Decision ... November 2"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.bu.edu/admissions/apply/first-year/",
+        "excerpt": "Teacher Evaluation"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.bu.edu/admissions/apply/international/",
+        "excerpt": "Documentation of Financial Support"
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://www.bu.edu/admissions/tuition-aid/",
+        "excerpt": "CSS Profile™ and FAFSA Deadline"
+      }
+    ]
+  },
+  "quality": {
+    "status": "publishable",
+    "missingFields": [],
+    "warnings": []
+  }
+}

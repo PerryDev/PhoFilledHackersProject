@@ -1,0 +1,387 @@
+{
+  "schoolSlug": "pennsylvania-state-university",
+  "lastVerifiedAt": "2026-03-21",
+  "identity": {
+    "schoolName": "Pennsylvania State University",
+    "city": "University Park",
+    "state": "PA",
+    "officialAdmissionsUrl": "https://www.psu.edu/admission/undergraduate/how-to-apply"
+  },
+  "applicationRounds": [
+    "early_action",
+    "regular_decision"
+  ],
+  "deadlinesByRound": {
+    "early_action": "2026-11-01",
+    "early_decision": null,
+    "regular_decision": "2026-12-01",
+    "rolling_admission": null,
+    "priority": null
+  },
+  "englishRequirements": {
+    "minimumIelts": 6.5,
+    "minimumToeflInternetBased": 80,
+    "waiverNotes": "International applicants can also satisfy English proficiency through Duolingo 120, SAT Evidence-Based Reading and Writing 570 or higher, ACT English 24 or higher, GCSE or GCE English, IB English Language & Literature 5 or higher, 4 years of U.S. high school, or Penn State's Intensive English Communication Program."
+  },
+  "testPolicy": "test_optional",
+  "requiredMaterials": [
+    "mypennstate_application_or_common_app",
+    "official_transcript_or_stars_record",
+    "application_fee_or_fee_waiver",
+    "proof_of_english_proficiency"
+  ],
+  "tuitionAnnualUsd": 44574,
+  "estimatedCostOfAttendanceUsd": 66566,
+  "livingCostEstimateUsd": 15346,
+  "scholarshipAvailabilityFlag": true,
+  "scholarshipNotes": "Penn State scholarships may be based on merit, financial need, or a combination of both. Students who submit the FAFSA are considered for scholarships through the Office of Student Aid, academic colleges, campuses, or other units, and some scholarships require separate applications.",
+  "recommendationInputs": {
+    "admissionRateOverall": 0.5422,
+    "satAverageOverall": 1316,
+    "actMidpointCumulative": null,
+    "undergraduateSize": 41862,
+    "schoolControl": "public",
+    "campusLocale": "college_town",
+    "internationalAidPolicy": "limited_or_unclear",
+    "hasNeedBasedAid": true,
+    "hasMeritAid": true,
+    "testingRequirements": {
+      "acceptedExams": [
+        "sat",
+        "act"
+      ],
+      "minimumSatTotal": null,
+      "minimumActComposite": null,
+      "latestSatTestDateNote": null,
+      "latestActTestDateNote": null,
+      "superscorePolicy": "none",
+      "writingEssayPolicy": "unknown",
+      "scoreReportingPolicy": "self_report_allowed",
+      "middle50SatTotal": {
+        "low": 1250,
+        "high": 1430
+      },
+      "middle50ActComposite": {
+        "low": 28,
+        "high": 32
+      }
+    },
+    "averageNetPriceUsd": null,
+    "programFitTags": [
+      "engineering",
+      "research_intensive",
+      "computer_science",
+      "business"
+    ],
+    "programAdmissionModel": "capacity_limited",
+    "applicationStrategyTags": [
+      "non_binding_early_action"
+    ]
+  },
+  "explanationInputs": {
+    "academicSelectivityBand": "moderately_selective",
+    "testingExpectation": "scores_considered",
+    "englishPolicySummary": "minimum_scores_required",
+    "aidModel": "need_and_merit",
+    "applicationComplexity": "medium",
+    "deadlineUrgencyWindows": {
+      "earliestDeadline": "2026-11-01",
+      "latestMajorDeadline": "2026-12-01"
+    },
+    "internationalStudentConsiderations": [
+      "english_test_may_be_required",
+      "financial_certification_likely_required",
+      "need_aware_or_limited_aid_possible"
+    ],
+    "potentialFitTags": [
+      "large_public_environment",
+      "test_flexible_pathway",
+      "rolling_or_extended_timeline",
+      "research_or_innovation_oriented"
+    ],
+    "potentialRiskTags": [
+      "high_total_cost",
+      "limited_aid_for_international_students",
+      "complex_application_requirements"
+    ],
+    "actionableApplicationSteps": [
+      "prepare_early_round_strategy",
+      "complete_standardized_testing_if_required",
+      "prepare_english_testing_or_waiver_plan",
+      "prepare_counselor_documents_early",
+      "prioritize_financial_aid_forms",
+      "budget_for_need_based_aid_process"
+    ]
+  },
+  "fieldProvenance": {
+    "identity.schoolName": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.psu.edu/admission/undergraduate/how-to-apply",
+        "excerpt": "How To Apply"
+      }
+    ],
+    "identity.city": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.city\": \"University Park\""
+      }
+    ],
+    "identity.state": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.state\": \"PA\""
+      }
+    ],
+    "identity.officialAdmissionsUrl": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.psu.edu/admission/undergraduate/how-to-apply",
+        "excerpt": "How To Apply"
+      }
+    ],
+    "applicationRounds": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.psu.edu/admission/undergraduate/how-to-apply",
+        "excerpt": "For Early Action: Apply by November 1 in order to receive a decision by December 24"
+      }
+    ],
+    "deadlinesByRound": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.psu.edu/admission/undergraduate/how-to-apply",
+        "excerpt": "Recommended submission deadline for all applications: December 1"
+      }
+    ],
+    "englishRequirements": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.psu.edu/resources/international-students/admission-requirements",
+        "excerpt": "A minimum score of 6.5 on the academic test"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.psu.edu/resources/international-students/admission-requirements",
+        "excerpt": "A minimum TOEFL score of 80 on the internet-based TOEFL"
+      }
+    ],
+    "testPolicy": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.psu.edu/admission/undergraduate/how-to-apply",
+        "excerpt": "Students applying for the spring, summer, or fall application terms applicants can decide whether or not to have SAT or ACT exam scores considered as part of the admission review."
+      }
+    ],
+    "requiredMaterials": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.psu.edu/admission/undergraduate/how-to-apply/first-year-students",
+        "excerpt": "MyPennState Application"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.psu.edu/admission/undergraduate/how-to-apply/first-year-students",
+        "excerpt": "Common App"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.psu.edu/resources/international-students/admission-requirements",
+        "excerpt": "STARS Record"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.psu.edu/resources/international-students/admission-requirements",
+        "excerpt": "Proof of English Language Proficiency"
+      }
+    ],
+    "tuitionAnnualUsd": [
+      {
+        "sourceKind": "official_tuition",
+        "sourceUrl": "https://tuition.psu.edu/rates-effective-2026-fall-semester",
+        "excerpt": "Non-Pennsylvania Residents: Undergraduate: Lower Division Including Associate: Freshmen & Sophomore 44,574"
+      }
+    ],
+    "estimatedCostOfAttendanceUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://tuition.psu.edu/rates-effective-2026-fall-semester",
+        "excerpt": "Non-Pennsylvania Residents ... Freshmen & Sophomore 44,574 ... Food $3,170 ... Housing $4,503 ... Books, Course Materials, Supplies, and Equipment $645 ... Transportation $1,122 ... Miscellaneous $1,556"
+      }
+    ],
+    "livingCostEstimateUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://tuition.psu.edu/rates-effective-2026-fall-semester",
+        "excerpt": "Food $3,170 ... Housing $4,503 ... Books, Course Materials, Supplies, and Equipment $645 ... Transportation $1,122 ... Miscellaneous $1,556"
+      }
+    ],
+    "scholarshipAvailabilityFlag": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://www.psu.edu/costs-aid/types-of-aid/scholarships",
+        "excerpt": "All students who are offered admission and submit a Free Application for Federal Student Aid (FAFSA) to Penn State are considered for scholarships"
+      }
+    ],
+    "scholarshipNotes": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://www.psu.edu/costs-aid/types-of-aid/scholarships",
+        "excerpt": "A limited number of scholarships with eligibility based upon need, merit, or a combination of the two may be available"
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://www.psu.edu/costs-aid/types-of-aid/scholarships",
+        "excerpt": "The majority of scholarships awarded by the Office of Student Aid are based on a combination of merit and demonstrated financial need"
+      }
+    ],
+    "recommendationInputs.admissionRateOverall": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.admission_rate.overall\": 0.5422"
+      }
+    ],
+    "recommendationInputs.satAverageOverall": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.sat_scores.average.overall\": 1316"
+      }
+    ],
+    "recommendationInputs.actMidpointCumulative": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.act_scores.midpoint.cumulative\": null"
+      }
+    ],
+    "recommendationInputs.undergraduateSize": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.student.size\": 41862"
+      }
+    ],
+    "recommendationInputs.programFitTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.psu.edu/academics/colleges-and-schools",
+        "excerpt": "Penn State offers hundreds of majors across colleges including engineering, business, information sciences and technology, and more."
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.psu.edu/research/",
+        "excerpt": "Penn State is a major research university and is one of the largest research universities in the nation."
+      }
+    ],
+    "recommendationInputs.programAdmissionModel": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.psu.edu/academics/colleges-and-schools",
+        "excerpt": "Some academic colleges and majors have specific entrance-to-major requirements."
+      }
+    ],
+    "recommendationInputs.applicationStrategyTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.psu.edu/admission/undergraduate/how-to-apply",
+        "excerpt": "For Early Action: Apply by November 1 in order to receive a decision by December 24."
+      }
+    ],
+    "recommendationInputs.schoolControl": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.ownership\": 1"
+      }
+    ],
+    "recommendationInputs.campusLocale": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.locale\": 13"
+      }
+    ],
+    "recommendationInputs.internationalAidPolicy": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://www.psu.edu/costs-aid/types-of-aid/scholarships",
+        "excerpt": "Penn State scholarships may be based on merit, financial need, or a combination of both"
+      }
+    ],
+    "recommendationInputs.hasNeedBasedAid": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://www.psu.edu/costs-aid/types-of-aid/scholarships",
+        "excerpt": "Scholarships are awarded on the basis of merit and/or financial need"
+      }
+    ],
+    "recommendationInputs.hasMeritAid": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://www.psu.edu/costs-aid/types-of-aid/scholarships",
+        "excerpt": "Scholarships are awarded on the basis of merit and/or financial need"
+      }
+    ],
+    "recommendationInputs.testingRequirements": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.psu.edu/admission/undergraduate/how-to-apply",
+        "excerpt": "Applicants that have elected to have scores used in the evaluation of their application can self-report SAT or ACT exam scores"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.psu.edu/admission/undergraduate/how-to-apply",
+        "excerpt": "Penn State does not utilize a superscore."
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://berks.psu.edu/admission/first-year-students/admissions-eligibility",
+        "excerpt": "University Park | 1250-1430 | 28-32"
+      }
+    ],
+    "explanationInputs.academicSelectivityBand": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.admission_rate.overall\": 0.5422"
+      }
+    ],
+    "explanationInputs.testingExpectation": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.psu.edu/admission/undergraduate/how-to-apply",
+        "excerpt": "Students applying for the spring, summer, or fall application terms applicants can decide whether or not to have SAT or ACT exam scores considered as part of the admission review."
+      }
+    ],
+    "explanationInputs.englishPolicySummary": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.psu.edu/resources/international-students/admission-requirements",
+        "excerpt": "All international students whose native language is not English must submit proof of English language proficiency."
+      }
+    ],
+    "explanationInputs.aidModel": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://www.psu.edu/costs-aid/types-of-aid/scholarships",
+        "excerpt": "Scholarships are awarded on the basis of merit and/or financial need"
+      }
+    ],
+    "explanationInputs.applicationComplexity": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.psu.edu/admission/undergraduate/how-to-apply/first-year-students",
+        "excerpt": "MyPennState Application ... Common App ... important deadlines ... 2+2 Plan"
+      }
+    ]
+  },
+  "quality": {
+    "status": "publishable",
+    "missingFields": [],
+    "warnings": []
+  }
+}

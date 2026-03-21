@@ -1,0 +1,452 @@
+{
+  "schoolSlug": "massachusetts-institute-of-technology",
+  "lastVerifiedAt": "2026-03-21",
+  "identity": {
+    "schoolName": "Massachusetts Institute of Technology",
+    "city": "Cambridge",
+    "state": "MA",
+    "officialAdmissionsUrl": "https://mitadmissions.org/apply/firstyear/"
+  },
+  "applicationRounds": [
+    "early_action",
+    "regular_decision"
+  ],
+  "deadlinesByRound": {
+    "early_action": "2026-11-01",
+    "early_decision": null,
+    "regular_decision": "2027-01-05",
+    "rolling_admission": null,
+    "priority": null
+  },
+  "englishRequirements": {
+    "minimumIelts": 7,
+    "minimumToeflInternetBased": 90,
+    "waiverNotes": "MIT strongly recommends English proficiency exam results for certain non-native English speakers, especially if they have used English for fewer than 5 years or do not speak English at home or school."
+  },
+  "testPolicy": "required",
+  "requiredMaterials": [
+    "mit_application",
+    "application_fee_or_fee_waiver",
+    "essays_activities_academics",
+    "sat_or_act",
+    "two_teacher_recommendations",
+    "school_counselor_secondary_school_report",
+    "official_transcript",
+    "february_updates_and_notes_form"
+  ],
+  "tuitionAnnualUsd": 66720,
+  "estimatedCostOfAttendanceUsd": 92760,
+  "livingCostEstimateUsd": 22194,
+  "scholarshipAvailabilityFlag": true,
+  "scholarshipNotes": "MIT scholarships are awarded solely on financial need. MIT meets 100% of demonstrated need and does not award aid for merit or athletics.",
+  "recommendationInputs": {
+    "admissionRateOverall": 0.046,
+    "satAverageOverall": 1553,
+    "actMidpointCumulative": 35,
+    "undergraduateSize": 4571,
+    "schoolControl": "private_nonprofit",
+    "campusLocale": "urban",
+    "internationalAidPolicy": "meets_full_demonstrated_need_if_eligible",
+    "hasNeedBasedAid": true,
+    "hasMeritAid": false,
+    "testingRequirements": {
+      "acceptedExams": [
+        "sat",
+        "act"
+      ],
+      "minimumSatTotal": null,
+      "minimumActComposite": null,
+      "latestSatTestDateNote": "Required tests must be taken before November 30 for Early Action and before December 31 for Regular Action.",
+      "latestActTestDateNote": "Required tests must be taken before November 30 for Early Action and before December 31 for Regular Action.",
+      "superscorePolicy": "both",
+      "writingEssayPolicy": "optional",
+      "scoreReportingPolicy": "self_report_allowed",
+      "middle50SatTotal": {
+        "low": 1520,
+        "high": 1580
+      },
+      "middle50ActComposite": {
+        "low": 34,
+        "high": 36
+      }
+    },
+    "averageNetPriceUsd": null,
+    "programFitTags": [
+      "engineering",
+      "computer_science",
+      "research_intensive"
+    ],
+    "programAdmissionModel": "open",
+    "applicationStrategyTags": [
+      "non_binding_early_action"
+    ]
+  },
+  "explanationInputs": {
+    "academicSelectivityBand": "ultra_selective",
+    "testingExpectation": "scores_considered",
+    "englishPolicySummary": "minimum_scores_required",
+    "aidModel": "need_based_only",
+    "applicationComplexity": "high",
+    "deadlineUrgencyWindows": {
+      "earliestDeadline": "2026-11-01",
+      "latestMajorDeadline": "2027-01-05"
+    },
+    "internationalStudentConsiderations": [
+      "english_fluency_required",
+      "english_test_may_be_required",
+      "need_based_aid_available"
+    ],
+    "potentialFitTags": [
+      "strong_for_high_achieving_stem_students",
+      "research_or_innovation_oriented",
+      "strong_need_based_aid_signal"
+    ],
+    "potentialRiskTags": [
+      "extremely_low_admission_rate",
+      "high_total_cost",
+      "limited_merit_aid",
+      "testing_required"
+    ],
+    "actionableApplicationSteps": [
+      "prepare_early_round_strategy",
+      "complete_standardized_testing_if_required",
+      "prepare_english_testing_or_waiver_plan",
+      "prepare_teacher_recommendations_early",
+      "prepare_counselor_documents_early",
+      "budget_for_need_based_aid_process"
+    ]
+  },
+  "fieldProvenance": {
+    "identity.schoolName": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.name\": \"Massachusetts Institute of Technology\""
+      }
+    ],
+    "identity.city": [
+      {
+        "sourceKind": "official_tuition",
+        "sourceUrl": "https://sfs.mit.edu/undergraduate-students/the-cost-of-attendance/annual-student-budget/",
+        "excerpt": "77 Massachusetts Ave., Cambridge, MA"
+      }
+    ],
+    "identity.state": [
+      {
+        "sourceKind": "official_tuition",
+        "sourceUrl": "https://sfs.mit.edu/undergraduate-students/the-cost-of-attendance/annual-student-budget/",
+        "excerpt": "77 Massachusetts Ave., Cambridge, MA"
+      }
+    ],
+    "officialAdmissionsUrl": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://mitadmissions.org/apply/firstyear/",
+        "excerpt": "First-year applicants"
+      }
+    ],
+    "applicationRounds": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://mitadmissions.org/apply/firstyear/deadlines-requirements/",
+        "excerpt": "Early Action (EA) ... Regular Action (RA)"
+      }
+    ],
+    "deadlinesByRound": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://mitadmissions.org/apply/firstyear/deadlines-requirements/",
+        "excerpt": "November 1 ... January 5"
+      }
+    ],
+    "englishRequirements": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://mitadmissions.org/apply/firstyear/tests-scores/",
+        "excerpt": "TOEFL Minimum: 90 ... IELTS Minimum: 7 ... For non-native English speakers, we strongly recommend providing the results of an English proficiency exam"
+      }
+    ],
+    "testPolicy": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://mitadmissions.org/apply/firstyear/tests-scores/",
+        "excerpt": "We require the SAT or the ACT"
+      }
+    ],
+    "requiredMaterials": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://mitadmissions.org/help/faq/application-fee-fee-waiver/",
+        "excerpt": "The first-year application fee is $75"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://mitadmissions.org/apply/firstyear/essays-activities-academics/",
+        "excerpt": "The MIT application consists of several short response questions and essays ... Please use our form, not a resume"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://mitadmissions.org/apply/firstyear/letters-of-recommendation/",
+        "excerpt": "We require letters of recommendation from two teachers ... We also require materials from your school counselor"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://mitadmissions.org/apply/firstyear/transcripts/",
+        "excerpt": "We require an official transcript sent by a school counselor or representative"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://mitadmissions.org/apply/firstyear/deadlines-requirements/",
+        "excerpt": "Standardized tests: SAT or ACT ... February Updates & Notes Form (including midyear grades)"
+      }
+    ],
+    "tuitionAnnualUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://sfs.mit.edu/undergraduate-students/the-cost-of-attendance/annual-student-budget/",
+        "excerpt": "Tuition $66,720"
+      }
+    ],
+    "estimatedCostOfAttendanceUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://sfs.mit.edu/undergraduate-students/the-cost-of-attendance/annual-student-budget/",
+        "excerpt": "Total $92,760"
+      }
+    ],
+    "livingCostEstimateUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://sfs.mit.edu/undergraduate-students/the-cost-of-attendance/annual-student-budget/",
+        "excerpt": "Housing $14,090 ... Food $8,104"
+      }
+    ],
+    "scholarshipAvailabilityFlag": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://sfs.mit.edu/undergraduate-students/types-of-aid/",
+        "excerpt": "The most common type of aid is the MIT Scholarship"
+      }
+    ],
+    "scholarshipNotes": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://sfs.mit.edu/undergraduate-students/types-of-aid/",
+        "excerpt": "Our scholarships are awarded based solely on financial need"
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://sfs.mit.edu/undergraduate-students/the-cost-of-attendance/",
+        "excerpt": "We are one of only nine colleges in the U.S. that is need blind and full need for all of our undergraduate students, domestic and international"
+      }
+    ],
+    "recommendationInputs.admissionRateOverall": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://mitadmissions.org/apply/process/stats/",
+        "excerpt": "Percentage admitted 4.6%"
+      }
+    ],
+    "recommendationInputs.satAverageOverall": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.sat_scores.average.overall\": 1553"
+      }
+    ],
+    "recommendationInputs.actMidpointCumulative": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://mitadmissions.org/apply/process/stats/",
+        "excerpt": "ACT Composite [34, 36]"
+      }
+    ],
+    "recommendationInputs.undergraduateSize": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.student.size\": 4571"
+      }
+    ],
+    "recommendationInputs.schoolControl": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.ownership\": 2"
+      }
+    ],
+    "recommendationInputs.campusLocale": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.locale\": 12"
+      }
+    ],
+    "recommendationInputs.internationalAidPolicy": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://mitadmissions.org/help/faq/international-admissions/",
+        "excerpt": "MIT practices need-blind admissions ... one of only nine schools in the U.S. that is need blind and meets full need for all students, foreign and domestic"
+      }
+    ],
+    "recommendationInputs.hasNeedBasedAid": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://sfs.mit.edu/undergraduate-students/types-of-aid/",
+        "excerpt": "Our scholarships are awarded based solely on financial need"
+      }
+    ],
+    "recommendationInputs.hasMeritAid": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://sfs.mit.edu/undergraduate-students/types-of-aid/",
+        "excerpt": "based solely on financial need"
+      }
+    ],
+    "recommendationInputs.programFitTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://engineering.mit.edu/academics/undergraduate/",
+        "excerpt": "School of Engineering offers more than 20 undergraduate majors, ranging from traditional engineering fields to programs that blend computer science, biology, economics, and beyond."
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://computing.mit.edu/academics/undergraduate-programs/",
+        "excerpt": "Computing majors are among the largest at MIT, and EECS students work on rigorous, hands-on curriculum and research."
+      }
+    ],
+    "recommendationInputs.programAdmissionModel": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.mit.edu/admissions-aid",
+        "excerpt": "All prospective undergraduate students apply through the Office of Undergraduate Admissions, regardless of their intended program of study."
+      }
+    ],
+    "recommendationInputs.applicationStrategyTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://catalog.mit.edu/mit/undergraduate-education/admissions/admissions_freshmanadmissionstext.pdf",
+        "excerpt": "Early Action decisions are non-binding."
+      }
+    ],
+    "recommendationInputs.testingRequirements": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://mitadmissions.org/apply/firstyear/tests-scores/",
+        "excerpt": "We require the SAT or the ACT ... We do not require the ACT writing or science sections or the SAT optional essay ... We will consider the highest score achieved in each section ... MIT will consider the super-score ... take the required tests before November 30 for Early Action, and before December 31 for Regular Action."
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://mitadmissions.org/apply/process/stats/",
+        "excerpt": "SAT Math [780, 800] ... SAT ERW [740, 780] ... ACT Composite [34, 36]"
+      }
+    ],
+    "explanationInputs.academicSelectivityBand": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://mitadmissions.org/apply/process/stats/",
+        "excerpt": "Percentage admitted 4.6%"
+      }
+    ],
+    "explanationInputs.testingExpectation": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://mitadmissions.org/apply/firstyear/tests-scores/",
+        "excerpt": "We do not have cut off or recommended scores for the ACT or SAT as scores are evaluated within an applicant’s context."
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://mitadmissions.org/apply/process/stats/",
+        "excerpt": "SAT Math [780, 800] ... SAT ERW [740, 780] ... ACT Composite [34, 36]"
+      }
+    ],
+    "explanationInputs.englishPolicySummary": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://mitadmissions.org/apply/firstyear/tests-scores/",
+        "excerpt": "TOEFL Minimum: 90 ... IELTS Minimum: 7 ... For non-native English speakers, we strongly recommend providing the results of an English proficiency exam"
+      }
+    ],
+    "explanationInputs.aidModel": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://sfs.mit.edu/undergraduate-students/types-of-aid/",
+        "excerpt": "Our scholarships are awarded based solely on financial need"
+      }
+    ],
+    "explanationInputs.applicationComplexity": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://mitadmissions.org/apply/firstyear/deadlines-requirements/",
+        "excerpt": "All individual application components ... Two letters of recommendation ... Secondary School Report ... Standardized tests"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://mitadmissions.org/apply/firstyear/essays-activities-academics/",
+        "excerpt": "The MIT application consists of several short response questions and essays"
+      }
+    ],
+    "explanationInputs.deadlineUrgencyWindows": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://mitadmissions.org/apply/firstyear/deadlines-requirements/",
+        "excerpt": "November 1 ... January 5"
+      }
+    ],
+    "explanationInputs.internationalStudentConsiderations": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://mitadmissions.org/help/faq/international-admissions/",
+        "excerpt": "MIT practices need-blind admissions ... one of only nine schools in the U.S. that is need blind and meets full need for all students, foreign and domestic"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://mitadmissions.org/apply/firstyear/tests-scores/",
+        "excerpt": "For non-native English speakers, we strongly recommend providing the results of an English proficiency exam"
+      }
+    ],
+    "explanationInputs.potentialFitTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://mitadmissions.org/apply/process/stats/",
+        "excerpt": "With that in mind, here are some numbers about the people we admit"
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://sfs.mit.edu/undergraduate-students/the-cost-of-attendance/",
+        "excerpt": "We are one of only nine colleges in the U.S. that is need blind and full need for all of our undergraduate students, domestic and international"
+      }
+    ],
+    "explanationInputs.potentialRiskTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://mitadmissions.org/apply/process/stats/",
+        "excerpt": "Percentage admitted 4.6%"
+      },
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://sfs.mit.edu/undergraduate-students/the-cost-of-attendance/annual-student-budget/",
+        "excerpt": "Total $92,760"
+      }
+    ],
+    "explanationInputs.actionableApplicationSteps": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://mitadmissions.org/apply/firstyear/deadlines-requirements/",
+        "excerpt": "November 1 ... Two letters of recommendation ... Secondary School Report ... Standardized tests"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://mitadmissions.org/apply/firstyear/tests-scores/",
+        "excerpt": "We require the SAT or the ACT ... take the required tests before November 30 for Early Action, and before December 31 for Regular Action"
+      }
+    ]
+  },
+  "quality": {
+    "status": "publishable",
+    "missingFields": [],
+    "warnings": [
+      "SAT total middle-50 range was derived from MIT's published SAT Math and SAT ERW ranges."
+    ]
+  }
+}

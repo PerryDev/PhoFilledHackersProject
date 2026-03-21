@@ -4,7 +4,10 @@
   "type": "module",
   "scripts": {
     "build": "tsc --project tsconfig.json",
+    "curate": "tsx ./src/curation.ts",
+    "import:curated": "tsx ./src/import-curated.ts",
     "lint": "node --eval \"console.log('apps/ingest lint is intentionally deferred until repo-wide lint rules land.')\"",
+    "test": "tsx --test tests/**/*.test.ts",
     "start": "node ./dist/index.js",
     "typecheck": "tsc --project tsconfig.json --noEmit"
   },
@@ -12,6 +15,11 @@
     "@etest/api-contracts": "*",
     "@etest/auth": "*",
     "@etest/catalog": "*",
-    "@etest/db": "*"
+    "@etest/db": "*",
+    "postgres": "3.4.8"
+  },
+  "devDependencies": {
+    "@types/node": "^25.0.0",
+    "tsx": "^4.21.0"
   }
 }

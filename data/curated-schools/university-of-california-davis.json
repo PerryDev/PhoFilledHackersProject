@@ -1,0 +1,319 @@
+{
+  "schoolSlug": "university-of-california-davis",
+  "lastVerifiedAt": "2026-03-21",
+  "identity": {
+    "schoolName": "University of California-Davis",
+    "city": "Davis",
+    "state": "CA",
+    "officialAdmissionsUrl": "https://www.ucdavis.edu/admissions/undergraduate/freshman/requirements"
+  },
+  "applicationRounds": [
+    "regular_decision"
+  ],
+  "deadlinesByRound": {
+    "early_action": null,
+    "early_decision": null,
+    "regular_decision": "2026-12-01",
+    "rolling_admission": null,
+    "priority": null
+  },
+  "englishRequirements": {
+    "minimumIelts": 7.5,
+    "minimumToeflInternetBased": 100,
+    "waiverNotes": "UC Davis requires English proficiency for international students who studied in the United States for fewer than three years and learned in a language other than English before arriving. Accepted pathways include TOEFL iBT, IELTS, Duolingo, ACT English, SAT Evidence-Based Reading and Writing, approved-country schooling, or two years of continuous full-time study at an approved college or university. Score reports are reviewed for a period of two years from the enrollment term."
+  },
+  "testPolicy": "test_blind",
+  "requiredMaterials": [
+    "uc_application",
+    "personal_insight_questions",
+    "self_reported_academic_record",
+    "test_scores_if_provided",
+    "proof_of_english_proficiency_if_applicable"
+  ],
+  "tuitionAnnualUsd": 54858,
+  "estimatedCostOfAttendanceUsd": 88279,
+  "livingCostEstimateUsd": 22252,
+  "scholarshipAvailabilityFlag": true,
+  "scholarshipNotes": "UC Davis offers campus-based scholarships through the UC Application for Admission and Scholarships, including merit-based awards. The entering-student scholarship application is due by December 2, and international students may be eligible for scholarships, private loans, and short-term loans even though most other aid types are not available.",
+  "recommendationInputs": {
+    "admissionRateOverall": 0.4163,
+    "satAverageOverall": null,
+    "actMidpointCumulative": null,
+    "undergraduateSize": 31777,
+    "schoolControl": "public",
+    "campusLocale": null,
+    "internationalAidPolicy": "limited_or_unclear",
+    "hasNeedBasedAid": true,
+    "hasMeritAid": true,
+    "testingRequirements": {
+      "acceptedExams": [
+        "sat",
+        "act"
+      ],
+      "minimumSatTotal": null,
+      "minimumActComposite": null,
+      "latestSatTestDateNote": "If tests are used for minimum subject requirements or course placement, UC Davis says to take them no later than December of the last year before graduation.",
+      "latestActTestDateNote": "If tests are used for minimum subject requirements or course placement, UC Davis says to take them no later than December of the last year before graduation.",
+      "superscorePolicy": "none",
+      "writingEssayPolicy": "not_considered",
+      "scoreReportingPolicy": "self_report_allowed",
+      "middle50SatTotal": {
+        "low": null,
+        "high": null
+      },
+      "middle50ActComposite": {
+        "low": null,
+        "high": null
+      }
+    },
+    "averageNetPriceUsd": null,
+    "programFitTags": [
+      "research_intensive",
+      "life_sciences"
+    ],
+    "programAdmissionModel": "open",
+    "applicationStrategyTags": []
+  },
+  "explanationInputs": {
+    "academicSelectivityBand": "selective",
+    "testingExpectation": "tests_not_considered",
+    "englishPolicySummary": "minimum_scores_required",
+    "aidModel": "need_and_merit",
+    "applicationComplexity": "medium",
+    "deadlineUrgencyWindows": {
+      "earliestDeadline": "2026-12-01",
+      "latestMajorDeadline": "2026-12-01"
+    },
+    "internationalStudentConsiderations": [
+      "english_fluency_required",
+      "english_test_may_be_required",
+      "financial_certification_likely_required",
+      "need_aware_or_limited_aid_possible",
+      "merit_aid_possible"
+    ],
+    "potentialFitTags": [
+      "large_public_environment",
+      "research_or_innovation_oriented",
+      "value_for_budget_conscious_students",
+      "strong_merit_aid_signal",
+      "strong_for_high_achieving_stem_students"
+    ],
+    "potentialRiskTags": [
+      "high_total_cost",
+      "limited_aid_for_international_students",
+      "early_deadline_pressure",
+      "english_requirement_barrier",
+      "complex_application_requirements"
+    ],
+    "actionableApplicationSteps": [
+      "prepare_regular_decision_timeline",
+      "prepare_english_testing_or_waiver_plan",
+      "prioritize_financial_aid_forms",
+      "build_supplemental_essay_plan"
+    ]
+  },
+  "fieldProvenance": {
+    "identity.schoolName": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.ucdavis.edu/admissions/undergraduate/freshman/requirements",
+        "excerpt": "Freshman Admission Requirements"
+      }
+    ],
+    "applicationRounds": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.ucdavis.edu/admissions/undergraduate/freshman",
+        "excerpt": "The application filing period is Oct. 1–Dec. 1 for admission the following year."
+      }
+    ],
+    "deadlinesByRound": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.ucdavis.edu/admissions/undergraduate/freshman",
+        "excerpt": "The application filing period is Oct. 1–Dec. 1 for admission the following year."
+      }
+    ],
+    "englishRequirements": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.ucdavis.edu/admissions/undergraduate/international/exams-visas",
+        "excerpt": "If you studied in the United States for fewer than three years and learned in a language other than English before you arrived, you must demonstrate English proficiency."
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.ucdavis.edu/admissions/undergraduate/freshman/requirements",
+        "excerpt": "TOEFL iBT ... minimum of 100 total ... IELTS ... minimum of 7.5 total ... Duolingo ... minimum of 130 overall"
+      }
+    ],
+    "testPolicy": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.ucdavis.edu/admissions/undergraduate/freshman/requirements",
+        "excerpt": "UC Davis no longer considers SAT or ACT test scores for admissions decisions or scholarship awards."
+      }
+    ],
+    "requiredMaterials": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.ucdavis.edu/admissions/undergraduate/freshman",
+        "excerpt": "Personal Insight Questions"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.ucdavis.edu/admissions/undergraduate/freshman/requirements",
+        "excerpt": "Students can self-report ACT and or SAT scores in the admission application"
+      }
+    ],
+    "tuitionAnnualUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://financialaid.ucdavis.edu/undergraduate/cost/2627-entering",
+        "excerpt": "Systemwide tuition and fees $15,588 ... Systemwide nonresident supplemental tuition $39,270"
+      }
+    ],
+    "estimatedCostOfAttendanceUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://financialaid.ucdavis.edu/undergraduate/cost/2627-entering",
+        "excerpt": "Total costs for nonresidents $88,279"
+      }
+    ],
+    "livingCostEstimateUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://financialaid.ucdavis.edu/undergraduate/cost/2627-entering",
+        "excerpt": "Campus housing and food $22,252"
+      }
+    ],
+    "scholarshipAvailabilityFlag": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://financialaid.ucdavis.edu/scholarships/campus/apply-prospective",
+        "excerpt": "The UC Application for Admission and Scholarships serves as your application for campus-based scholarships at UC Davis."
+      }
+    ],
+    "scholarshipNotes": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://financialaid.ucdavis.edu/scholarships/campus/apply-prospective",
+        "excerpt": "A minimum 3.25 GPA is required for all applicants for our UC Davis-based scholarships."
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://financialaid.ucdavis.edu/undergraduate/apply/international",
+        "excerpt": "Most types of financial aid are not available for students with the following Visa types ... International students may, however, be eligible for scholarships, private loans, and short-term loans."
+      }
+    ],
+    "recommendationInputs.admissionRateOverall": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools?id=110644",
+        "excerpt": "\"latest.admissions.admission_rate.overall\": 0.4163"
+      }
+    ],
+    "recommendationInputs.undergraduateSize": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools?id=110644",
+        "excerpt": "\"latest.student.size\": 31777"
+      }
+    ],
+    "recommendationInputs.schoolControl": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools?id=110644",
+        "excerpt": "\"school.ownership\": 1"
+      }
+    ],
+    "recommendationInputs.internationalAidPolicy": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://financialaid.ucdavis.edu/undergraduate/apply/international",
+        "excerpt": "Most types of financial aid are not available ... International students may, however, be eligible for scholarships, private loans, and short-term loans."
+      }
+    ],
+    "recommendationInputs.testingRequirements": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.ucdavis.edu/admissions/undergraduate/freshman/requirements",
+        "excerpt": "UC Davis no longer considers SAT or ACT test scores for admissions decisions or scholarship awards."
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.ucdavis.edu/admissions/undergraduate/freshman/requirements",
+        "excerpt": "Students can self-report ACT and or SAT scores in the admission application"
+      }
+    ],
+    "explanationInputs.testingExpectation": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.ucdavis.edu/admissions/undergraduate/freshman/requirements",
+        "excerpt": "UC Davis no longer considers SAT or ACT test scores for admissions decisions or scholarship awards."
+      }
+    ],
+    "explanationInputs.englishPolicySummary": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.ucdavis.edu/admissions/undergraduate/international/exams-visas",
+        "excerpt": "If you studied in the United States for fewer than three years and learned in a language other than English before you arrived, you must demonstrate English proficiency."
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.ucdavis.edu/admissions/undergraduate/freshman/requirements",
+        "excerpt": "TOEFL iBT ... minimum of 100 total ... IELTS ... minimum of 7.5 total"
+      }
+    ],
+    "explanationInputs.aidModel": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://financialaid.ucdavis.edu/scholarships/campus",
+        "excerpt": "Scholarships are offered based on merit, although some scholarships also have a financial need component."
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://financialaid.ucdavis.edu/undergraduate/apply/international",
+        "excerpt": "Most types of financial aid are not available"
+      }
+    ],
+    "explanationInputs.applicationComplexity": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.ucdavis.edu/admissions/undergraduate/freshman",
+        "excerpt": "The application filing period is Oct. 1–Dec. 1 for admission the following year."
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.ucdavis.edu/admissions/undergraduate/freshman/requirements",
+        "excerpt": "We encourage you to challenge yourself with advanced coursework ... and Personal Insight Questions."
+      }
+    ],
+    "recommendationInputs.programFitTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.ucdavis.edu/research",
+        "excerpt": "Research is in our DNA"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.ucdavis.edu/academics/interest-areas/biology-and-life-sciences",
+        "excerpt": "Biology and Life Sciences Majors"
+      }
+    ],
+    "recommendationInputs.programAdmissionModel": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.ucdavis.edu/majors",
+        "excerpt": "UC Davis Majors"
+      }
+    ]
+  },
+  "quality": {
+    "status": "publishable",
+    "missingFields": [],
+    "warnings": [
+      "UC Davis uses a test-blind admissions policy, so testingRequirements is intentionally sparse and the SAT/ACT fields are present only as optional context.",
+      "The published 2026-27 cost page includes both resident and nonresident budgets; this artifact uses the nonresident budget for a single publishable cost figure."
+    ]
+  }
+}

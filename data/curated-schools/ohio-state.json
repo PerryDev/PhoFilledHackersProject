@@ -1,0 +1,351 @@
+{
+  "schoolSlug": "ohio-state",
+  "lastVerifiedAt": "2026-03-21",
+  "identity": {
+    "schoolName": "The Ohio State University",
+    "city": "Columbus",
+    "state": "OH",
+    "officialAdmissionsUrl": "https://undergrad.osu.edu/welcome/freshmen"
+  },
+  "applicationRounds": [
+    "early_action",
+    "regular_decision"
+  ],
+  "deadlinesByRound": {
+    "early_action": "2025-11-01",
+    "early_decision": null,
+    "regular_decision": "2026-01-15",
+    "rolling_admission": null,
+    "priority": null
+  },
+  "englishRequirements": {
+    "minimumIelts": 6.5,
+    "minimumToeflInternetBased": 79,
+    "waiverNotes": "Ohio State requires English-language proof for international first-year applicants. Accepted options include TOEFL iBT, IELTS or IELTS Indicator, Duolingo, ACT English, SAT reading, and certain U.S. schooling or equivalent English-medium schooling. Official scores must be sent directly from the testing agency, and admitted students who submit scores are asked to send official reports before enrollment."
+  },
+  "testPolicy": "required",
+  "requiredMaterials": [
+    "common_application",
+    "ohio_state_specific_questions",
+    "personal_essay",
+    "official_act_or_sat_scores",
+    "application_fee_or_fee_waiver",
+    "official_transcripts"
+  ],
+  "tuitionAnnualUsd": 42559,
+  "estimatedCostOfAttendanceUsd": 64858,
+  "livingCostEstimateUsd": 15630,
+  "scholarshipAvailabilityFlag": true,
+  "scholarshipNotes": "Ohio State offers admissions scholarships for incoming first-year students, including merit awards tied to the Columbus campus application and scholarship programs such as the President's Ohio Scholarship Program, Morrill Scholarship Program, Honors and Scholars scholarships, National Buckeye Scholarship, and the Stamps Eminence program. The FAFSA and ScholarshipUniverse priority date is February 1.",
+  "recommendationInputs": {
+    "admissionRateOverall": 0.5082,
+    "satAverageOverall": 1407,
+    "actMidpointCumulative": 29,
+    "undergraduateSize": 44617,
+    "schoolControl": "public",
+    "campusLocale": null,
+    "internationalAidPolicy": "merit_aid_available",
+    "hasNeedBasedAid": true,
+    "hasMeritAid": true,
+    "testingRequirements": {
+      "acceptedExams": [
+        "sat",
+        "act"
+      ],
+      "minimumSatTotal": null,
+      "minimumActComposite": null,
+      "latestSatTestDateNote": "Ohio State says applicants planning to meet the November 1 early action deadline should follow the last test dates it publishes for that cycle and request score transmission when registering.",
+      "latestActTestDateNote": "Ohio State says applicants planning to meet the November 1 early action deadline should follow the last test dates it publishes for that cycle and request score transmission when registering.",
+      "superscorePolicy": "both",
+      "writingEssayPolicy": "not_considered",
+      "scoreReportingPolicy": "official_required_upfront",
+      "middle50SatTotal": {
+        "low": 1260,
+        "high": 1460
+      },
+      "middle50ActComposite": {
+        "low": 28,
+        "high": 33
+      }
+    },
+    "averageNetPriceUsd": null,
+    "programFitTags": [
+      "engineering"
+    ],
+    "programAdmissionModel": "unknown",
+    "applicationStrategyTags": [
+      "non_binding_early_action"
+    ]
+  },
+  "explanationInputs": {
+    "academicSelectivityBand": "selective",
+    "testingExpectation": "high_scores_expected",
+    "englishPolicySummary": "minimum_scores_required",
+    "aidModel": "need_and_merit",
+    "applicationComplexity": "high",
+    "deadlineUrgencyWindows": {
+      "earliestDeadline": "2025-11-01",
+      "latestMajorDeadline": "2026-01-15"
+    },
+    "internationalStudentConsiderations": [
+      "english_fluency_required",
+      "english_test_may_be_required",
+      "financial_certification_likely_required",
+      "merit_aid_possible",
+      "need_based_aid_available"
+    ],
+    "potentialFitTags": [
+      "large_public_environment",
+      "research_or_innovation_oriented",
+      "value_for_budget_conscious_students",
+      "strong_merit_aid_signal",
+      "strong_for_high_achieving_stem_students"
+    ],
+    "potentialRiskTags": [
+      "high_total_cost",
+      "limited_aid_for_international_students",
+      "early_deadline_pressure",
+      "testing_required",
+      "complex_application_requirements"
+    ],
+    "actionableApplicationSteps": [
+      "prepare_early_round_strategy",
+      "complete_standardized_testing_if_required",
+      "prepare_english_testing_or_waiver_plan",
+      "prioritize_financial_aid_forms"
+    ]
+  },
+  "fieldProvenance": {
+    "identity.schoolName": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://undergrad.osu.edu/welcome/freshmen",
+        "excerpt": "First-year applicants"
+      }
+    ],
+    "applicationRounds": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://undergrad.osu.edu/welcome/freshmen",
+        "excerpt": "Early action: November 1, 2025"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://undergrad.osu.edu/welcome/freshmen",
+        "excerpt": "Regular decision: January 15, 2026"
+      }
+    ],
+    "deadlinesByRound": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://undergrad.osu.edu/welcome/freshmen",
+        "excerpt": "Early action: November 1, 2025"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://undergrad.osu.edu/welcome/freshmen",
+        "excerpt": "Regular decision: January 15, 2026"
+      }
+    ],
+    "englishRequirements": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://undergrad.osu.edu/apply/international-freshmen/apply-step-by-step",
+        "excerpt": "TOEFL ... minimum score of 79 or higher"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://undergrad.osu.edu/apply/international-freshmen/apply-step-by-step",
+        "excerpt": "IELTS or IELTS Indicator: 6.5 or higher"
+      }
+    ],
+    "testPolicy": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://undergrad.osu.edu/apply/freshmen-columbus/apply-step-by-step",
+        "excerpt": "Yes, standardized test scores from ACT or SAT are required for first-year applicants to the Columbus campus."
+      }
+    ],
+    "requiredMaterials": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://undergrad.osu.edu/apply/international-freshmen/common-app",
+        "excerpt": "First-year applicants to Ohio State's Columbus campus must apply through the Common Application."
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://undergrad.osu.edu/apply/international-freshmen/common-app",
+        "excerpt": "Ohio State requires completion of Ohio State-specific questions"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://undergrad.osu.edu/apply/international-freshmen/common-app",
+        "excerpt": "Ohio State requires a personal statement essay"
+      }
+    ],
+    "tuitionAnnualUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://undergrad.osu.edu/costs",
+        "excerpt": "Tuition (includes instructional and general fees) | $42,423"
+      }
+    ],
+    "estimatedCostOfAttendanceUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://sfa.osu.edu/incoming-freshmen/about-aid/financial-aid-eligibility",
+        "excerpt": "Total Estimated Cost $64,858"
+      }
+    ],
+    "livingCostEstimateUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://sfa.osu.edu/incoming-freshmen/about-aid/financial-aid-eligibility",
+        "excerpt": "Living expenses: housing and food $15,630"
+      }
+    ],
+    "scholarshipAvailabilityFlag": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://undergrad.osu.edu/cost-and-aid/merit-based-scholarships",
+        "excerpt": "In recognition of outstanding academic achievements, the university offers several merit scholarships for incoming first-year students entering the university fall semester of 2026."
+      }
+    ],
+    "scholarshipNotes": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://undergrad.osu.edu/cost-and-aid/merit-based-scholarships",
+        "excerpt": "The President’s Ohio Scholarship Program recognizes students who earn a perfect ACT or SAT test score from a single test date with a full cost of attendance scholarship"
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://undergrad.osu.edu/cost-and-aid/merit-based-scholarships",
+        "excerpt": "National Buckeye Scholarship"
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://sfa.osu.edu/international-student/about-aid",
+        "excerpt": "International students are generally not eligible to receive federal, state or most institutional funding."
+      }
+    ],
+    "recommendationInputs.admissionRateOverall": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools?id=204796",
+        "excerpt": "\"latest.admissions.admission_rate.overall\": 0.5082"
+      }
+    ],
+    "recommendationInputs.satAverageOverall": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools?id=204796",
+        "excerpt": "\"latest.admissions.sat_scores.average.overall\": 1407"
+      }
+    ],
+    "recommendationInputs.actMidpointCumulative": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools?id=204796",
+        "excerpt": "\"latest.admissions.act_scores.midpoint.cumulative\": 29"
+      }
+    ],
+    "recommendationInputs.undergraduateSize": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools?id=204796",
+        "excerpt": "\"latest.student.size\": 44617"
+      }
+    ],
+    "recommendationInputs.schoolControl": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools?id=204796",
+        "excerpt": "\"school.ownership\": 1"
+      }
+    ],
+    "recommendationInputs.programFitTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://undergrad.osu.edu/welcome/freshmen",
+        "excerpt": "majors in engineering, Honors and Scholars Programs, and the Morrill Scholarship Program"
+      }
+    ],
+    "recommendationInputs.applicationStrategyTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://undergrad.osu.edu/welcome/freshmen",
+        "excerpt": "Early action: November 1, 2025"
+      }
+    ],
+    "recommendationInputs.internationalAidPolicy": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://sfa.osu.edu/international-student/about-aid",
+        "excerpt": "International students are generally not eligible to receive federal, state or most institutional funding."
+      }
+    ],
+    "recommendationInputs.testingRequirements": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://undergrad.osu.edu/apply/freshmen-columbus/apply-step-by-step",
+        "excerpt": "Yes, standardized test scores from ACT or SAT are required for first-year applicants to the Columbus campus."
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://undergrad.osu.edu/apply/freshmen-columbus/apply-step-by-step",
+        "excerpt": "Ohio State uses superscoring"
+      }
+    ],
+    "explanationInputs.testingExpectation": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://undergrad.osu.edu/apply/freshmen-columbus/apply-step-by-step",
+        "excerpt": "Yes, standardized test scores from ACT or SAT are required for first-year applicants to the Columbus campus."
+      }
+    ],
+    "explanationInputs.englishPolicySummary": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://undergrad.osu.edu/apply/international-freshmen/apply-step-by-step",
+        "excerpt": "TOEFL ... minimum score of 79 or higher"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://undergrad.osu.edu/apply/international-freshmen/apply-step-by-step",
+        "excerpt": "IELTS or IELTS Indicator: 6.5 or higher"
+      }
+    ],
+    "explanationInputs.aidModel": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://undergrad.osu.edu/cost-and-aid/merit-based-scholarships",
+        "excerpt": "merit scholarships for incoming first-year students entering the university fall semester of 2026"
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://sfa.osu.edu/incoming-freshmen/about-aid/financial-aid-eligibility",
+        "excerpt": "need-based aid"
+      }
+    ],
+    "explanationInputs.applicationComplexity": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://undergrad.osu.edu/apply/international-freshmen/common-app",
+        "excerpt": "Ohio State requires completion of Ohio State-specific questions"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://undergrad.osu.edu/apply/freshmen-columbus/apply-step-by-step",
+        "excerpt": "the application will be incomplete until official scores are received from the testing agency"
+      }
+    ]
+  },
+  "quality": {
+    "status": "publishable",
+    "missingFields": [],
+    "warnings": [
+      "Ohio State Columbus admissions now require ACT or SAT scores, so the artifact uses a required-testing policy even though some older archived materials still say test optional.",
+      "The published cost pages distinguish between university tuition and total nonresident cost; this artifact uses the nonresident Columbus incoming-freshman total as the published cost figure."
+    ]
+  }
+}

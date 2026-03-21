@@ -1,0 +1,391 @@
+{
+  "schoolSlug": "university-of-florida",
+  "lastVerifiedAt": "2026-03-21",
+  "identity": {
+    "schoolName": "University of Florida",
+    "city": "Gainesville",
+    "state": "FL",
+    "officialAdmissionsUrl": "https://admissions.ufl.edu/apply/freshman/"
+  },
+  "applicationRounds": [
+    "early_action",
+    "regular_decision"
+  ],
+  "deadlinesByRound": {
+    "early_action": "2026-11-01",
+    "early_decision": null,
+    "regular_decision": "2027-01-15",
+    "rolling_admission": null,
+    "priority": null
+  },
+  "englishRequirements": {
+    "minimumIelts": null,
+    "minimumToeflInternetBased": null,
+    "waiverNotes": null
+  },
+  "testPolicy": "required",
+  "requiredMaterials": [
+    "common_application",
+    "application_fee_or_fee_waiver",
+    "official_high_school_transcript",
+    "activities_list",
+    "personal_essay",
+    "uf_supplement",
+    "stars_or_ssar",
+    "sat_act_or_clt_scores"
+  ],
+  "tuitionAnnualUsd": 6380,
+  "estimatedCostOfAttendanceUsd": 25770,
+  "livingCostEstimateUsd": 14190,
+  "scholarshipAvailabilityFlag": true,
+  "scholarshipNotes": "UF awards a limited number of merit scholarships to admitted freshmen who apply by the priority deadline, automatically considers admitted students for merit review, and also offers need-based aid through FAFSA-based programs and Florida programs such as Bright Futures and MFOS.",
+  "recommendationInputs": {
+    "admissionRateOverall": 0.2403,
+    "satAverageOverall": 1397,
+    "actMidpointCumulative": 31,
+    "undergraduateSize": 34102,
+    "schoolControl": "public",
+    "campusLocale": "college_town",
+    "internationalAidPolicy": "merit_aid_available",
+    "hasNeedBasedAid": true,
+    "hasMeritAid": true,
+    "testingRequirements": {
+      "acceptedExams": [
+        "sat",
+        "act"
+      ],
+      "minimumSatTotal": null,
+      "minimumActComposite": null,
+      "latestSatTestDateNote": "SAT, ACT, and CLT scores should be submitted by the materials deadline; official scores received after May 1 are too late for enrollment.",
+      "latestActTestDateNote": "SAT, ACT, and CLT scores should be submitted by the materials deadline; official scores received after May 1 are too late for enrollment.",
+      "superscorePolicy": "both",
+      "writingEssayPolicy": "not_considered",
+      "scoreReportingPolicy": "self_report_allowed",
+      "middle50SatTotal": {
+        "low": 1380,
+        "high": 1510
+      },
+      "middle50ActComposite": {
+        "low": 31,
+        "high": 34
+      }
+    },
+    "averageNetPriceUsd": null,
+    "programFitTags": [],
+    "programAdmissionModel": "unknown",
+    "applicationStrategyTags": [
+      "non_binding_early_action"
+    ]
+  },
+  "explanationInputs": {
+    "academicSelectivityBand": "selective",
+    "testingExpectation": "high_scores_expected",
+    "englishPolicySummary": "not_clearly_stated",
+    "aidModel": "need_and_merit",
+    "applicationComplexity": "medium",
+    "deadlineUrgencyWindows": {
+      "earliestDeadline": "2026-11-01",
+      "latestMajorDeadline": "2027-01-15"
+    },
+    "internationalStudentConsiderations": [
+      "financial_certification_likely_required",
+      "merit_aid_possible",
+      "need_aware_or_limited_aid_possible"
+    ],
+    "potentialFitTags": [
+      "large_public_environment",
+      "value_for_budget_conscious_students",
+      "research_or_innovation_oriented",
+      "strong_merit_aid_signal"
+    ],
+    "potentialRiskTags": [
+      "limited_aid_for_international_students",
+      "early_deadline_pressure",
+      "complex_application_requirements"
+    ],
+    "actionableApplicationSteps": [
+      "prepare_early_round_strategy",
+      "complete_standardized_testing_if_required",
+      "prepare_counselor_documents_early",
+      "prioritize_financial_aid_forms",
+      "build_supplemental_essay_plan"
+    ]
+  },
+  "fieldProvenance": {
+    "identity.schoolName": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.ufl.edu/apply/freshman/",
+        "excerpt": "How To Apply"
+      }
+    ],
+    "identity.city": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.city\": \"Gainesville\""
+      }
+    ],
+    "identity.state": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.state\": \"FL\""
+      }
+    ],
+    "identity.officialAdmissionsUrl": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.ufl.edu/apply/freshman/",
+        "excerpt": "Freshman - How To Apply"
+      }
+    ],
+    "applicationRounds": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.ufl.edu/apply/freshman//deadlines",
+        "excerpt": "The University of Florida provides two application options, or timelines, for students to choose: Early Action (EA) or Regular Decision (RD)."
+      }
+    ],
+    "deadlinesByRound": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.ufl.edu/apply/freshman//deadlines",
+        "excerpt": "Application Deadline November 1 ... January 15"
+      }
+    ],
+    "englishRequirements": [
+      {
+        "sourceKind": "manual_note",
+        "sourceUrl": "https://admissions.ufl.edu/apply/freshman/international",
+        "excerpt": "UF's international freshman page used here does not publish a separate TOEFL/IELTS minimum."
+      }
+    ],
+    "testPolicy": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.ufl.edu/apply/freshman/requirements",
+        "excerpt": "All applicants must submit test scores from the SAT, ACT and/or CLT."
+      }
+    ],
+    "requiredMaterials": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.ufl.edu/apply/freshman/",
+        "excerpt": "Prospective freshmen can only apply by using the Common App."
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.ufl.edu/apply/freshman/",
+        "excerpt": "A copy of your transcript for any school you have attended"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.ufl.edu/apply/freshman/",
+        "excerpt": "A list of your high school activities"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.ufl.edu/apply/freshman/",
+        "excerpt": "Complete the UF Supplement"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.ufl.edu/apply/freshman/",
+        "excerpt": "Complete the Personal Essay question"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.ufl.edu/apply/freshman/",
+        "excerpt": "STARS"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.ufl.edu/apply/freshman/",
+        "excerpt": "SAT, ACT and/or Classic Learning Test (CLT) scores"
+      }
+    ],
+    "tuitionAnnualUsd": [
+      {
+        "sourceKind": "official_tuition",
+        "sourceUrl": "https://www.sfa.ufl.edu/cost/",
+        "excerpt": "Tuition / Fees $6,380"
+      }
+    ],
+    "estimatedCostOfAttendanceUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://www.sfa.ufl.edu/cost/",
+        "excerpt": "Total Budget $25,770"
+      }
+    ],
+    "livingCostEstimateUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://www.sfa.ufl.edu/cost/",
+        "excerpt": "Living Expenses 14,190"
+      }
+    ],
+    "scholarshipAvailabilityFlag": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.ufl.edu/cost-and-aid/scholarships",
+        "excerpt": "The Admissions Office awards a limited number of scholarships for admitted freshmen who apply by the priority deadlines."
+      }
+    ],
+    "scholarshipNotes": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.ufl.edu/cost-and-aid/scholarships",
+        "excerpt": "No separate application is needed"
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.ufl.edu/cost-and-aid/scholarships",
+        "excerpt": "Approximately 10 percent of admitted freshman are awarded a merit scholarship."
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.ufl.edu/cost-and-aid/scholarships",
+        "excerpt": "UF offers a limited number of merit-based scholarships designed for high-achieving, in-state students"
+      }
+    ],
+    "recommendationInputs.admissionRateOverall": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.admission_rate.overall\": 0.2403"
+      }
+    ],
+    "recommendationInputs.satAverageOverall": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.sat_scores.average.overall\": 1397"
+      }
+    ],
+    "recommendationInputs.actMidpointCumulative": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.act_scores.midpoint.cumulative\": 31"
+      }
+    ],
+    "recommendationInputs.undergraduateSize": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.student.size\": 34102"
+      }
+    ],
+    "recommendationInputs.schoolControl": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.ownership\": 1"
+      }
+    ],
+    "recommendationInputs.applicationStrategyTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.ufl.edu/apply/freshman/",
+        "excerpt": "Early Action (EA) or Regular Decision (RD)"
+      }
+    ],
+    "recommendationInputs.campusLocale": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.locale\": 12"
+      }
+    ],
+    "recommendationInputs.internationalAidPolicy": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.ufl.edu/cost-and-aid/scholarships",
+        "excerpt": "The Office of Admissions will consider admitted international freshmen for one of our out-of-state tuition waivers."
+      }
+    ],
+    "recommendationInputs.hasNeedBasedAid": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.ufl.edu/english-admissions-guide",
+        "excerpt": "UF offers generous financial aid packages with pathways for low-income and first-generation students to graduate debt-free."
+      }
+    ],
+    "recommendationInputs.hasMeritAid": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.ufl.edu/cost-and-aid/scholarships",
+        "excerpt": "UF currently offers a limited number of merit-based scholarships designed for high-achieving, in-state students"
+      }
+    ],
+    "recommendationInputs.testingRequirements": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.ufl.edu/apply/freshman/requirements",
+        "excerpt": "All applicants must submit test scores from the SAT, ACT and/or CLT."
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.ufl.edu/apply/freshman/",
+        "excerpt": "UF has no test preference. We superscore the SAT, ACT and CLT."
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.ufl.edu/apply/freshman/",
+        "excerpt": "You may self-report your SAT, ACT and/or Classic Learning Test (CLT) scores through your Gator Portal."
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.ufl.edu/apply/freshman//deadlines",
+        "excerpt": "Official Test Score Submission Deadline May 1"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.ufl.edu/international-admissions-guide",
+        "excerpt": "Middle 50% ... 31-34: ACT ... 1380-1510: SAT"
+      }
+    ],
+    "explanationInputs.academicSelectivityBand": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.admission_rate.overall\": 0.2403"
+      }
+    ],
+    "explanationInputs.testingExpectation": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.ufl.edu/apply/freshman/requirements",
+        "excerpt": "All applicants must submit test scores from the SAT, ACT and/or CLT."
+      }
+    ],
+    "explanationInputs.englishPolicySummary": [
+      {
+        "sourceKind": "manual_note",
+        "sourceUrl": "https://admissions.ufl.edu/apply/freshman/international",
+        "excerpt": "UF's international freshman page used here does not publish a separate TOEFL/IELTS minimum."
+      }
+    ],
+    "explanationInputs.aidModel": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.ufl.edu/english-admissions-guide",
+        "excerpt": "UF offers generous financial aid packages with pathways for low-income and first-generation students to graduate debt-free."
+      }
+    ],
+    "explanationInputs.applicationComplexity": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.ufl.edu/apply/freshman/",
+        "excerpt": "Common App ... UF Supplement ... Personal Essay ... STARS ... test scores"
+      }
+    ]
+  },
+  "quality": {
+    "status": "publishable",
+    "missingFields": [],
+    "warnings": []
+  }
+}

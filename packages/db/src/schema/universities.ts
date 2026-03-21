@@ -19,6 +19,8 @@ import {
 import {
   type DeadlinesByRound,
   type EnglishRequirements,
+  type UniversityExplanationInputs,
+  type UniversityRecommendationInputs,
   type UniversitySourceMetadata,
   type UniversityValidationReason,
   universitySourceKinds,
@@ -68,6 +70,12 @@ export const universities = pgTable(
       "scholarship_availability_flag",
     ).notNull(),
     scholarshipNotes: text("scholarship_notes").notNull(),
+    recommendationInputs: jsonb("recommendation_inputs")
+      .$type<UniversityRecommendationInputs>()
+      .notNull(),
+    explanationInputs: jsonb("explanation_inputs")
+      .$type<UniversityExplanationInputs>()
+      .notNull(),
     lastVerifiedAt: timestamp("last_verified_at", {
       withTimezone: true,
     }).notNull(),

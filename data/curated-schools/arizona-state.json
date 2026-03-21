@@ -1,0 +1,487 @@
+{
+  "schoolSlug": "arizona-state",
+  "lastVerifiedAt": "2026-03-21",
+  "identity": {
+    "schoolName": "Arizona State University",
+    "city": "Tempe",
+    "state": "AZ",
+    "officialAdmissionsUrl": "https://admission.asu.edu/apply/first-year/admission"
+  },
+  "applicationRounds": [
+    "priority",
+    "regular_decision"
+  ],
+  "deadlinesByRound": {
+    "early_action": null,
+    "early_decision": null,
+    "regular_decision": "2026-01-15",
+    "rolling_admission": null,
+    "priority": "2025-11-01"
+  },
+  "englishRequirements": {
+    "minimumIelts": 6,
+    "minimumToeflInternetBased": null,
+    "waiverNotes": "ASU requires proof of English proficiency for international applicants or applicants whose native language is not English. The page lists multiple accepted tests and program-specific thresholds; ASU also allows Global Launch pathways and certain exemption cases."
+  },
+  "testPolicy": "test_optional",
+  "requiredMaterials": [
+    "common_application_or_asu_application",
+    "application_fee_or_fee_waiver_if_eligible",
+    "self_reported_grades_or_official_transcripts",
+    "standardized_tests_optional",
+    "english_proficiency_proof_if_international",
+    "financial_support_documents_if_international",
+    "passport_copy_if_international"
+  ],
+  "tuitionAnnualUsd": 12177,
+  "estimatedCostOfAttendanceUsd": 37738,
+  "livingCostEstimateUsd": 18819,
+  "scholarshipAvailabilityFlag": true,
+  "scholarshipNotes": "ASU offers need- and merit-based aid, including aid through FAFSA, the New American University Scholarship, the ASU Commitment Scholarship for eligible nonresident students, and international scholarship opportunities such as the New American University merit scholarship. International students are not eligible for federal or state aid unless they are eligible noncitizens.",
+  "recommendationInputs": {
+    "admissionRateOverall": 0.9019,
+    "satAverageOverall": null,
+    "actMidpointCumulative": null,
+    "undergraduateSize": 64398,
+    "schoolControl": "public",
+    "campusLocale": "urban",
+    "internationalAidPolicy": "merit_aid_available",
+    "hasNeedBasedAid": true,
+    "hasMeritAid": true,
+    "testingRequirements": {
+      "acceptedExams": [
+        "sat",
+        "act"
+      ],
+      "minimumSatTotal": 1120,
+      "minimumActComposite": 22,
+      "latestSatTestDateNote": null,
+      "latestActTestDateNote": null,
+      "superscorePolicy": "unknown",
+      "writingEssayPolicy": "not_considered",
+      "scoreReportingPolicy": "official_required_upfront",
+      "middle50SatTotal": {
+        "low": null,
+        "high": null
+      },
+      "middle50ActComposite": {
+        "low": null,
+        "high": null
+      }
+    },
+    "averageNetPriceUsd": null,
+    "programFitTags": [],
+    "programAdmissionModel": "open",
+    "applicationStrategyTags": [
+      "rolling_or_extended_timeline"
+    ]
+  },
+  "explanationInputs": {
+    "academicSelectivityBand": "broad_access",
+    "testingExpectation": "tests_not_required",
+    "englishPolicySummary": "minimum_scores_required",
+    "aidModel": "need_and_merit",
+    "applicationComplexity": "medium",
+    "deadlineUrgencyWindows": {
+      "earliestDeadline": "2025-11-01",
+      "latestMajorDeadline": "2026-01-15"
+    },
+    "internationalStudentConsiderations": [
+      "english_fluency_required",
+      "english_test_may_be_required",
+      "financial_certification_likely_required",
+      "merit_aid_possible",
+      "need_aware_or_limited_aid_possible"
+    ],
+    "potentialFitTags": [
+      "large_public_environment",
+      "urban_access",
+      "value_for_budget_conscious_students",
+      "strong_need_based_aid_signal",
+      "strong_merit_aid_signal"
+    ],
+    "potentialRiskTags": [
+      "high_total_cost",
+      "complex_application_requirements",
+      "limited_aid_for_international_students"
+    ],
+    "actionableApplicationSteps": [
+      "prepare_regular_decision_timeline",
+      "complete_standardized_testing_if_required",
+      "prepare_english_testing_or_waiver_plan",
+      "prepare_counselor_documents_early",
+      "budget_for_need_based_aid_process",
+      "research_merit_aid_deadlines",
+      "prioritize_financial_aid_forms"
+    ]
+  },
+  "fieldProvenance": {
+    "identity.schoolName": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.asu.edu/apply/first-year/admission",
+        "excerpt": "First-year student college admission requirements"
+      }
+    ],
+    "identity.city": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.city\": \"Tempe\""
+      }
+    ],
+    "identity.state": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.state\": \"AZ\""
+      }
+    ],
+    "identity.officialAdmissionsUrl": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.asu.edu/apply/first-year/admission",
+        "excerpt": "First-year student college admission requirements"
+      }
+    ],
+    "applicationRounds": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.asu.edu/apply/first-year/admission",
+        "excerpt": "Nov. 1 is ASU’s priority admission date, and Jan. 15 is ASU’s regular admission date."
+      }
+    ],
+    "deadlinesByRound": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.asu.edu/apply/first-year/admission",
+        "excerpt": "Nov. 1 is ASU’s priority admission date, and Jan. 15 is ASU’s regular admission date."
+      }
+    ],
+    "englishRequirements": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.asu.edu/apply/international/undergrad/english-proficiency",
+        "excerpt": "The overall band score requirement for the academic test is at least 6.0."
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.asu.edu/apply/international/undergrad/english-proficiency",
+        "excerpt": "Applicants who have scores that are more than two years old ... may be requested to submit updated test scores"
+      }
+    ],
+    "testPolicy": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.asu.edu/apply/first-year/admission",
+        "excerpt": "ACT or SAT scores are not required for admission, but may be submitted for ASU course placement or as supplemental information."
+      }
+    ],
+    "requiredMaterials": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.asu.edu/apply/first-year/admission",
+        "excerpt": "ASU’s Application for Admission or Common Application"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.asu.edu/apply/first-year/admission",
+        "excerpt": "submit the nonrefundable application fee"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.asu.edu/apply/first-year/admission",
+        "excerpt": "self-report your high school grades or have your high school transcripts sent to ASU"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.asu.edu/apply/first-year/admission",
+        "excerpt": "ACT or SAT scores are not required for admission"
+      }
+    ],
+    "tuitionAnnualUsd": [
+      {
+        "sourceKind": "official_tuition",
+        "sourceUrl": "https://tuition.asu.edu/cost",
+        "excerpt": "Base Tuition $12,177"
+      }
+    ],
+    "estimatedCostOfAttendanceUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://tuition.asu.edu/cost",
+        "excerpt": "Estimated Total Costs $37,738- $39,018"
+      }
+    ],
+    "livingCostEstimateUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://tuition.asu.edu/cost",
+        "excerpt": "Housing $11,473 ... Food $7,346"
+      }
+    ],
+    "scholarshipAvailabilityFlag": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admission.asu.edu/cost-aid",
+        "excerpt": "Most students are eligible for some form of financial aid no matter what their family's income."
+      }
+    ],
+    "scholarshipNotes": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admission.asu.edu/cost-aid",
+        "excerpt": "The New American University Scholarship has a range of award values, and you’ll be automatically considered for it upon admission to the university."
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admission.asu.edu/cost-aid/international",
+        "excerpt": "International first-year and transfer F-1 students may be considered for the New American University Scholarship"
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admission.asu.edu/cost-aid/international",
+        "excerpt": "International students do not qualify for federal and state financial aid"
+      }
+    ],
+    "recommendationInputs.admissionRateOverall": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.admission_rate.overall\": 0.9019"
+      }
+    ],
+    "recommendationInputs.satAverageOverall": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.sat_scores.average.overall\": null"
+      }
+    ],
+    "recommendationInputs.actMidpointCumulative": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.act_scores.midpoint.cumulative\": null"
+      }
+    ],
+    "recommendationInputs.undergraduateSize": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.student.size\": 64398"
+      }
+    ],
+    "recommendationInputs.schoolControl": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.ownership\": 1"
+      }
+    ],
+    "recommendationInputs.programAdmissionModel": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.asu.edu/apply/first-year/admission",
+        "excerpt": "ACT or SAT scores are not required for admission"
+      }
+    ],
+    "recommendationInputs.applicationStrategyTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.asu.edu/apply/first-year/admission",
+        "excerpt": "Nov. 1 is ASU’s priority admission date, and Jan. 15 is ASU’s regular admission date."
+      }
+    ],
+    "recommendationInputs.campusLocale": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.locale\": 12"
+      }
+    ],
+    "recommendationInputs.internationalAidPolicy": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admission.asu.edu/cost-aid/international",
+        "excerpt": "International first-year and transfer F-1 students may be considered for the New American University Scholarship"
+      }
+    ],
+    "recommendationInputs.hasNeedBasedAid": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admission.asu.edu/cost-aid",
+        "excerpt": "Most students are eligible for some form of financial aid no matter what their family's income."
+      }
+    ],
+    "recommendationInputs.hasMeritAid": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admission.asu.edu/cost-aid",
+        "excerpt": "The New American University Scholarship has a range of award values"
+      }
+    ],
+    "recommendationInputs.testingRequirements.acceptedExams": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.asu.edu/apply/first-year/admission",
+        "excerpt": "ACT or SAT scores"
+      }
+    ],
+    "recommendationInputs.testingRequirements.minimumSatTotal": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.asu.edu/apply/first-year/admission",
+        "excerpt": "SAT: 1120"
+      }
+    ],
+    "recommendationInputs.testingRequirements.minimumActComposite": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.asu.edu/apply/first-year/admission",
+        "excerpt": "ACT: 22"
+      }
+    ],
+    "recommendationInputs.testingRequirements.superscorePolicy": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.asu.edu/apply/first-year/admission",
+        "excerpt": "ACT or SAT scores are not required for admission, but may be submitted for ASU course placement or as supplemental information."
+      }
+    ],
+    "recommendationInputs.testingRequirements.writingEssayPolicy": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.asu.edu/apply/first-year/admission",
+        "excerpt": "we do not require an essay or personal statement"
+      }
+    ],
+    "recommendationInputs.testingRequirements.scoreReportingPolicy": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.asu.edu/apply/first-year/admission",
+        "excerpt": "ACT or SAT scores are not required for admission, but may be submitted for ASU course placement or as supplemental information."
+      }
+    ],
+    "explanationInputs.academicSelectivityBand": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.admission_rate.overall\": 0.9019"
+      }
+    ],
+    "explanationInputs.testingExpectation": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.asu.edu/apply/first-year/admission",
+        "excerpt": "ACT or SAT scores are not required for admission"
+      }
+    ],
+    "explanationInputs.englishPolicySummary": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.asu.edu/apply/international/undergrad/english-proficiency",
+        "excerpt": "Pass the TOEFL, IELTS, PTE, Duolingo English test or Cambridge English exam"
+      }
+    ],
+    "explanationInputs.aidModel": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admission.asu.edu/cost-aid",
+        "excerpt": "The New American University Scholarship has a range of award values"
+      }
+    ],
+    "explanationInputs.applicationComplexity": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.asu.edu/apply/first-year/admission",
+        "excerpt": "self-report your high school grades or have your high school transcripts sent to ASU"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.asu.edu/apply/first-year/admission",
+        "excerpt": "ACT or SAT scores are not required for admission"
+      }
+    ],
+    "explanationInputs.deadlineUrgencyWindows": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.asu.edu/apply/first-year/admission",
+        "excerpt": "Nov. 1 is ASU’s priority admission date, and Jan. 15 is ASU’s regular admission date."
+      }
+    ],
+    "explanationInputs.internationalStudentConsiderations": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.asu.edu/cost-aid/international",
+        "excerpt": "International students do not qualify for federal and state financial aid"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.asu.edu/cost-aid/international",
+        "excerpt": "International first-year and transfer F-1 students may be considered for the New American University Scholarship"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.asu.edu/apply/international/undergrad/english-proficiency",
+        "excerpt": "Applicants who have scores that are more than two years old ... may be requested to submit updated test scores"
+      }
+    ],
+    "explanationInputs.potentialFitTags": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.ownership\": 1"
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admission.asu.edu/cost-aid",
+        "excerpt": "Most students are eligible for some form of financial aid no matter what their family's income."
+      }
+    ],
+    "explanationInputs.potentialRiskTags": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admission.asu.edu/cost-aid/international",
+        "excerpt": "International students do not qualify for federal and state financial aid"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.asu.edu/apply/first-year/admission",
+        "excerpt": "Nov. 1 is ASU’s priority admission date, and Jan. 15 is ASU’s regular admission date."
+      },
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://tuition.asu.edu/cost",
+        "excerpt": "Estimated Total Costs $37,738- $39,018"
+      }
+    ],
+    "explanationInputs.actionableApplicationSteps": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.asu.edu/apply/first-year/admission",
+        "excerpt": "self-report your high school grades or have your high school transcripts sent to ASU"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.asu.edu/apply/first-year/admission",
+        "excerpt": "Submit your completed FAFSA by ASU’s Jan. 15 priority filing date"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.asu.edu/apply/international/undergrad/english-proficiency",
+        "excerpt": "Pass the TOEFL, IELTS, PTE, Duolingo English test or Cambridge English exam"
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admission.asu.edu/cost-aid/international",
+        "excerpt": "International first-year and transfer F-1 students may be considered for the New American University Scholarship"
+      }
+    ]
+  },
+  "quality": {
+    "status": "publishable",
+    "missingFields": [],
+    "warnings": []
+  }
+}

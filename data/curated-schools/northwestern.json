@@ -1,0 +1,401 @@
+{
+  "schoolSlug": "northwestern",
+  "lastVerifiedAt": "2026-03-21",
+  "identity": {
+    "schoolName": "Northwestern University",
+    "city": "Evanston",
+    "state": "IL",
+    "officialAdmissionsUrl": "https://admissions.northwestern.edu/apply/"
+  },
+  "applicationRounds": [
+    "early_decision",
+    "regular_decision"
+  ],
+  "deadlinesByRound": {
+    "early_action": null,
+    "early_decision": "2025-11-01",
+    "regular_decision": "2026-01-02",
+    "rolling_admission": null,
+    "priority": null
+  },
+  "englishRequirements": {
+    "minimumIelts": null,
+    "minimumToeflInternetBased": null,
+    "waiverNotes": "Official proof of English language proficiency is required for applicants whose first/primary language is not English or whose secondary schooling has not been in English."
+  },
+  "testPolicy": "test_optional",
+  "requiredMaterials": [
+    "common_application_or_apply_coalition_with_scoir_application",
+    "northwestern_supplement",
+    "official_secondary_school_transcript",
+    "school_report",
+    "counselor_recommendation",
+    "teacher_recommendation_at_least_one",
+    "application_fee_or_fee_waiver",
+    "official_proof_of_english_language_proficiency_if_required",
+    "early_decision_agreement_if_applying_ed"
+  ],
+  "tuitionAnnualUsd": 69375,
+  "estimatedCostOfAttendanceUsd": 96236,
+  "livingCostEstimateUsd": 21975,
+  "scholarshipAvailabilityFlag": true,
+  "scholarshipNotes": "Northwestern is a no-loan institution for need-based undergraduate aid, and it meets full demonstrated need for admitted students. Need-based aid is available to international students, but admission is need-aware for them.",
+  "recommendationInputs": {
+    "admissionRateOverall": null,
+    "satAverageOverall": null,
+    "actMidpointCumulative": null,
+    "undergraduateSize": null,
+    "schoolControl": "private_nonprofit",
+    "campusLocale": "urban",
+    "internationalAidPolicy": "need_based_aid_available",
+    "hasNeedBasedAid": true,
+    "hasMeritAid": false,
+    "testingRequirements": {
+      "acceptedExams": [
+        "sat",
+        "act"
+      ],
+      "minimumSatTotal": null,
+      "minimumActComposite": null,
+      "latestSatTestDateNote": null,
+      "latestActTestDateNote": null,
+      "superscorePolicy": "none",
+      "writingEssayPolicy": "not_considered",
+      "scoreReportingPolicy": "self_report_allowed",
+      "middle50SatTotal": {
+        "low": null,
+        "high": null
+      },
+      "middle50ActComposite": {
+        "low": null,
+        "high": null
+      }
+    },
+    "averageNetPriceUsd": null,
+    "programFitTags": [
+      "engineering",
+      "humanities",
+      "social_sciences",
+      "arts_design",
+      "research_intensive"
+    ],
+    "programAdmissionModel": "open",
+    "applicationStrategyTags": [
+      "binding_early_decision"
+    ]
+  },
+  "explanationInputs": {
+    "academicSelectivityBand": "highly_selective",
+    "testingExpectation": "tests_not_required",
+    "englishPolicySummary": "minimum_scores_required",
+    "aidModel": "need_based_only",
+    "applicationComplexity": "high",
+    "deadlineUrgencyWindows": {
+      "earliestDeadline": "2025-11-01",
+      "latestMajorDeadline": "2026-01-02"
+    },
+    "internationalStudentConsiderations": [
+      "english_fluency_required",
+      "need_aware_or_limited_aid_possible",
+      "need_based_aid_available"
+    ],
+    "potentialFitTags": [
+      "research_or_innovation_oriented",
+      "urban_access",
+      "strong_need_based_aid_signal"
+    ],
+    "potentialRiskTags": [
+      "high_total_cost",
+      "early_deadline_pressure",
+      "testing_required",
+      "complex_application_requirements",
+      "limited_aid_for_international_students"
+    ],
+    "actionableApplicationSteps": [
+      "prepare_early_round_strategy",
+      "prepare_teacher_recommendations_early",
+      "prepare_counselor_documents_early",
+      "budget_for_need_based_aid_process",
+      "build_supplemental_essay_plan",
+      "prepare_english_testing_or_waiver_plan"
+    ]
+  },
+  "fieldProvenance": {
+    "identity.schoolName": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.northwestern.edu/apply/",
+        "excerpt": "Northwestern University"
+      }
+    ],
+    "identity.city": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.city\": \"Evanston\""
+      }
+    ],
+    "identity.state": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.state\": \"IL\""
+      }
+    ],
+    "identity.officialAdmissionsUrl": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.northwestern.edu/apply/",
+        "excerpt": "Apply: Undergraduate Admissions"
+      }
+    ],
+    "applicationRounds": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.northwestern.edu/apply/application-deadlines.html",
+        "excerpt": "Early Decision First-Year Applicant ... Regular Decision First-Year Applicant"
+      }
+    ],
+    "deadlinesByRound": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.northwestern.edu/apply/application-deadlines.html",
+        "excerpt": "November 1, 2025 ... January 2, 2026"
+      }
+    ],
+    "englishRequirements": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.northwestern.edu/apply/",
+        "excerpt": "Official proof of English language proficiency (for applicants whose first/primary language is not English or whose secondary schooling has not been in English)"
+      }
+    ],
+    "testPolicy": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.northwestern.edu/faqs/standardized-testing-policy/",
+        "excerpt": "Northwestern is test-optional and does not require ACT or SAT scores from first-year or transfer candidates applying for full-time undergraduate study."
+      }
+    ],
+    "requiredMaterials": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.northwestern.edu/apply/",
+        "excerpt": "Common Application or Apply Coalition with Scoir ... Northwestern supplement ... Official secondary school transcript(s) ... school report ... Counselor recommendation ... At least one teacher recommendation"
+      }
+    ],
+    "tuitionAnnualUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://undergradaid.northwestern.edu/aid-basics-eligibility/cost-of-attendance.html",
+        "excerpt": "Full-Time Tuition $69,375"
+      }
+    ],
+    "estimatedCostOfAttendanceUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://undergradaid.northwestern.edu/aid-basics-eligibility/cost-of-attendance.html",
+        "excerpt": "Total $96,236"
+      }
+    ],
+    "livingCostEstimateUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://undergradaid.northwestern.edu/aid-basics-eligibility/cost-of-attendance.html",
+        "excerpt": "On-Campus Housing/Meals $21,975"
+      }
+    ],
+    "scholarshipAvailabilityFlag": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.northwestern.edu/tuition-aid/international-student-aid/",
+        "excerpt": "Need-based financial aid is available to international students seeking undergraduate degrees at Northwestern."
+      }
+    ],
+    "scholarshipNotes": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://news.northwestern.edu/stories/2023/05/northwestern-sets-tuition-fees-and-financial-aid-for-2023-2024-academic-year",
+        "excerpt": "For all undergraduates who are eligible to receive financial aid, the University will continue its 2016 policy to meet cost-of-attendance needs without loans."
+      }
+    ],
+    "recommendationInputs.campusLocale": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.locale\": 12"
+      }
+    ],
+    "recommendationInputs.schoolControl": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.ownership\": 2"
+      }
+    ],
+    "recommendationInputs.internationalAidPolicy": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.northwestern.edu/tuition-aid/international-student-aid/",
+        "excerpt": "We have a need-aware admission review for international students"
+      }
+    ],
+    "recommendationInputs.hasNeedBasedAid": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.northwestern.edu/tuition-aid/international-student-aid/",
+        "excerpt": "Need-based financial aid is available to international students"
+      }
+    ],
+    "recommendationInputs.hasMeritAid": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://news.northwestern.edu/stories/2023/05/northwestern-sets-tuition-fees-and-financial-aid-for-2023-2024-academic-year",
+        "excerpt": "meet cost-of-attendance needs without loans as part of the financial aid package"
+      }
+    ],
+    "recommendationInputs.programFitTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.northwestern.edu/academics/majors-minors/",
+        "excerpt": "choose one of Northwestern's six undergraduate schools"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.northwestern.edu/academics/",
+        "excerpt": "With hundreds of labs ... you'll have countless opportunities to engage in self-directed research."
+      }
+    ],
+    "recommendationInputs.programAdmissionModel": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.northwestern.edu/academics/majors-minors/",
+        "excerpt": "choose one of Northwestern's six undergraduate schools"
+      }
+    ],
+    "recommendationInputs.applicationStrategyTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.northwestern.edu/apply/application-deadlines.html",
+        "excerpt": "Early Decision is a good fit for applicants who have identified Northwestern as their top choice"
+      }
+    ],
+    "recommendationInputs.testingRequirements.acceptedExams": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.northwestern.edu/apply/",
+        "excerpt": "SAT and/or ACT scores"
+      }
+    ],
+    "recommendationInputs.testingRequirements.minimumSatTotal": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.northwestern.edu/faqs/standardized-testing-policy/",
+        "excerpt": "Northwestern is test-optional and does not require ACT or SAT scores"
+      }
+    ],
+    "recommendationInputs.testingRequirements.minimumActComposite": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.northwestern.edu/faqs/standardized-testing-policy/",
+        "excerpt": "Northwestern is test-optional and does not require ACT or SAT scores"
+      }
+    ],
+    "recommendationInputs.testingRequirements.superscorePolicy": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.northwestern.edu/apply/application-deadlines.html",
+        "excerpt": "Northwestern will not calculate a superscore for students reporting ACT scores in the 2025–26 application cycle."
+      }
+    ],
+    "recommendationInputs.testingRequirements.writingEssayPolicy": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.northwestern.edu/apply/application-deadlines.html",
+        "excerpt": "Northwestern follows a test-optional policy and will not require ACT or SAT scores"
+      }
+    ],
+    "recommendationInputs.testingRequirements.scoreReportingPolicy": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.northwestern.edu/apply/application-deadlines.html",
+        "excerpt": "Applicants may self-report these scores"
+      }
+    ],
+    "explanationInputs.academicSelectivityBand": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.northwestern.edu/apply/application-deadlines.html",
+        "excerpt": "our ED acceptance rate is typically higher than that of Regular Decision"
+      }
+    ],
+    "explanationInputs.testingExpectation": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.northwestern.edu/faqs/standardized-testing-policy/",
+        "excerpt": "test-optional"
+      }
+    ],
+    "explanationInputs.englishPolicySummary": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.northwestern.edu/apply/",
+        "excerpt": "Official proof of English language proficiency"
+      }
+    ],
+    "explanationInputs.aidModel": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://news.northwestern.edu/stories/2023/05/northwestern-sets-tuition-fees-and-financial-aid-for-2023-2024-academic-year",
+        "excerpt": "meet cost-of-attendance needs without loans"
+      }
+    ],
+    "explanationInputs.applicationComplexity": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.northwestern.edu/apply/",
+        "excerpt": "Northwestern supplement ... school report ... counselor recommendation ... teacher recommendation"
+      }
+    ],
+    "explanationInputs.deadlineUrgencyWindows": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.northwestern.edu/apply/application-deadlines.html",
+        "excerpt": "November 1, 2025 ... January 2, 2026"
+      }
+    ],
+    "explanationInputs.internationalStudentConsiderations": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.northwestern.edu/tuition-aid/international-student-aid/",
+        "excerpt": "need-aware admission review for international students"
+      }
+    ],
+    "explanationInputs.potentialFitTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.northwestern.edu/apply/",
+        "excerpt": "Northwestern supplement ... holistic review"
+      }
+    ],
+    "explanationInputs.potentialRiskTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.northwestern.edu/apply/application-deadlines.html",
+        "excerpt": "November 1, 2025 ... January 2, 2026"
+      }
+    ],
+    "explanationInputs.actionableApplicationSteps": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.northwestern.edu/apply/",
+        "excerpt": "Northwestern supplement"
+      }
+    ]
+  },
+  "quality": {
+    "status": "publishable",
+    "missingFields": [],
+    "warnings": []
+  }
+}

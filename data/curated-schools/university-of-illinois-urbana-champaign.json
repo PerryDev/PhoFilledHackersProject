@@ -1,0 +1,371 @@
+{
+  "schoolSlug": "university-of-illinois-urbana-champaign",
+  "lastVerifiedAt": "2026-03-21",
+  "identity": {
+    "schoolName": "University of Illinois Urbana-Champaign",
+    "city": "Champaign",
+    "state": "IL",
+    "officialAdmissionsUrl": "https://www.admissions.illinois.edu/apply/freshman"
+  },
+  "applicationRounds": [
+    "early_action",
+    "regular_decision"
+  ],
+  "deadlinesByRound": {
+    "early_action": "2025-11-01",
+    "early_decision": null,
+    "regular_decision": "2026-01-05",
+    "rolling_admission": null,
+    "priority": null
+  },
+  "englishRequirements": {
+    "minimumIelts": 7.5,
+    "minimumToeflInternetBased": 100,
+    "waiverNotes": "English proficiency is required for all students. UIUC accepts TOEFL iBT, IELTS Academic/Online, Duolingo English Test, ACT English, SAT Evidence-Based Reading and Writing, approved-country schooling, or two years of continuous full-time college study in an approved English-speaking setting. Accepted proficiency scores must be taken within two years of the enrollment term."
+  },
+  "testPolicy": "test_optional",
+  "requiredMaterials": [
+    "common_application",
+    "application_fee_or_fee_waiver",
+    "self_reported_academic_record",
+    "writing_responses",
+    "test_scores_if_provided",
+    "proof_of_english_proficiency_if_applicable"
+  ],
+  "tuitionAnnualUsd": 18530,
+  "estimatedCostOfAttendanceUsd": 38088,
+  "livingCostEstimateUsd": 15858,
+  "scholarshipAvailabilityFlag": true,
+  "scholarshipNotes": "UIUC offers merit scholarships for incoming freshmen such as the Illinois Achievement Scholarship, Stamps Scholarship, Provost Scholarship, and the President's Award Program. Illinois Commitment and other need-based aid options support eligible Illinois residents, while international students are generally limited to institutional aid, outside scholarships, and private or alternative loans.",
+  "recommendationInputs": {
+    "admissionRateOverall": 0.4369,
+    "satAverageOverall": 1418,
+    "actMidpointCumulative": 32,
+    "undergraduateSize": 34623,
+    "schoolControl": "public",
+    "campusLocale": null,
+    "internationalAidPolicy": "limited_or_unclear",
+    "hasNeedBasedAid": true,
+    "hasMeritAid": true,
+    "testingRequirements": {
+      "acceptedExams": [
+        "sat",
+        "act"
+      ],
+      "minimumSatTotal": null,
+      "minimumActComposite": null,
+      "latestSatTestDateNote": null,
+      "latestActTestDateNote": null,
+      "superscorePolicy": "none",
+      "writingEssayPolicy": "not_considered",
+      "scoreReportingPolicy": "self_report_allowed",
+      "middle50SatTotal": {
+        "low": 1420,
+        "high": 1540
+      },
+      "middle50ActComposite": {
+        "low": 31,
+        "high": 35
+      }
+    },
+    "averageNetPriceUsd": null,
+    "programFitTags": [
+      "engineering",
+      "computer_science",
+      "business",
+      "research_intensive"
+    ],
+    "programAdmissionModel": "capacity_limited",
+    "applicationStrategyTags": [
+      "non_binding_early_action"
+    ]
+  },
+  "explanationInputs": {
+    "academicSelectivityBand": "selective",
+    "testingExpectation": "scores_considered",
+    "englishPolicySummary": "minimum_scores_required",
+    "aidModel": "need_and_merit",
+    "applicationComplexity": "high",
+    "deadlineUrgencyWindows": {
+      "earliestDeadline": "2025-11-01",
+      "latestMajorDeadline": "2026-01-05"
+    },
+    "internationalStudentConsiderations": [
+      "english_fluency_required",
+      "english_test_may_be_required",
+      "financial_certification_likely_required",
+      "merit_aid_possible",
+      "need_based_aid_available"
+    ],
+    "potentialFitTags": [
+      "large_public_environment",
+      "research_or_innovation_oriented",
+      "value_for_budget_conscious_students",
+      "strong_merit_aid_signal",
+      "strong_for_high_achieving_stem_students"
+    ],
+    "potentialRiskTags": [
+      "high_total_cost",
+      "limited_aid_for_international_students",
+      "early_deadline_pressure",
+      "english_requirement_barrier",
+      "complex_application_requirements"
+    ],
+    "actionableApplicationSteps": [
+      "prepare_early_round_strategy",
+      "prepare_english_testing_or_waiver_plan",
+      "prioritize_financial_aid_forms",
+      "build_supplemental_essay_plan"
+    ]
+  },
+  "fieldProvenance": {
+    "identity.schoolName": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.admissions.illinois.edu/apply/freshman/profile",
+        "excerpt": "First-Year Class Profile"
+      }
+    ],
+    "applicationRounds": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.admissions.illinois.edu/apply/freshman/dates",
+        "excerpt": "Early Action Deadline"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.admissions.illinois.edu/apply/freshman/dates",
+        "excerpt": "Regular Decision Deadline"
+      }
+    ],
+    "deadlinesByRound": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.admissions.illinois.edu/apply/freshman/dates",
+        "excerpt": "Early Action Deadline November 1"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.admissions.illinois.edu/apply/freshman/dates",
+        "excerpt": "Regular Decision Deadline January 5"
+      }
+    ],
+    "englishRequirements": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.admissions.illinois.edu/policies",
+        "excerpt": "TOEFL iBT ... minimum of 100 total ... IELTS ... minimum of 7.5 total ... Duolingo ... minimum of 130 overall"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.admissions.illinois.edu/apply/international",
+        "excerpt": "We require all students ... to demonstrate English proficiency."
+      }
+    ],
+    "testPolicy": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.admissions.illinois.edu/faq/applicant-freshman",
+        "excerpt": "We will use a holistic review of your admissions application with or without an ACT or SAT."
+      }
+    ],
+    "requiredMaterials": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.admissions.illinois.edu/faq/applicant-freshman",
+        "excerpt": "Required items include your application fee or fee waiver, your self-reported academic record ... any test scores you've chosen to report"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.admissions.illinois.edu/apply/freshman/help-with-applying",
+        "excerpt": "After applying through Common App, we'll email you instructions on how to self-report your courses and grades."
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.admissions.illinois.edu/present/2025/app-workshop",
+        "excerpt": "Common App application ... Application fee or fee waiver ... Illinois self-reported academic record"
+      }
+    ],
+    "tuitionAnnualUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://cost.illinois.edu/Home/Cost/R/U/Compare/12/120268/120268",
+        "excerpt": "Tuition $13,252.00 Fees $5,278.00"
+      }
+    ],
+    "estimatedCostOfAttendanceUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://cost.illinois.edu/Home/Cost/R/U/Compare/12/120268/120268",
+        "excerpt": "Total $38,088.00"
+      }
+    ],
+    "livingCostEstimateUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://cost.illinois.edu/Home/Cost/R/U/Compare/12/120268/120268",
+        "excerpt": "Food & Housing $15,858.00"
+      }
+    ],
+    "scholarshipAvailabilityFlag": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://osfa.illinois.edu/types-of-aid/scholarships/merit-based-scholarships/",
+        "excerpt": "Following are select merit-based scholarships available to University of Illinois students."
+      }
+    ],
+    "scholarshipNotes": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://osfa.illinois.edu/types-of-aid/scholarships/merit-based-scholarships/",
+        "excerpt": "Illinois Achievement Scholarship ... Stamps Scholarship ... Provost Scholarship ... President's Award Program"
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://osfa.illinois.edu/illinois-commitment/",
+        "excerpt": "Illinois Commitment ... cover tuition and campus fees for up to four years"
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://www.osfa.illinois.edu/types-of-aid/other-aid/international-students/",
+        "excerpt": "For international students, financial aid is generally limited to institutional aid programs ... and outside scholarships"
+      }
+    ],
+    "recommendationInputs.admissionRateOverall": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools?id=145637",
+        "excerpt": "\"latest.admissions.admission_rate.overall\": 0.4369"
+      }
+    ],
+    "recommendationInputs.satAverageOverall": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools?id=145637",
+        "excerpt": "\"latest.admissions.sat_scores.average.overall\": 1418"
+      }
+    ],
+    "recommendationInputs.actMidpointCumulative": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools?id=145637",
+        "excerpt": "\"latest.admissions.act_scores.midpoint.cumulative\": 32"
+      }
+    ],
+    "recommendationInputs.undergraduateSize": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools?id=145637",
+        "excerpt": "\"latest.student.size\": 34623"
+      }
+    ],
+    "recommendationInputs.schoolControl": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools?id=145637",
+        "excerpt": "\"school.ownership\": 1"
+      }
+    ],
+    "recommendationInputs.internationalAidPolicy": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://www.osfa.illinois.edu/types-of-aid/other-aid/international-students/",
+        "excerpt": "For international students, financial aid is generally limited to institutional aid programs ... and outside scholarships"
+      }
+    ],
+    "recommendationInputs.testingRequirements": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.admissions.illinois.edu/faq/applicant-freshman",
+        "excerpt": "We accept both exams, and no preference is given to either. ... You don't need a set score to be admitted. ... We'll review your application based on the test scores you report"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.admissions.illinois.edu/apply/freshman/profile",
+        "excerpt": "SAT Score (no writing): 1420-1540 ... ACT Score: 31-35"
+      }
+    ],
+    "explanationInputs.testingExpectation": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.admissions.illinois.edu/faq/applicant-freshman",
+        "excerpt": "We will use a holistic review of your admissions application with or without an ACT or SAT."
+      }
+    ],
+    "explanationInputs.englishPolicySummary": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.admissions.illinois.edu/apply/international",
+        "excerpt": "We require all students ... to demonstrate English proficiency."
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.admissions.illinois.edu/policies",
+        "excerpt": "TOEFL iBT ... minimum of 100 total ... IELTS ... minimum of 7.5 total ... Duolingo ... minimum of 130 overall"
+      }
+    ],
+    "explanationInputs.aidModel": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://osfa.illinois.edu/types-of-aid/scholarships/merit-based-scholarships/",
+        "excerpt": "Following are select merit-based scholarships available to University of Illinois students."
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://osfa.illinois.edu/illinois-commitment/",
+        "excerpt": "Eligible students will receive a financial aid package that provides scholarship and grant funding to cover the full cost of tuition and campus fees"
+      }
+    ],
+    "explanationInputs.applicationComplexity": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.admissions.illinois.edu/apply/freshman/help-with-applying",
+        "excerpt": "After applying through Common App, we'll email you instructions on how to self-report your courses and grades."
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.admissions.illinois.edu/faq/applicant-freshman",
+        "excerpt": "Required items include your application fee or fee waiver, your self-reported academic record ... any test scores you've chosen to report, and in some cases, English Language Proficiency scores."
+      }
+    ],
+    "recommendationInputs.programFitTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://grainger.illinois.edu/",
+        "excerpt": "Grainger Engineering invites students to invent the future in engineering and computing together, with research for good."
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://giesbusiness.illinois.edu/",
+        "excerpt": "Gies Business is dedicated to making a tangible impact on the business world, our communities, and the global economy."
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://undergradresearch.illinois.edu/",
+        "excerpt": "The Illinois Office of Undergraduate Research supports undergraduate research across the university."
+      }
+    ],
+    "recommendationInputs.programAdmissionModel": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.admissions.illinois.edu/apply/freshman/dates",
+        "excerpt": "Depending on the competitiveness of the major you select, you may not receive a final decision at this time."
+      }
+    ],
+    "recommendationInputs.applicationStrategyTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.admissions.illinois.edu/apply/freshman/dates",
+        "excerpt": "Early action is non-binding, meaning you are not required to attend if you are admitted."
+      }
+    ]
+  },
+  "quality": {
+    "status": "publishable",
+    "missingFields": [],
+    "warnings": [
+      "The official admissions dates page is published for fall 2026 admission and the captured deadline dates reflect that published cycle.",
+      "International aid is limited compared with domestic aid, so the artifact marks the school as having merit aid but constrained international financial support."
+    ]
+  }
+}

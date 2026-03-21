@@ -1,0 +1,351 @@
+{
+  "schoolSlug": "university-of-california-santa-barbara",
+  "lastVerifiedAt": "2026-03-21",
+  "identity": {
+    "schoolName": "University of California, Santa Barbara",
+    "city": "Santa Barbara",
+    "state": "CA",
+    "officialAdmissionsUrl": "https://admissions.sa.ucsb.edu/faq"
+  },
+  "applicationRounds": [
+    "regular_decision"
+  ],
+  "deadlinesByRound": {
+    "early_action": null,
+    "early_decision": null,
+    "regular_decision": "2026-11-30",
+    "rolling_admission": null,
+    "priority": null
+  },
+  "englishRequirements": {
+    "minimumIelts": null,
+    "minimumToeflInternetBased": null,
+    "waiverNotes": "If your language of instruction in high school was English for three or more years, you do not need an English proficiency exam. UCSB also accepts a Duolingo score of 115 or higher to meet the English proficiency requirement."
+  },
+  "testPolicy": "test_blind",
+  "requiredMaterials": [
+    "uc_application",
+    "application_fee_or_fee_waiver",
+    "personal_insight_questions",
+    "proof_of_english_proficiency"
+  ],
+  "tuitionAnnualUsd": 16407,
+  "estimatedCostOfAttendanceUsd": 44568,
+  "livingCostEstimateUsd": 19623,
+  "scholarshipAvailabilityFlag": true,
+  "scholarshipNotes": "Most UCSB financial aid is need-based and, for UCSB Scholarship, is awarded to California resident undergraduates who file on time and demonstrate financial need. UCSB also offers Regents Scholarship awards to a small number of incoming freshmen, and nonresident undergraduates are generally ineligible for UC need-based aid or institutional grant funding.",
+  "recommendationInputs": {
+    "admissionRateOverall": 0.2778,
+    "satAverageOverall": null,
+    "actMidpointCumulative": null,
+    "undergraduateSize": 23205,
+    "schoolControl": "public",
+    "campusLocale": "suburban",
+    "internationalAidPolicy": "limited_or_unclear",
+    "hasNeedBasedAid": true,
+    "hasMeritAid": true,
+    "testingRequirements": {
+      "acceptedExams": [],
+      "minimumSatTotal": null,
+      "minimumActComposite": null,
+      "latestSatTestDateNote": null,
+      "latestActTestDateNote": null,
+      "superscorePolicy": "unknown",
+      "writingEssayPolicy": "unknown",
+      "scoreReportingPolicy": "unknown",
+      "middle50SatTotal": {
+        "low": null,
+        "high": null
+      },
+      "middle50ActComposite": {
+        "low": null,
+        "high": null
+      }
+    },
+    "averageNetPriceUsd": null,
+    "programFitTags": [],
+    "programAdmissionModel": "open",
+    "applicationStrategyTags": []
+  },
+  "explanationInputs": {
+    "academicSelectivityBand": "selective",
+    "testingExpectation": "tests_not_considered",
+    "englishPolicySummary": "waiver_possible",
+    "aidModel": "need_and_merit",
+    "applicationComplexity": "medium",
+    "deadlineUrgencyWindows": {
+      "earliestDeadline": "2026-11-30",
+      "latestMajorDeadline": "2026-11-30"
+    },
+    "internationalStudentConsiderations": [
+      "english_fluency_required",
+      "need_aware_or_limited_aid_possible",
+      "financial_certification_likely_required",
+      "merit_aid_possible"
+    ],
+    "potentialFitTags": [
+      "large_public_environment",
+      "value_for_budget_conscious_students",
+      "research_or_innovation_oriented",
+      "strong_need_based_aid_signal"
+    ],
+    "potentialRiskTags": [
+      "high_total_cost",
+      "limited_aid_for_international_students",
+      "early_deadline_pressure"
+    ],
+    "actionableApplicationSteps": [
+      "prepare_regular_decision_timeline",
+      "prepare_english_testing_or_waiver_plan",
+      "prioritize_financial_aid_forms",
+      "build_supplemental_essay_plan"
+    ]
+  },
+  "fieldProvenance": {
+    "identity.schoolName": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.sa.ucsb.edu/faq",
+        "excerpt": "Frequently Asked Questions"
+      }
+    ],
+    "identity.city": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.city\": \"Santa Barbara\""
+      }
+    ],
+    "identity.state": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.state\": \"CA\""
+      }
+    ],
+    "identity.officialAdmissionsUrl": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.sa.ucsb.edu/faq",
+        "excerpt": "Frequently Asked Questions"
+      }
+    ],
+    "applicationRounds": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.sa.ucsb.edu/faq",
+        "excerpt": "The next application filing period will open from October 1 - November 30, 2026"
+      }
+    ],
+    "deadlinesByRound": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.sa.ucsb.edu/faq",
+        "excerpt": "The next application filing period will open from October 1 - November 30, 2026 for the fall 2027 year."
+      }
+    ],
+    "englishRequirements": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.sa.ucsb.edu/faq",
+        "excerpt": "If you attended a high school for three or more years where the language of instruction was English, you do not need to take an English proficiency exam."
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.sa.ucsb.edu/faq",
+        "excerpt": "UCSB will also accept a Duolingo score of 115 or higher"
+      }
+    ],
+    "testPolicy": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.sa.ucsb.edu/faq",
+        "excerpt": "UCSB will not consider SAT or ACT test scores when making admissions decisions or awarding scholarships for applicants."
+      }
+    ],
+    "requiredMaterials": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.sa.ucsb.edu/faq",
+        "excerpt": "UC Application"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.sa.ucsb.edu/faq",
+        "excerpt": "application fees"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.sa.ucsb.edu/faq",
+        "excerpt": "UC Application"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.sa.ucsb.edu/faq",
+        "excerpt": "We will only use the submitted UC application to make our decision."
+      }
+    ],
+    "tuitionAnnualUsd": [
+      {
+        "sourceKind": "official_tuition",
+        "sourceUrl": "https://www.finaid.ucsb.edu/docs/default-source/default-document-library/2024-2025-undergrad-coa.pdf?sfvrsn=fb791f8a_4",
+        "excerpt": "UC Tuition $14,436 ... Campus Fees $1,971"
+      }
+    ],
+    "estimatedCostOfAttendanceUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://www.finaid.ucsb.edu/docs/default-source/default-document-library/2024-2025-undergrad-coa.pdf?sfvrsn=fb791f8a_4",
+        "excerpt": "Total (CA Resident) $44,568"
+      }
+    ],
+    "livingCostEstimateUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://www.finaid.ucsb.edu/docs/default-source/default-document-library/2024-2025-undergrad-coa.pdf?sfvrsn=fb791f8a_4",
+        "excerpt": "Living Expenses $19,623"
+      }
+    ],
+    "scholarshipAvailabilityFlag": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://www.finaid.ucsb.edu/eligibility",
+        "excerpt": "grant & scholarship support from a combination of federal, state, university, and private sources"
+      }
+    ],
+    "scholarshipNotes": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://www.finaid.ucsb.edu/eligibility",
+        "excerpt": "UCSB Scholarship is made available by the University of California and is awarded to California resident undergraduate applicants who are considered to be On-Time and determined to have sufficient financial need."
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://www.finaid.ucsb.edu/scholarships/regents-scholarship",
+        "excerpt": "At UCSB, the award is coordinated by the Office of Financial Aid and Scholarships."
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://www.finaid.ucsb.edu/eligibility",
+        "excerpt": "nonresident undergraduates are ineligible for UC need-based financial aid and are not typically awarded institutional scholarships or grant funding"
+      }
+    ],
+    "recommendationInputs.admissionRateOverall": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.admission_rate.overall\": 0.2778"
+      }
+    ],
+    "recommendationInputs.satAverageOverall": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.sat_scores.average.overall\": null"
+      }
+    ],
+    "recommendationInputs.actMidpointCumulative": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.act_scores.midpoint.cumulative\": null"
+      }
+    ],
+    "recommendationInputs.undergraduateSize": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.student.size\": 23205"
+      }
+    ],
+    "recommendationInputs.schoolControl": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.ownership\": 1"
+      }
+    ],
+    "recommendationInputs.programAdmissionModel": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.sa.ucsb.edu/faq",
+        "excerpt": "We will only use the submitted UC application to make our decision."
+      }
+    ],
+    "recommendationInputs.campusLocale": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.locale\": 22"
+      }
+    ],
+    "recommendationInputs.internationalAidPolicy": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://www.finaid.ucsb.edu/eligibility",
+        "excerpt": "nonresident undergraduates are ineligible for UC need-based financial aid"
+      }
+    ],
+    "recommendationInputs.hasNeedBasedAid": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://www.finaid.ucsb.edu/eligibility",
+        "excerpt": "financial aid is awarded based on an assessment of a family’s demonstrated financial need"
+      }
+    ],
+    "recommendationInputs.hasMeritAid": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://www.finaid.ucsb.edu/scholarships/regents-scholarship",
+        "excerpt": "Regents Scholarship Award"
+      }
+    ],
+    "recommendationInputs.testingRequirements": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.sa.ucsb.edu/faq",
+        "excerpt": "UCSB will not consider SAT or ACT test scores when making admissions decisions or awarding scholarships for applicants."
+      }
+    ],
+    "explanationInputs.academicSelectivityBand": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.admission_rate.overall\": 0.2778"
+      }
+    ],
+    "explanationInputs.testingExpectation": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.sa.ucsb.edu/faq",
+        "excerpt": "UCSB will not consider SAT or ACT test scores when making admissions decisions or awarding scholarships for applicants."
+      }
+    ],
+    "explanationInputs.englishPolicySummary": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.sa.ucsb.edu/faq",
+        "excerpt": "If your language of instruction in high school was English, you do not need an English proficiency exam."
+      }
+    ],
+    "explanationInputs.aidModel": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://www.finaid.ucsb.edu/eligibility",
+        "excerpt": "grant & scholarship support from a combination of federal, state, university, and private sources"
+      }
+    ],
+    "explanationInputs.applicationComplexity": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.sa.ucsb.edu/faq",
+        "excerpt": "We will only use the submitted UC application to make our decision."
+      }
+    ]
+  },
+  "quality": {
+    "status": "publishable",
+    "missingFields": [],
+    "warnings": []
+  }
+}

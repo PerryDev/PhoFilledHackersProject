@@ -1,0 +1,383 @@
+{
+  "schoolSlug": "university-of-notre-dame",
+  "lastVerifiedAt": "2026-03-21",
+  "identity": {
+    "schoolName": "University of Notre Dame",
+    "city": "Notre Dame",
+    "state": "IN",
+    "officialAdmissionsUrl": "https://admissions.nd.edu/apply/"
+  },
+  "applicationRounds": [
+    "early_action",
+    "regular_decision"
+  ],
+  "deadlinesByRound": {
+    "early_action": "2026-11-01",
+    "early_decision": null,
+    "regular_decision": "2027-01-02",
+    "rolling_admission": null,
+    "priority": null
+  },
+  "englishRequirements": {
+    "minimumIelts": null,
+    "minimumToeflInternetBased": null,
+    "waiverNotes": "International applicants whose primary first language is not English, or whose secondary education was not primarily in English, must submit English proficiency testing unless they qualify for a waiver. Notre Dame accepts TOEFL, IELTS, DET, and PTE Academic and can waive English proficiency with SAT Evidence-Based Reading and Writing 650+ or ACT English/Reading 26+."
+  },
+  "testPolicy": "test_optional",
+  "requiredMaterials": [
+    "common_application",
+    "notre_dame_writing_supplement",
+    "official_high_school_transcript",
+    "teacher_evaluation",
+    "application_fee_or_fee_waiver",
+    "test_scores_if_provided",
+    "css_profile_if_applying_for_need_based_aid_as_non_us_citizen"
+  ],
+  "tuitionAnnualUsd": 69280,
+  "estimatedCostOfAttendanceUsd": 91986,
+  "livingCostEstimateUsd": 18992,
+  "scholarshipAvailabilityFlag": true,
+  "scholarshipNotes": "Notre Dame is need-blind for all students, meets 100% of demonstrated financial need, and structures aid offers as grants and scholarships rather than loans. Admitted students who complete the financial aid process are automatically considered for University need-based scholarship programs, and international applicants are also considered for merit scholarships.",
+  "recommendationInputs": {
+    "admissionRateOverall": 0.1238,
+    "satAverageOverall": 1510,
+    "actMidpointCumulative": 34,
+    "undergraduateSize": 8923,
+    "schoolControl": "private_nonprofit",
+    "campusLocale": null,
+    "internationalAidPolicy": "need_and_merit_available",
+    "hasNeedBasedAid": true,
+    "hasMeritAid": true,
+    "testingRequirements": {
+      "acceptedExams": [
+        "sat",
+        "act"
+      ],
+      "minimumSatTotal": null,
+      "minimumActComposite": null,
+      "latestSatTestDateNote": "Notre Dame says the SAT should be taken prior to January of the year you intend to enroll, and encourages students to take the exam at least twice if possible.",
+      "latestActTestDateNote": "Notre Dame says the ACT should be taken prior to January of the year you intend to enroll, and encourages students to take the exam at least twice if possible.",
+      "superscorePolicy": "both",
+      "writingEssayPolicy": "not_considered",
+      "scoreReportingPolicy": "official_required_after_admit",
+      "middle50SatTotal": {
+        "low": 1460,
+        "high": 1540
+      },
+      "middle50ActComposite": {
+        "low": 33,
+        "high": 35
+      }
+    },
+    "averageNetPriceUsd": null,
+    "programFitTags": [
+      "research_intensive",
+      "humanities",
+      "social_sciences",
+      "engineering",
+      "business",
+      "life_sciences"
+    ],
+    "programAdmissionModel": "unknown",
+    "applicationStrategyTags": [
+      "restrictive_early_action",
+      "multiple_early_rounds"
+    ]
+  },
+  "explanationInputs": {
+    "academicSelectivityBand": "highly_selective",
+    "testingExpectation": "tests_not_required",
+    "englishPolicySummary": "waiver_possible",
+    "aidModel": "need_and_merit",
+    "applicationComplexity": "high",
+    "deadlineUrgencyWindows": {
+      "earliestDeadline": "2026-11-01",
+      "latestMajorDeadline": "2027-01-02"
+    },
+    "internationalStudentConsiderations": [
+      "english_fluency_required",
+      "english_test_may_be_required",
+      "need_based_aid_available",
+      "merit_aid_possible"
+    ],
+    "potentialFitTags": [
+      "research_or_innovation_oriented",
+      "strong_need_based_aid_signal",
+      "strong_for_liberal_arts_or_humanities_students"
+    ],
+    "potentialRiskTags": [
+      "high_total_cost",
+      "early_deadline_pressure",
+      "complex_application_requirements"
+    ],
+    "actionableApplicationSteps": [
+      "prepare_early_round_strategy",
+      "prepare_english_testing_or_waiver_plan",
+      "prepare_teacher_recommendations_early",
+      "prioritize_financial_aid_forms",
+      "build_supplemental_essay_plan"
+    ]
+  },
+  "fieldProvenance": {
+    "identity.schoolName": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.nd.edu/apply/",
+        "excerpt": "University of Notre Dame"
+      }
+    ],
+    "applicationRounds": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.nd.edu/apply/application-overview/",
+        "excerpt": "Restrictive Early Action or January 2 for Regular Decision"
+      }
+    ],
+    "deadlinesByRound": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.nd.edu/apply/application-overview/",
+        "excerpt": "no later than November 1 for Restrictive Early Action or January 2 for Regular Decision"
+      }
+    ],
+    "englishRequirements": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.nd.edu/apply/resources-for/international-applicants/application-information/",
+        "excerpt": "Students whose native language is not English must also take the TOEFL, IELTS, DET, or PTE Academic unless you qualify for a waiver."
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.nd.edu/apply/resources-for/international-applicants/application-information/",
+        "excerpt": "We strongly recommend the following scores: TOEFL: 100 or higher ... IELTS: 7.5 or higher ... Duolingo English Test: 125 or higher ... PTE Academic: 70"
+      }
+    ],
+    "testPolicy": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.nd.edu/apply/faqs/",
+        "excerpt": "The University of Notre Dame is test-optional through the 2026-2027 academic year."
+      }
+    ],
+    "requiredMaterials": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.nd.edu/apply/application-overview/",
+        "excerpt": "The Notre Dame Writing Supplement"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.nd.edu/apply/application-overview/",
+        "excerpt": "Official high school transcripts or record of academic achievement in secondary school"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.nd.edu/apply/application-overview/",
+        "excerpt": "A letter of evaluation from a high school teacher"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.nd.edu/apply/application-overview/",
+        "excerpt": "A non-refundable application fee of $85"
+      }
+    ],
+    "tuitionAnnualUsd": [
+      {
+        "sourceKind": "official_tuition",
+        "sourceUrl": "https://financialaid.nd.edu/costs-and-affordability/",
+        "excerpt": "Tuition $69,280"
+      }
+    ],
+    "estimatedCostOfAttendanceUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://financialaid.nd.edu/costs-and-affordability/",
+        "excerpt": "Total Estimated Cost $91,986"
+      }
+    ],
+    "livingCostEstimateUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://financialaid.nd.edu/costs-and-affordability/",
+        "excerpt": "Housing and Food $18,992"
+      }
+    ],
+    "scholarshipAvailabilityFlag": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://financialaid.nd.edu/costs-and-affordability/",
+        "excerpt": "Need-blind Admissions for All Students"
+      }
+    ],
+    "scholarshipNotes": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://financialaid.nd.edu/costs-and-affordability/",
+        "excerpt": "100% of your demonstrated financial need is met"
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.nd.edu/apply/resources-for/international-applicants/application-information/",
+        "excerpt": "Applicants will still be considered for Notre Dame’s merit scholarships."
+      }
+    ],
+    "recommendationInputs.admissionRateOverall": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools?id=152080",
+        "excerpt": "\"latest.admissions.admission_rate.overall\": 0.1238"
+      }
+    ],
+    "recommendationInputs.satAverageOverall": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools?id=152080",
+        "excerpt": "\"latest.admissions.sat_scores.average.overall\": 1510"
+      }
+    ],
+    "recommendationInputs.actMidpointCumulative": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools?id=152080",
+        "excerpt": "\"latest.admissions.act_scores.midpoint.cumulative\": 34"
+      }
+    ],
+    "recommendationInputs.undergraduateSize": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools?id=152080",
+        "excerpt": "\"latest.student.size\": 8923"
+      }
+    ],
+    "recommendationInputs.schoolControl": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools?id=152080",
+        "excerpt": "\"school.ownership\": 2"
+      }
+    ],
+    "recommendationInputs.internationalAidPolicy": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.nd.edu/apply/resources-for/international-applicants/application-information/",
+        "excerpt": "Applicants will still be considered for Notre Dame’s merit scholarships."
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://financialaid.nd.edu/costs-and-affordability/",
+        "excerpt": "100% of your demonstrated financial need is met"
+      }
+    ],
+    "recommendationInputs.testingRequirements": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.nd.edu/apply/resources-for/international-applicants/application-information/",
+        "excerpt": "Notre Dame is test-optional through at least 2026-27"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.nd.edu/apply/resources-for/international-applicants/application-information/",
+        "excerpt": "The SAT and ACT should be taken prior to January of the year you intend to enroll"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.nd.edu/apply/resources-for/international-applicants/application-information/",
+        "excerpt": "If admitted, you will be required to submit official score reports from the testing agency."
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.nd.edu/apply/faqs/",
+        "excerpt": "1160-1340 SAT (Mid 50%) 30-34 ACT (Mid 50%)"
+      }
+    ],
+    "recommendationInputs.programFitTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://research.nd.edu/",
+        "excerpt": "A premier Catholic research university"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://al.nd.edu/academics/undergraduate-programs/",
+        "excerpt": "more than 60 programs across the arts, humanities, languages, and social sciences"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://engineering.nd.edu/departments-programs/undergraduate-programs/",
+        "excerpt": "Computer Science and Engineering"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://mendoza.nd.edu/undergraduate/",
+        "excerpt": "Undergraduate Business Core"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://science.nd.edu/academics/degree-programs/",
+        "excerpt": "College of Science"
+      }
+    ],
+    "recommendationInputs.applicationStrategyTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.nd.edu/apply/application-overview/",
+        "excerpt": "Restrictive Early Action"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.nd.edu/apply/application-overview/",
+        "excerpt": "January 2 for Regular Decision"
+      }
+    ],
+    "explanationInputs.testingExpectation": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.nd.edu/apply/faqs/",
+        "excerpt": "The University of Notre Dame is test-optional through the 2026-2027 academic year."
+      }
+    ],
+    "explanationInputs.englishPolicySummary": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.nd.edu/apply/resources-for/international-applicants/application-information/",
+        "excerpt": "Students whose native language is not English must also take the TOEFL, IELTS, DET, or PTE Academic unless you qualify for a waiver."
+      }
+    ],
+    "explanationInputs.aidModel": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://financialaid.nd.edu/costs-and-affordability/",
+        "excerpt": "Need-blind Admissions for All Students"
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://financialaid.nd.edu/costs-and-affordability/",
+        "excerpt": "100% of your demonstrated financial need is met"
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.nd.edu/apply/resources-for/international-applicants/application-information/",
+        "excerpt": "Applicants will still be considered for Notre Dame’s merit scholarships."
+      }
+    ],
+    "explanationInputs.applicationComplexity": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.nd.edu/apply/application-overview/",
+        "excerpt": "The Notre Dame Writing Section consists of responses to one (1) short essay question and three (3) short-answer responses"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.nd.edu/apply/application-overview/",
+        "excerpt": "A letter of evaluation from a high school teacher"
+      }
+    ]
+  },
+  "quality": {
+    "status": "publishable",
+    "missingFields": [],
+    "warnings": [
+      "Notre Dame is test-optional, so testingRequirements is capturing policy, middle-50 context, and score-reporting rules rather than a hard submission requirement."
+    ]
+  }
+}

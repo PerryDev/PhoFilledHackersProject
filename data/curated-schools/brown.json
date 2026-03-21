@@ -1,0 +1,361 @@
+{
+  "schoolSlug": "brown",
+  "lastVerifiedAt": "2026-03-21",
+  "identity": {
+    "schoolName": "Brown University",
+    "city": "Providence",
+    "state": "RI",
+    "officialAdmissionsUrl": "https://admission.brown.edu/first-year"
+  },
+  "applicationRounds": [
+    "early_decision",
+    "regular_decision"
+  ],
+  "deadlinesByRound": {
+    "early_action": null,
+    "early_decision": "2026-11-01",
+    "regular_decision": "2027-01-05",
+    "rolling_admission": null,
+    "priority": null
+  },
+  "englishRequirements": {
+    "minimumIelts": 8,
+    "minimumToeflInternetBased": 105,
+    "waiverNotes": "English language proficiency must be achieved before international students are admitted. Brown accepts TOEFL, IELTS, Duolingo, Pearson, and Cambridge English exams. Official score reports are required for matriculating students who self-report English proficiency results."
+  },
+  "testPolicy": "required",
+  "requiredMaterials": [
+    "common_application",
+    "brown_supplemental_essays",
+    "application_fee_or_fee_waiver",
+    "official_transcript",
+    "school_report",
+    "midyear_report",
+    "counselor_recommendation",
+    "teacher_recommendations_2",
+    "sat_or_act"
+  ],
+  "tuitionAnnualUsd": 71700,
+  "estimatedCostOfAttendanceUsd": 99984,
+  "livingCostEstimateUsd": 19464,
+  "scholarshipAvailabilityFlag": true,
+  "scholarshipNotes": "Brown meets 100% of demonstrated financial need for admitted students. Brown financial aid is need-based, Brown Promise replaces packaged loans with scholarship-based aid, and Brown does not offer merit awards.",
+  "recommendationInputs": {
+    "schoolControl": "private_nonprofit",
+    "internationalAidPolicy": "meets_full_demonstrated_need_if_eligible",
+    "hasNeedBasedAid": true,
+    "hasMeritAid": false,
+    "testingRequirements": {
+      "acceptedExams": [
+        "sat",
+        "act"
+      ],
+      "minimumSatTotal": null,
+      "minimumActComposite": null,
+      "latestSatTestDateNote": "For Early Decision, testing must be completed by the last October test date to ensure receipt of scores. For Regular Decision, testing must be completed by the last December test date to ensure receipt of scores.",
+      "latestActTestDateNote": "For Early Decision, testing must be completed by the last October test date to ensure receipt of scores. For Regular Decision, testing must be completed by the last December test date to ensure receipt of scores.",
+      "superscorePolicy": "both",
+      "writingEssayPolicy": "optional",
+      "scoreReportingPolicy": "self_report_allowed",
+      "middle50SatTotal": {
+        "low": null,
+        "high": null
+      },
+      "middle50ActComposite": {
+        "low": null,
+        "high": null
+      }
+    },
+    "admissionRateOverall": 0.0523,
+    "satAverageOverall": 1546,
+    "actMidpointCumulative": 34,
+    "undergraduateSize": 7273,
+    "campusLocale": null,
+    "averageNetPriceUsd": null,
+    "programFitTags": [
+      "humanities",
+      "social_sciences",
+      "research_intensive"
+    ],
+    "programAdmissionModel": "unknown",
+    "applicationStrategyTags": [
+      "binding_early_decision"
+    ]
+  },
+  "explanationInputs": {
+    "academicSelectivityBand": "ultra_selective",
+    "testingExpectation": "scores_considered",
+    "englishPolicySummary": "minimum_scores_required",
+    "aidModel": "need_based_only",
+    "applicationComplexity": "high",
+    "deadlineUrgencyWindows": {
+      "earliestDeadline": "2026-11-01",
+      "latestMajorDeadline": "2027-01-05"
+    },
+    "internationalStudentConsiderations": [
+      "english_fluency_required",
+      "english_test_may_be_required",
+      "need_based_aid_available"
+    ],
+    "potentialFitTags": [
+      "research_or_innovation_oriented",
+      "smaller_private_environment",
+      "strong_need_based_aid_signal"
+    ],
+    "potentialRiskTags": [
+      "extremely_low_admission_rate",
+      "high_total_cost",
+      "limited_merit_aid",
+      "testing_required",
+      "complex_application_requirements"
+    ],
+    "actionableApplicationSteps": [
+      "prepare_early_round_strategy",
+      "complete_standardized_testing_if_required",
+      "prepare_teacher_recommendations_early",
+      "prepare_counselor_documents_early",
+      "budget_for_need_based_aid_process",
+      "build_supplemental_essay_plan",
+      "prepare_english_testing_or_waiver_plan"
+    ]
+  },
+  "fieldProvenance": {
+    "identity.officialAdmissionsUrl": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.brown.edu/first-year",
+        "excerpt": "First-Year Applicants | Undergraduate Admission | Brown University"
+      }
+    ],
+    "applicationRounds": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.brown.edu/first-year/application-checklist",
+        "excerpt": "Brown's first-year application checklist lists Early Decision and Regular Decision."
+      }
+    ],
+    "deadlinesByRound": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.brown.edu/first-year/application-checklist",
+        "excerpt": "Early Decision application deadline - November 1 ... Regular Decision application deadline - January 5."
+      }
+    ],
+    "englishRequirements.minimumIelts": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.brown.edu/international/english-proficiency",
+        "excerpt": "IELTS: minimum score of 8.0"
+      }
+    ],
+    "englishRequirements.minimumToeflInternetBased": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.brown.edu/international/english-proficiency",
+        "excerpt": "TOEFL internet-based exam taken prior to January 2026: minimum score of 105"
+      }
+    ],
+    "englishRequirements.waiverNotes": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.brown.edu/international/english-proficiency",
+        "excerpt": "English language proficiency must be achieved before international students are admitted."
+      }
+    ],
+    "testPolicy": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.brown.edu/first-year/application-checklist",
+        "excerpt": "Brown University has returned to a policy requiring standardized test scores (either SAT or ACT scores) for first-year applicants beginning with the 2024-25 admission cycle."
+      }
+    ],
+    "requiredMaterials": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.brown.edu/first-year/application-checklist",
+        "excerpt": "Complete your application via the Common Application; Brown's supplemental essays are submitted through the Common Application; submit the application fee or a fee waiver; transcript; School Report; Midyear School Report and Transcript; Counselor Recommendation; Two Teacher Evaluations/Recommendations; standardized test scores."
+      }
+    ],
+    "tuitionAnnualUsd": [
+      {
+        "sourceKind": "official_tuition",
+        "sourceUrl": "https://admission.brown.edu/tuition-aid/tuition-fees",
+        "excerpt": "Tuition $35,850 Fall and $35,850 Spring; Total $71,700"
+      }
+    ],
+    "estimatedCostOfAttendanceUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://finaid.brown.edu/estimate-cost-aid/cost",
+        "excerpt": "Total Direct and Indirect Charges $99,984"
+      }
+    ],
+    "livingCostEstimateUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://finaid.brown.edu/estimate-cost-aid/cost",
+        "excerpt": "Housing $10,710; Food $8,754; Miscellaneous Personal Expenses $2,878"
+      }
+    ],
+    "scholarshipAvailabilityFlag": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admission.brown.edu/tuition-aid/financial-aid",
+        "excerpt": "Brown meets 100% of each student's demonstrated financial need."
+      }
+    ],
+    "scholarshipNotes": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admission.brown.edu/tuition-aid/financial-aid",
+        "excerpt": "Brown does not package loans in its financial aid awards ... financial aid packages are based on scholarships that do not have to be repaid."
+      }
+    ],
+    "recommendationInputs.schoolControl": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools?school.name=Brown%20University",
+        "excerpt": "\"school.ownership\": 2"
+      }
+    ],
+    "recommendationInputs.internationalAidPolicy": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admission.brown.edu/international/financial-aid",
+        "excerpt": "International students are eligible to apply for University financial aid ... We meet full demonstrated need for students who are admitted."
+      }
+    ],
+    "recommendationInputs.hasNeedBasedAid": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admission.brown.edu/international/financial-aid",
+        "excerpt": "Financial aid is need based."
+      }
+    ],
+    "recommendationInputs.hasMeritAid": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admission.brown.edu/international/financial-aid",
+        "excerpt": "Brown University does not offer any merit awards."
+      }
+    ],
+    "recommendationInputs.testingRequirements.acceptedExams": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.brown.edu/first-year/application-checklist",
+        "excerpt": "Standardized test scores (either SAT or ACT scores) are required."
+      }
+    ],
+    "recommendationInputs.testingRequirements.latestSatTestDateNote": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.brown.edu/first-year/application-checklist",
+        "excerpt": "If you are applying Early Decision, testing must be completed by the last October test date ... Regular Decision ... last December test date."
+      }
+    ],
+    "recommendationInputs.testingRequirements.latestActTestDateNote": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.brown.edu/first-year/application-checklist",
+        "excerpt": "If you are applying Early Decision, testing must be completed by the last October test date ... Regular Decision ... last December test date."
+      }
+    ],
+    "recommendationInputs.testingRequirements.superscorePolicy": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.brown.edu/first-year/application-checklist",
+        "excerpt": "We will superscore either the SAT or ACT, or both."
+      }
+    ],
+    "recommendationInputs.testingRequirements.writingEssayPolicy": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.brown.edu/first-year/application-checklist",
+        "excerpt": "Brown recommends the ACT writing section or SAT essay section, but it is not required."
+      }
+    ],
+    "recommendationInputs.testingRequirements.scoreReportingPolicy": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.brown.edu/first-year/application-checklist",
+        "excerpt": "Standardized tests may be self-reported in the application."
+      }
+    ],
+    "recommendationInputs.testingRequirements.middle50SatTotal": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools?school.name=Brown%20University",
+        "excerpt": "Brown does not publish a Brown-wide SAT middle-50 range on the sources used here; the field is null."
+      }
+    ],
+    "recommendationInputs.testingRequirements.middle50ActComposite": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools?school.name=Brown%20University",
+        "excerpt": "Brown does not publish a Brown-wide ACT middle-50 range on the sources used here; the field is null."
+      }
+    ],
+    "explanationInputs.academicSelectivityBand": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools?school.name=Brown%20University",
+        "excerpt": "\"latest.admissions.admission_rate.overall\": 0.0523"
+      }
+    ],
+    "explanationInputs.testingExpectation": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.brown.edu/first-year/application-checklist",
+        "excerpt": "Brown requires standardized test scores but does not publish minimum test scores."
+      }
+    ],
+    "explanationInputs.englishPolicySummary": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.brown.edu/international/english-proficiency",
+        "excerpt": "The following minimum scores are expected in most cases."
+      }
+    ],
+    "explanationInputs.aidModel": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admission.brown.edu/international/financial-aid",
+        "excerpt": "Financial aid is need based. Brown University does not offer any merit awards."
+      }
+    ],
+    "explanationInputs.deadlineUrgencyWindows": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.brown.edu/first-year/application-checklist",
+        "excerpt": "Early Decision application deadline - November 1 ... Regular Decision application deadline - January 5."
+      }
+    ],
+    "recommendationInputs.programFitTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.brown.edu/academics/undergraduate/open-curriculum",
+        "excerpt": "Brown students develop a personalized course of study and have greater freedom to study what they choose across any and every discipline."
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://www.brown.edu/brown-research",
+        "excerpt": "Brown researchers generate real solutions in areas ranging from health and medicine to science and technology, security, engineering and economics."
+      }
+    ],
+    "recommendationInputs.applicationStrategyTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admission.brown.edu/first-year/early-decision",
+        "excerpt": "If Brown is your first choice and you would definitely accept an offer of admission if admitted, you may choose our Early Decision plan."
+      }
+    ]
+  },
+  "quality": {
+    "status": "publishable",
+    "missingFields": [],
+    "warnings": [
+      "Brown does not publish Brown-wide SAT/ACT middle-50 ranges on the sources used here, so recommendationInputs.testingRequirements.middle50 fields are null."
+    ],
+    "lastVerifiedAt": "2026-03-21"
+  }
+}

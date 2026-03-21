@@ -1,0 +1,436 @@
+{
+  "schoolSlug": "university-of-rochester",
+  "lastVerifiedAt": "2026-03-21",
+  "identity": {
+    "schoolName": "University of Rochester",
+    "city": "Rochester",
+    "state": "NY",
+    "officialAdmissionsUrl": "https://admissions.rochester.edu/"
+  },
+  "applicationRounds": [
+    "early_decision",
+    "regular_decision"
+  ],
+  "deadlinesByRound": {
+    "early_action": null,
+    "early_decision": "2026-11-01",
+    "regular_decision": "2027-01-05",
+    "rolling_admission": null,
+    "priority": null
+  },
+  "englishRequirements": {
+    "minimumIelts": null,
+    "minimumToeflInternetBased": null,
+    "waiverNotes": "URochester requires proof of English language proficiency for some international applicants, but the page presents the published DET, IELTS, and TOEFL values as recommended scores rather than hard minimums. A waiver may be requested if the applicant is a native English speaker, completed at least three years of high school in English, or completed a year or more of U.S. college-level coursework including a writing-intensive course."
+  },
+  "testPolicy": "test_optional",
+  "requiredMaterials": [
+    "common_application_or_coalition_application",
+    "application_fee_or_fee_waiver",
+    "secondary_school_transcript",
+    "teacher_recommendation_1_required",
+    "additional_teacher_recommendations_optional",
+    "test_scores_optional",
+    "financial_aid_forms_if_applying_for_aid",
+    "international_english_proficiency_documents_if_applicable"
+  ],
+  "tuitionAnnualUsd": 71750,
+  "estimatedCostOfAttendanceUsd": 96022,
+  "livingCostEstimateUsd": 21328,
+  "scholarshipAvailabilityFlag": true,
+  "scholarshipNotes": "URochester says it meets the full demonstrated need of all students who earn admission to the College, and 75% of first-year students receive financial aid. The university also offers non-need-based scholarships that can exceed calculated need, including the Handler Scholarship and other merit awards, and test scores are not used as a factor for merit-based scholarships.",
+  "recommendationInputs": {
+    "admissionRateOverall": 0.404,
+    "satAverageOverall": 1463,
+    "actMidpointCumulative": 32,
+    "undergraduateSize": 7897,
+    "schoolControl": "private_nonprofit",
+    "campusLocale": "urban",
+    "internationalAidPolicy": "need_and_merit_available",
+    "hasNeedBasedAid": true,
+    "hasMeritAid": true,
+    "testingRequirements": {
+      "acceptedExams": [
+        "sat",
+        "act"
+      ],
+      "minimumSatTotal": null,
+      "minimumActComposite": null,
+      "latestSatTestDateNote": "ED I / ED II applicants may include November SAT scores; regular decision applicants may include December SAT scores. Students who choose to submit testing can also include AP, IB, or A-level exams.",
+      "latestActTestDateNote": "ED I / ED II applicants may include October ACT scores; regular decision applicants may include December ACT scores. Students who choose to submit testing can also include AP, IB, or A-level exams.",
+      "superscorePolicy": "both",
+      "writingEssayPolicy": "not_considered",
+      "scoreReportingPolicy": "self_report_allowed",
+      "middle50SatTotal": {
+        "low": 1400,
+        "high": 1530
+      },
+      "middle50ActComposite": {
+        "low": 31,
+        "high": 34
+      }
+    },
+    "averageNetPriceUsd": null,
+    "programFitTags": [
+      "research_intensive"
+    ],
+    "programAdmissionModel": "unknown",
+    "applicationStrategyTags": [
+      "binding_early_decision",
+      "multiple_early_rounds"
+    ]
+  },
+  "explanationInputs": {
+    "academicSelectivityBand": "highly_selective",
+    "testingExpectation": "scores_considered",
+    "englishPolicySummary": "waiver_possible",
+    "aidModel": "need_and_merit",
+    "applicationComplexity": "high",
+    "deadlineUrgencyWindows": {
+      "earliestDeadline": "2026-11-01",
+      "latestMajorDeadline": "2027-01-05"
+    },
+    "internationalStudentConsiderations": [
+      "english_fluency_required",
+      "english_test_may_be_required",
+      "financial_certification_likely_required",
+      "need_based_aid_available"
+    ],
+    "potentialFitTags": [
+      "smaller_private_environment",
+      "urban_access",
+      "research_or_innovation_oriented",
+      "strong_for_high_achieving_stem_students",
+      "strong_need_based_aid_signal",
+      "strong_merit_aid_signal"
+    ],
+    "potentialRiskTags": [
+      "high_total_cost",
+      "limited_aid_for_international_students",
+      "complex_application_requirements",
+      "early_deadline_pressure"
+    ],
+    "actionableApplicationSteps": [
+      "prepare_early_round_strategy",
+      "complete_standardized_testing_if_required",
+      "prepare_english_testing_or_waiver_plan",
+      "prepare_teacher_recommendations_early",
+      "prioritize_financial_aid_forms",
+      "build_supplemental_essay_plan"
+    ]
+  },
+  "fieldProvenance": {
+    "identity.schoolName": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.rochester.edu/",
+        "excerpt": "University of Rochester"
+      }
+    ],
+    "applicationRounds": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.rochester.edu/early-decision/",
+        "excerpt": "Early Decision I | Early Decision II | Regular Decision"
+      }
+    ],
+    "deadlinesByRound": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.rochester.edu/early-decision/",
+        "excerpt": "Nov 1 ... Jan 5 ... Regular Decision"
+      }
+    ],
+    "englishRequirements": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.rochester.edu/applying/international-students/",
+        "excerpt": "Exam | Recommended score ... IELTS 7.5 ... TOEFL iBT 100"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.rochester.edu/applying/international-students/",
+        "excerpt": "All international students are required to submit proof of English language proficiency."
+      }
+    ],
+    "testPolicy": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.rochester.edu/applying/testing-policies/",
+        "excerpt": "The University of Rochester’s undergraduate admissions process is test optional."
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.rochester.edu/applying/testing-policies/",
+        "excerpt": "Applicants choosing not to submit standardized tests will not be at a disadvantage"
+      }
+    ],
+    "requiredMaterials": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.rochester.edu/applying/first-year-students/",
+        "excerpt": "Common Application or Coalition for College Application"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.rochester.edu/applying/first-year-students/",
+        "excerpt": "A $50 application fee"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.rochester.edu/applying/first-year-students/",
+        "excerpt": "Secondary school transcript"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.rochester.edu/applying/first-year-students/",
+        "excerpt": "Teacher recommendation (one required)"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.rochester.edu/applying/first-year-students/",
+        "excerpt": "Official standardized test scores (optional)"
+      }
+    ],
+    "tuitionAnnualUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://www.rochester.edu/financial-aid/undergraduate-tuition-expenses/",
+        "excerpt": "Cost breakdown: 2026-2027 ... Tuition $71,750"
+      }
+    ],
+    "estimatedCostOfAttendanceUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://www.rochester.edu/financial-aid/undergraduate-tuition-expenses/",
+        "excerpt": "Cost breakdown: 2026-2027 ... Total $96,022"
+      }
+    ],
+    "livingCostEstimateUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://www.rochester.edu/financial-aid/undergraduate-tuition-expenses/",
+        "excerpt": "Housing $12,822 ... Food $8,506"
+      }
+    ],
+    "scholarshipAvailabilityFlag": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.rochester.edu/campus-life/university-facts/",
+        "excerpt": "We are committed to meeting the full demonstrated need of all students who earn admission to the College."
+      }
+    ],
+    "scholarshipNotes": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.rochester.edu/campus-life/university-facts/",
+        "excerpt": "students receiving non-need-based scholarships exceeding their calculated financial need"
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.rochester.edu/applying/testing-policies/",
+        "excerpt": "Testing is not used as a factor for merit-based scholarships."
+      }
+    ],
+    "recommendationInputs.admissionRateOverall": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.admission_rate.overall\": 0.404"
+      }
+    ],
+    "recommendationInputs.satAverageOverall": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.sat_scores.average.overall\": 1463"
+      }
+    ],
+    "recommendationInputs.actMidpointCumulative": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.admissions.act_scores.midpoint.cumulative\": 32"
+      }
+    ],
+    "recommendationInputs.undergraduateSize": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"latest.student.size\": 7897"
+      }
+    ],
+    "recommendationInputs.schoolControl": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.ownership\": 2"
+      }
+    ],
+    "recommendationInputs.programFitTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.rochester.edu/",
+        "excerpt": "Top-tier research"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.rochester.edu/",
+        "excerpt": "Research is a never-ending pursuit"
+      }
+    ],
+    "recommendationInputs.applicationStrategyTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.rochester.edu/early-decision/",
+        "excerpt": "Early Decision I | Early Decision II | Regular Decision"
+      }
+    ],
+    "recommendationInputs.campusLocale": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools",
+        "excerpt": "\"school.locale\": 21"
+      }
+    ],
+    "recommendationInputs.internationalAidPolicy": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.rochester.edu/applying/international-students/",
+        "excerpt": "The University provides a combination of merit and need-based aid"
+      }
+    ],
+    "recommendationInputs.hasNeedBasedAid": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.rochester.edu/campus-life/university-facts/",
+        "excerpt": "We are committed to meeting the full demonstrated need"
+      }
+    ],
+    "recommendationInputs.hasMeritAid": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.rochester.edu/applying/testing-policies/",
+        "excerpt": "scholarship consideration"
+      }
+    ],
+    "recommendationInputs.testingRequirements": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.rochester.edu/applying/testing-policies/",
+        "excerpt": "test optional ... will not be at a disadvantage"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.rochester.edu/applying/testing-policies/",
+        "excerpt": "we superscore testing"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.rochester.edu/applying/testing-policies/",
+        "excerpt": "Early Decision I ... October ... November ... Regular Decision ... December"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.rochester.edu/applying/international-students/",
+        "excerpt": "Duolingo ... IELTS ... TOEFL ... Recommended score ... 130 / 7.5 / 100"
+      }
+    ],
+    "explanationInputs.testingExpectation": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.rochester.edu/applying/testing-policies/",
+        "excerpt": "test optional"
+      }
+    ],
+    "explanationInputs.aidModel": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.rochester.edu/campus-life/university-facts/",
+        "excerpt": "meeting the full demonstrated need"
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://admissions.rochester.edu/applying/testing-policies/",
+        "excerpt": "Testing is not used as a factor for merit-based scholarships."
+      }
+    ],
+    "explanationInputs.applicationComplexity": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.rochester.edu/applying/first-year-students/",
+        "excerpt": "Teacher recommendation (one required)"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.rochester.edu/applying/first-year-students/",
+        "excerpt": "The following required materials must be submitted"
+      }
+    ],
+    "explanationInputs.internationalStudentConsiderations": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.rochester.edu/applying/international-students/",
+        "excerpt": "All international students are required to submit proof of English language proficiency."
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.rochester.edu/applying/international-students/",
+        "excerpt": "International Financial Support Form"
+      }
+    ],
+    "explanationInputs.potentialFitTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.rochester.edu/campus-life/university-facts/",
+        "excerpt": "one of America’s leading private research universities"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.rochester.edu/campus-life/university-facts/",
+        "excerpt": "The University of Rochester is committed to meeting the full demonstrated need"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.rochester.edu/early-decision/",
+        "excerpt": "priority when it comes to housing assignment and move-in day"
+      }
+    ],
+    "explanationInputs.potentialRiskTags": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://www.rochester.edu/financial-aid/undergraduate-tuition-expenses/",
+        "excerpt": "Cost breakdown: 2026-2027 ... Tuition $71,750"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.rochester.edu/applying/international-students/",
+        "excerpt": "Financial need can be a contributing factor in our admissions decisions for most international applicants"
+      }
+    ],
+    "explanationInputs.actionableApplicationSteps": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.rochester.edu/early-decision/",
+        "excerpt": "Apply by November 1 for Early Decision I"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.rochester.edu/early-decision/",
+        "excerpt": "Apply by January 5 for Early Decision II"
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://admissions.rochester.edu/applying/testing-policies/",
+        "excerpt": "Applicants who choose to submit testing can do so at any point up until the application deadline"
+      }
+    ]
+  },
+  "quality": {
+    "status": "publishable",
+    "missingFields": [],
+    "warnings": [
+      "URochester has test-flexible language and accepts AP/IB/A-level testing for review, but the validator schema only tracks SAT/ACT plus standardized-test policy fields."
+    ]
+  }
+}

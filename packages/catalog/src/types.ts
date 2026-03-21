@@ -7,7 +7,10 @@ import type {
   CatalogRequiredField,
   DeadlinesByRound,
   EnglishRequirements,
+  UniversityExplanationInputs,
+  UniversityRecommendationInputs,
   UniversitySourceKind,
+  UniversitySourceMetadata,
   UniversityValidationReason,
   UniversityValidationStatus,
 } from "@etest/db";
@@ -27,6 +30,8 @@ export interface NormalizedUniversityCatalogRecord {
   livingCostEstimateUsd: number;
   scholarshipAvailabilityFlag: boolean;
   scholarshipNotes: string;
+  recommendationInputs: UniversityRecommendationInputs;
+  explanationInputs: UniversityExplanationInputs;
   lastVerifiedAt: Date;
 }
 
@@ -40,4 +45,44 @@ export interface UniversityFieldProvenance {
 export interface UniversityPublishabilityResult {
   status: Extract<UniversityValidationStatus, "publishable" | "rejected">;
   reasons: UniversityValidationReason[];
+}
+
+export interface ExtractedCatalogFieldCandidate {
+  fieldKey: Exclude<CatalogRequiredField, "lastVerifiedAt">;
+  sourceKind: Exclude<UniversitySourceKind, "manual_review">;
+  sourceUrl: string;
+  value: unknown;
+  excerpt: string | null;
+  capturedValue?: string | null;
+}
+
+export interface SelectedCatalogFieldSource {
+  fieldKey: Exclude<CatalogRequiredField, "lastVerifiedAt">;
+  sourceKind: Exclude<UniversitySourceKind, "manual_review">;
+  sourceUrl: string;
+  value: unknown;
+  excerpt: string | null;
+  metadata: UniversitySourceMetadata;
+}
+
+export interface CatalogSourceSelectionIssue {
+  code: "missing_source_candidate";
+  fieldKey: Exclude<CatalogRequiredField, "lastVerifiedAt">;
+  message: string;
+}
+
+export interface CatalogSourceSelectionResult {
+  selectedSources: SelectedCatalogFieldSource[];
+  issues: CatalogSourceSelectionIssue[];
+}
+
+export interface CatalogNormalizationIssue {
+  code: "invalid_field_value" | "missing_selected_source";
+  fieldKey: CatalogRequiredField;
+  message: string;
+}
+
+export interface CatalogNormalizationResult {
+  record: NormalizedUniversityCatalogRecord | null;
+  issues: CatalogNormalizationIssue[];
 }

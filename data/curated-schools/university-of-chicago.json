@@ -1,0 +1,333 @@
+{
+  "schoolSlug": "university-of-chicago",
+  "lastVerifiedAt": "2026-03-21",
+  "identity": {
+    "schoolName": "University of Chicago",
+    "city": "Chicago",
+    "state": "IL",
+    "officialAdmissionsUrl": "https://collegeadmissions.uchicago.edu/apply"
+  },
+  "applicationRounds": [
+    "early_action",
+    "early_decision",
+    "regular_decision"
+  ],
+  "deadlinesByRound": {
+    "early_action": "2026-11-01",
+    "early_decision": "2026-01-02",
+    "regular_decision": "2026-01-02",
+    "rolling_admission": null,
+    "priority": null
+  },
+  "englishRequirements": {
+    "minimumIelts": null,
+    "minimumToeflInternetBased": null,
+    "waiverNotes": "UChicago lists English proficiency examinations such as TOEFL, IELTS, or Duolingo as optional elements in the first-year checklist."
+  },
+  "testPolicy": "test_optional",
+  "requiredMaterials": [
+    "coalition_application_or_common_application",
+    "uchicago_supplement",
+    "application_fee_or_fee_waiver",
+    "school_report",
+    "official_transcript",
+    "teacher_recommendation_1",
+    "teacher_recommendation_2",
+    "international_financial_aid_worksheet"
+  ],
+  "tuitionAnnualUsd": 71325,
+  "estimatedCostOfAttendanceUsd": 98301,
+  "livingCostEstimateUsd": 20835,
+  "scholarshipAvailabilityFlag": true,
+  "scholarshipNotes": "UChicago says need-based aid is packaged as grants, meets 100% of demonstrated need, and also offers merit scholarships that are automatically considered for admitted students. Families earning less than $125,000 receive free tuition, and families earning less than $60,000 attend for free. International students have also received grants and scholarships.",
+  "recommendationInputs": {
+    "admissionRateOverall": 0.0479,
+    "satAverageOverall": 1554,
+    "actMidpointCumulative": 34,
+    "undergraduateSize": 7540,
+    "schoolControl": "private_nonprofit",
+    "campusLocale": null,
+    "internationalAidPolicy": "need_and_merit_available",
+    "hasNeedBasedAid": true,
+    "hasMeritAid": true,
+    "testingRequirements": {
+      "acceptedExams": [
+        "sat",
+        "act"
+      ],
+      "minimumSatTotal": null,
+      "minimumActComposite": null,
+      "latestSatTestDateNote": null,
+      "latestActTestDateNote": null,
+      "superscorePolicy": "unknown",
+      "writingEssayPolicy": "unknown",
+      "scoreReportingPolicy": "unknown",
+      "middle50SatTotal": {
+        "low": null,
+        "high": null
+      },
+      "middle50ActComposite": {
+        "low": null,
+        "high": null
+      }
+    },
+    "averageNetPriceUsd": null,
+    "programFitTags": [
+      "humanities",
+      "social_sciences",
+      "economics",
+      "research_intensive"
+    ],
+    "programAdmissionModel": "open",
+    "applicationStrategyTags": [
+      "non_binding_early_action",
+      "binding_early_decision",
+      "multiple_early_rounds"
+    ]
+  },
+  "explanationInputs": {
+    "academicSelectivityBand": "ultra_selective",
+    "testingExpectation": "tests_not_required",
+    "englishPolicySummary": "waiver_possible",
+    "aidModel": "need_and_merit",
+    "applicationComplexity": "high",
+    "deadlineUrgencyWindows": {
+      "earliestDeadline": "2026-11-01",
+      "latestMajorDeadline": "2026-01-02"
+    },
+    "internationalStudentConsiderations": [
+      "english_test_may_be_required",
+      "financial_certification_likely_required",
+      "need_based_aid_available",
+      "merit_aid_possible"
+    ],
+    "potentialFitTags": [
+      "research_or_innovation_oriented",
+      "strong_need_based_aid_signal",
+      "strong_merit_aid_signal",
+      "value_for_budget_conscious_students",
+      "test_flexible_pathway"
+    ],
+    "potentialRiskTags": [
+      "extremely_low_admission_rate",
+      "high_total_cost",
+      "early_deadline_pressure",
+      "complex_application_requirements"
+    ],
+    "actionableApplicationSteps": [
+      "prepare_early_round_strategy",
+      "prepare_teacher_recommendations_early",
+      "budget_for_need_based_aid_process",
+      "prioritize_financial_aid_forms",
+      "build_supplemental_essay_plan"
+    ]
+  },
+  "fieldProvenance": {
+    "identity.schoolName": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://collegeadmissions.uchicago.edu/apply",
+        "excerpt": "The University of Chicago"
+      }
+    ],
+    "applicationRounds": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://collegeadmissions.uchicago.edu/files/documents/uchicago-glance.pdf",
+        "excerpt": "Choice of Applications ... Early Action & Early Decision I ... Regular Decision & Early Decision II"
+      }
+    ],
+    "deadlinesByRound": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://collegeadmissions.uchicago.edu/files/documents/uchicago-glance.pdf",
+        "excerpt": "Early Action & Early Decision I: November 1st ... Early Decision II & Regular Decision: January 2nd"
+      }
+    ],
+    "englishRequirements": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://collegeadmissions.uchicago.edu/files/documents/international-experience.pdf",
+        "excerpt": "English proficiency examination (such as TOEFL, IELTS, or Duolingo)"
+      }
+    ],
+    "testPolicy": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://collegeadmissions.uchicago.edu/files/documents/schoolhouse-certification.pdf",
+        "excerpt": "UChicago remains a completely test-optional application process"
+      }
+    ],
+    "requiredMaterials": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://collegeadmissions.uchicago.edu/files/documents/international-experience.pdf",
+        "excerpt": "Coalition for College or Common Application ... UChicago Supplement ... Application fee ... School report and transcript ... 2 letters of recommendation from teachers ... International Financial Aid Worksheet"
+      }
+    ],
+    "tuitionAnnualUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://csl.uchicago.edu/college-historical-cost-of-attendance/",
+        "excerpt": "Tuition | $71,325"
+      }
+    ],
+    "estimatedCostOfAttendanceUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://csl.uchicago.edu/college-historical-cost-of-attendance/",
+        "excerpt": "Total | $98,301 - $98,676"
+      }
+    ],
+    "livingCostEstimateUsd": [
+      {
+        "sourceKind": "official_cost_of_attendance",
+        "sourceUrl": "https://csl.uchicago.edu/college-historical-cost-of-attendance/",
+        "excerpt": "Housing & Food | $20,835"
+      }
+    ],
+    "scholarshipAvailabilityFlag": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://collegeadmissions.uchicago.edu/files/documents/no-barriers-financial-aid-uchicago.pdf",
+        "excerpt": "need-based financial aid ... merit-based financial aid"
+      }
+    ],
+    "scholarshipNotes": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://collegeadmissions.uchicago.edu/files/documents/no-barriers-financial-aid-uchicago.pdf",
+        "excerpt": "We meet 100% of your family's demonstrated financial need"
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://collegeadmissions.uchicago.edu/files/documents/no-barriers-financial-aid-uchicago.pdf",
+        "excerpt": "Every first-year student admitted to UChicago is automatically considered for merit aid"
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://collegeadmissions.uchicago.edu/files/documents/no-barriers-financial-aid-uchicago.pdf",
+        "excerpt": "Families earning less than $125,000 per year will receive free tuition"
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://collegeadmissions.uchicago.edu/files/documents/no-barriers-financial-aid-uchicago.pdf",
+        "excerpt": "Families earning less than $60,000 per year attend UChicago for free"
+      },
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://collegeadmissions.uchicago.edu/files/documents/no-barriers-financial-aid-uchicago.pdf",
+        "excerpt": "Over $45 million in grants and scholarships have been offered to international students"
+      }
+    ],
+    "recommendationInputs.admissionRateOverall": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools?id=144050",
+        "excerpt": "\"latest.admissions.admission_rate.overall\": 0.0479"
+      }
+    ],
+    "recommendationInputs.satAverageOverall": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools?id=144050",
+        "excerpt": "\"latest.admissions.sat_scores.average.overall\": 1554"
+      }
+    ],
+    "recommendationInputs.actMidpointCumulative": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools?id=144050",
+        "excerpt": "\"latest.admissions.act_scores.midpoint.cumulative\": 34"
+      }
+    ],
+    "recommendationInputs.undergraduateSize": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools?id=144050",
+        "excerpt": "\"latest.student.size\": 7540"
+      }
+    ],
+    "recommendationInputs.schoolControl": [
+      {
+        "sourceKind": "public_dataset",
+        "sourceUrl": "https://api.data.gov/ed/collegescorecard/v1/schools?id=144050",
+        "excerpt": "\"school.ownership\": 2"
+      }
+    ],
+    "recommendationInputs.programFitTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://college.uchicago.edu/academics",
+        "excerpt": "The College includes the Arts & Humanities, Biological Sciences, Physical Sciences, and Social Sciences divisions, with 68 majors and 57 minors."
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://economics.uchicago.edu/undergraduate-study/",
+        "excerpt": "The undergraduate economics program is a central part of the UChicago academic experience."
+      }
+    ],
+    "recommendationInputs.programAdmissionModel": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://collegeadmissions.uchicago.edu/files/documents/uchicago-glance.pdf",
+        "excerpt": "Students apply to UChicago's one undergraduate College and declare a major later."
+      }
+    ],
+    "recommendationInputs.applicationStrategyTags": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://collegeadmissions.uchicago.edu/files/documents/uchicago-glance.pdf",
+        "excerpt": "Early Action & Early Decision I: November 1st; Early Decision II & Regular Decision: January 2nd."
+      },
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://collegeadmissions.uchicago.edu/files/documents/early-decision-agreement.pdf",
+        "excerpt": "Early Decision is binding."
+      }
+    ],
+    "recommendationInputs.testingRequirements": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://collegeadmissions.uchicago.edu/files/documents/international-experience.pdf",
+        "excerpt": "Optional testing* (such as SAT, ACT, or AP test scores)"
+      }
+    ],
+    "explanationInputs.testingExpectation": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://collegeadmissions.uchicago.edu/files/documents/schoolhouse-certification.pdf",
+        "excerpt": "UChicago remains a completely test-optional application process"
+      }
+    ],
+    "explanationInputs.englishPolicySummary": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://collegeadmissions.uchicago.edu/files/documents/international-experience.pdf",
+        "excerpt": "English proficiency examination (such as TOEFL, IELTS, or Duolingo)"
+      }
+    ],
+    "explanationInputs.aidModel": [
+      {
+        "sourceKind": "official_scholarship",
+        "sourceUrl": "https://collegeadmissions.uchicago.edu/files/documents/no-barriers-financial-aid-uchicago.pdf",
+        "excerpt": "need-based financial aid ... merit-based financial aid"
+      }
+    ],
+    "explanationInputs.applicationComplexity": [
+      {
+        "sourceKind": "official_admissions",
+        "sourceUrl": "https://collegeadmissions.uchicago.edu/files/documents/international-experience.pdf",
+        "excerpt": "Coalition for College or Common Application ... UChicago Supplement ... School report and transcript ... 2 letters of recommendation from teachers ... International Financial Aid Worksheet"
+      }
+    ]
+  },
+  "quality": {
+    "status": "publishable",
+    "missingFields": [],
+    "warnings": [
+      "The admissions page lists both ED I and ED II; the schema stores one early_decision date, so the deadline reflects the published January 2 binding round.",
+      "The official cost page publishes a total range because transportation and travel vary; estimatedCostOfAttendanceUsd uses the published lower bound."
+    ]
+  }
+}
