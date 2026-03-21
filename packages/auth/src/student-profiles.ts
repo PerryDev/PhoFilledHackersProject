@@ -13,7 +13,6 @@ import {
   type StudentAcademicProfile,
   type StudentBudgetProfile,
   type StudentPreferenceProfile,
-  type StudentProfileMissingField,
   type StudentProfileRecord,
   type StudentProfileSnapshotKind,
   type StudentReadinessProfile,
@@ -33,11 +32,28 @@ export interface StudentProfileInput {
   readiness: StudentReadinessProfile;
 }
 
+export interface StudentProfileSnapshotInput {
+  assumptions: string[];
+  profile: StudentProfileInput;
+}
+
+export interface StudentProfileDocument {
+  current: StudentProfileSnapshotInput;
+  projected: StudentProfileSnapshotInput;
+}
+
+export interface StudentProfileMissingField {
+  snapshotKind: StudentProfileSnapshotKind;
+  path: string;
+  message: string;
+}
+
 export interface StudentProfileState {
   profile: StudentProfileRecord | null;
   snapshots: Record<
     StudentProfileSnapshotKind,
     {
+      id: string | null;
       assumptions: string[];
       profile: StudentProfileRecord | null;
     }
@@ -79,89 +95,299 @@ export function getDefaultStudentProfileInput(): StudentProfileInput {
   };
 }
 
+export function buildStudentProfileDocumentFromState(
+  state: Pick<StudentProfileState, "profile" | "snapshots">,
+): StudentProfileDocument {
+  const profile = state.profile
+    ? {
+        citizenshipCountry: state.profile.citizenshipCountry,
+        targetEntryTerm: state.profile.targetEntryTerm,
+        academic: state.profile.academic,
+        testing: state.profile.testing,
+        preferences: state.profile.preferences,
+        budget: state.profile.budget,
+        readiness: state.profile.readiness,
+      }
+    : getDefaultStudentProfileInput();
+  const currentSnapshotProfile = state.snapshots.current.profile
+    ? {
+        citizenshipCountry: state.snapshots.current.profile.citizenshipCountry,
+        targetEntryTerm: state.snapshots.current.profile.targetEntryTerm,
+        academic: state.snapshots.current.profile.academic,
+        testing: state.snapshots.current.profile.testing,
+        preferences: state.snapshots.current.profile.preferences,
+        budget: state.snapshots.current.profile.budget,
+        readiness: state.snapshots.current.profile.readiness,
+      }
+    : profile;
+  const projectedSnapshotProfile = state.snapshots.projected.profile
+    ? {
+        citizenshipCountry: state.snapshots.projected.profile.citizenshipCountry,
+        targetEntryTerm: state.snapshots.projected.profile.targetEntryTerm,
+        academic: state.snapshots.projected.profile.academic,
+        testing: state.snapshots.projected.profile.testing,
+        preferences: state.snapshots.projected.profile.preferences,
+        budget: state.snapshots.projected.profile.budget,
+        readiness: state.snapshots.projected.profile.readiness,
+      }
+    : {
+        ...profile,
+        academic: {
+          ...profile.academic,
+          projectedGpa100: profile.academic.projectedGpa100,
+        },
+      };
+
+  return {
+    current: {
+      assumptions: state.snapshots.current.assumptions,
+      profile: currentSnapshotProfile,
+    },
+    projected: {
+      assumptions: state.snapshots.projected.assumptions,
+      profile: projectedSnapshotProfile,
+    },
+  };
+}
+
 export function evaluateMissingStudentProfileFields(
   profile: StudentProfileInput,
 ): StudentProfileMissingField[] {
+  return evaluateRecommendationMissingFields({
+    currentProfile: profile,
+    projectedProfile: profile,
+    currentAssumptions: [],
+    projectedAssumptions: [],
+  }).filter((field) => field.snapshotKind === "current");
+}
+
+export function evaluateRecommendationMissingFields(input: {
+  currentProfile: StudentProfileInput;
+  projectedProfile: StudentProfileInput;
+  currentAssumptions: string[];
+  projectedAssumptions: string[];
+}): StudentProfileMissingField[] {
   const missingFields: StudentProfileMissingField[] = [];
 
-  if (!profile.citizenshipCountry.trim()) {
-    missingFields.push({
-      path: "citizenshipCountry",
-      message: "Citizenship country is required.",
-    });
-  }
+  const add = (
+    snapshotKind: StudentProfileSnapshotKind,
+    path: string,
+    message: string,
+    missing: boolean,
+  ) => {
+    if (!missing) {
+      return;
+    }
 
-  if (!profile.targetEntryTerm.trim()) {
     missingFields.push({
-      path: "targetEntryTerm",
-      message: "Target entry term is required.",
+      snapshotKind,
+      path,
+      message,
     });
-  }
+  };
 
-  if (profile.academic.currentGpa100 === null) {
-    missingFields.push({
-      path: "academic.currentGpa100",
-      message: "Current GPA is required.",
-    });
-  }
+  const current = input.currentProfile;
+  add(
+    "current",
+    "citizenshipCountry",
+    "Citizenship country is required.",
+    !current.citizenshipCountry.trim(),
+  );
+  add(
+    "current",
+    "targetEntryTerm",
+    "Target entry term is required.",
+    !current.targetEntryTerm.trim(),
+  );
+  add(
+    "current",
+    "academic.currentGpa100",
+    "Current GPA is required.",
+    current.academic.currentGpa100 === null,
+  );
+  add(
+    "current",
+    "academic.curriculumStrength",
+    "Curriculum strength is required.",
+    current.academic.curriculumStrength === "unknown",
+  );
+  add(
+    "current",
+    "academic.classRankPercent",
+    "Class rank percentile is required.",
+    current.academic.classRankPercent === null,
+  );
+  add(
+    "current",
+    "testing.willSubmitTests",
+    "Test submission intent is required.",
+    current.testing.willSubmitTests === null,
+  );
+  add(
+    "current",
+    "testing.scoresOrExam",
+    "Add at least one SAT, ACT, or English exam detail.",
+    current.testing.willSubmitTests !== false &&
+      current.testing.satTotal === null &&
+      current.testing.actComposite === null &&
+      current.testing.englishExamType === "unknown",
+  );
+  add(
+    "current",
+    "preferences.intendedMajors",
+    "At least one intended major is required.",
+    current.preferences.intendedMajors.length === 0,
+  );
+  add(
+    "current",
+    "preferences.preferredStates",
+    "At least one preferred state is required.",
+    current.preferences.preferredStates.length === 0,
+  );
+  add(
+    "current",
+    "preferences.preferredCampusLocale",
+    "At least one preferred campus locale is required.",
+    current.preferences.preferredCampusLocale.length === 0,
+  );
+  add(
+    "current",
+    "preferences.preferredSchoolControl",
+    "At least one school control preference is required.",
+    current.preferences.preferredSchoolControl.length === 0,
+  );
+  add(
+    "current",
+    "preferences.preferredUndergraduateSize",
+    "Preferred undergraduate size is required.",
+    current.preferences.preferredUndergraduateSize === "unknown",
+  );
+  add(
+    "current",
+    "budget.annualBudgetUsd",
+    "Annual budget is required.",
+    current.budget.annualBudgetUsd === null,
+  );
+  add(
+    "current",
+    "budget.needsFinancialAid",
+    "Financial aid need is required.",
+    current.budget.needsFinancialAid === null,
+  );
+  add(
+    "current",
+    "budget.needsMeritAid",
+    "Merit aid preference is required.",
+    current.budget.needsMeritAid === null,
+  );
+  add(
+    "current",
+    "budget.budgetFlexibility",
+    "Budget flexibility is required.",
+    current.budget.budgetFlexibility === "unknown",
+  );
+  add(
+    "current",
+    "readiness.wantsEarlyRound",
+    "Early-round intent is required.",
+    current.readiness.wantsEarlyRound === null,
+  );
+  add(
+    "current",
+    "readiness.hasTeacherRecommendationsReady",
+    "Teacher recommendation readiness is required.",
+    current.readiness.hasTeacherRecommendationsReady === null,
+  );
+  add(
+    "current",
+    "readiness.hasCounselorDocumentsReady",
+    "Counselor document readiness is required.",
+    current.readiness.hasCounselorDocumentsReady === null,
+  );
+  add(
+    "current",
+    "readiness.hasEssayDraftsStarted",
+    "Essay readiness is required.",
+    current.readiness.hasEssayDraftsStarted === null,
+  );
 
-  if (profile.academic.curriculumStrength === "unknown") {
-    missingFields.push({
-      path: "academic.curriculumStrength",
-      message: "Curriculum strength is required.",
-    });
-  }
-
-  if (profile.preferences.intendedMajors.length === 0) {
-    missingFields.push({
-      path: "preferences.intendedMajors",
-      message: "At least one intended major is required.",
-    });
-  }
-
-  if (profile.testing.englishExamType === "unknown") {
-    missingFields.push({
-      path: "testing.englishExamType",
-      message: "English exam status is required.",
-    });
-  }
-
-  if (profile.testing.willSubmitTests === null) {
-    missingFields.push({
-      path: "testing.willSubmitTests",
-      message: "Test submission intent is required.",
-    });
-  }
-
-  if (profile.budget.annualBudgetUsd === null) {
-    missingFields.push({
-      path: "budget.annualBudgetUsd",
-      message: "Annual budget is required.",
-    });
-  }
-
-  if (profile.budget.needsFinancialAid === null) {
-    missingFields.push({
-      path: "budget.needsFinancialAid",
-      message: "Financial aid need is required.",
-    });
-  }
-
-  if (profile.budget.needsMeritAid === null) {
-    missingFields.push({
-      path: "budget.needsMeritAid",
-      message: "Merit aid preference is required.",
-    });
-  }
-
-  if (profile.readiness.wantsEarlyRound === null) {
-    missingFields.push({
-      path: "readiness.wantsEarlyRound",
-      message: "Early-round intent is required.",
-    });
-  }
+  add(
+    "projected",
+    "academic.projectedGpa100",
+    "Projected GPA is required.",
+    input.projectedProfile.academic.projectedGpa100 === null,
+  );
+  add(
+    "projected",
+    "assumptions",
+    "At least one projected-state assumption is required.",
+    input.projectedAssumptions.length === 0,
+  );
 
   return missingFields;
+}
+
+export function toRecommendationMissingFieldPaths(
+  missingFields: StudentProfileMissingField[],
+) {
+  return missingFields.map(
+    (field) => `${field.snapshotKind}.${field.path}`,
+  );
+}
+
+export function evaluateRecommendationRunReadinessFromDocument(
+  document: StudentProfileDocument,
+) {
+  const missingFields = evaluateRecommendationMissingFields({
+    currentProfile: document.current.profile,
+    projectedProfile: document.projected.profile,
+    currentAssumptions: document.current.assumptions,
+    projectedAssumptions: document.projected.assumptions,
+  });
+
+  return {
+    missingFields,
+    canRun: missingFields.length === 0,
+  };
+}
+
+export function evaluateRecommendationRunReadinessFromState(
+  state: Pick<StudentProfileState, "profile" | "snapshots">,
+) {
+  const missingFields = [
+    ...evaluateRecommendationRunReadinessFromDocument(
+      buildStudentProfileDocumentFromState(state),
+    ).missingFields,
+  ];
+
+  if (!state.profile) {
+    missingFields.push({
+      snapshotKind: "current",
+      path: "profile",
+      message: "Save a student profile before running recommendations.",
+    });
+  }
+
+  if (!state.snapshots.current.id) {
+    missingFields.push({
+      snapshotKind: "current",
+      path: "snapshotId",
+      message: "Save the current snapshot before running recommendations.",
+    });
+  }
+
+  if (!state.snapshots.projected.id) {
+    missingFields.push({
+      snapshotKind: "projected",
+      path: "snapshotId",
+      message: "Save the projected snapshot before running recommendations.",
+    });
+  }
+
+  return {
+    missingFields,
+    canRun: missingFields.length === 0,
+  };
 }
 
 export async function getStudentProfileStateForUser(
@@ -176,21 +402,26 @@ export async function getStudentProfileStateForUser(
   });
 
   if (!profile) {
-    return {
+    const state = {
       profile: null,
       snapshots: {
         current: {
+          id: null,
           assumptions: [],
           profile: null,
         },
         projected: {
+          id: null,
           assumptions: [],
           profile: null,
         },
       },
-      missingFields: evaluateMissingStudentProfileFields(
-        getDefaultStudentProfileInput(),
-      ),
+    };
+
+    return {
+      ...state,
+      missingFields: evaluateRecommendationRunReadinessFromState(state)
+        .missingFields,
     };
   }
 
@@ -202,27 +433,25 @@ export async function getStudentProfileStateForUser(
     profile.snapshots.find((snapshot) => snapshot.snapshotKind === "projected") ??
     null;
 
-  return {
+  const state = {
     profile: normalizedProfile,
     snapshots: {
       current: {
+        id: currentSnapshot?.id ?? null,
         assumptions: currentSnapshot?.assumptions ?? [],
         profile: currentSnapshot?.profile ?? normalizedProfile,
       },
       projected: {
+        id: projectedSnapshot?.id ?? null,
         assumptions: projectedSnapshot?.assumptions ?? [],
         profile: projectedSnapshot?.profile ?? normalizedProfile,
       },
     },
-    missingFields: evaluateMissingStudentProfileFields({
-      citizenshipCountry: profile.citizenshipCountry,
-      targetEntryTerm: profile.targetEntryTerm,
-      academic: profile.academic,
-      testing: profile.testing,
-      preferences: profile.preferences,
-      budget: profile.budget,
-      readiness: profile.readiness,
-    }),
+  };
+
+  return {
+    ...state,
+    missingFields: evaluateRecommendationRunReadinessFromState(state).missingFields,
   };
 }
 

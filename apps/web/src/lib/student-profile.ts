@@ -103,7 +103,7 @@ export interface StudentProfileDocument {
 
 export interface StudentProfileMissingField {
   snapshotKind: "current" | "projected";
-  field: string;
+  path: string;
   message: string;
 }
 
@@ -281,37 +281,50 @@ export const getStudentProfileMissingFields = (
   document: StudentProfileDocument,
 ): StudentProfileMissingField[] => {
   const gaps: StudentProfileMissingField[] = [];
-  const add = (snapshotKind: "current" | "projected", field: string, message: string, missing: boolean) => {
+  const add = (
+    snapshotKind: "current" | "projected",
+    path: string,
+    message: string,
+    missing: boolean,
+  ) => {
     if (missing) {
-      gaps.push({ snapshotKind, field, message });
+      gaps.push({ snapshotKind, path, message });
     }
   };
 
   const current = document.current.profile;
-  add("current", "citizenshipCountry", "Add the student's citizenship country.", !current.citizenshipCountry.trim());
-  add("current", "targetEntryTerm", "Add the target entry term.", !current.targetEntryTerm.trim());
-  add("current", "academic.currentGpa100", "Add the current GPA on a 100-point scale.", current.academic.currentGpa100 === null);
-  add("current", "academic.curriculumStrength", "Choose the current curriculum strength.", current.academic.curriculumStrength === "unknown");
-  add("current", "academic.classRankPercent", "Add the current class rank percentile.", current.academic.classRankPercent === null);
-  add("current", "testing.willSubmitTests", "Decide whether the student will submit tests.", current.testing.willSubmitTests === null);
-  add("current", "testing.scoresOrExam", "Add at least one SAT, ACT, or English exam detail.", current.testing.willSubmitTests !== false && current.testing.satTotal === null && current.testing.actComposite === null && current.testing.englishExamType === "unknown");
-  add("current", "preferences.intendedMajors", "Add at least one intended major.", current.preferences.intendedMajors.length === 0);
-  add("current", "preferences.preferredStates", "Add at least one preferred state.", current.preferences.preferredStates.length === 0);
-  add("current", "preferences.preferredCampusLocale", "Add at least one preferred campus locale.", current.preferences.preferredCampusLocale.length === 0);
-  add("current", "preferences.preferredSchoolControl", "Choose at least one school control preference.", current.preferences.preferredSchoolControl.length === 0);
-  add("current", "preferences.preferredUndergraduateSize", "Choose a preferred undergraduate size.", current.preferences.preferredUndergraduateSize === "unknown");
-  add("current", "budget.annualBudgetUsd", "Add the annual budget.", current.budget.annualBudgetUsd === null);
-  add("current", "budget.needsFinancialAid", "Indicate whether financial aid is needed.", current.budget.needsFinancialAid === null);
-  add("current", "budget.needsMeritAid", "Indicate whether merit aid is needed.", current.budget.needsMeritAid === null);
-  add("current", "budget.budgetFlexibility", "Choose a budget flexibility level.", current.budget.budgetFlexibility === "unknown");
-  add("current", "readiness.wantsEarlyRound", "Mark whether the student wants an early round.", current.readiness.wantsEarlyRound === null);
-  add("current", "readiness.hasTeacherRecommendationsReady", "Mark whether teacher recommendations are ready.", current.readiness.hasTeacherRecommendationsReady === null);
-  add("current", "readiness.hasCounselorDocumentsReady", "Mark whether counselor documents are ready.", current.readiness.hasCounselorDocumentsReady === null);
-  add("current", "readiness.hasEssayDraftsStarted", "Mark whether essay drafting has started.", current.readiness.hasEssayDraftsStarted === null);
+  add("current", "citizenshipCountry", "Citizenship country is required.", !current.citizenshipCountry.trim());
+  add("current", "targetEntryTerm", "Target entry term is required.", !current.targetEntryTerm.trim());
+  add("current", "academic.currentGpa100", "Current GPA is required.", current.academic.currentGpa100 === null);
+  add("current", "academic.curriculumStrength", "Curriculum strength is required.", current.academic.curriculumStrength === "unknown");
+  add("current", "academic.classRankPercent", "Class rank percentile is required.", current.academic.classRankPercent === null);
+  add("current", "testing.willSubmitTests", "Test submission intent is required.", current.testing.willSubmitTests === null);
+  add(
+    "current",
+    "testing.scoresOrExam",
+    "Add at least one SAT, ACT, or English exam detail.",
+    current.testing.willSubmitTests !== false &&
+      current.testing.satTotal === null &&
+      current.testing.actComposite === null &&
+      current.testing.englishExamType === "unknown",
+  );
+  add("current", "preferences.intendedMajors", "At least one intended major is required.", current.preferences.intendedMajors.length === 0);
+  add("current", "preferences.preferredStates", "At least one preferred state is required.", current.preferences.preferredStates.length === 0);
+  add("current", "preferences.preferredCampusLocale", "At least one preferred campus locale is required.", current.preferences.preferredCampusLocale.length === 0);
+  add("current", "preferences.preferredSchoolControl", "At least one school control preference is required.", current.preferences.preferredSchoolControl.length === 0);
+  add("current", "preferences.preferredUndergraduateSize", "Preferred undergraduate size is required.", current.preferences.preferredUndergraduateSize === "unknown");
+  add("current", "budget.annualBudgetUsd", "Annual budget is required.", current.budget.annualBudgetUsd === null);
+  add("current", "budget.needsFinancialAid", "Financial aid need is required.", current.budget.needsFinancialAid === null);
+  add("current", "budget.needsMeritAid", "Merit aid preference is required.", current.budget.needsMeritAid === null);
+  add("current", "budget.budgetFlexibility", "Budget flexibility is required.", current.budget.budgetFlexibility === "unknown");
+  add("current", "readiness.wantsEarlyRound", "Early-round intent is required.", current.readiness.wantsEarlyRound === null);
+  add("current", "readiness.hasTeacherRecommendationsReady", "Teacher recommendation readiness is required.", current.readiness.hasTeacherRecommendationsReady === null);
+  add("current", "readiness.hasCounselorDocumentsReady", "Counselor document readiness is required.", current.readiness.hasCounselorDocumentsReady === null);
+  add("current", "readiness.hasEssayDraftsStarted", "Essay readiness is required.", current.readiness.hasEssayDraftsStarted === null);
 
   const projected = document.projected;
-  add("projected", "academic.projectedGpa100", "Add the projected GPA on a 100-point scale.", projected.profile.academic.projectedGpa100 === null);
-  add("projected", "assumptions", "Add at least one projected-state assumption.", projected.assumptions.length === 0);
+  add("projected", "academic.projectedGpa100", "Projected GPA is required.", projected.profile.academic.projectedGpa100 === null);
+  add("projected", "assumptions", "At least one projected-state assumption is required.", projected.assumptions.length === 0);
 
   return gaps;
 };

@@ -560,7 +560,7 @@ export function StudentProfileEditor({ displayName, email, initialDocument }: Pr
                 {missingFields.length ? (
                   <ul className="space-y-1.5 text-sm text-muted-foreground">
                     {missingFields.slice(0, 8).map((item) => (
-                      <li key={`${item.snapshotKind}-${item.field}`}>
+                      <li key={`${item.snapshotKind}-${item.path}`}>
                         <span className="font-medium text-foreground">{item.snapshotKind}</span>: {item.message}
                       </li>
                     ))}
