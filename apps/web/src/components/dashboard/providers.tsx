@@ -1,6 +1,6 @@
 // apps/web/src/components/dashboard/providers.tsx
-// Shared dashboard state for language, theme, and search.
-// Keeps the shell interactive while the routes stay route-driven and simple.
+// Shared dashboard state for language, theme, search, and session-backed user info.
+// Keeps UI preferences client-side while auth state comes from the server session.
 "use client";
 
 import {
@@ -14,6 +14,12 @@ import type { DashboardLanguage } from "@/lib/dashboard-copy";
 
 type ThemeMode = "light" | "dark";
 
+type DashboardUser = {
+  id: string;
+  name: string;
+  email: string;
+} | null;
+
 type DashboardSettings = {
   language: DashboardLanguage;
   setLanguage: (language: DashboardLanguage) => void;
@@ -21,29 +27,34 @@ type DashboardSettings = {
   setTheme: (theme: ThemeMode) => void;
   searchTerm: string;
   setSearchTerm: (value: string) => void;
-  profileName: string;
-  setProfileName: (value: string) => void;
+  currentUser: DashboardUser;
+  setCurrentUser: (value: DashboardUser) => void;
   isAuthenticated: boolean;
-  signIn: () => void;
-  signOut: () => void;
   isHydrated: boolean;
 };
 
 const DashboardSettingsContext = createContext<DashboardSettings | null>(null);
 
-export function DashboardProviders({ children }: Readonly<{ children: ReactNode }>) {
+export function DashboardProviders({
+  children,
+  initialUser,
+}: Readonly<{
+  children: ReactNode;
+  initialUser: DashboardUser;
+}>) {
   const [language, setLanguage] = useState<DashboardLanguage>("en");
   const [theme, setTheme] = useState<ThemeMode>("light");
   const [searchTerm, setSearchTerm] = useState("");
-  const [profileName, setProfileName] = useState("Thanh Le");
-  const [isAuthenticated, setIsAuthenticated] = useState(true);
+  const [currentUser, setCurrentUser] = useState<DashboardUser>(initialUser);
   const [isHydrated, setIsHydrated] = useState(false);
 
   useEffect(() => {
-    const savedLanguage = window.localStorage.getItem("etest-dashboard-language") as DashboardLanguage | null;
-    const savedTheme = window.localStorage.getItem("etest-dashboard-theme") as ThemeMode | null;
-    const savedProfileName = window.localStorage.getItem("etest-dashboard-profile-name");
-    const savedAuthState = window.localStorage.getItem("etest-dashboard-authenticated");
+    const savedLanguage = window.localStorage.getItem(
+      "etest-dashboard-language",
+    ) as DashboardLanguage | null;
+    const savedTheme = window.localStorage.getItem(
+      "etest-dashboard-theme",
+    ) as ThemeMode | null;
 
     if (savedLanguage === "en" || savedLanguage === "vi") {
       setLanguage(savedLanguage);
@@ -51,14 +62,6 @@ export function DashboardProviders({ children }: Readonly<{ children: ReactNode 
 
     if (savedTheme === "light" || savedTheme === "dark") {
       setTheme(savedTheme);
-    }
-
-    if (savedProfileName?.trim()) {
-      setProfileName(savedProfileName);
-    }
-
-    if (savedAuthState === "true" || savedAuthState === "false") {
-      setIsAuthenticated(savedAuthState === "true");
     }
 
     setIsHydrated(true);
@@ -73,21 +76,6 @@ export function DashboardProviders({ children }: Readonly<{ children: ReactNode 
     document.documentElement.classList.toggle("dark", theme === "dark");
   }, [theme]);
 
-  useEffect(() => {
-    window.localStorage.setItem("etest-dashboard-profile-name", profileName);
-  }, [profileName]);
-
-  useEffect(() => {
-    if (!isHydrated) {
-      return;
-    }
-
-    window.localStorage.setItem("etest-dashboard-authenticated", String(isAuthenticated));
-  }, [isAuthenticated, isHydrated]);
-
-  const signIn = () => setIsAuthenticated(true);
-  const signOut = () => setIsAuthenticated(false);
-
   return (
     <DashboardSettingsContext.Provider
       value={{
@@ -97,11 +85,9 @@ export function DashboardProviders({ children }: Readonly<{ children: ReactNode 
         setTheme,
         searchTerm,
         setSearchTerm,
-        profileName,
-        setProfileName,
-        isAuthenticated,
-        signIn,
-        signOut,
+        currentUser,
+        setCurrentUser,
+        isAuthenticated: currentUser !== null,
         isHydrated,
       }}
     >
@@ -114,7 +100,9 @@ export function useDashboardSettings() {
   const context = useContext(DashboardSettingsContext);
 
   if (!context) {
-    throw new Error("useDashboardSettings must be used within DashboardProviders");
+    throw new Error(
+      "useDashboardSettings must be used within DashboardProviders",
+    );
   }
 
   return context;
