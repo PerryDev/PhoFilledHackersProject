@@ -15,10 +15,16 @@ import { bigint, pgSchema, serial, text } from "drizzle-orm/pg-core";
 import postgres from "postgres";
 
 import {
+  accounts,
   catalogImportItems,
   catalogImportRuns,
+  sessions,
+  studentProfileSnapshots,
+  studentProfiles,
   universities,
   universitySources,
+  users,
+  verifications,
 } from "../src/index.js";
 
 const scriptDir = path.dirname(fileURLToPath(import.meta.url));
@@ -67,6 +73,12 @@ function readBaselineMigration() {
 
 async function assertExistingApplicationSchema(db: ReturnType<typeof drizzle>) {
   await Promise.all([
+    db.select().from(users).limit(1),
+    db.select().from(accounts).limit(1),
+    db.select().from(sessions).limit(1),
+    db.select().from(verifications).limit(1),
+    db.select().from(studentProfiles).limit(1),
+    db.select().from(studentProfileSnapshots).limit(1),
     db.select().from(universities).limit(1),
     db.select().from(universitySources).limit(1),
     db.select().from(catalogImportRuns).limit(1),
