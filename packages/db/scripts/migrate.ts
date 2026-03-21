@@ -7,7 +7,7 @@ import path from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 import { loadEnvFile } from "node:process";
 
-import { desc } from "drizzle-orm";
+import { desc, sql } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/postgres-js";
 import { readMigrationFiles } from "drizzle-orm/migrator";
 import { migrate } from "drizzle-orm/postgres-js/migrator";
@@ -15,10 +15,16 @@ import { pgSchema, serial, text, bigint } from "drizzle-orm/pg-core";
 import postgres from "postgres";
 
 import {
+  accounts,
   catalogImportItems,
   catalogImportRuns,
+  sessions,
+  studentProfileSnapshots,
+  studentProfiles,
   universities,
   universitySources,
+  users,
+  verifications,
 } from "../src/index.js";
 
 const scriptDir = path.dirname(fileURLToPath(import.meta.url));
@@ -47,6 +53,24 @@ async function relationExists<TTable>(db: ReturnType<typeof drizzle>, table: TTa
   }
 }
 
+async function tableExistsByName(
+  db: ReturnType<typeof drizzle>,
+  tableName: string,
+) {
+  const result = await db.execute(sql`
+    select exists (
+      select 1
+      from information_schema.tables
+      where table_schema = 'public'
+        and table_name = ${tableName}
+    ) as exists
+  `);
+
+  const row = Array.isArray(result) ? result[0] : result.rows[0];
+
+  return Boolean(row?.exists);
+}
+
 async function runDrizzleMigrations() {
   loadRepositoryEnv();
 
@@ -70,21 +94,71 @@ async function runDrizzleMigrations() {
     }
 
     const [
+      hasUsers,
+      hasAccounts,
+      hasSessions,
+      hasVerifications,
+      hasStudentProfiles,
+      hasStudentProfileSnapshots,
       hasUniversities,
       hasSources,
       hasRuns,
       hasItems,
       hasMigrationState,
+      hasUsersTable,
+      hasAccountsTable,
+      hasSessionsTable,
+      hasVerificationsTable,
+      hasStudentProfilesTable,
+      hasStudentProfileSnapshotsTable,
     ] = await Promise.all([
+      relationExists(db, users),
+      relationExists(db, accounts),
+      relationExists(db, sessions),
+      relationExists(db, verifications),
+      relationExists(db, studentProfiles),
+      relationExists(db, studentProfileSnapshots),
       relationExists(db, universities),
       relationExists(db, universitySources),
       relationExists(db, catalogImportRuns),
       relationExists(db, catalogImportItems),
       relationExists(db, drizzleMigrations),
+      tableExistsByName(db, "users"),
+      tableExistsByName(db, "accounts"),
+      tableExistsByName(db, "sessions"),
+      tableExistsByName(db, "verifications"),
+      tableExistsByName(db, "student_profiles"),
+      tableExistsByName(db, "student_profile_snapshots"),
     ]);
 
+    const driftedApplicationTables = [
+      hasUsersTable && !hasUsers ? "users" : null,
+      hasAccountsTable && !hasAccounts ? "accounts" : null,
+      hasSessionsTable && !hasSessions ? "sessions" : null,
+      hasVerificationsTable && !hasVerifications ? "verifications" : null,
+      hasStudentProfilesTable && !hasStudentProfiles ? "student_profiles" : null,
+      hasStudentProfileSnapshotsTable && !hasStudentProfileSnapshots
+        ? "student_profile_snapshots"
+        : null,
+    ].filter((tableName): tableName is string => Boolean(tableName));
+
     const hasApplicationSchema =
-      hasUniversities || hasSources || hasRuns || hasItems;
+      hasUsers ||
+      hasAccounts ||
+      hasSessions ||
+      hasVerifications ||
+      hasStudentProfiles ||
+      hasStudentProfileSnapshots ||
+      hasUniversities ||
+      hasSources ||
+      hasRuns ||
+      hasItems;
+
+    if (driftedApplicationTables.length > 0) {
+      throw new Error(
+        `Existing application tables do not match the checked-in Drizzle schema: ${driftedApplicationTables.join(", ")}. Normalize or drop the drifted tables before rerunning migrate.`,
+      );
+    }
 
     if (hasMigrationState) {
       const [lastAppliedMigration] = await db
