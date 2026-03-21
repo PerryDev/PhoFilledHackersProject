@@ -4,7 +4,7 @@
 **Status:** Draft  
 **Last Updated:** 2026-03-21  
 **Target Release:** Hackathon MVP  
-**Approved Stack:** Next.js 16, Supabase Postgres, Drizzle ORM, Better Auth, Google OAuth, Facebook OAuth, email auth, shadcn/ui, OpenAPI
+**Approved Stack:** Turborepo, Next.js 16, Supabase Postgres, Drizzle ORM, Better Auth, Google OAuth, Facebook OAuth, email auth, shadcn/ui, OpenAPI
 
 ## 1. Product Description
 
@@ -50,7 +50,7 @@ ETEST also needs a structured pre-consultation workflow. Today, too much counsel
 * Full essay-writing or essay-review platform.
 * Visa workflow management.
 * Guaranteed admissions or scholarship outcomes.
-* A fully autonomous school-data crawling system as an MVP dependency.
+* Live request-time school-data scraping as an MVP dependency.
 
 ## 5. Product Principles
 
@@ -88,6 +88,7 @@ ETEST also needs a structured pre-consultation workflow. Today, too much counsel
 * Student onboarding and profile builder.
 * Saved student profile and edit flow.
 * Curated university catalog stored in Supabase.
+* Offline catalog ingestion/import pipeline for official admissions, tuition, cost-of-attendance, and scholarship data.
 * Recommendation engine with Current Outlook and Projected Outlook.
 * Reach / Target / Safety recommendation lists.
 * Transparent school cards with cost, budget fit, blockers, and sources.
@@ -99,7 +100,7 @@ ETEST also needs a structured pre-consultation workflow. Today, too much counsel
 
 ### Explicitly excluded from MVP
 
-* Fully automated school-data crawling as a launch blocker.
+* Fully automated school-data crawling at request time.
 * Program-level recommendations.
 * Parent-specific dashboards.
 * OCR or document-intelligence workflows.
@@ -207,8 +208,8 @@ Maintain a source-backed list of US universities used by recommendations and exp
 
 * Every user-visible school fact must have at least one source URL.
 * Every school card must show `last_verified_at`.
-* Catalog records may be created manually or via import for MVP.
-* Automated ingestion is a future enhancement unless explicitly staffed for this phase.
+* Catalog records may be created manually or via offline import for MVP.
+* Ingestion must normalize source-backed records before recommendations read from them.
 
 #### Acceptance criteria
 
@@ -399,6 +400,8 @@ Minimum entities for MVP:
 * `student_profile_snapshots`
 * `universities`
 * `university_sources`
+* `catalog_import_runs`
+* `catalog_import_items`
 * `recommendation_runs`
 * `recommendation_results`
 * `chat_threads`
@@ -428,6 +431,7 @@ OpenAPI is required for server contracts.
 * `/auth/*`
 * `/api/profile/*`
 * `/api/universities/*`
+* `/api/catalog-imports/*`
 * `/api/recommendations/*`
 * `/api/chat/*`
 * `/api/handoffs/*`
@@ -438,6 +442,7 @@ OpenAPI is required for server contracts.
 
 ### Approved stack
 
+* Monorepo: Turborepo
 * Frontend and BFF: Next.js 16 App Router
 * Database: Supabase Postgres
 * ORM and migrations: Drizzle
@@ -455,15 +460,17 @@ OpenAPI is required for server contracts.
 
 ### Suggested module boundaries
 
-* `app/` for routes and layouts
-* `features/profile/`
-* `features/recommendations/`
-* `features/chat/`
-* `features/handoff/`
-* `features/admin/`
-* `db/` for Drizzle schema and queries
-* `lib/auth/`
-* `lib/api/` for OpenAPI helpers and shared transport logic
+* `apps/web/app/` for routes and layouts
+* `apps/web/features/profile/`
+* `apps/web/features/recommendations/`
+* `apps/web/features/chat/`
+* `apps/web/features/handoff/`
+* `apps/web/features/admin/`
+* `apps/ingest/` for the offline catalog import pipeline
+* `packages/catalog/` for catalog schema, validation, and normalization
+* `packages/db/` for Drizzle schema and queries
+* `packages/auth/` for Better Auth configuration and shared server auth helpers
+* `packages/api-contracts/` for OpenAPI helpers, generated types, and shared transport logic
 
 ## 14. Release Plan
 
@@ -472,6 +479,7 @@ OpenAPI is required for server contracts.
 * Authentication
 * Profile builder
 * Curated catalog
+* Offline catalog import pipeline
 * Recommendation engine
 * Recommendation UI
 * Compare mode
@@ -483,7 +491,6 @@ OpenAPI is required for server contracts.
 ### Phase 2
 
 * Booking workflow improvements
-* Automated catalog import pipeline
 * Better counselor tooling
 * Analytics and feedback loops
 
@@ -507,7 +514,7 @@ OpenAPI is required for server contracts.
 ## 16. Risks and Mitigations
 
 * **Risk:** automated school-data ingestion expands scope too early.  
-  **Mitigation:** treat curated catalog management as the MVP default and keep automation behind the same catalog contract.
+  **Mitigation:** keep ingestion offline, source-backed, and limited to official admissions, tuition, cost, and scholarship pages.
 
 * **Risk:** recommendation logic becomes opaque.  
   **Mitigation:** require explanation fields, assumption lists, and visible budget labels in every result.
@@ -518,7 +525,7 @@ OpenAPI is required for server contracts.
 ## 17. Assumptions
 
 * The initial launch scope is US universities only.
-* The initial school catalog is curated rather than fully auto-scraped.
+* The initial school catalog is populated through an offline import pipeline from official admissions, tuition, cost, and scholarship pages.
 * Counselors remain the final decision-makers for premium strategy.
 * Booking in MVP is an internal queue workflow, not a synchronized calendar system.
 
