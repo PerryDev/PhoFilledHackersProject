@@ -21,6 +21,12 @@ export function Sidebar({
 
   const navItems = [
     {
+      href: "/profile",
+      icon: Compass,
+      label: t.navStudentProfile,
+      active: pathname.startsWith("/profile"),
+    },
+    {
       href: "/",
       icon: Users,
       label: t.navLeadQueue,
