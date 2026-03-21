@@ -2,12 +2,7 @@
   "name": "web",
   "version": "0.1.0",
   "private": true,
-  "scripts": {
-    "dev": "next dev --webpack",
-    "build": "next build",
-    "start": "next start",
-    "lint": "eslint"
-  },
+  "scripts": {},
   "dependencies": {
     "@etest/auth": "*",
     "better-auth": "^1.5.5",
