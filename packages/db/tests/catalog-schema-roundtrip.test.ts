@@ -38,6 +38,54 @@ test("universities and university_sources round-trip through the catalog schema"
         livingCostEstimateUsd: 16000,
         scholarshipAvailabilityFlag: true,
         scholarshipNotes: "Merit scholarships available for international applicants.",
+        recommendationInputs: {
+          admissionRateOverall: 0.45,
+          satAverageOverall: 1280,
+          actMidpointCumulative: 28,
+          undergraduateSize: 8500,
+          averageNetPriceUsd: 24000,
+          schoolControl: "private_nonprofit",
+          campusLocale: "urban",
+          internationalAidPolicy: "need_and_merit_available",
+          hasNeedBasedAid: true,
+          hasMeritAid: true,
+          programFitTags: ["engineering", "computer_science", "research_intensive"],
+          programAdmissionModel: "direct_admit",
+          applicationStrategyTags: ["binding_early_decision"],
+          testingRequirements: {
+            acceptedExams: ["sat", "act"],
+            minimumSatTotal: null,
+            minimumActComposite: null,
+            latestSatTestDateNote: "Scores accepted through the December SAT.",
+            latestActTestDateNote: "Scores accepted through the December ACT.",
+            superscorePolicy: "both",
+            writingEssayPolicy: "optional",
+            scoreReportingPolicy: "self_report_allowed",
+            middle50SatTotal: {
+              low: 1210,
+              high: 1390,
+            },
+            middle50ActComposite: {
+              low: 26,
+              high: 31,
+            },
+          },
+        },
+        explanationInputs: {
+          academicSelectivityBand: "selective",
+          testingExpectation: "scores_considered",
+          englishPolicySummary: "minimum_scores_required",
+          aidModel: "need_and_merit",
+          applicationComplexity: "medium",
+          deadlineUrgencyWindows: {
+            earliestDeadline: "2026-01-15",
+            latestMajorDeadline: "2026-01-15",
+          },
+          internationalStudentConsiderations: ["need_based_aid_available"],
+          potentialFitTags: ["strong_merit_aid_signal"],
+          potentialRiskTags: [],
+          actionableApplicationSteps: ["research_merit_aid_deadlines"],
+        },
         lastVerifiedAt: new Date("2026-03-21T00:00:00.000Z"),
         validationStatus: "publishable",
       })
@@ -66,6 +114,26 @@ test("universities and university_sources round-trip through the catalog schema"
     assert.ok(storedUniversity);
     assert.equal(storedUniversity.schoolName, "Example University");
     assert.equal(storedUniversity.validationStatus, "publishable");
+    assert.equal(
+      storedUniversity.recommendationInputs.internationalAidPolicy,
+      "need_and_merit_available",
+    );
+    assert.equal(
+      storedUniversity.recommendationInputs.averageNetPriceUsd,
+      24000,
+    );
+    assert.deepEqual(
+      storedUniversity.recommendationInputs.programFitTags,
+      ["engineering", "computer_science", "research_intensive"],
+    );
+    assert.equal(
+      storedUniversity.recommendationInputs.testingRequirements.superscorePolicy,
+      "both",
+    );
+    assert.equal(
+      storedUniversity.explanationInputs.applicationComplexity,
+      "medium",
+    );
     assert.equal(storedUniversity.universitySources.length, 1);
     assert.equal(
       storedUniversity.universitySources[0]?.fieldKey,
