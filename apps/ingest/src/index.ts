@@ -3,14 +3,10 @@
 // Verifies that the ingest app can resolve shared workspace packages before real pipelines arrive.
 import { apiContractsWorkspaceStatus } from "@etest/api-contracts";
 import { authWorkspaceStatus } from "@etest/auth";
-import { catalogWorkspaceStatus } from "@etest/catalog";
-import { dbWorkspaceStatus } from "@etest/db";
 
 const workspaceStatuses = [
   apiContractsWorkspaceStatus,
   authWorkspaceStatus,
-  catalogWorkspaceStatus,
-  dbWorkspaceStatus,
 ];
 
 for (const status of workspaceStatuses) {
