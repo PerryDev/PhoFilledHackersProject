@@ -1,5 +1,5 @@
 // packages/db/src/schema/types.ts
-// Shared catalog schema types for Drizzle tables and downstream packages.
+// Shared catalog and recommendation schema types for Drizzle tables and downstream packages.
 // Keeps the database and domain packages aligned on one canonical field model.
 
 export const catalogRequiredFields = [
@@ -257,6 +257,86 @@ export type ApplicationComplexity = (typeof applicationComplexities)[number];
 export interface DeadlineUrgencyWindows {
   earliestDeadline: string | null;
   latestMajorDeadline: string | null;
+}
+
+export const recommendationRunStatuses = [
+  "pending",
+  "succeeded",
+  "failed",
+] as const;
+
+export type RecommendationRunStatus =
+  (typeof recommendationRunStatuses)[number];
+
+export const recommendationTiers = ["reach", "target", "safety"] as const;
+
+export type RecommendationTier = (typeof recommendationTiers)[number];
+
+export const outlookLabels = [
+  "very_strong",
+  "strong",
+  "possible",
+  "stretch",
+  "unlikely",
+] as const;
+
+export type OutlookLabel = (typeof outlookLabels)[number];
+
+export const budgetFitLabels = [
+  "comfortable",
+  "stretch",
+  "high_risk",
+  "unknown",
+] as const;
+
+export type BudgetFitLabel = (typeof budgetFitLabels)[number];
+
+export const deadlinePressureLabels = ["low", "medium", "high"] as const;
+
+export type DeadlinePressureLabel = (typeof deadlinePressureLabels)[number];
+
+export const confidenceLevels = ["low", "medium", "high"] as const;
+
+export type ConfidenceLevel = (typeof confidenceLevels)[number];
+
+export interface ScoreComponentBreakdown {
+  admissionFit: number;
+  readinessFit: number;
+  budgetFit: number;
+  preferenceFit: number;
+  improvementUpside: number;
+}
+
+export interface RecommendationRunRecord {
+  id: string;
+  userId: string;
+  studentProfileId: string;
+  currentSnapshotId: string;
+  projectedSnapshotId: string | null;
+  runStatus: RecommendationRunStatus;
+  missingProfileFields: string[];
+  candidateSchoolCount: number;
+  createdAt: string;
+  finishedAt: string | null;
+}
+
+export interface RecommendationResultRecord {
+  id: string;
+  recommendationRunId: string;
+  universityId: string;
+  tier: RecommendationTier;
+  currentOutlook: OutlookLabel;
+  projectedOutlook: OutlookLabel | null;
+  confidenceLevel: ConfidenceLevel;
+  budgetFit: BudgetFitLabel;
+  deadlinePressure: DeadlinePressureLabel;
+  currentScore: number;
+  projectedScore: number | null;
+  currentScoreBreakdown: ScoreComponentBreakdown;
+  projectedScoreBreakdown: ScoreComponentBreakdown | null;
+  projectedAssumptionDelta: string[];
+  rankOrder: number;
+  createdAt: string;
 }
 
 export const internationalStudentConsiderationTags = [
