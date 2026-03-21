@@ -1,0 +1,17 @@
+{
+  "name": "@phofilledhackers/ingest",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc --project tsconfig.json",
+    "lint": "node --eval \"console.log('apps/ingest lint is intentionally deferred until repo-wide lint rules land.')\"",
+    "start": "node ./dist/index.js",
+    "typecheck": "tsc --project tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@etest/api-contracts": "*",
+    "@etest/auth": "*",
+    "@etest/catalog": "*",
+    "@etest/db": "*"
+  }
+}

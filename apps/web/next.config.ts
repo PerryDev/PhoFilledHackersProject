@@ -1,10 +1,10 @@
+// apps/web/next.config.ts
+// Minimal Next.js config for the bootstrap branch.
+// Keeps the initial app strict without adding product-specific behavior.
 import type { NextConfig } from "next";
-import path from "node:path";
 
 const nextConfig: NextConfig = {
-  turbopack: {
-    root: path.join(__dirname, "../.."),
-  },
+  reactStrictMode: true,
 };
 
 export default nextConfig;
