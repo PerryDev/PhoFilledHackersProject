@@ -1,7 +1,13 @@
 // packages/auth/src/index.ts
-// Placeholder export surface for the future auth package.
-// Keeps auth setup isolated so Better Auth can land in a later branch without moving files again.
-export const authWorkspaceStatus = {
-  packageName: "@etest/auth",
-  status: "ready for Better Auth setup",
-} as const;
+// Public export surface for the shared Better Auth package.
+// Keeps the web app importing one canonical auth instance and helpers.
+
+export { getAuth, getAuthDb } from "./auth.js";
+export {
+  evaluateMissingStudentProfileFields,
+  getDefaultStudentProfileInput,
+  getStudentProfileStateForUser,
+  saveStudentProfileStateForUser,
+  type StudentProfileInput,
+  type StudentProfileState,
+} from "./student-profiles.js";
