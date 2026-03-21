@@ -8,10 +8,14 @@ import {
   defaultStudentPreferenceProfile,
   defaultStudentReadinessProfile,
   defaultStudentTestingProfile,
+  studentIntakeSessions,
   studentProfileSnapshots,
   studentProfiles,
+  studentLocationPreferenceKinds,
   type StudentAcademicProfile,
   type StudentBudgetProfile,
+  type StudentIntakeMessageRecord,
+  type StudentIntakeStateRecord,
   type StudentPreferenceProfile,
   type StudentProfileRecord,
   type StudentProfileSnapshotKind,
@@ -48,6 +52,19 @@ export interface StudentProfileMissingField {
   message: string;
 }
 
+export interface StudentIntakeMessageInput {
+  id: string;
+  role: "assistant" | "student";
+  text: string;
+  createdAt: string;
+}
+
+export interface StudentIntakeStateInput {
+  currentStepIndex: number;
+  conversationDone: boolean;
+  messages: StudentIntakeMessageInput[];
+}
+
 export interface StudentProfileState {
   profile: StudentProfileRecord | null;
   snapshots: Record<
@@ -59,6 +76,79 @@ export interface StudentProfileState {
     }
   >;
   missingFields: StudentProfileMissingField[];
+}
+
+function toStudentIntakeStateRecord(
+  row: typeof studentIntakeSessions.$inferSelect,
+): StudentIntakeStateRecord {
+  return {
+    userId: row.userId,
+    currentStepIndex: row.currentStepIndex,
+    conversationDone: row.conversationDone,
+    messages: row.messages,
+    createdAt: toIsoString(row.createdAt),
+    updatedAt: toIsoString(row.updatedAt),
+  };
+}
+
+function normalizeStudentPreferenceProfile(
+  value: Partial<StudentPreferenceProfile> | null | undefined,
+): StudentPreferenceProfile {
+  const intendedMajors = Array.isArray(value?.intendedMajors)
+    ? value.intendedMajors.filter((entry): entry is string => typeof entry === "string" && entry.trim().length > 0).map((entry) => entry.trim())
+    : [...defaultStudentPreferenceProfile.intendedMajors];
+  const preferredStates = Array.isArray(value?.preferredStates)
+    ? value.preferredStates.filter((entry): entry is string => typeof entry === "string" && entry.trim().length > 0).map((entry) => entry.trim().toUpperCase())
+    : [...defaultStudentPreferenceProfile.preferredStates];
+  const preferredLocationPreferences = Array.isArray(value?.preferredLocationPreferences)
+    ? value.preferredLocationPreferences.filter(
+        (entry): entry is StudentPreferenceProfile["preferredLocationPreferences"][number] =>
+          typeof entry === "string" &&
+          studentLocationPreferenceKinds.includes(
+            entry as (typeof studentLocationPreferenceKinds)[number],
+          ),
+      )
+    : [...defaultStudentPreferenceProfile.preferredLocationPreferences];
+  const preferredCampusLocale = Array.isArray(value?.preferredCampusLocale)
+    ? value.preferredCampusLocale.filter((entry): entry is string => typeof entry === "string" && entry.trim().length > 0).map((entry) => entry.trim())
+    : [...defaultStudentPreferenceProfile.preferredCampusLocale];
+  const preferredSchoolControl = Array.isArray(value?.preferredSchoolControl)
+    ? value.preferredSchoolControl.filter(
+        (entry): entry is StudentPreferenceProfile["preferredSchoolControl"][number] =>
+          entry === "public" || entry === "private_nonprofit",
+      )
+    : [...defaultStudentPreferenceProfile.preferredSchoolControl];
+
+  return {
+    intendedMajors,
+    preferredStates,
+    preferredLocationPreferences,
+    preferredCampusLocale,
+    preferredSchoolControl,
+    preferredUndergraduateSize:
+      value?.preferredUndergraduateSize &&
+      ["small", "medium", "large", "unknown"].includes(value.preferredUndergraduateSize)
+        ? value.preferredUndergraduateSize
+        : defaultStudentPreferenceProfile.preferredUndergraduateSize,
+  };
+}
+
+function sanitizeStudentIntakeMessages(
+  messages: StudentIntakeMessageInput[],
+): StudentIntakeMessageRecord[] {
+  return messages
+    .filter(
+      (message) =>
+        (message.role === "assistant" || message.role === "student") &&
+        message.id.trim().length > 0 &&
+        message.text.trim().length > 0,
+    )
+    .map((message) => ({
+      id: message.id.trim(),
+      role: message.role,
+      text: message.text.trim(),
+      createdAt: message.createdAt,
+    }));
 }
 
 function toIsoString(value: Date | string) {
@@ -75,7 +165,7 @@ function toStudentProfileRecord(
     targetEntryTerm: row.targetEntryTerm,
     academic: row.academic,
     testing: row.testing,
-    preferences: row.preferences,
+    preferences: normalizeStudentPreferenceProfile(row.preferences),
     budget: row.budget,
     readiness: row.readiness,
     createdAt: toIsoString(row.createdAt),
@@ -238,11 +328,14 @@ export function evaluateRecommendationMissingFields(input: {
     "At least one intended major is required.",
     current.preferences.intendedMajors.length === 0,
   );
+  const hasPreferredLocation =
+    current.preferences.preferredStates.length > 0 ||
+    current.preferences.preferredLocationPreferences.length > 0;
   add(
     "current",
-    "preferences.preferredStates",
-    "At least one preferred state is required.",
-    current.preferences.preferredStates.length === 0,
+    "preferences.preferredLocationPreferences",
+    "At least one preferred location is required.",
+    !hasPreferredLocation,
   );
   add(
     "current",
@@ -439,12 +532,26 @@ export async function getStudentProfileStateForUser(
       current: {
         id: currentSnapshot?.id ?? null,
         assumptions: currentSnapshot?.assumptions ?? [],
-        profile: currentSnapshot?.profile ?? normalizedProfile,
+        profile: currentSnapshot?.profile
+          ? {
+              ...currentSnapshot.profile,
+              preferences: normalizeStudentPreferenceProfile(
+                currentSnapshot.profile.preferences,
+              ),
+            }
+          : normalizedProfile,
       },
       projected: {
         id: projectedSnapshot?.id ?? null,
         assumptions: projectedSnapshot?.assumptions ?? [],
-        profile: projectedSnapshot?.profile ?? normalizedProfile,
+        profile: projectedSnapshot?.profile
+          ? {
+              ...projectedSnapshot.profile,
+              preferences: normalizeStudentPreferenceProfile(
+                projectedSnapshot.profile.preferences,
+              ),
+            }
+          : normalizedProfile,
       },
     },
   };
@@ -476,7 +583,7 @@ export async function saveStudentProfileStateForUser(input: {
       projectedGpa100: input.projectedProfile.academic.projectedGpa100,
     },
     testing: input.currentProfile.testing,
-    preferences: input.currentProfile.preferences,
+    preferences: normalizeStudentPreferenceProfile(input.currentProfile.preferences),
     budget: input.currentProfile.budget,
     readiness: input.currentProfile.readiness,
     updatedAt: new Date(),
@@ -503,7 +610,7 @@ export async function saveStudentProfileStateForUser(input: {
       projectedGpa100: input.projectedProfile.academic.projectedGpa100,
     },
     testing: input.currentProfile.testing,
-    preferences: input.currentProfile.preferences,
+    preferences: normalizeStudentPreferenceProfile(input.currentProfile.preferences),
     budget: input.currentProfile.budget,
     readiness: input.currentProfile.readiness,
   };
@@ -513,7 +620,7 @@ export async function saveStudentProfileStateForUser(input: {
     targetEntryTerm: input.projectedProfile.targetEntryTerm.trim(),
     academic: input.projectedProfile.academic,
     testing: input.projectedProfile.testing,
-    preferences: input.projectedProfile.preferences,
+    preferences: normalizeStudentPreferenceProfile(input.projectedProfile.preferences),
     budget: input.projectedProfile.budget,
     readiness: input.projectedProfile.readiness,
   };
@@ -566,4 +673,44 @@ async function upsertStudentProfileSnapshot(input: {
       profile: input.profile,
     })
     .where(eq(studentProfileSnapshots.id, existingSnapshot.id));
+}
+
+export async function getStudentIntakeStateForUser(
+  userId: string,
+): Promise<StudentIntakeStateRecord | null> {
+  const authDb = await getAuthDb();
+  const intakeState = await authDb.query.studentIntakeSessions.findFirst({
+    where: eq(studentIntakeSessions.userId, userId),
+  });
+
+  return intakeState ? toStudentIntakeStateRecord(intakeState) : null;
+}
+
+export async function saveStudentIntakeStateForUser(input: {
+  userId: string;
+  currentStepIndex: number;
+  conversationDone: boolean;
+  messages: StudentIntakeMessageInput[];
+}): Promise<StudentIntakeStateRecord> {
+  const authDb = await getAuthDb();
+  const existingState = await authDb.query.studentIntakeSessions.findFirst({
+    where: eq(studentIntakeSessions.userId, input.userId),
+  });
+  const values = {
+    userId: input.userId,
+    currentStepIndex: Math.max(0, Math.trunc(input.currentStepIndex)),
+    conversationDone: input.conversationDone,
+    messages: sanitizeStudentIntakeMessages(input.messages),
+    updatedAt: new Date(),
+  };
+
+  const [savedState] = existingState
+    ? await authDb
+        .update(studentIntakeSessions)
+        .set(values)
+        .where(eq(studentIntakeSessions.id, existingState.id))
+        .returning()
+    : await authDb.insert(studentIntakeSessions).values(values).returning();
+
+  return toStudentIntakeStateRecord(savedState);
 }

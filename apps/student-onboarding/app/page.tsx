@@ -2,6 +2,7 @@
 // Home route for the canonical student onboarding app.
 // Loads the shared profile state on the server before rendering the client experience.
 import {
+  getStudentIntakeStateForUser,
   getStudentProfileStateForUser,
 } from "@etest/auth";
 import { requireAuthSession } from "@/lib/auth-session";
@@ -10,7 +11,10 @@ import { StudentOnboardingExperience } from "@/components/student-onboarding/stu
 
 export default async function HomePage() {
   const session = await requireAuthSession();
-  const initialState = await getStudentProfileStateForUser(session.user.id);
+  const [initialState, initialIntakeState] = await Promise.all([
+    getStudentProfileStateForUser(session.user.id),
+    getStudentIntakeStateForUser(session.user.id),
+  ]);
   const initialDocument = buildStudentProfileDocumentFromState(initialState);
 
   return (
@@ -20,6 +24,7 @@ export default async function HomePage() {
         email: session.user.email,
       }}
       initialDocument={initialDocument}
+      initialIntakeState={initialIntakeState}
       initialRoute="chat"
     />
   );
