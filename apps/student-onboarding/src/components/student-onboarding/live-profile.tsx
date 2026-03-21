@@ -30,6 +30,7 @@ interface LiveProfileProps {
   filledCount: number;
   totalCount: number;
   isComplete: boolean;
+  onGenerate: () => void;
 }
 
 const fieldIcons: Record<ProfileField, React.ElementType> = {
@@ -97,6 +98,7 @@ export function LiveProfile({
   filledCount,
   totalCount,
   isComplete,
+  onGenerate,
 }: LiveProfileProps) {
   const text = copy[locale];
   const progressPercent = Math.round((filledCount / totalCount) * 100);
@@ -183,6 +185,7 @@ export function LiveProfile({
       <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-background via-background to-transparent p-4">
         <button
           type="button"
+          onClick={onGenerate}
           disabled={!isComplete}
           className={`flex w-full items-center justify-center gap-2 rounded-xl py-3 text-sm transition-all ${
             isComplete
