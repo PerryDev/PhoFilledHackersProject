@@ -46,7 +46,7 @@ CREATE TABLE "student_profiles" (
 	"target_entry_term" text NOT NULL,
 	"academic" jsonb DEFAULT '{"currentGpa100":null,"projectedGpa100":null,"curriculumStrength":"unknown","classRankPercent":null}'::jsonb NOT NULL,
 	"testing" jsonb DEFAULT '{"satTotal":null,"actComposite":null,"englishExamType":"unknown","englishExamScore":null,"willSubmitTests":null}'::jsonb NOT NULL,
-	"preferences" jsonb DEFAULT '{"intendedMajors":[],"preferredStates":[],"preferredCampusLocale":[],"preferredSchoolControl":[],"preferredUndergraduateSize":"unknown"}'::jsonb NOT NULL,
+	"preferences" jsonb DEFAULT '{"intendedMajors":[],"preferredStates":[],"preferredLocationPreferences":[],"preferredCampusLocale":[],"preferredSchoolControl":[],"preferredUndergraduateSize":"unknown"}'::jsonb NOT NULL,
 	"budget" jsonb DEFAULT '{"annualBudgetUsd":null,"needsFinancialAid":null,"needsMeritAid":null,"budgetFlexibility":"unknown"}'::jsonb NOT NULL,
 	"readiness" jsonb DEFAULT '{"wantsEarlyRound":null,"hasTeacherRecommendationsReady":null,"hasCounselorDocumentsReady":null,"hasEssayDraftsStarted":null}'::jsonb NOT NULL,
 	"created_at" timestamp with time zone DEFAULT now() NOT NULL,

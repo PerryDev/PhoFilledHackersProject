@@ -1315,7 +1315,7 @@
           "type": "jsonb",
           "primaryKey": false,
           "notNull": true,
-          "default": "'{\"intendedMajors\":[],\"preferredStates\":[],\"preferredCampusLocale\":[],\"preferredSchoolControl\":[],\"preferredUndergraduateSize\":\"unknown\"}'::jsonb"
+          "default": "'{\"intendedMajors\":[],\"preferredStates\":[],\"preferredLocationPreferences\":[],\"preferredCampusLocale\":[],\"preferredSchoolControl\":[],\"preferredUndergraduateSize\":\"unknown\"}'::jsonb"
         },
         "budget": {
           "name": "budget",

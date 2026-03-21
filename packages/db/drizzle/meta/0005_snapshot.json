@@ -1,6 +1,6 @@
 {
-  "id": "c4591a62-df9c-4eae-bda5-59ee3ed1f959",
-  "prevId": "a489087b-b96f-4d0a-94ce-7064b7c33872",
+  "id": "e55116db-efc5-451a-bba1-8d0f248d684a",
+  "prevId": "fe784505-4c25-40ca-a985-8e925c7374e8",
   "version": "7",
   "dialect": "postgresql",
   "tables": {
@@ -289,6 +289,628 @@
       "checkConstraints": {},
       "isRLSEnabled": false
     },
+    "public.recommendation_explanations": {
+      "name": "recommendation_explanations",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "recommendation_shortlist_id": {
+          "name": "recommendation_shortlist_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "recommendation_result_id": {
+          "name": "recommendation_result_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "why_recommended": {
+          "name": "why_recommended",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'[]'::jsonb"
+        },
+        "top_blockers": {
+          "name": "top_blockers",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'[]'::jsonb"
+        },
+        "next_recommended_actions": {
+          "name": "next_recommended_actions",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'[]'::jsonb"
+        },
+        "budget_summary": {
+          "name": "budget_summary",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'[]'::jsonb"
+        },
+        "assumption_changes": {
+          "name": "assumption_changes",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'[]'::jsonb"
+        },
+        "explanation_confidence": {
+          "name": "explanation_confidence",
+          "type": "recommendation_confidence_level",
+          "typeSchema": "public",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {
+        "recommendation_explanations_shortlist_id_idx": {
+          "name": "recommendation_explanations_shortlist_id_idx",
+          "columns": [
+            {
+              "expression": "recommendation_shortlist_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        },
+        "recommendation_explanations_result_id_idx": {
+          "name": "recommendation_explanations_result_id_idx",
+          "columns": [
+            {
+              "expression": "recommendation_result_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": true,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        }
+      },
+      "foreignKeys": {
+        "recommendation_explanations_recommendation_shortlist_id_recommendation_shortlists_id_fk": {
+          "name": "recommendation_explanations_recommendation_shortlist_id_recommendation_shortlists_id_fk",
+          "tableFrom": "recommendation_explanations",
+          "tableTo": "recommendation_shortlists",
+          "columnsFrom": [
+            "recommendation_shortlist_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "cascade",
+          "onUpdate": "no action"
+        },
+        "recommendation_explanations_recommendation_result_id_recommendation_results_id_fk": {
+          "name": "recommendation_explanations_recommendation_result_id_recommendation_results_id_fk",
+          "tableFrom": "recommendation_explanations",
+          "tableTo": "recommendation_results",
+          "columnsFrom": [
+            "recommendation_result_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "cascade",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.recommendation_results": {
+      "name": "recommendation_results",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "recommendation_run_id": {
+          "name": "recommendation_run_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "university_id": {
+          "name": "university_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "tier": {
+          "name": "tier",
+          "type": "recommendation_tier",
+          "typeSchema": "public",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "current_outlook": {
+          "name": "current_outlook",
+          "type": "recommendation_outlook_label",
+          "typeSchema": "public",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "projected_outlook": {
+          "name": "projected_outlook",
+          "type": "recommendation_outlook_label",
+          "typeSchema": "public",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "confidence_level": {
+          "name": "confidence_level",
+          "type": "recommendation_confidence_level",
+          "typeSchema": "public",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "budget_fit": {
+          "name": "budget_fit",
+          "type": "recommendation_budget_fit_label",
+          "typeSchema": "public",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "deadline_pressure": {
+          "name": "deadline_pressure",
+          "type": "recommendation_deadline_pressure_label",
+          "typeSchema": "public",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "current_score": {
+          "name": "current_score",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "projected_score": {
+          "name": "projected_score",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "current_score_breakdown": {
+          "name": "current_score_breakdown",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "projected_score_breakdown": {
+          "name": "projected_score_breakdown",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "projected_assumption_delta": {
+          "name": "projected_assumption_delta",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'[]'::jsonb"
+        },
+        "rank_order": {
+          "name": "rank_order",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {
+        "recommendation_results_run_id_idx": {
+          "name": "recommendation_results_run_id_idx",
+          "columns": [
+            {
+              "expression": "recommendation_run_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        },
+        "recommendation_results_run_rank_idx": {
+          "name": "recommendation_results_run_rank_idx",
+          "columns": [
+            {
+              "expression": "recommendation_run_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            },
+            {
+              "expression": "rank_order",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": true,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        },
+        "recommendation_results_run_university_idx": {
+          "name": "recommendation_results_run_university_idx",
+          "columns": [
+            {
+              "expression": "recommendation_run_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            },
+            {
+              "expression": "university_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": true,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        }
+      },
+      "foreignKeys": {
+        "recommendation_results_recommendation_run_id_recommendation_runs_id_fk": {
+          "name": "recommendation_results_recommendation_run_id_recommendation_runs_id_fk",
+          "tableFrom": "recommendation_results",
+          "tableTo": "recommendation_runs",
+          "columnsFrom": [
+            "recommendation_run_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "cascade",
+          "onUpdate": "no action"
+        },
+        "recommendation_results_university_id_universities_id_fk": {
+          "name": "recommendation_results_university_id_universities_id_fk",
+          "tableFrom": "recommendation_results",
+          "tableTo": "universities",
+          "columnsFrom": [
+            "university_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.recommendation_runs": {
+      "name": "recommendation_runs",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "user_id": {
+          "name": "user_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "student_profile_id": {
+          "name": "student_profile_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "current_snapshot_id": {
+          "name": "current_snapshot_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "projected_snapshot_id": {
+          "name": "projected_snapshot_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "run_status": {
+          "name": "run_status",
+          "type": "recommendation_run_status",
+          "typeSchema": "public",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'pending'"
+        },
+        "scoring_config_snapshot": {
+          "name": "scoring_config_snapshot",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'{}'::jsonb"
+        },
+        "missing_profile_fields": {
+          "name": "missing_profile_fields",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'[]'::jsonb"
+        },
+        "candidate_school_count": {
+          "name": "candidate_school_count",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "default": 0
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        },
+        "finished_at": {
+          "name": "finished_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {
+        "recommendation_runs_user_id_idx": {
+          "name": "recommendation_runs_user_id_idx",
+          "columns": [
+            {
+              "expression": "user_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        },
+        "recommendation_runs_student_profile_id_idx": {
+          "name": "recommendation_runs_student_profile_id_idx",
+          "columns": [
+            {
+              "expression": "student_profile_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        },
+        "recommendation_runs_created_at_idx": {
+          "name": "recommendation_runs_created_at_idx",
+          "columns": [
+            {
+              "expression": "created_at",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        }
+      },
+      "foreignKeys": {
+        "recommendation_runs_user_id_student_profiles_user_id_fk": {
+          "name": "recommendation_runs_user_id_student_profiles_user_id_fk",
+          "tableFrom": "recommendation_runs",
+          "tableTo": "student_profiles",
+          "columnsFrom": [
+            "user_id"
+          ],
+          "columnsTo": [
+            "user_id"
+          ],
+          "onDelete": "cascade",
+          "onUpdate": "no action"
+        },
+        "recommendation_runs_student_profile_id_student_profiles_id_fk": {
+          "name": "recommendation_runs_student_profile_id_student_profiles_id_fk",
+          "tableFrom": "recommendation_runs",
+          "tableTo": "student_profiles",
+          "columnsFrom": [
+            "student_profile_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "cascade",
+          "onUpdate": "no action"
+        },
+        "recommendation_runs_current_snapshot_id_student_profile_snapshots_id_fk": {
+          "name": "recommendation_runs_current_snapshot_id_student_profile_snapshots_id_fk",
+          "tableFrom": "recommendation_runs",
+          "tableTo": "student_profile_snapshots",
+          "columnsFrom": [
+            "current_snapshot_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        },
+        "recommendation_runs_projected_snapshot_id_student_profile_snapshots_id_fk": {
+          "name": "recommendation_runs_projected_snapshot_id_student_profile_snapshots_id_fk",
+          "tableFrom": "recommendation_runs",
+          "tableTo": "student_profile_snapshots",
+          "columnsFrom": [
+            "projected_snapshot_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.recommendation_shortlists": {
+      "name": "recommendation_shortlists",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "recommendation_run_id": {
+          "name": "recommendation_run_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "model": {
+          "name": "model",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "prompt_version": {
+          "name": "prompt_version",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "system_prompt": {
+          "name": "system_prompt",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "shortlisted_recommendation_result_ids": {
+          "name": "shortlisted_recommendation_result_ids",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'[]'::jsonb"
+        },
+        "shortlist_rationale": {
+          "name": "shortlist_rationale",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'[]'::jsonb"
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {
+        "recommendation_shortlists_run_id_idx": {
+          "name": "recommendation_shortlists_run_id_idx",
+          "columns": [
+            {
+              "expression": "recommendation_run_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": true,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        }
+      },
+      "foreignKeys": {
+        "recommendation_shortlists_recommendation_run_id_recommendation_runs_id_fk": {
+          "name": "recommendation_shortlists_recommendation_run_id_recommendation_runs_id_fk",
+          "tableFrom": "recommendation_shortlists",
+          "tableTo": "recommendation_runs",
+          "columnsFrom": [
+            "recommendation_run_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "cascade",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
     "public.accounts": {
       "name": "accounts",
       "schema": "",
@@ -524,6 +1146,112 @@
         "sessions_user_id_users_id_fk": {
           "name": "sessions_user_id_users_id_fk",
           "tableFrom": "sessions",
+          "tableTo": "users",
+          "columnsFrom": [
+            "user_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "cascade",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.student_intake_sessions": {
+      "name": "student_intake_sessions",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "user_id": {
+          "name": "user_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "current_step_index": {
+          "name": "current_step_index",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "default": 0
+        },
+        "conversation_done": {
+          "name": "conversation_done",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": true,
+          "default": false
+        },
+        "messages": {
+          "name": "messages",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'[]'::jsonb"
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {
+        "student_intake_sessions_user_id_idx": {
+          "name": "student_intake_sessions_user_id_idx",
+          "columns": [
+            {
+              "expression": "user_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": true,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        },
+        "student_intake_sessions_updated_at_idx": {
+          "name": "student_intake_sessions_updated_at_idx",
+          "columns": [
+            {
+              "expression": "updated_at",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        }
+      },
+      "foreignKeys": {
+        "student_intake_sessions_user_id_users_id_fk": {
+          "name": "student_intake_sessions_user_id_users_id_fk",
+          "tableFrom": "student_intake_sessions",
           "tableTo": "users",
           "columnsFrom": [
             "user_id"
@@ -1243,6 +1971,63 @@
         "persisting",
         "succeeded",
         "failed"
+      ]
+    },
+    "public.recommendation_budget_fit_label": {
+      "name": "recommendation_budget_fit_label",
+      "schema": "public",
+      "values": [
+        "comfortable",
+        "stretch",
+        "high_risk",
+        "unknown"
+      ]
+    },
+    "public.recommendation_confidence_level": {
+      "name": "recommendation_confidence_level",
+      "schema": "public",
+      "values": [
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    "public.recommendation_deadline_pressure_label": {
+      "name": "recommendation_deadline_pressure_label",
+      "schema": "public",
+      "values": [
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    "public.recommendation_outlook_label": {
+      "name": "recommendation_outlook_label",
+      "schema": "public",
+      "values": [
+        "very_strong",
+        "strong",
+        "possible",
+        "stretch",
+        "unlikely"
+      ]
+    },
+    "public.recommendation_run_status": {
+      "name": "recommendation_run_status",
+      "schema": "public",
+      "values": [
+        "pending",
+        "succeeded",
+        "failed"
+      ]
+    },
+    "public.recommendation_tier": {
+      "name": "recommendation_tier",
+      "schema": "public",
+      "values": [
+        "reach",
+        "target",
+        "safety"
       ]
     },
     "public.student_budget_flexibility": {

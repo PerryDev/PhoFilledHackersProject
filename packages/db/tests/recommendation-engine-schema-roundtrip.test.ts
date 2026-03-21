@@ -137,6 +137,7 @@ test("recommendation runs and results round-trip through the schema", async () =
         preferences: {
           intendedMajors: ["computer_science", "data_science"],
           preferredStates: ["CA", "MA"],
+          preferredLocationPreferences: ["us_west_coast", "us_east_coast"],
           preferredCampusLocale: ["urban"],
           preferredSchoolControl: ["public", "private_nonprofit"],
           preferredUndergraduateSize: "medium",

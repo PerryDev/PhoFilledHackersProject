@@ -11,6 +11,7 @@ import {
 import {
   accounts,
   sessions,
+  studentIntakeSessions,
   studentProfileSnapshots,
   studentProfiles,
   users,
@@ -69,6 +70,10 @@ export const catalogImportItemsRelations = relations(
 export const usersRelations = relations(users, ({ many, one }) => ({
   accounts: many(accounts),
   sessions: many(sessions),
+  studentIntakeSession: one(studentIntakeSessions, {
+    fields: [users.id],
+    references: [studentIntakeSessions.userId],
+  }),
   studentProfile: one(studentProfiles, {
     fields: [users.id],
     references: [studentProfiles.userId],
@@ -109,6 +114,16 @@ export const studentProfileSnapshotsRelations = relations(
     studentProfile: one(studentProfiles, {
       fields: [studentProfileSnapshots.studentProfileId],
       references: [studentProfiles.id],
+    }),
+  }),
+);
+
+export const studentIntakeSessionsRelations = relations(
+  studentIntakeSessions,
+  ({ one }) => ({
+    user: one(users, {
+      fields: [studentIntakeSessions.userId],
+      references: [users.id],
     }),
   }),
 );

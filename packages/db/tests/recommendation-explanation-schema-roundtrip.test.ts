@@ -275,6 +275,7 @@ function toSnapshotProfile(
     preferences: {
       intendedMajors: [],
       preferredStates: [],
+      preferredLocationPreferences: [],
       preferredCampusLocale: [],
       preferredSchoolControl: [],
       preferredUndergraduateSize: "unknown" as const,

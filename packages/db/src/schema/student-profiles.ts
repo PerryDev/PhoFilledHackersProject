@@ -5,6 +5,7 @@
 import { sql } from "drizzle-orm";
 import {
   boolean,
+  integer,
   index,
   jsonb,
   pgEnum,
@@ -23,6 +24,7 @@ import {
   studentProfileSnapshotKinds,
   type StudentAcademicProfile,
   type StudentBudgetProfile,
+  type StudentIntakeMessageRecord,
   type StudentPreferenceProfile,
   type StudentProfileRecord,
   type StudentReadinessProfile,
@@ -181,7 +183,7 @@ export const studentProfiles = pgTable(
       .$type<StudentPreferenceProfile>()
       .notNull()
       .default(
-        sql`'{"intendedMajors":[],"preferredStates":[],"preferredCampusLocale":[],"preferredSchoolControl":[],"preferredUndergraduateSize":"unknown"}'::jsonb`,
+        sql`'{"intendedMajors":[],"preferredStates":[],"preferredLocationPreferences":[],"preferredCampusLocale":[],"preferredSchoolControl":[],"preferredUndergraduateSize":"unknown"}'::jsonb`,
       ),
     budget: jsonb("budget")
       .$type<StudentBudgetProfile>()
@@ -233,5 +235,31 @@ export const studentProfileSnapshots = pgTable(
     profileKindIdx: uniqueIndex(
       "student_profile_snapshots_profile_kind_idx",
     ).on(table.studentProfileId, table.snapshotKind),
+  }),
+);
+
+export const studentIntakeSessions = pgTable(
+  "student_intake_sessions",
+  {
+    id: uuid("id").defaultRandom().primaryKey(),
+    userId: text("user_id")
+      .notNull()
+      .references(() => users.id, { onDelete: "cascade" }),
+    currentStepIndex: integer("current_step_index").notNull().default(0),
+    conversationDone: boolean("conversation_done").notNull().default(false),
+    messages: jsonb("messages")
+      .$type<StudentIntakeMessageRecord[]>()
+      .notNull()
+      .default(sql`'[]'::jsonb`),
+    createdAt: timestamp("created_at", { withTimezone: true })
+      .notNull()
+      .defaultNow(),
+    updatedAt: timestamp("updated_at", { withTimezone: true })
+      .notNull()
+      .defaultNow(),
+  },
+  (table) => ({
+    userIdIdx: uniqueIndex("student_intake_sessions_user_id_idx").on(table.userId),
+    updatedAtIdx: index("student_intake_sessions_updated_at_idx").on(table.updatedAt),
   }),
 );

@@ -34,6 +34,19 @@ export const preferredUndergraduateSizes = [
 export type PreferredUndergraduateSize =
   (typeof preferredUndergraduateSizes)[number];
 
+export const studentLocationPreferenceKinds = [
+  "us_east_coast",
+  "us_west_coast",
+  "us_midwest",
+  "us_south",
+  "canada",
+  "uk",
+  "no_preference",
+] as const;
+
+export type StudentLocationPreferenceKind =
+  (typeof studentLocationPreferenceKinds)[number];
+
 export const budgetFlexibilities = [
   "low",
   "medium",
@@ -53,6 +66,11 @@ export type StudentPreferredSchoolControl = Extract<
   "public" | "private_nonprofit"
 >;
 
+export const studentIntakeMessageRoles = ["assistant", "student"] as const;
+
+export type StudentIntakeMessageRole =
+  (typeof studentIntakeMessageRoles)[number];
+
 export interface StudentAcademicProfile {
   currentGpa100: number | null;
   projectedGpa100: number | null;
@@ -71,6 +89,7 @@ export interface StudentTestingProfile {
 export interface StudentPreferenceProfile {
   intendedMajors: string[];
   preferredStates: string[];
+  preferredLocationPreferences: StudentLocationPreferenceKind[];
   preferredCampusLocale: string[];
   preferredSchoolControl: StudentPreferredSchoolControl[];
   preferredUndergraduateSize: PreferredUndergraduateSize;
@@ -119,6 +138,22 @@ export interface StudentProfileMissingField {
   message: string;
 }
 
+export interface StudentIntakeMessageRecord {
+  id: string;
+  role: StudentIntakeMessageRole;
+  text: string;
+  createdAt: string;
+}
+
+export interface StudentIntakeStateRecord {
+  userId: string;
+  currentStepIndex: number;
+  conversationDone: boolean;
+  messages: StudentIntakeMessageRecord[];
+  createdAt: string;
+  updatedAt: string;
+}
+
 export const defaultStudentAcademicProfile: StudentAcademicProfile = {
   currentGpa100: null,
   projectedGpa100: null,
@@ -137,6 +172,7 @@ export const defaultStudentTestingProfile: StudentTestingProfile = {
 export const defaultStudentPreferenceProfile: StudentPreferenceProfile = {
   intendedMajors: [],
   preferredStates: [],
+  preferredLocationPreferences: [],
   preferredCampusLocale: [],
   preferredSchoolControl: [],
   preferredUndergraduateSize: "unknown",

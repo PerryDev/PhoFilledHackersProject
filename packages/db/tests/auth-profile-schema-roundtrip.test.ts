@@ -10,6 +10,7 @@ import { eq } from "drizzle-orm";
 import {
   accounts,
   sessions,
+  studentIntakeSessions,
   studentProfiles,
   studentProfileSnapshots,
   users,
@@ -67,6 +68,7 @@ test("auth rows and student profile snapshots round-trip through the schema", as
         preferences: {
           intendedMajors: ["computer_science", "data_science"],
           preferredStates: ["CA", "MA"],
+          preferredLocationPreferences: ["us_west_coast", "us_east_coast"],
           preferredCampusLocale: ["urban"],
           preferredSchoolControl: ["public", "private_nonprofit"],
           preferredUndergraduateSize: "medium",
@@ -115,6 +117,26 @@ test("auth rows and student profile snapshots round-trip through the schema", as
       },
     ]);
 
+    await database.db.insert(studentIntakeSessions).values({
+      userId: "user_1",
+      currentStepIndex: 3,
+      conversationDone: false,
+      messages: [
+        {
+          id: "assistant-1",
+          role: "assistant",
+          text: "Nice to meet you! What grade are you currently in?",
+          createdAt: "2026-03-22T00:00:00.000Z",
+        },
+        {
+          id: "student-1",
+          role: "student",
+          text: "Grade 11",
+          createdAt: "2026-03-22T00:00:10.000Z",
+        },
+      ],
+    });
+
     const storedProfile = await database.db.query.studentProfiles.findFirst({
       where: eq(studentProfiles.id, insertedProfile.id),
       with: {
@@ -126,6 +148,10 @@ test("auth rows and student profile snapshots round-trip through the schema", as
     assert.ok(storedProfile);
     assert.equal(storedProfile.user.email, "minh.anh@example.com");
     assert.equal(storedProfile.testing.englishExamType, "ielts");
+    assert.deepEqual(storedProfile.preferences.preferredLocationPreferences, [
+      "us_west_coast",
+      "us_east_coast",
+    ]);
     assert.equal(storedProfile.preferences.preferredUndergraduateSize, "medium");
     assert.equal(storedProfile.snapshots.length, 2);
 
@@ -139,6 +165,15 @@ test("auth rows and student profile snapshots round-trip through the schema", as
       "Complete counselor documents",
     ]);
     assert.equal(projectedSnapshot.profile.targetEntryTerm, "fall_2027");
+
+    const storedIntake = await database.db.query.studentIntakeSessions.findFirst({
+      where: eq(studentIntakeSessions.userId, "user_1"),
+    });
+
+    assert.ok(storedIntake);
+    assert.equal(storedIntake.currentStepIndex, 3);
+    assert.equal(storedIntake.messages.length, 2);
+    assert.equal(storedIntake.messages[0]?.role, "assistant");
   } finally {
     await database.close();
   }

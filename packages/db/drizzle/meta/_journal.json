@@ -36,6 +36,13 @@
       "when": 1774123305928,
       "tag": "0004_bitter_christian_walker",
       "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1774136220037,
+      "tag": "0005_vengeful_dakota_north",
+      "breakpoints": true
     }
   ]
 }
