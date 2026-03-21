@@ -1,3 +1,14 @@
+node_modules
+.DS_Store
+.turbo
+.codex-artifacts
+test-results
+playwright-report
+
+apps/web/.next
+apps/web/node_modules
+apps/web/out
+apps/web/coverage
 # Logs
 logs
 *.log
