@@ -9,3 +9,6 @@ export * from "./publishability.js";
 export * from "./recommendation-catalog-read-path.js";
 export * from "./recommendation-engine-config.js";
 export * from "./recommendation-engine.js";
+export * from "./recommendation-explanation-prompt.js";
+export * from "./recommendation-explanation-read-path.js";
+export * from "./recommendation-explanation-service.js";
