@@ -16,6 +16,14 @@
   "scripts": {
     "build": "tsc --project tsconfig.json",
     "lint": "node --eval \"console.log('packages/catalog lint is intentionally deferred until repo-wide lint rules land.')\"",
+    "test": "tsx --test tests/**/*.test.ts",
     "typecheck": "tsc --project tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@etest/db": "*"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "tsx": "^4.21.0"
   }
 }
