@@ -418,6 +418,30 @@ export interface RecommendationResultRecord {
   createdAt: string;
 }
 
+export interface RecommendationShortlistRecord {
+  id: string;
+  recommendationRunId: string;
+  model: string;
+  promptVersion: string;
+  systemPrompt: string;
+  shortlistedRecommendationResultIds: string[];
+  shortlistRationale: string[];
+  createdAt: string;
+}
+
+export interface RecommendationExplanationRecord {
+  id: string;
+  recommendationShortlistId: string;
+  recommendationResultId: string;
+  whyRecommended: string[];
+  topBlockers: string[];
+  nextRecommendedActions: string[];
+  budgetSummary: string[];
+  assumptionChanges: string[];
+  explanationConfidence: ConfidenceLevel;
+  createdAt: string;
+}
+
 export const internationalStudentConsiderationTags = [
   "english_fluency_required",
   "english_test_may_be_required",

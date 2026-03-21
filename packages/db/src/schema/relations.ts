@@ -16,7 +16,12 @@ import {
   users,
   verifications,
 } from "./student-profiles.js";
-import { recommendationResults, recommendationRuns } from "./recommendations.js";
+import {
+  recommendationExplanations,
+  recommendationResults,
+  recommendationShortlists,
+  recommendationRuns,
+} from "./recommendations.js";
 import { universities, universitySources } from "./universities.js";
 
 export const universitiesRelations = relations(universities, ({ many }) => ({
@@ -124,6 +129,7 @@ export const recommendationRunsRelations = relations(
       references: [studentProfileSnapshots.id],
     }),
     results: many(recommendationResults),
+    shortlists: many(recommendationShortlists),
   }),
 );
 
@@ -137,6 +143,31 @@ export const recommendationResultsRelations = relations(
     university: one(universities, {
       fields: [recommendationResults.universityId],
       references: [universities.id],
+    }),
+  }),
+);
+
+export const recommendationShortlistsRelations = relations(
+  recommendationShortlists,
+  ({ many, one }) => ({
+    recommendationRun: one(recommendationRuns, {
+      fields: [recommendationShortlists.recommendationRunId],
+      references: [recommendationRuns.id],
+    }),
+    explanations: many(recommendationExplanations),
+  }),
+);
+
+export const recommendationExplanationsRelations = relations(
+  recommendationExplanations,
+  ({ one }) => ({
+    recommendationShortlist: one(recommendationShortlists, {
+      fields: [recommendationExplanations.recommendationShortlistId],
+      references: [recommendationShortlists.id],
+    }),
+    recommendationResult: one(recommendationResults, {
+      fields: [recommendationExplanations.recommendationResultId],
+      references: [recommendationResults.id],
     }),
   }),
 );
