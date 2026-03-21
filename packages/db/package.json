@@ -23,7 +23,8 @@
     "typecheck": "tsc --project tsconfig.json --noEmit"
   },
   "dependencies": {
-    "drizzle-orm": "^0.45.1"
+    "drizzle-orm": "^0.45.1",
+    "postgres": "^3.4.8"
   },
   "devDependencies": {
     "@electric-sql/pglite": "^0.4.1",
