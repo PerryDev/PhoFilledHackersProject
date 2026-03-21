@@ -1,5 +1,5 @@
 // packages/db/src/schema/relations.ts
-// Drizzle relations for catalog tables used by tests and later application queries.
+// Drizzle relations for catalog and recommendation tables used by tests and later application queries.
 // Keeps ownership inside the db package so downstream packages can consume one schema surface.
 
 import { relations } from "drizzle-orm";
@@ -16,12 +16,14 @@ import {
   users,
   verifications,
 } from "./student-profiles.js";
+import { recommendationResults, recommendationRuns } from "./recommendations.js";
 import { universities, universitySources } from "./universities.js";
 
 export const universitiesRelations = relations(universities, ({ many }) => ({
   universitySources: many(universitySources),
   catalogImportRuns: many(catalogImportRuns),
   catalogImportItems: many(catalogImportItems),
+  recommendationResults: many(recommendationResults),
 }));
 
 export const universitySourcesRelations = relations(
@@ -92,6 +94,7 @@ export const studentProfilesRelations = relations(
       references: [users.id],
     }),
     snapshots: many(studentProfileSnapshots),
+    recommendationRuns: many(recommendationRuns),
   }),
 );
 
@@ -101,6 +104,39 @@ export const studentProfileSnapshotsRelations = relations(
     studentProfile: one(studentProfiles, {
       fields: [studentProfileSnapshots.studentProfileId],
       references: [studentProfiles.id],
+    }),
+  }),
+);
+
+export const recommendationRunsRelations = relations(
+  recommendationRuns,
+  ({ many, one }) => ({
+    studentProfile: one(studentProfiles, {
+      fields: [recommendationRuns.studentProfileId],
+      references: [studentProfiles.id],
+    }),
+    currentSnapshot: one(studentProfileSnapshots, {
+      fields: [recommendationRuns.currentSnapshotId],
+      references: [studentProfileSnapshots.id],
+    }),
+    projectedSnapshot: one(studentProfileSnapshots, {
+      fields: [recommendationRuns.projectedSnapshotId],
+      references: [studentProfileSnapshots.id],
+    }),
+    results: many(recommendationResults),
+  }),
+);
+
+export const recommendationResultsRelations = relations(
+  recommendationResults,
+  ({ one }) => ({
+    recommendationRun: one(recommendationRuns, {
+      fields: [recommendationResults.recommendationRunId],
+      references: [recommendationRuns.id],
+    }),
+    university: one(universities, {
+      fields: [recommendationResults.universityId],
+      references: [universities.id],
     }),
   }),
 );

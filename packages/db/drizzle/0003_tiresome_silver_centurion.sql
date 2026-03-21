@@ -1,0 +1,1 @@
+ALTER TABLE "recommendation_runs" ADD COLUMN "scoring_config_snapshot" jsonb DEFAULT '{}'::jsonb NOT NULL;

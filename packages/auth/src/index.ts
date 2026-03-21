@@ -4,10 +4,18 @@
 
 export { getAuth, getAuthDb } from "./auth.js";
 export {
+  buildStudentProfileDocumentFromState,
   evaluateMissingStudentProfileFields,
+  evaluateRecommendationMissingFields,
+  evaluateRecommendationRunReadinessFromDocument,
+  evaluateRecommendationRunReadinessFromState,
   getDefaultStudentProfileInput,
   getStudentProfileStateForUser,
   saveStudentProfileStateForUser,
+  toRecommendationMissingFieldPaths,
+  type StudentProfileDocument,
   type StudentProfileInput,
+  type StudentProfileMissingField,
+  type StudentProfileSnapshotInput,
   type StudentProfileState,
 } from "./student-profiles.js";

@@ -1,5 +1,5 @@
 // packages/db/src/schema/types.ts
-// Shared catalog schema types for Drizzle tables and downstream packages.
+// Shared catalog and recommendation schema types for Drizzle tables and downstream packages.
 // Keeps the database and domain packages aligned on one canonical field model.
 
 export const catalogRequiredFields = [
@@ -257,6 +257,165 @@ export type ApplicationComplexity = (typeof applicationComplexities)[number];
 export interface DeadlineUrgencyWindows {
   earliestDeadline: string | null;
   latestMajorDeadline: string | null;
+}
+
+export const recommendationRunStatuses = [
+  "pending",
+  "succeeded",
+  "failed",
+] as const;
+
+export type RecommendationRunStatus =
+  (typeof recommendationRunStatuses)[number];
+
+export const recommendationTiers = ["reach", "target", "safety"] as const;
+
+export type RecommendationTier = (typeof recommendationTiers)[number];
+
+export const outlookLabels = [
+  "very_strong",
+  "strong",
+  "possible",
+  "stretch",
+  "unlikely",
+] as const;
+
+export type OutlookLabel = (typeof outlookLabels)[number];
+
+export const budgetFitLabels = [
+  "comfortable",
+  "stretch",
+  "high_risk",
+  "unknown",
+] as const;
+
+export type BudgetFitLabel = (typeof budgetFitLabels)[number];
+
+export const deadlinePressureLabels = ["low", "medium", "high"] as const;
+
+export type DeadlinePressureLabel = (typeof deadlinePressureLabels)[number];
+
+export const confidenceLevels = ["low", "medium", "high"] as const;
+
+export type ConfidenceLevel = (typeof confidenceLevels)[number];
+
+export interface ScoreComponentBreakdown {
+  admissionFit: number;
+  readinessFit: number;
+  budgetFit: number;
+  preferenceFit: number;
+  improvementUpside: number;
+}
+
+export interface RecommendationScoringConfigSnapshot {
+  admissionFit: {
+    defaultScore: number;
+    scoreByMinGap: Array<{
+      minGap: number;
+      score: number;
+    }>;
+    testingRequiredNoSubmissionPenalty: number;
+  };
+  readinessFit: {
+    perReadyItem: number;
+    noEarlyRoundBonus: number;
+    earlyRoundReadyBonus: number;
+    earlyRoundReadyThreshold: number;
+  };
+  preferenceFit: {
+    majorMatchScore: number;
+    majorFallbackScore: number;
+    stateMatchScore: number;
+    localeMatchScore: number;
+    schoolControlMatchScore: number;
+    sizeMatchScore: number;
+  };
+  improvementUpside: {
+    gpaDeltaDivisor: number;
+    assumptionBonusCap: number;
+  };
+  studentIndex: {
+    gpaMultiplier: number;
+    satPointsMax: number;
+    actPointsMax: number;
+    curriculumBonuses: {
+      baseline: number;
+      rigorous: number;
+      most_rigorous: number;
+      unknown: number;
+    };
+    classRankBands: Array<{
+      maxPercentile: number;
+      bonus: number;
+    }>;
+  };
+  schoolIndex: {
+    admissionRateNullScore: number;
+    admissionRateMinScore: number;
+    admissionRateMaxScore: number;
+    satScoreMin: number;
+    satScoreMax: number;
+    actScoreMin: number;
+    actScoreMax: number;
+  };
+  budgetFit: {
+    flexibilityBufferHigh: number;
+    flexibilityBufferMedium: number;
+    stretchCoaGapBuffer: number;
+    componentScores: {
+      comfortable: number;
+      stretch: number;
+      high_risk: number;
+      unknown: number;
+    };
+  };
+  tierThresholds: {
+    safetyMin: number;
+    targetMin: number;
+  };
+  outlookThresholds: {
+    very_strong: number;
+    strong: number;
+    possible: number;
+    stretch: number;
+  };
+  sizeBuckets: {
+    smallMaxExclusive: number;
+    mediumMaxInclusive: number;
+  };
+}
+
+export interface RecommendationRunRecord {
+  id: string;
+  userId: string;
+  studentProfileId: string;
+  currentSnapshotId: string;
+  projectedSnapshotId: string | null;
+  runStatus: RecommendationRunStatus;
+  scoringConfigSnapshot: RecommendationScoringConfigSnapshot;
+  missingProfileFields: string[];
+  candidateSchoolCount: number;
+  createdAt: string;
+  finishedAt: string | null;
+}
+
+export interface RecommendationResultRecord {
+  id: string;
+  recommendationRunId: string;
+  universityId: string;
+  tier: RecommendationTier;
+  currentOutlook: OutlookLabel;
+  projectedOutlook: OutlookLabel | null;
+  confidenceLevel: ConfidenceLevel;
+  budgetFit: BudgetFitLabel;
+  deadlinePressure: DeadlinePressureLabel;
+  currentScore: number;
+  projectedScore: number | null;
+  currentScoreBreakdown: ScoreComponentBreakdown;
+  projectedScoreBreakdown: ScoreComponentBreakdown | null;
+  projectedAssumptionDelta: string[];
+  rankOrder: number;
+  createdAt: string;
 }
 
 export const internationalStudentConsiderationTags = [

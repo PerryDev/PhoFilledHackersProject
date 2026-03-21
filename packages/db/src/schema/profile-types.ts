@@ -114,6 +114,7 @@ export interface StudentProfileSnapshotRecord {
 }
 
 export interface StudentProfileMissingField {
+  snapshotKind: StudentProfileSnapshotKind;
   path: string;
   message: string;
 }
