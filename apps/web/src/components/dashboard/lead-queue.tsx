@@ -18,7 +18,7 @@ const stageStyles: Record<StudentProfile["studentStage"], string> = {
 };
 
 export function LeadQueue() {
-  const { language, searchTerm, setSearchTerm } = useDashboardSettings();
+  const { language } = useDashboardSettings();
   const t = dashboardCopy[language];
   const stageLabels: Record<StudentProfile["studentStage"], string> = {
     "Early Builder": t.stageEarlyBuilder,
@@ -27,40 +27,37 @@ export function LeadQueue() {
   };
 
   const [stageFilter, setStageFilter] = useState<"All" | StudentProfile["studentStage"]>("All");
-  const normalizedQuery = searchTerm.trim().toLowerCase();
+  const [search, setSearch] = useState("");
+  const normalizedQuery = search.trim().toLowerCase();
 
   const filteredStudents = students.filter((student) => {
     const matchesStage = stageFilter === "All" || student.studentStage === stageFilter;
     const matchesQuery =
       normalizedQuery.length === 0 ||
       student.name.toLowerCase().includes(normalizedQuery) ||
-      student.email.toLowerCase().includes(normalizedQuery) ||
-      student.intendedMajors.some((major) => major.toLowerCase().includes(normalizedQuery));
+      student.email.toLowerCase().includes(normalizedQuery);
 
     return matchesStage && matchesQuery;
   });
 
   return (
-    <div className="space-y-6">
-      <section className="space-y-2">
-        <p className="text-xs font-semibold uppercase tracking-[0.24em] text-muted-foreground">
-          {t.navLeadQueue}
-        </p>
-        <h1 className="text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
+    <div>
+      <section className="mb-6">
+        <h1 className="text-[24px] font-bold text-foreground">
           {t.queueTitle}
         </h1>
-        <p className="max-w-2xl text-sm leading-6 text-muted-foreground sm:text-base">
+        <p className="mt-1 max-w-2xl text-sm text-muted-foreground">
           {t.queueDescription}
         </p>
       </section>
 
-      <section className="rounded-[1.75rem] border border-border bg-card shadow-sm">
-        <div className="flex flex-col gap-3 border-b border-border px-4 py-4 lg:flex-row lg:items-center">
-          <div className="relative flex-1">
+      <section className="overflow-hidden rounded-[1.75rem] border border-border bg-card shadow-sm">
+        <div className="flex flex-wrap items-center gap-3 border-b border-border px-4 py-4">
+          <div className="relative min-w-[200px] max-w-xs flex-1">
             <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
             <input
-              value={searchTerm}
-              onChange={(event) => setSearchTerm(event.target.value)}
+              value={search}
+              onChange={(event) => setSearch(event.target.value)}
               placeholder={t.queueSearchPlaceholder}
               suppressHydrationWarning
               className="h-11 w-full rounded-xl border border-border bg-surface-soft pl-10 pr-4 text-[13px] text-foreground outline-none transition-colors placeholder:text-muted-foreground focus:border-accent"
@@ -86,26 +83,26 @@ export function LeadQueue() {
             </label>
           </div>
 
-          <div className="text-sm font-medium text-muted-foreground">
+          <div className="ml-auto text-[13px] text-muted-foreground">
             {filteredStudents.length} {filteredStudents.length === 1 ? "student" : "students"}
           </div>
         </div>
 
-        <div className="hidden overflow-hidden lg:block">
-          <table className="min-w-full divide-y divide-border">
-            <thead className="bg-surface-soft">
+        <div className="hidden overflow-x-auto lg:block">
+          <table className="min-w-full">
+            <thead>
               <tr>
                 {Object.values(t.queueColumns).map((column) => (
                   <th
                     key={column}
-                    className="px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-[0.08em] text-muted-foreground"
+                    className="bg-surface-soft px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-[0.05em] text-muted-foreground"
                   >
                     {column}
                   </th>
                 ))}
               </tr>
             </thead>
-            <tbody className="divide-y divide-border/60">
+            <tbody>
               {filteredStudents.map((student) => (
                 <QueueRow
                   key={student.id}
@@ -154,17 +151,17 @@ function QueueRow({
   const t = dashboardCopy[language];
 
   return (
-    <tr className="transition-colors hover:bg-surface-soft/80">
+    <tr className="cursor-pointer border-b border-border/50 transition-colors hover:bg-surface-soft">
       <td className="px-4 py-4">
         <div className="space-y-0.5">
-          <p className="font-semibold text-foreground">{student.name}</p>
-          <p className="text-sm text-muted-foreground">{student.email}</p>
-          <p className="text-sm text-muted-foreground">{student.phone}</p>
+          <p className="text-sm font-semibold text-foreground">{student.name}</p>
+          <p className="text-[12px] text-muted-foreground">{student.email}</p>
+          <p className="text-[12px] text-muted-foreground">{student.phone}</p>
         </div>
       </td>
       <td className="px-4 py-4">
-        <p className="text-sm font-medium text-foreground">Grade {student.gradeLevel}</p>
-        <p className="text-sm text-muted-foreground">Class of {student.graduationYear}</p>
+        <p className="text-sm text-foreground">Grade {student.gradeLevel}</p>
+        <p className="text-[12px] text-muted-foreground">Class of {student.graduationYear}</p>
       </td>
       <td className="px-4 py-4">
         <p className="text-sm text-foreground">{student.intendedMajors.join(", ")}</p>
