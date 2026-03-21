@@ -7,7 +7,6 @@ import Link from "next/link";
 import {
   Activity,
   ArrowLeft,
-  Calendar,
   CheckCircle2,
   DollarSign,
   GraduationCap,
@@ -49,8 +48,8 @@ export function StudentDetail({ student }: Readonly<{ student: StudentProfile }>
       <section className="rounded-[1.75rem] border border-border bg-card p-5 shadow-sm sm:p-6">
         <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
           <div>
-            <h1 className="text-3xl font-semibold tracking-tight text-foreground">{student.name}</h1>
-            <div className="mt-2 flex flex-wrap gap-4 text-sm text-muted-foreground">
+            <h1 className="text-[24px] font-bold text-foreground">{student.name}</h1>
+            <div className="mt-2 flex flex-wrap items-center gap-4 text-[13px] text-muted-foreground">
               <span className="inline-flex items-center gap-1.5">
                 <Mail className="h-3.5 w-3.5" />
                 {student.email}
@@ -68,8 +67,16 @@ export function StudentDetail({ student }: Readonly<{ student: StudentProfile }>
                     ? t.stagePreApplicant
                     : t.stageActiveApplicant}
               </Pill>
-              <Pill className="bg-surface-strong text-secondary-foreground">
-                Grade {student.gradeLevel} · Class of {student.graduationYear}
+              <span className="text-[12px] text-muted-foreground">
+                Grade {student.gradeLevel} · Class of {student.graduationYear} · {student.curriculum}
+              </span>
+            </div>
+            <div className="mt-2 flex flex-wrap gap-2">
+              <Pill className={bandStyles[student.academicStrengthBand]}>
+                {t.detailAcademicBand} {student.academicStrengthBand}
+              </Pill>
+              <Pill className={bandStyles[student.testReadinessBand]}>
+                {t.detailTestBand} {student.testReadinessBand}
               </Pill>
             </div>
           </div>
@@ -79,24 +86,6 @@ export function StudentDetail({ student }: Readonly<{ student: StudentProfile }>
             {t.detailContact}
           </button>
         </div>
-
-        {student.bookingIntent ? (
-          <div className="mt-5 rounded-2xl bg-deadline px-4 py-3 text-deadline-foreground">
-            <div className="flex flex-wrap items-center gap-2">
-              <Calendar className="h-4 w-4" />
-              <span className="text-sm font-semibold">{t.detailBooking}</span>
-              <Pill className="bg-warning text-warning-foreground">{student.bookingIntent.status}</Pill>
-            </div>
-            <div className="mt-2 space-y-1 text-sm">
-              <p>
-                <span className="font-semibold">{t.detailTopic}:</span> {student.bookingIntent.topic}
-              </p>
-              <p>
-                <span className="font-semibold">{t.detailTimeWindow}:</span> {student.bookingIntent.timeWindow}
-              </p>
-            </div>
-          </div>
-        ) : null}
       </section>
 
       <div className="grid gap-5 lg:grid-cols-2">
