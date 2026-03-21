@@ -1,0 +1,88 @@
+/* apps/web/app/globals.css */
+/* Shared bootstrap styles for the initial Next.js shell. */
+/* Keeps the placeholder app readable without introducing a full design system yet. */
+:root {
+  color-scheme: light;
+  font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
+  background:
+    radial-gradient(circle at top, #fef3c7 0%, transparent 32%),
+    linear-gradient(180deg, #fff9f1 0%, #f4f4f5 100%);
+  color: #18181b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+.page-shell {
+  display: grid;
+  gap: 2rem;
+  padding: 4rem 1.5rem 5rem;
+}
+
+.hero {
+  margin: 0 auto;
+  max-width: 48rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.75rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #c2410c;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(2.5rem, 5vw, 4.25rem);
+  line-height: 0.95;
+}
+
+.lead {
+  max-width: 40rem;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #3f3f46;
+}
+
+.module-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  gap: 1rem;
+  margin: 0 auto;
+  max-width: 64rem;
+  width: 100%;
+}
+
+.module-card {
+  border: 1px solid rgba(24, 24, 27, 0.08);
+  border-radius: 1.25rem;
+  padding: 1.25rem;
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 16px 40px rgba(24, 24, 27, 0.06);
+  backdrop-filter: blur(12px);
+}
+
+.module-card h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+}
+
+.module-card p {
+  margin: 0;
+  color: #52525b;
+  line-height: 1.5;
+}
+
+@media (max-width: 640px) {
+  .page-shell {
+    padding-top: 3rem;
+  }
+}

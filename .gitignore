@@ -137,3 +137,10 @@ dist
 # Vite logs files
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+# Turborepo cache
+.turbo/
+
+# Local agent instructions
+agents.md
+AGENTS.md
