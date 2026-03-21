@@ -1,149 +1,205 @@
+// apps/web/src/components/dashboard/lead-queue.tsx
+// Lead queue route content with search, stage filtering, and seeded student rows.
+// Uses the shared search state from the dashboard shell to keep the header and page in sync.
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
-import { useMemo, useState } from "react";
 import { ChevronDown, Filter, Search } from "lucide-react";
-import { students, type StudentProfile } from "@/lib/mock-data";
+import { dashboardCopy } from "@/lib/dashboard-copy";
+import { formatHandOffDate, students, type StudentProfile } from "@/lib/dashboard-data";
+import { useDashboardSettings } from "@/components/dashboard/providers";
+import { Pill } from "@/components/dashboard/primitives";
 
-const stageBadge: Record<StudentProfile["studentStage"], string> = {
-  "Active Applicant": "bg-success text-success-foreground",
-  "Pre-Applicant": "bg-warning text-warning-foreground",
+const stageStyles: Record<StudentProfile["studentStage"], string> = {
   "Early Builder": "bg-info text-info-foreground",
+  "Pre-Applicant": "bg-warning text-warning-foreground",
+  "Active Applicant": "bg-success text-success-foreground",
 };
 
 export function LeadQueue() {
-  const [search, setSearch] = useState("");
-  const [stageFilter, setStageFilter] = useState("All");
+  const { language, searchTerm, setSearchTerm } = useDashboardSettings();
+  const t = dashboardCopy[language];
+  const stageLabels: Record<StudentProfile["studentStage"], string> = {
+    "Early Builder": t.stageEarlyBuilder,
+    "Pre-Applicant": t.stagePreApplicant,
+    "Active Applicant": t.stageActiveApplicant,
+  };
 
-  const filtered = useMemo(() => {
-    return students.filter((student) => {
-      if (stageFilter !== "All" && student.studentStage !== stageFilter) {
-        return false;
-      }
+  const [stageFilter, setStageFilter] = useState<"All" | StudentProfile["studentStage"]>("All");
+  const normalizedQuery = searchTerm.trim().toLowerCase();
 
-      const query = search.trim().toLowerCase();
-      if (!query) {
-        return true;
-      }
+  const filteredStudents = students.filter((student) => {
+    const matchesStage = stageFilter === "All" || student.studentStage === stageFilter;
+    const matchesQuery =
+      normalizedQuery.length === 0 ||
+      student.name.toLowerCase().includes(normalizedQuery) ||
+      student.email.toLowerCase().includes(normalizedQuery) ||
+      student.intendedMajors.some((major) => major.toLowerCase().includes(normalizedQuery));
 
-      return (
-        student.name.toLowerCase().includes(query) ||
-        student.email.toLowerCase().includes(query)
-      );
-    });
-  }, [search, stageFilter]);
+    return matchesStage && matchesQuery;
+  });
 
   return (
-    <section>
-      <div className="mb-6">
-        <h1 className="text-2xl font-bold text-foreground">Student Lead Queue</h1>
-        <p className="mt-1 text-sm text-muted-foreground">
-          Review pending consultation requests
+    <div className="space-y-6">
+      <section className="space-y-2">
+        <p className="text-xs font-semibold uppercase tracking-[0.24em] text-muted-foreground">
+          {t.navLeadQueue}
         </p>
-      </div>
+        <h1 className="text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
+          {t.queueTitle}
+        </h1>
+        <p className="max-w-2xl text-sm leading-6 text-muted-foreground sm:text-base">
+          {t.queueDescription}
+        </p>
+      </section>
 
-      <div className="overflow-hidden rounded-3xl border border-border bg-card shadow-[0_20px_45px_rgba(10,34,64,0.08)]">
-        <div className="flex flex-wrap items-center gap-3 border-b border-border p-4">
-          <div className="relative min-w-[220px] flex-1 lg:max-w-xs">
-            <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+      <section className="rounded-[1.75rem] border border-border bg-card shadow-sm">
+        <div className="flex flex-col gap-3 border-b border-border px-4 py-4 lg:flex-row lg:items-center">
+          <div className="relative flex-1">
+            <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
             <input
-              type="text"
-              placeholder="Search by name or email..."
-              value={search}
-              onChange={(event) => setSearch(event.target.value)}
-              className="w-full rounded-xl border border-border bg-surface-soft py-2 pl-9 pr-3 text-[13px] text-foreground placeholder:text-muted-foreground focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/30"
+              value={searchTerm}
+              onChange={(event) => setSearchTerm(event.target.value)}
+              placeholder={t.queueSearchPlaceholder}
+              suppressHydrationWarning
+              className="h-11 w-full rounded-xl border border-border bg-surface-soft pl-10 pr-4 text-[13px] text-foreground outline-none transition-colors placeholder:text-muted-foreground focus:border-accent"
             />
           </div>
+
           <div className="flex items-center gap-2">
             <Filter className="h-4 w-4 text-muted-foreground" />
-            <div className="relative">
+            <label className="relative">
               <select
                 value={stageFilter}
-                onChange={(event) => setStageFilter(event.target.value)}
-                className="appearance-none rounded-xl border border-border bg-surface-soft px-3 py-2 pr-8 text-[13px] text-foreground focus:outline-none focus:ring-2 focus:ring-ring/20"
+                onChange={(event) =>
+                  setStageFilter(event.target.value as "All" | StudentProfile["studentStage"])
+                }
+                className="h-11 appearance-none rounded-xl border border-border bg-surface-soft px-3.5 pr-9 text-[13px] font-medium text-foreground outline-none"
               >
-                <option value="All">All Stages</option>
-                <option value="Early Builder">Early Builder</option>
-                <option value="Pre-Applicant">Pre-Applicant</option>
-                <option value="Active Applicant">Active Applicant</option>
+                <option value="All">{t.queueAllStages}</option>
+                <option value="Early Builder">{t.stageEarlyBuilder}</option>
+                <option value="Pre-Applicant">{t.stagePreApplicant}</option>
+                <option value="Active Applicant">{t.stageActiveApplicant}</option>
               </select>
-              <ChevronDown className="pointer-events-none absolute right-2 top-1/2 h-3.5 w-3.5 -translate-y-1/2 text-muted-foreground" />
-            </div>
+              <ChevronDown className="pointer-events-none absolute right-3 top-1/2 h-3.5 w-3.5 -translate-y-1/2 text-muted-foreground" />
+            </label>
           </div>
-          <div className="ml-auto text-[13px] text-muted-foreground">
-            {filtered.length} student{filtered.length === 1 ? "" : "s"}
+
+          <div className="text-sm font-medium text-muted-foreground">
+            {filteredStudents.length} {filteredStudents.length === 1 ? "student" : "students"}
           </div>
         </div>
 
-        <div className="overflow-x-auto">
-          <table className="min-w-full">
-            <thead>
-              <tr className="bg-surface-soft">
-                {[
-                  "Student Name & Contact",
-                  "Grade & Grad Year",
-                  "Intended Major(s)",
-                  "Stage",
-                  "Handoff Date",
-                  "Action",
-                ].map((header) => (
+        <div className="hidden overflow-hidden lg:block">
+          <table className="min-w-full divide-y divide-border">
+            <thead className="bg-surface-soft">
+              <tr>
+                {Object.values(t.queueColumns).map((column) => (
                   <th
-                    key={header}
-                    className="px-4 py-3 text-left text-[11px] font-semibold tracking-[0.05em] text-muted-foreground"
+                    key={column}
+                    className="px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-[0.08em] text-muted-foreground"
                   >
-                    {header.toUpperCase()}
+                    {column}
                   </th>
                 ))}
               </tr>
             </thead>
-            <tbody>
-              {filtered.map((student) => (
-                <tr
+            <tbody className="divide-y divide-border/60">
+              {filteredStudents.map((student) => (
+                <QueueRow
                   key={student.id}
-                  className="border-t border-border/60 hover:bg-surface-soft/80"
-                >
-                  <td className="px-4 py-3.5">
-                    <p className="text-sm font-semibold text-foreground">{student.name}</p>
-                    <p className="mt-0.5 text-xs text-muted-foreground">{student.email}</p>
-                    <p className="text-xs text-muted-foreground">{student.phone}</p>
-                  </td>
-                  <td className="px-4 py-3.5">
-                    <p className="text-sm text-foreground">Grade {student.gradeLevel}</p>
-                    <p className="text-xs text-muted-foreground">
-                      Class of {student.graduationYear}
-                    </p>
-                  </td>
-                  <td className="px-4 py-3.5 text-sm text-foreground">
-                    {student.intendedMajors.join(", ")}
-                  </td>
-                  <td className="px-4 py-3.5">
-                    <span
-                      className={`inline-block rounded-xl px-2.5 py-1 text-xs font-medium ${stageBadge[student.studentStage]}`}
-                    >
-                      {student.studentStage}
-                    </span>
-                  </td>
-                  <td className="px-4 py-3.5 text-sm text-muted-foreground">
-                    {new Date(student.handoffDate).toLocaleDateString("en-US", {
-                      month: "short",
-                      day: "numeric",
-                      year: "numeric",
-                    })}
-                  </td>
-                  <td className="px-4 py-3.5">
-                    <Link
-                      href={`/student/${student.id}`}
-                      className="inline-flex rounded-xl bg-accent px-4 py-2 text-[13px] font-semibold text-accent-foreground shadow-sm hover:opacity-90"
-                    >
-                      Review Profile
-                    </Link>
-                  </td>
-                </tr>
+                  student={student}
+                  stageLabel={stageLabels[student.studentStage]}
+                />
               ))}
             </tbody>
           </table>
         </div>
-      </div>
-    </section>
+
+        <div className="grid gap-3 p-4 lg:hidden">
+          {filteredStudents.map((student) => (
+            <article key={student.id} className="rounded-2xl border border-border bg-surface-soft p-4">
+              <div className="flex items-start justify-between gap-3">
+                <div>
+                  <p className="text-base font-semibold text-foreground">{student.name}</p>
+                  <p className="text-sm text-muted-foreground">{student.email}</p>
+                </div>
+                <Pill className={stageStyles[student.studentStage]}>{stageLabels[student.studentStage]}</Pill>
+              </div>
+              <div className="mt-4 grid gap-2 text-sm">
+                <Row label={t.queueColumns.grade} value={`Grade ${student.gradeLevel} · ${student.graduationYear}`} />
+                <Row label={t.queueColumns.majors} value={student.intendedMajors.join(", ")} />
+                <Row label={t.queueColumns.handoff} value={formatHandOffDate(student.handoffDate)} />
+              </div>
+              <Link
+                href={`/student/${student.id}`}
+                className="mt-4 inline-flex rounded-xl bg-accent px-4 py-2 text-sm font-semibold text-accent-foreground shadow-sm"
+              >
+                {t.queueReview}
+              </Link>
+            </article>
+          ))}
+        </div>
+      </section>
+    </div>
+  );
+}
+
+function QueueRow({
+  student,
+  stageLabel,
+}: Readonly<{ student: StudentProfile; stageLabel: string }>) {
+  const { language } = useDashboardSettings();
+  const t = dashboardCopy[language];
+
+  return (
+    <tr className="transition-colors hover:bg-surface-soft/80">
+      <td className="px-4 py-4">
+        <div className="space-y-0.5">
+          <p className="font-semibold text-foreground">{student.name}</p>
+          <p className="text-sm text-muted-foreground">{student.email}</p>
+          <p className="text-sm text-muted-foreground">{student.phone}</p>
+        </div>
+      </td>
+      <td className="px-4 py-4">
+        <p className="text-sm font-medium text-foreground">Grade {student.gradeLevel}</p>
+        <p className="text-sm text-muted-foreground">Class of {student.graduationYear}</p>
+      </td>
+      <td className="px-4 py-4">
+        <p className="text-sm text-foreground">{student.intendedMajors.join(", ")}</p>
+      </td>
+      <td className="px-4 py-4">
+        <Pill className={stageStyles[student.studentStage]}>{stageLabel}</Pill>
+      </td>
+      <td className="px-4 py-4 text-sm text-muted-foreground">
+        {formatHandOffDate(student.handoffDate)}
+      </td>
+      <td className="px-4 py-4">
+        <Link
+          href={`/student/${student.id}`}
+          className="inline-flex rounded-xl bg-accent px-4 py-2 text-sm font-semibold text-accent-foreground shadow-sm transition-opacity hover:opacity-90"
+        >
+          {t.queueReview}
+        </Link>
+      </td>
+    </tr>
+  );
+}
+
+function Row({
+  label,
+  value,
+}: Readonly<{
+  label: string;
+  value: string;
+}>) {
+  return (
+    <div className="flex items-start justify-between gap-4">
+      <span className="text-xs font-medium uppercase tracking-[0.08em] text-muted-foreground">
+        {label}
+      </span>
+      <span className="text-right text-sm font-medium text-foreground">{value}</span>
+    </div>
   );
 }
