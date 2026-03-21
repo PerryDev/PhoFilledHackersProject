@@ -200,6 +200,8 @@ Maintain a source-backed list of US universities used by recommendations and exp
 * `living_cost_estimate_usd`
 * `scholarship_availability_flag`
 * `scholarship_notes`
+* `recommendation_inputs`
+* `explanation_inputs`
 * `source_urls`
 * `last_verified_at`
 * `validation_status`
@@ -210,6 +212,9 @@ Maintain a source-backed list of US universities used by recommendations and exp
 * Every school card must show `last_verified_at`.
 * Catalog records may be created manually or via offline import for MVP.
 * Ingestion must normalize source-backed records before recommendations read from them.
+* `recommendation_inputs` must stay machine-readable and bounded to enumerated, boolean, numeric, or short-note fields.
+* `explanation_inputs` must be structured primitives such as selectivity bands, risk tags, fit tags, and next-step tags rather than freeform narrative.
+* The catalog may store derived recommendation and explanation primitives, but those primitives must be backed by explicit catalog facts or approved public dataset fields.
 
 #### Acceptance criteria
 
@@ -233,6 +238,14 @@ Maintain a source-backed list of US universities used by recommendations and exp
 * Top blockers
 * Next recommended actions
 
+#### Required structured inputs per school
+
+* `recommendation_inputs` must capture scoring-ready fields such as admission rate, undergraduate size, average net price, school control, campus locale, international aid policy, broad academic-domain `program_fit_tags`, a school-level `program_admission_model`, `application_strategy_tags`, and a structured `testing_requirements` block.
+* `program_fit_tags` and `program_admission_model` are school-wide academic-domain proxies for recommendation scoring, not true per-major recommendation logic.
+* `testing_requirements` must stay structured and source-backed, including accepted exams, minimum SAT or ACT scores when published, latest test-date notes, superscore policy, writing or essay policy, score-reporting policy, and middle-50 score ranges when available.
+* `explanation_inputs` must capture explanation-ready fields such as selectivity band, testing expectation, aid model, application complexity, deadline urgency windows, fit tags, risk tags, and next-step tags.
+* The engine should compose readable explanations from those structured inputs instead of relying on unconstrained model prose at recommendation time.
+
 #### Scoring dimensions
 
 * Admission Fit
@@ -254,6 +267,7 @@ Maintain a source-backed list of US universities used by recommendations and exp
 * A student receives at least one school in each tier when enough catalog coverage exists.
 * Each recommended school includes machine-readable fields for score components plus user-readable explanations.
 * If the profile lacks enough data, the system asks for specific missing fields before running.
+* Recommendation explanations remain reproducible because they are built from stored structured inputs rather than ad hoc generated text.
 
 ### 9.5 Recommendation UI and comparison
 
