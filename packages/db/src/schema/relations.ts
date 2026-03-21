@@ -8,6 +8,14 @@ import {
   catalogImportItems,
   catalogImportRuns,
 } from "./imports.js";
+import {
+  accounts,
+  sessions,
+  studentProfileSnapshots,
+  studentProfiles,
+  users,
+  verifications,
+} from "./student-profiles.js";
 import { universities, universitySources } from "./universities.js";
 
 export const universitiesRelations = relations(universities, ({ many }) => ({
@@ -47,6 +55,52 @@ export const catalogImportItemsRelations = relations(
     university: one(universities, {
       fields: [catalogImportItems.universityId],
       references: [universities.id],
+    }),
+  }),
+);
+
+export const usersRelations = relations(users, ({ many, one }) => ({
+  accounts: many(accounts),
+  sessions: many(sessions),
+  studentProfile: one(studentProfiles, {
+    fields: [users.id],
+    references: [studentProfiles.userId],
+  }),
+}));
+
+export const accountsRelations = relations(accounts, ({ one }) => ({
+  user: one(users, {
+    fields: [accounts.userId],
+    references: [users.id],
+  }),
+}));
+
+export const sessionsRelations = relations(sessions, ({ one }) => ({
+  user: one(users, {
+    fields: [sessions.userId],
+    references: [users.id],
+  }),
+}));
+
+export const verificationsRelations = relations(verifications, () => ({}));
+
+export const studentProfilesRelations = relations(
+  studentProfiles,
+  ({ many, one }) => ({
+    user: one(users, {
+      fields: [studentProfiles.userId],
+      references: [users.id],
+    }),
+    snapshots: many(studentProfileSnapshots),
+  }),
+);
+
+export const studentProfileSnapshotsRelations = relations(
+  studentProfileSnapshots,
+  ({ one }) => ({
+    studentProfile: one(studentProfiles, {
+      fields: [studentProfileSnapshots.studentProfileId],
+      references: [studentProfiles.id],
     }),
   }),
 );
