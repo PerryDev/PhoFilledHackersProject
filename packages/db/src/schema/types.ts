@@ -307,6 +307,84 @@ export interface ScoreComponentBreakdown {
   improvementUpside: number;
 }
 
+export interface RecommendationScoringConfigSnapshot {
+  admissionFit: {
+    defaultScore: number;
+    scoreByMinGap: Array<{
+      minGap: number;
+      score: number;
+    }>;
+    testingRequiredNoSubmissionPenalty: number;
+  };
+  readinessFit: {
+    perReadyItem: number;
+    noEarlyRoundBonus: number;
+    earlyRoundReadyBonus: number;
+    earlyRoundReadyThreshold: number;
+  };
+  preferenceFit: {
+    majorMatchScore: number;
+    majorFallbackScore: number;
+    stateMatchScore: number;
+    localeMatchScore: number;
+    schoolControlMatchScore: number;
+    sizeMatchScore: number;
+  };
+  improvementUpside: {
+    gpaDeltaDivisor: number;
+    assumptionBonusCap: number;
+  };
+  studentIndex: {
+    gpaMultiplier: number;
+    satPointsMax: number;
+    actPointsMax: number;
+    curriculumBonuses: {
+      baseline: number;
+      rigorous: number;
+      most_rigorous: number;
+      unknown: number;
+    };
+    classRankBands: Array<{
+      maxPercentile: number;
+      bonus: number;
+    }>;
+  };
+  schoolIndex: {
+    admissionRateNullScore: number;
+    admissionRateMinScore: number;
+    admissionRateMaxScore: number;
+    satScoreMin: number;
+    satScoreMax: number;
+    actScoreMin: number;
+    actScoreMax: number;
+  };
+  budgetFit: {
+    flexibilityBufferHigh: number;
+    flexibilityBufferMedium: number;
+    stretchCoaGapBuffer: number;
+    componentScores: {
+      comfortable: number;
+      stretch: number;
+      high_risk: number;
+      unknown: number;
+    };
+  };
+  tierThresholds: {
+    safetyMin: number;
+    targetMin: number;
+  };
+  outlookThresholds: {
+    very_strong: number;
+    strong: number;
+    possible: number;
+    stretch: number;
+  };
+  sizeBuckets: {
+    smallMaxExclusive: number;
+    mediumMaxInclusive: number;
+  };
+}
+
 export interface RecommendationRunRecord {
   id: string;
   userId: string;
@@ -314,6 +392,7 @@ export interface RecommendationRunRecord {
   currentSnapshotId: string;
   projectedSnapshotId: string | null;
   runStatus: RecommendationRunStatus;
+  scoringConfigSnapshot: RecommendationScoringConfigSnapshot;
   missingProfileFields: string[];
   candidateSchoolCount: number;
   createdAt: string;

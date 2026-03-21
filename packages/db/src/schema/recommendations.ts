@@ -22,6 +22,7 @@ import {
   outlookLabels,
   recommendationRunStatuses,
   recommendationTiers,
+  type RecommendationScoringConfigSnapshot,
   type ScoreComponentBreakdown,
 } from "./types.js";
 import { studentProfileSnapshots, studentProfiles } from "./student-profiles.js";
@@ -73,6 +74,10 @@ export const recommendationRuns = pgTable(
     runStatus: recommendationRunStatusEnum("run_status")
       .notNull()
       .default("pending"),
+    scoringConfigSnapshot: jsonb("scoring_config_snapshot")
+      .$type<RecommendationScoringConfigSnapshot>()
+      .notNull()
+      .default(sql`'{}'::jsonb`),
     missingProfileFields: jsonb("missing_profile_fields")
       .$type<string[]>()
       .notNull()
