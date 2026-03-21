@@ -1,7 +1,8 @@
 // packages/db/src/index.ts
-// Placeholder export surface for the future database package.
-// Gives the bootstrap branch a typed package boundary without adding Drizzle schema yet.
-export const dbWorkspaceStatus = {
-  packageName: "@etest/db",
-  status: "ready for schema work",
-} as const;
+// Public schema surface for the database package.
+// Exposes the canonical catalog tables, relations, and shared schema types.
+
+export * from "./schema/types.js";
+export * from "./schema/universities.js";
+export * from "./schema/imports.js";
+export * from "./schema/relations.js";
