@@ -44,6 +44,7 @@ const cloneProfile = (profile: StudentProfile): StudentProfile => ({
   preferences: {
     intendedMajors: [...profile.preferences.intendedMajors],
     preferredStates: [...profile.preferences.preferredStates],
+    preferredLocationPreferences: [...profile.preferences.preferredLocationPreferences],
     preferredCampusLocale: [...profile.preferences.preferredCampusLocale],
     preferredSchoolControl: [...profile.preferences.preferredSchoolControl],
     preferredUndergraduateSize: profile.preferences.preferredUndergraduateSize,
@@ -135,7 +136,7 @@ export const buildStudentOnboardingSummary = (
           : "Not set",
       },
       { label: "Budget flexibility", value: document.projected.profile.budget.budgetFlexibility },
-      { label: "Essay status", value: fmt.bool(document.projected.profile.readiness.hasEssayDraftsStarted) },
+      { label: "Readiness", value: fmt.bool(document.projected.profile.readiness.hasEssayDraftsStarted) },
     ],
     nextSteps: missingFields.slice(0, 5).map((field) => field.message),
   };

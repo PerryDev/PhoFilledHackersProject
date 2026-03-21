@@ -283,9 +283,9 @@ export function StudentOnboardingSettingsPanel({
           </div>
 
           <div className="grid gap-3 sm:grid-cols-3">
-            <StubCard title="Alumni handoff" description="Stubbed client-side surface for alumni review flows." />
-            <StubCard title="Plan visibility" description="Stubbed client-side surface for review and plan controls." />
-            <StubCard title="Review queue" description="Stubbed client-side surface for human review status." />
+            <InfoCard title="Canonical profile" description="The backend owns the saved student profile and snapshot records." />
+            <InfoCard title="Intake transcript" description="The chat transcript can be restored from the persisted intake session." />
+            <InfoCard title="Recommendation runs" description="Recommendation history is owned by the canonical API and catalog tables." />
           </div>
 
           <div className="flex flex-wrap gap-2">
@@ -316,14 +316,14 @@ export function StudentOnboardingSettingsPanel({
           <div className="space-y-3">
             <ResultStat label="Authenticated viewer" value="Yes" />
             <ResultStat label="Current workspace" value="Student onboarding" />
-            <ResultStat label="Persistence" value="Provided by parent" />
+            <ResultStat label="Persistence" value="Backend canonical" />
           </div>
         </SectionCard>
 
-        <SectionCard title="Client-side only notes" icon={AlertTriangle}>
+        <SectionCard title="Backend-owned notes" icon={AlertTriangle}>
           <div className="space-y-3 text-sm text-muted-foreground">
-            <p>This pane stays visible even before the route layer wires live settings persistence.</p>
-            <p>It is intentionally lightweight and safe to render without any fetches.</p>
+            <p>This pane now documents the backend-backed surfaces only.</p>
+            <p>There are no alumni-handoff or review-queue placeholders left in this workspace.</p>
           </div>
         </SectionCard>
       </div>
@@ -397,7 +397,7 @@ function ActionButton({
   );
 }
 
-function StubCard({
+function InfoCard({
   title,
   description,
 }: Readonly<{

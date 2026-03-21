@@ -1,7 +1,11 @@
+// apps/student-onboarding/src/components/student-onboarding/chat-assistant.tsx
+// Chatbot intake UI for the onboarding workspace.
+// Keeps the assistant surface visible while persisting canonical intake state upstream.
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { Bot, Compass, Send, SkipForward } from "lucide-react";
+
 import {
   copy,
   onboardingSteps,
@@ -14,25 +18,41 @@ interface Message {
   id: string;
   sender: "bot" | "user";
   text: string;
+  createdAt: string;
   quickReplies?: string[];
   skippable?: boolean;
+}
+
+interface PersistedIntakeState {
+  currentStepIndex: number;
+  conversationDone: boolean;
+  messages: Array<{
+    id: string;
+    role: "assistant" | "student";
+    text: string;
+    createdAt: string;
+  }>;
 }
 
 interface ChatAssistantProps {
   locale: Locale;
   userName: string;
+  initialState?: PersistedIntakeState | null;
   onAnswer: (field: ProfileField, value: string) => void;
+  onPersist: (state: PersistedIntakeState) => Promise<void> | void;
   onProgressChange: (current: number, total: number) => void;
   onFinished: () => void;
 }
 
-function createMessage(sender: Message["sender"], text: string, options?: Pick<Message, "quickReplies" | "skippable">): Message {
+function createMessage(
+  sender: Message["sender"],
+  text: string,
+): Message {
   return {
     id: `${sender}-${Date.now()}-${Math.random()}`,
     sender,
     text,
-    quickReplies: options?.quickReplies,
-    skippable: options?.skippable,
+    createdAt: new Date().toISOString(),
   };
 }
 
@@ -40,46 +60,128 @@ function localizeQuickReplies(values: string[] | undefined, locale: Locale) {
   return values?.map((value) => quickReplyLabels[value]?.[locale] ?? value);
 }
 
+function hydrateMessage(message: PersistedIntakeState["messages"][number]): Message {
+  return {
+    id: message.id,
+    sender: message.role === "assistant" ? "bot" : "user",
+    text: message.text,
+    createdAt: message.createdAt,
+  };
+}
+
+function toPersistedState(
+  messages: Message[],
+  currentStepIndex: number,
+  conversationDone: boolean,
+): PersistedIntakeState {
+  return {
+    currentStepIndex,
+    conversationDone,
+    messages: messages.map((message) => ({
+      id: message.id,
+      role: message.sender === "bot" ? "assistant" : "student",
+      text: message.text,
+      createdAt: message.createdAt,
+    })),
+  };
+}
+
 export function ChatAssistant({
   locale,
   userName,
+  initialState = null,
   onAnswer,
+  onPersist,
   onProgressChange,
   onFinished,
 }: ChatAssistantProps) {
   const text = copy[locale];
   const welcomeText = text.chatWelcome.replace("{name}", userName);
-  const [messages, setMessages] = useState<Message[]>(() => [createMessage("bot", welcomeText)]);
-  const [currentStepIndex, setCurrentStepIndex] = useState(0);
+  const [messages, setMessages] = useState<Message[]>(
+    initialState?.messages.map(hydrateMessage) ?? [],
+  );
+  const [currentStepIndex, setCurrentStepIndex] = useState(
+    initialState?.currentStepIndex ?? 0,
+  );
   const [inputValue, setInputValue] = useState("");
-  const [isTyping, setIsTyping] = useState(true);
-  const [conversationDone, setConversationDone] = useState(false);
+  const [isTyping, setIsTyping] = useState(!initialState?.messages.length);
+  const [conversationDone, setConversationDone] = useState(
+    initialState?.conversationDone ?? false,
+  );
   const bottomRef = useRef<HTMLDivElement>(null);
+  const initializedRef = useRef(initialState?.messages.length ? true : false);
 
   useEffect(() => {
+    if (initializedRef.current) {
+      onProgressChange(
+        conversationDone ? onboardingSteps.length : currentStepIndex,
+        onboardingSteps.length,
+      );
+      return;
+    }
+
     const firstStep = onboardingSteps[0];
-
-    onProgressChange(0, onboardingSteps.length);
-
     const timeoutId = window.setTimeout(() => {
-      setIsTyping(false);
-      setMessages([
+      const nextMessages = [
         createMessage("bot", welcomeText),
-        createMessage("bot", firstStep.prompts[locale], {
-          quickReplies: localizeQuickReplies(firstStep.quickReplies?.en, locale),
-          skippable: firstStep.skippable,
-        }),
-      ]);
+        createMessage("bot", firstStep.prompts[locale]),
+      ];
+
+      initializedRef.current = true;
+      setIsTyping(false);
+      setMessages(nextMessages);
+      onProgressChange(0, onboardingSteps.length);
+      void onPersist(toPersistedState(nextMessages, 0, false));
     }, 700);
 
     return () => window.clearTimeout(timeoutId);
-  }, [locale, onProgressChange, userName, welcomeText]);
+  }, [
+    conversationDone,
+    currentStepIndex,
+    locale,
+    onPersist,
+    onProgressChange,
+    welcomeText,
+  ]);
 
   useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages, isTyping]);
 
-  function queueNextStep(nextIndex: number) {
+  const renderedMessages = useMemo(() => {
+    return messages.map((message, index) => {
+      const isLastMessage = index === messages.length - 1;
+      if (
+        !isLastMessage ||
+        message.sender !== "bot" ||
+        conversationDone ||
+        !onboardingSteps[currentStepIndex]
+      ) {
+        return message;
+      }
+
+      return {
+        ...message,
+        quickReplies: localizeQuickReplies(
+          onboardingSteps[currentStepIndex]?.quickReplies?.en,
+          locale,
+        ),
+        skippable: onboardingSteps[currentStepIndex]?.skippable,
+      };
+    });
+  }, [conversationDone, currentStepIndex, locale, messages]);
+
+  function persistState(
+    nextMessages: Message[],
+    nextStepIndex: number,
+    nextConversationDone: boolean,
+  ) {
+    void onPersist(
+      toPersistedState(nextMessages, nextStepIndex, nextConversationDone),
+    );
+  }
+
+  function queueNextStep(nextIndex: number, existingMessages: Message[]) {
     const nextStep = onboardingSteps[nextIndex];
 
     if (!nextStep) {
@@ -88,8 +190,13 @@ export function ChatAssistant({
       onProgressChange(onboardingSteps.length, onboardingSteps.length);
 
       window.setTimeout(() => {
+        const nextMessages = [
+          ...existingMessages,
+          createMessage("bot", text.chatDone),
+        ];
         setIsTyping(false);
-        setMessages((existing) => [...existing, createMessage("bot", text.chatDone)]);
+        setMessages(nextMessages);
+        persistState(nextMessages, onboardingSteps.length, true);
         onFinished();
       }, 700);
       return;
@@ -97,16 +204,15 @@ export function ChatAssistant({
 
     setIsTyping(true);
     window.setTimeout(() => {
+      const nextMessages = [
+        ...existingMessages,
+        createMessage("bot", nextStep.prompts[locale]),
+      ];
       setIsTyping(false);
       setCurrentStepIndex(nextIndex);
-      setMessages((existing) => [
-        ...existing,
-        createMessage("bot", nextStep.prompts[locale], {
-          quickReplies: localizeQuickReplies(nextStep.quickReplies?.en, locale),
-          skippable: nextStep.skippable,
-        }),
-      ]);
+      setMessages(nextMessages);
       onProgressChange(nextIndex, onboardingSteps.length);
+      persistState(nextMessages, nextIndex, false);
     }, 700);
   }
 
@@ -117,10 +223,15 @@ export function ChatAssistant({
       return;
     }
 
-    setMessages((existing) => [...existing, createMessage("user", answer.trim())]);
+    const nextMessages = [
+      ...messages,
+      createMessage("user", answer.trim()),
+    ];
+    setMessages(nextMessages);
     onAnswer(step.key, answer.trim());
     setInputValue("");
-    queueNextStep(currentStepIndex + 1);
+    persistState(nextMessages, currentStepIndex, false);
+    queueNextStep(currentStepIndex + 1, nextMessages);
   }
 
   function skipCurrentStep() {
@@ -130,11 +241,15 @@ export function ChatAssistant({
       return;
     }
 
-    setMessages((existing) => [...existing, createMessage("user", text.chatSkipped)]);
-    queueNextStep(currentStepIndex + 1);
+    const nextMessages = [...messages, createMessage("user", text.chatSkipped)];
+    setMessages(nextMessages);
+    persistState(nextMessages, currentStepIndex, false);
+    queueNextStep(currentStepIndex + 1, nextMessages);
   }
 
-  const lastBotMessage = [...messages].reverse().find((message) => message.sender === "bot");
+  const lastBotMessage = [...renderedMessages]
+    .reverse()
+    .find((message) => message.sender === "bot");
 
   return (
     <div className="flex h-full flex-col bg-card">
@@ -145,7 +260,7 @@ export function ChatAssistant({
         <div className="flex-1">
           <h3 className="text-sm text-foreground">{text.chatTitle}</h3>
           <div className="flex items-center gap-1.5">
-            <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
+            <span className="h-2 w-2 animate-pulse rounded-full bg-emerald-500" />
             <span className="text-xs text-muted-foreground">{text.chatActive}</span>
           </div>
         </div>
@@ -156,12 +271,16 @@ export function ChatAssistant({
 
       <div className="flex-1 overflow-y-auto">
         <div className="space-y-4 p-4">
-          {messages.map((message) => (
+          {renderedMessages.map((message) => (
             <div
               key={message.id}
               className={`flex ${message.sender === "user" ? "justify-end" : "justify-start"}`}
             >
-              <div className={`flex max-w-[85%] gap-2 ${message.sender === "user" ? "flex-row-reverse" : ""}`}>
+              <div
+                className={`flex max-w-[85%] gap-2 ${
+                  message.sender === "user" ? "flex-row-reverse" : ""
+                }`}
+              >
                 {message.sender === "bot" ? (
                   <div className="mt-1 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-primary/10">
                     <Bot className="h-4 w-4 text-primary" />
@@ -180,7 +299,9 @@ export function ChatAssistant({
             </div>
           ))}
 
-          {lastBotMessage?.quickReplies && !conversationDone && lastBotMessage === messages[messages.length - 1] ? (
+          {lastBotMessage?.quickReplies &&
+          !conversationDone &&
+          lastBotMessage === renderedMessages[renderedMessages.length - 1] ? (
             <div className="flex flex-wrap gap-2 pl-9">
               {lastBotMessage.quickReplies.map((reply) => (
                 <button

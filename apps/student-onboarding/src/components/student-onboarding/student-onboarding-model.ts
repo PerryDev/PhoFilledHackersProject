@@ -99,8 +99,10 @@ const fieldLabel: Record<ProfileField, string> = {
   sat: "SAT/ACT",
   intendedMajors: "Intended Major(s)",
   extracurriculars: "Extracurriculars",
-  essayStatus: "Essay Status",
-  recommendationStatus: "Recommendation Letters",
+  wantsEarlyRound: "Early Round Plan",
+  teacherRecommendationsReady: "Teacher Recommendations Ready",
+  counselorDocumentsReady: "Counselor Documents Ready",
+  essayDraftsStarted: "Essay Drafts Started",
   annualBudget: "Annual Budget",
   scholarshipNeed: "Scholarship Need",
   geographyPreferences: "Location Preference",
@@ -158,7 +160,7 @@ export const buildSummary = (
     projectedHighlights: [
       { label: "Projected GPA", value: document.projected.profile.gpa || "Not set" },
       { label: "Location", value: document.projected.profile.geographyPreferences || "Not set" },
-      { label: "Readiness", value: document.projected.profile.essayStatus || "Not set" },
+      { label: "Readiness", value: document.projected.profile.essayDraftsStarted || "Not set" },
     ],
     nextSteps: currentMissing.slice(0, 4).map((field) => field.message),
   };
@@ -226,13 +228,23 @@ export const applyChatPrompt = (
   }
 
   if (lower.includes("essay")) {
-    updateCurrentAndProjected("essayStatus", lower.includes("not started") ? "Not started" : "Brainstorming ideas");
+    updateCurrentAndProjected("essayDraftsStarted", lower.includes("not started") ? "No" : "Yes");
     changes.push("Updated essay readiness.");
   }
 
   if (lower.includes("recommendation")) {
-    updateCurrentAndProjected("recommendationStatus", lower.includes("not yet") ? "Not yet" : "Asked but not received");
+    updateCurrentAndProjected("teacherRecommendationsReady", lower.includes("not yet") ? "No" : "Yes");
     changes.push("Updated recommendation readiness.");
+  }
+
+  if (lower.includes("counselor")) {
+    updateCurrentAndProjected("counselorDocumentsReady", lower.includes("not yet") ? "No" : "Yes");
+    changes.push("Updated counselor document readiness.");
+  }
+
+  if (lower.includes("early round") || lower.includes("early")) {
+    updateCurrentAndProjected("wantsEarlyRound", lower.includes("no") ? "No - regular rounds" : "Yes - planning early");
+    changes.push("Updated early-round plan.");
   }
 
   if (lower.includes("east coast")) {
@@ -281,7 +293,7 @@ export const buildRecommendationView = (
       },
       {
         label: "Next action",
-        value: document.current.profile.essayStatus || "Complete essays and recommendations.",
+        value: document.current.profile.essayDraftsStarted || "Complete essays and recommendations.",
         tone: "neutral",
       },
     ],

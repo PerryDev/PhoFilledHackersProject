@@ -62,6 +62,7 @@ export interface StudentTestingProfile {
 export interface StudentPreferenceProfile {
   intendedMajors: string[];
   preferredStates: string[];
+  preferredLocationPreferences: string[];
   preferredCampusLocale: string[];
   preferredSchoolControl: Array<"public" | "private_nonprofit">;
   preferredUndergraduateSize: PreferredUndergraduateSize;
@@ -133,6 +134,7 @@ export const createEmptyStudentProfile = (): StudentProfile => ({
   preferences: {
     intendedMajors: [],
     preferredStates: [],
+    preferredLocationPreferences: [],
     preferredCampusLocale: [],
     preferredSchoolControl: [],
     preferredUndergraduateSize: "unknown",
@@ -219,6 +221,9 @@ const mergeProfile = (
     preferences: {
       intendedMajors: Array.isArray(value.preferences?.intendedMajors) ? value.preferences.intendedMajors.filter(Boolean) : fallback.preferences.intendedMajors,
       preferredStates: Array.isArray(value.preferences?.preferredStates) ? value.preferences.preferredStates.filter(Boolean) : fallback.preferences.preferredStates,
+      preferredLocationPreferences: Array.isArray(value.preferences?.preferredLocationPreferences)
+        ? value.preferences.preferredLocationPreferences.filter(Boolean)
+        : fallback.preferences.preferredLocationPreferences,
       preferredCampusLocale: Array.isArray(value.preferences?.preferredCampusLocale) ? value.preferences.preferredCampusLocale.filter(Boolean) : fallback.preferences.preferredCampusLocale,
       preferredSchoolControl: Array.isArray(value.preferences?.preferredSchoolControl)
         ? value.preferences.preferredSchoolControl.filter((item): item is "public" | "private_nonprofit" => item === "public" || item === "private_nonprofit")
@@ -309,7 +314,15 @@ export const getStudentProfileMissingFields = (
       current.testing.englishExamType === "unknown",
   );
   add("current", "preferences.intendedMajors", "At least one intended major is required.", current.preferences.intendedMajors.length === 0);
-  add("current", "preferences.preferredStates", "At least one preferred state is required.", current.preferences.preferredStates.length === 0);
+  const hasPreferredLocation =
+    current.preferences.preferredStates.length > 0 ||
+    current.preferences.preferredLocationPreferences.length > 0;
+  add(
+    "current",
+    "preferences.preferredLocationPreferences",
+    "At least one preferred location is required.",
+    !hasPreferredLocation,
+  );
   add("current", "preferences.preferredCampusLocale", "At least one preferred campus locale is required.", current.preferences.preferredCampusLocale.length === 0);
   add("current", "preferences.preferredSchoolControl", "At least one school control preference is required.", current.preferences.preferredSchoolControl.length === 0);
   add("current", "preferences.preferredUndergraduateSize", "Preferred undergraduate size is required.", current.preferences.preferredUndergraduateSize === "unknown");

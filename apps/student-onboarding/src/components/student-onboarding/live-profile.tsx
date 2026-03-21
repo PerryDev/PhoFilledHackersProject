@@ -43,8 +43,10 @@ const fieldIcons: Record<ProfileField, React.ElementType> = {
   sat: Award,
   intendedMajors: Target,
   extracurriculars: Users,
-  essayStatus: FileText,
-  recommendationStatus: FileText,
+  wantsEarlyRound: Target,
+  teacherRecommendationsReady: FileText,
+  counselorDocumentsReady: FileText,
+  essayDraftsStarted: FileText,
   annualBudget: DollarSign,
   scholarshipNeed: Award,
   geographyPreferences: MapPin,
@@ -54,10 +56,14 @@ const fieldIcons: Record<ProfileField, React.ElementType> = {
 const sectionIcons = {
   academics: GraduationCap,
   activities: Users,
+  readiness: FileText,
   preferences: DollarSign,
 };
 
-function getSectionTitle(locale: Locale, key: "academics" | "activities" | "preferences") {
+function getSectionTitle(
+  locale: Locale,
+  key: "academics" | "activities" | "readiness" | "preferences",
+) {
   const text = copy[locale];
 
   if (key === "academics") {
@@ -66,6 +72,10 @@ function getSectionTitle(locale: Locale, key: "academics" | "activities" | "pref
 
   if (key === "activities") {
     return text.sectionActivities;
+  }
+
+  if (key === "readiness") {
+    return text.sectionReadiness;
   }
 
   return text.sectionPreferences;

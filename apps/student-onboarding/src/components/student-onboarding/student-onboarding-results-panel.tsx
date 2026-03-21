@@ -1,5 +1,5 @@
-// Local recommendation surface for the onboarding experience.
-// Shows the placeholder recommendation view until a backend route is wired in.
+// Recommendation surface for the onboarding experience.
+// Shows the latest canonical recommendation-run output for the current student.
 "use client";
 
 import { ArrowRight, CheckCircle2, RefreshCcw, Sparkles } from "lucide-react";
@@ -78,7 +78,7 @@ export function StudentOnboardingResultsPanel({
             </div>
           ) : (
             <div className="rounded-[1.35rem] border border-dashed border-border bg-white/80 p-5 text-sm text-muted-foreground">
-              The route layer can pass any recommendation payload back into this view. Until then, this surface stays ready with a stubbed empty state.
+              No recommendation run has been saved yet for this student profile.
             </div>
           )}
 

@@ -11,8 +11,10 @@ export interface StudentProfileDraft {
   sat: string;
   intendedMajors: string;
   extracurriculars: string;
-  essayStatus: string;
-  recommendationStatus: string;
+  wantsEarlyRound: string;
+  teacherRecommendationsReady: string;
+  counselorDocumentsReady: string;
+  essayDraftsStarted: string;
   annualBudget: string;
   scholarshipNeed: string;
   geographyPreferences: string;
@@ -39,8 +41,10 @@ export const initialProfileDraft: StudentProfileDraft = {
   sat: "",
   intendedMajors: "",
   extracurriculars: "",
-  essayStatus: "",
-  recommendationStatus: "",
+  wantsEarlyRound: "",
+  teacherRecommendationsReady: "",
+  counselorDocumentsReady: "",
+  essayDraftsStarted: "",
   annualBudget: "",
   scholarshipNeed: "",
   geographyPreferences: "",
@@ -57,7 +61,7 @@ export const requiredProfileFields: ProfileField[] = [
 ];
 
 export const sectionFields: Array<{
-  key: "academics" | "activities" | "preferences";
+  key: "academics" | "activities" | "readiness" | "preferences";
   fields: ProfileField[];
 }> = [
   {
@@ -66,7 +70,16 @@ export const sectionFields: Array<{
   },
   {
     key: "activities",
-    fields: ["intendedMajors", "extracurriculars", "essayStatus", "recommendationStatus"],
+    fields: ["intendedMajors", "extracurriculars"],
+  },
+  {
+    key: "readiness",
+    fields: [
+      "wantsEarlyRound",
+      "teacherRecommendationsReady",
+      "counselorDocumentsReady",
+      "essayDraftsStarted",
+    ],
   },
   {
     key: "preferences",
@@ -84,8 +97,10 @@ export const profileLabels: Record<ProfileField, Record<Locale, string>> = {
   sat: { en: "SAT/ACT", vi: "SAT/ACT" },
   intendedMajors: { en: "Intended Major(s)", vi: "Ngành học dự định" },
   extracurriculars: { en: "Extracurriculars", vi: "Hoạt động ngoại khóa" },
-  essayStatus: { en: "Essay Status", vi: "Trạng thái bài luận" },
-  recommendationStatus: { en: "Recommendation Letters", vi: "Thư giới thiệu" },
+  wantsEarlyRound: { en: "Early Round Plan", vi: "Kế hoạch nộp sớm" },
+  teacherRecommendationsReady: { en: "Teacher Recommendations Ready", vi: "Thư giáo viên sẵn sàng" },
+  counselorDocumentsReady: { en: "Counselor Documents Ready", vi: "Hồ sơ counselor sẵn sàng" },
+  essayDraftsStarted: { en: "Essay Drafts Started", vi: "Đã bắt đầu bài luận" },
   annualBudget: { en: "Annual Budget", vi: "Ngân sách hàng năm" },
   scholarshipNeed: { en: "Scholarship Need", vi: "Nhu cầu học bổng" },
   geographyPreferences: { en: "Location Preference", vi: "Khu vực mong muốn" },
@@ -124,14 +139,10 @@ export const quickReplyLabels: Record<string, Record<Locale, string>> = {
   "Medicine/Pre-Med": { en: "Medicine/Pre-Med", vi: "Y khoa/Tiền Y" },
   "Liberal Arts": { en: "Liberal Arts", vi: "Khoa học Xã hội" },
   Undecided: { en: "Undecided", vi: "Chưa quyết định" },
-  "Not started": { en: "Not started", vi: "Chưa bắt đầu" },
-  "Brainstorming ideas": { en: "Brainstorming ideas", vi: "Đang lên ý tưởng" },
-  "First draft done": { en: "First draft done", vi: "Đã có bản nháp đầu" },
-  "Final draft ready": { en: "Final draft ready", vi: "Đã hoàn chỉnh" },
-  "Not yet": { en: "Not yet", vi: "Chưa" },
-  "Asked but not received": { en: "Asked but not received", vi: "Đã nhờ nhưng chưa nhận" },
-  "1 letter ready": { en: "1 letter ready", vi: "Có 1 thư" },
-  "2+ letters ready": { en: "2+ letters ready", vi: "Có 2+ thư" },
+  "Yes - planning early": { en: "Yes - planning early", vi: "Có - dự định nộp sớm" },
+  "No - regular rounds": { en: "No - regular rounds", vi: "Không - nộp vòng thường" },
+  "Yes": { en: "Yes", vi: "Có" },
+  "No": { en: "No", vi: "Không" },
   "Under $20,000": { en: "Under $20,000", vi: "Dưới $20,000" },
   "$20,000 - $40,000": { en: "$20,000 - $40,000", vi: "$20,000 - $40,000" },
   "$40,000 - $60,000": { en: "$40,000 - $60,000", vi: "$40,000 - $60,000" },
@@ -307,27 +318,51 @@ export const onboardingSteps: ChatStep[] = [
     },
   },
   {
-    key: "essayStatus",
+    key: "wantsEarlyRound",
     skippable: true,
     prompts: {
-      en: "Have you started working on your application essays?",
-      vi: "Bạn đã bắt đầu viết bài luận du học chưa?",
+      en: "Are you planning to apply in an early round?",
+      vi: "Bạn có dự định nộp hồ sơ vòng sớm không?",
     },
     quickReplies: {
-      en: ["Not started", "Brainstorming ideas", "First draft done", "Final draft ready"],
-      vi: ["Not started", "Brainstorming ideas", "First draft done", "Final draft ready"],
+      en: ["Yes - planning early", "No - regular rounds"],
+      vi: ["Yes - planning early", "No - regular rounds"],
     },
   },
   {
-    key: "recommendationStatus",
+    key: "teacherRecommendationsReady",
     skippable: true,
     prompts: {
-      en: "How about recommendation letters? Have you asked your teachers?",
-      vi: "Còn thư giới thiệu thì sao? Bạn đã nhờ thầy cô viết chưa?",
+      en: "Do you already have teacher recommendations ready?",
+      vi: "Bạn đã có thư giới thiệu từ giáo viên sẵn sàng chưa?",
     },
     quickReplies: {
-      en: ["Not yet", "Asked but not received", "1 letter ready", "2+ letters ready"],
-      vi: ["Not yet", "Asked but not received", "1 letter ready", "2+ letters ready"],
+      en: ["Yes", "No"],
+      vi: ["Yes", "No"],
+    },
+  },
+  {
+    key: "counselorDocumentsReady",
+    skippable: true,
+    prompts: {
+      en: "Are your counselor documents ready?",
+      vi: "Hồ sơ counselor của bạn đã sẵn sàng chưa?",
+    },
+    quickReplies: {
+      en: ["Yes", "No"],
+      vi: ["Yes", "No"],
+    },
+  },
+  {
+    key: "essayDraftsStarted",
+    skippable: true,
+    prompts: {
+      en: "Have you started your application essay drafts?",
+      vi: "Bạn đã bắt đầu bản nháp bài luận chưa?",
+    },
+    quickReplies: {
+      en: ["Yes", "No"],
+      vi: ["Yes", "No"],
     },
   },
   {
@@ -461,7 +496,8 @@ export const copy = {
     mobileProfile: "Profile",
     mobileYourProfile: "Your Profile",
     sectionAcademics: "Academics",
-    sectionActivities: "Activities & Readiness",
+    sectionActivities: "Activities",
+    sectionReadiness: "Readiness",
     sectionPreferences: "Preferences & Budget",
   },
   vi: {
@@ -506,7 +542,8 @@ export const copy = {
     mobileProfile: "Hồ sơ",
     mobileYourProfile: "Hồ sơ của bạn",
     sectionAcademics: "Học tập",
-    sectionActivities: "Hoạt động & Sẵn sàng",
+    sectionActivities: "Hoạt động",
+    sectionReadiness: "Sẵn sàng",
     sectionPreferences: "Sở thích & Ngân sách",
   },
 } as const;

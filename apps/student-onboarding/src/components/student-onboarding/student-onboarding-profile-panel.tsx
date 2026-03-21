@@ -29,8 +29,8 @@ const curriculumOptions = [
   "A-Levels",
   "Other",
 ];
-const essayOptions = ["Not started", "Brainstorming ideas", "First draft done", "Final draft ready"];
-const recommendationOptions = ["Not yet", "Asked but not received", "1 letter ready", "2+ letters ready"];
+const earlyRoundOptions = ["Yes - planning early", "No - regular rounds"];
+const yesNoOptions = ["Yes", "No"];
 const scholarshipOptions = [
   "Essential - can't attend without it",
   "Important but not critical",
@@ -84,8 +84,10 @@ export function StudentOnboardingProfilePanel({
             <div className="grid gap-3 sm:grid-cols-2">
               <TextField label="Intended majors" value={current.intendedMajors} onChange={(value) => onChangeCurrent((profile) => ({ ...profile, intendedMajors: value }))} placeholder="Computer Science, Economics" />
               <TextField label="Extracurriculars" value={current.extracurriculars} onChange={(value) => onChangeCurrent((profile) => ({ ...profile, extracurriculars: value }))} placeholder="Robotics club, volunteering" />
-              <ChoiceField label="Essay status" value={current.essayStatus} options={essayOptions} onChange={(value) => onChangeCurrent((profile) => ({ ...profile, essayStatus: value }))} />
-              <ChoiceField label="Recommendation letters" value={current.recommendationStatus} options={recommendationOptions} onChange={(value) => onChangeCurrent((profile) => ({ ...profile, recommendationStatus: value }))} />
+              <ChoiceField label="Early round plan" value={current.wantsEarlyRound} options={earlyRoundOptions} onChange={(value) => onChangeCurrent((profile) => ({ ...profile, wantsEarlyRound: value }))} />
+              <ChoiceField label="Teacher recommendations ready" value={current.teacherRecommendationsReady} options={yesNoOptions} onChange={(value) => onChangeCurrent((profile) => ({ ...profile, teacherRecommendationsReady: value }))} />
+              <ChoiceField label="Counselor documents ready" value={current.counselorDocumentsReady} options={yesNoOptions} onChange={(value) => onChangeCurrent((profile) => ({ ...profile, counselorDocumentsReady: value }))} />
+              <ChoiceField label="Essay drafts started" value={current.essayDraftsStarted} options={yesNoOptions} onChange={(value) => onChangeCurrent((profile) => ({ ...profile, essayDraftsStarted: value }))} />
             </div>
           </ProfileGroup>
 
@@ -110,8 +112,10 @@ export function StudentOnboardingProfilePanel({
             <div className="grid gap-3 sm:grid-cols-2">
               <TextField label="Projected GPA" value={projected.gpa} onChange={(value) => onChangeProjected((profile) => ({ ...profile, gpa: value }))} placeholder="3.9/4.0" />
               <TextField label="Projected majors" value={projected.intendedMajors} onChange={(value) => onChangeProjected((profile) => ({ ...profile, intendedMajors: value }))} placeholder="Computer Science" />
-              <ChoiceField label="Projected essay status" value={projected.essayStatus} options={essayOptions} onChange={(value) => onChangeProjected((profile) => ({ ...profile, essayStatus: value }))} />
-              <ChoiceField label="Projected recommendation letters" value={projected.recommendationStatus} options={recommendationOptions} onChange={(value) => onChangeProjected((profile) => ({ ...profile, recommendationStatus: value }))} />
+              <ChoiceField label="Projected early round plan" value={projected.wantsEarlyRound} options={earlyRoundOptions} onChange={(value) => onChangeProjected((profile) => ({ ...profile, wantsEarlyRound: value }))} />
+              <ChoiceField label="Projected teacher recommendations" value={projected.teacherRecommendationsReady} options={yesNoOptions} onChange={(value) => onChangeProjected((profile) => ({ ...profile, teacherRecommendationsReady: value }))} />
+              <ChoiceField label="Projected counselor documents" value={projected.counselorDocumentsReady} options={yesNoOptions} onChange={(value) => onChangeProjected((profile) => ({ ...profile, counselorDocumentsReady: value }))} />
+              <ChoiceField label="Projected essay drafts" value={projected.essayDraftsStarted} options={yesNoOptions} onChange={(value) => onChangeProjected((profile) => ({ ...profile, essayDraftsStarted: value }))} />
             </div>
             <TagsField label="Projected assumptions" value={document.projected.assumptions} onChange={onChangeProjectedAssumptions} />
             <div className="rounded-2xl border border-dashed border-border bg-[var(--surface-soft,#f4f7fb)] p-4 text-sm text-muted-foreground">

@@ -99,7 +99,7 @@ export function StudentOnboardingReviewPanel({
         <SectionCard title="Assumptions and notes" icon={AlertTriangle}>
           <div className="space-y-3 text-sm text-muted-foreground">
             <p>
-              This surface intentionally keeps the backend boundary visible. The route layer is expected to own persistence and recommendation execution.
+              This review surface reflects the canonical profile snapshots and recommendation controls.
             </p>
             <p>
               Use the save action to send the current canonical document upstream once the data is complete.
@@ -160,9 +160,9 @@ export function StudentOnboardingSettingsPanel({
           </div>
 
           <div className="grid gap-3 sm:grid-cols-3">
-            <StubCard title="Alumni handoff" description="Stubbed client-side surface for alumni review flows." />
-            <StubCard title="Plan visibility" description="Stubbed client-side surface for review and plan controls." />
-            <StubCard title="Review queue" description="Stubbed client-side surface for human review status." />
+            <InfoCard title="Canonical profile" description="The backend owns the saved student profile and snapshot records." />
+            <InfoCard title="Intake transcript" description="The chat transcript can be restored from the persisted intake session." />
+            <InfoCard title="Recommendation runs" description="Recommendation history is owned by the canonical API and catalog tables." />
           </div>
 
           <div className="flex flex-wrap gap-2">
@@ -193,17 +193,17 @@ export function StudentOnboardingSettingsPanel({
           <div className="space-y-3">
             <MetricCard label="Authenticated viewer" value="Yes" />
             <MetricCard label="Current workspace" value="Student onboarding" />
-            <MetricCard label="Persistence" value="Provided by parent" />
+            <MetricCard label="Persistence" value="Backend canonical" />
           </div>
         </SectionCard>
 
-        <SectionCard title="Placeholders" icon={Sparkles}>
+        <SectionCard title="Backend-owned surfaces" icon={Sparkles}>
           <div className="space-y-2">
             <p className="text-sm text-muted-foreground">
-              These UI surfaces stay visible until a backend route is wired in.
+              The visible surfaces here now reflect backend-backed profile, intake, and recommendation state.
             </p>
             <div className="rounded-2xl border border-dashed border-border bg-white px-3 py-3 text-sm text-muted-foreground">
-              Alumni reviews, counselor handoff, and plan controls are intentionally left as placeholders.
+              No counselor handoff or review-queue stubs remain in this panel.
             </div>
           </div>
         </SectionCard>
@@ -245,7 +245,7 @@ function MissingFieldRow({
   );
 }
 
-function StubCard({
+function InfoCard({
   title,
   description,
 }: Readonly<{

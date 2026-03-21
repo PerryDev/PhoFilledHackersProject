@@ -66,6 +66,17 @@ const StudentOnboardingSettingsPanel = dynamic(
 );
 
 type Viewer = Readonly<{ name: string; email: string }>;
+type IntakeMessage = Readonly<{
+  id: string;
+  role: "assistant" | "student";
+  text: string;
+  createdAt: string;
+}>;
+type IntakeState = Readonly<{
+  currentStepIndex: number;
+  conversationDone: boolean;
+  messages: IntakeMessage[];
+}>;
 type SaveResult = { ok: true } | { ok: false; error: string };
 type RunResult =
   | { ok: true; data: unknown }
@@ -78,6 +89,7 @@ type RunResult =
 type Props = Readonly<{
   viewer: Viewer;
   initialDocument: StudentProfileDocument;
+  initialIntakeState?: IntakeState | null;
   initialRoute?: StudentOnboardingRoute;
   onSave?: (payload: { name: string; document: StudentProfileDocument }) => Promise<SaveResult>;
   onRunRecommendations?: () => Promise<RunResult>;
@@ -85,6 +97,42 @@ type Props = Readonly<{
 }>;
 
 const emptyDraft = (): StudentProfileDraft => ({ ...initialProfileDraft });
+
+const locationPreferenceLabels: Record<string, string> = {
+  us_east_coast: "US - East Coast",
+  us_west_coast: "US - West Coast",
+  us_midwest: "US - Midwest",
+  us_south: "US - South",
+  canada: "Canada",
+  uk: "UK",
+  no_preference: "No preference",
+};
+
+function parseLocationPreferences(value: string) {
+  const normalizedValues = value
+    .split(",")
+    .map((item) => item.trim())
+    .filter(Boolean);
+  const preferredStates: string[] = [];
+  const preferredLocationPreferences = new Set<string>();
+
+  for (const entry of normalizedValues) {
+    const lower = entry.toLowerCase();
+    if (lower === "us - east coast") preferredLocationPreferences.add("us_east_coast");
+    else if (lower === "us - west coast") preferredLocationPreferences.add("us_west_coast");
+    else if (lower === "us - midwest") preferredLocationPreferences.add("us_midwest");
+    else if (lower === "us - south") preferredLocationPreferences.add("us_south");
+    else if (lower === "canada") preferredLocationPreferences.add("canada");
+    else if (lower === "uk") preferredLocationPreferences.add("uk");
+    else if (lower === "no preference") preferredLocationPreferences.add("no_preference");
+    else if (/^[A-Za-z]{2}$/.test(entry)) preferredStates.push(entry.toUpperCase());
+  }
+
+  return {
+    preferredStates,
+    preferredLocationPreferences: [...preferredLocationPreferences],
+  };
+}
 
 function parseMoneyRange(value: string): number | null {
   const cleaned = value.replaceAll(",", "");
@@ -170,18 +218,30 @@ function draftFromDocument(document: StudentProfileDocument, viewerName: string)
     sat: satDisplay || actDisplay,
     intendedMajors: current.preferences.intendedMajors.join(", "),
     extracurriculars: "",
-    essayStatus:
-      current.readiness.hasEssayDraftsStarted === null
+    wantsEarlyRound:
+      current.readiness.wantsEarlyRound === null
         ? ""
-        : current.readiness.hasEssayDraftsStarted
-          ? "Brainstorming ideas"
-          : "Not started",
-    recommendationStatus:
+        : current.readiness.wantsEarlyRound
+          ? "Yes - planning early"
+          : "No - regular rounds",
+    teacherRecommendationsReady:
       current.readiness.hasTeacherRecommendationsReady === null
         ? ""
         : current.readiness.hasTeacherRecommendationsReady
-          ? "2+ letters ready"
-          : "Not yet",
+          ? "Yes"
+          : "No",
+    counselorDocumentsReady:
+      current.readiness.hasCounselorDocumentsReady === null
+        ? ""
+        : current.readiness.hasCounselorDocumentsReady
+          ? "Yes"
+          : "No",
+    essayDraftsStarted:
+      current.readiness.hasEssayDraftsStarted === null
+        ? ""
+        : current.readiness.hasEssayDraftsStarted
+          ? "Yes"
+          : "No",
     annualBudget:
       current.budget.annualBudgetUsd === null
         ? ""
@@ -196,7 +256,12 @@ function draftFromDocument(document: StudentProfileDocument, viewerName: string)
         : current.budget.needsFinancialAid
           ? "Essential - can't attend without it"
           : "Not needed",
-    geographyPreferences: current.preferences.preferredStates.join(", "),
+    geographyPreferences:
+      current.preferences.preferredLocationPreferences.length > 0
+        ? current.preferences.preferredLocationPreferences
+            .map((entry) => locationPreferenceLabels[entry] ?? entry)
+            .join(", ")
+        : current.preferences.preferredStates.join(", "),
     campusSize:
       current.preferences.preferredUndergraduateSize === "unknown"
         ? ""
@@ -268,10 +333,10 @@ function applyDraftFieldToDocument(
   }
 
   if (field === "geographyPreferences") {
-    current.preferences.preferredStates = trimmed
-      .split(",")
-      .map((item) => item.trim())
-      .filter(Boolean);
+    const locationPreferences = parseLocationPreferences(trimmed);
+    current.preferences.preferredStates = locationPreferences.preferredStates;
+    current.preferences.preferredLocationPreferences =
+      locationPreferences.preferredLocationPreferences;
   }
 
   if (field === "campusSize") {
@@ -285,15 +350,27 @@ function applyDraftFieldToDocument(
           : "unknown";
   }
 
-  if (field === "essayStatus") {
-    current.readiness.hasEssayDraftsStarted = trimmed
-      ? !trimmed.toLowerCase().includes("not started")
+  if (field === "wantsEarlyRound") {
+    current.readiness.wantsEarlyRound = trimmed
+      ? trimmed.toLowerCase().includes("yes")
       : null;
   }
 
-  if (field === "recommendationStatus") {
+  if (field === "teacherRecommendationsReady") {
     current.readiness.hasTeacherRecommendationsReady = trimmed
-      ? !trimmed.toLowerCase().includes("not yet")
+      ? trimmed.toLowerCase() === "yes"
+      : null;
+  }
+
+  if (field === "counselorDocumentsReady") {
+    current.readiness.hasCounselorDocumentsReady = trimmed
+      ? trimmed.toLowerCase() === "yes"
+      : null;
+  }
+
+  if (field === "essayDraftsStarted") {
+    current.readiness.hasEssayDraftsStarted = trimmed
+      ? trimmed.toLowerCase() === "yes"
       : null;
   }
 
@@ -305,6 +382,7 @@ function applyDraftFieldToDocument(
 export function StudentOnboardingExperience({
   viewer,
   initialDocument,
+  initialIntakeState = null,
   initialRoute = "chat",
   onSave,
   onRunRecommendations,
@@ -459,7 +537,9 @@ export function StudentOnboardingExperience({
               <ChatAssistant
                 locale={locale}
                 userName={viewerName}
+                initialState={initialIntakeState}
                 onAnswer={applyDraftField}
+                onPersist={defaultSaveIntakeState}
                 onProgressChange={(current, total) => {
                   setProgressCurrent(current);
                   setProgressTotal(total);
@@ -484,7 +564,9 @@ export function StudentOnboardingExperience({
             <ChatAssistant
               locale={locale}
               userName={viewerName}
+              initialState={initialIntakeState}
               onAnswer={applyDraftField}
+              onPersist={defaultSaveIntakeState}
               onProgressChange={(current, total) => {
                 setProgressCurrent(current);
                 setProgressTotal(total);
@@ -657,4 +739,21 @@ async function defaultRunRecommendations(): Promise<RunResult> {
   }
 
   return { ok: true, data: body };
+}
+
+async function defaultSaveIntakeState(payload: IntakeState): Promise<void> {
+  await fetch("/api/profile/intake", {
+    method: "PUT",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify({
+      currentStepIndex: payload.currentStepIndex,
+      conversationDone: payload.conversationDone,
+      messages: payload.messages.map((message) => ({
+        id: message.id,
+        role: message.role,
+        text: message.text,
+        createdAt: message.createdAt,
+      })),
+    }),
+  });
 }
