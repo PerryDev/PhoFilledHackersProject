@@ -95,6 +95,18 @@ type ChatTurnResponse = {
   profileState: Parameters<typeof buildStudentProfileDocumentFromState>[0];
 };
 
+type RecommendationChatMessage = {
+  id: string;
+  role: "assistant" | "student";
+  text: string;
+  createdAt: string;
+};
+
+type RecommendationChatTurnResponse = {
+  assistantMessage: string;
+  suggestedReplies: string[];
+};
+
 const emptyDraft = (): StudentProfileDraft => ({ ...initialProfileDraft });
 
 function parseMoneyRange(value: string): number | null {
@@ -510,6 +522,13 @@ export function StudentOnboardingExperience({
     return result.intakeState;
   }
 
+  async function handleRecommendationChatTurn(
+    message: string | null,
+    messages: RecommendationChatMessage[],
+  ) {
+    return defaultSubmitRecommendationChatTurn(message, messages);
+  }
+
   return (
     <div className="flex min-h-screen flex-col">
       <GlobalHeader
@@ -647,6 +666,12 @@ export function StudentOnboardingExperience({
               runningRecommendations={runningRecommendations}
               onRunRecommendations={handleRunRecommendations}
               onGoToReview={() => setActiveRoute("review")}
+              recommendationChatSessionKey={
+                recommendationView?.rawPreview ??
+                recommendationView?.summary ??
+                "recommendation-chat"
+              }
+              onSubmitRecommendationChatTurn={handleRecommendationChatTurn}
             />
           </div>
         </div>
@@ -766,5 +791,38 @@ async function defaultSubmitIntakeTurn(
   return {
     intakeState: body.intakeState,
     profileState: body.profileState,
+  };
+}
+
+async function defaultSubmitRecommendationChatTurn(
+  message: string | null,
+  messages: RecommendationChatMessage[],
+): Promise<RecommendationChatTurnResponse> {
+  const response = await fetch("/api/recommendations/chat", {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify({ message, messages }),
+  });
+  const body = (await response.json().catch(() => null)) as
+    | {
+        error?: string;
+        assistantMessage?: string;
+        suggestedReplies?: string[];
+      }
+    | null;
+
+  if (!response.ok || typeof body?.assistantMessage !== "string") {
+    throw new Error(
+      body?.error ?? "Unable to continue the recommendations conversation.",
+    );
+  }
+
+  return {
+    assistantMessage: body.assistantMessage,
+    suggestedReplies: Array.isArray(body.suggestedReplies)
+      ? body.suggestedReplies.filter(
+          (entry): entry is string => typeof entry === "string" && entry.trim().length > 0,
+        )
+      : [],
   };
 }

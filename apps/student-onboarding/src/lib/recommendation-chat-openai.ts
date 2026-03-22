@@ -29,6 +29,7 @@ const recommendationChatSchema = {
     suggestedReplies: {
       type: "array",
       items: { type: "string" },
+      maxItems: 3,
     },
   },
 } as const;

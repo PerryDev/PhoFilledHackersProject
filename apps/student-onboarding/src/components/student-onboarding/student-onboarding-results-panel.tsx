@@ -6,6 +6,11 @@ import { ArrowRight, CheckCircle2, RefreshCcw, Sparkles } from "lucide-react";
 
 import { MetricCard, Pill, SectionCard } from "../dashboard/primitives";
 import {
+  RecommendationChatPanel,
+  type RecommendationChatMessage,
+  type RecommendationChatTurnResult,
+} from "./recommendation-chat-panel";
+import {
   type StudentOnboardingMissingField,
   type StudentOnboardingRecommendationView,
   type StudentOnboardingSummary,
@@ -18,6 +23,11 @@ type ResultsPanelProps = Readonly<{
   runningRecommendations: boolean;
   onRunRecommendations: () => void;
   onGoToReview: () => void;
+  recommendationChatSessionKey: string;
+  onSubmitRecommendationChatTurn: (
+    message: string | null,
+    messages: RecommendationChatMessage[],
+  ) => Promise<RecommendationChatTurnResult>;
 }>;
 
 export function StudentOnboardingResultsPanel({
@@ -27,6 +37,8 @@ export function StudentOnboardingResultsPanel({
   runningRecommendations,
   onRunRecommendations,
   onGoToReview,
+  recommendationChatSessionKey,
+  onSubmitRecommendationChatTurn,
 }: ResultsPanelProps) {
   const visibleItems = recommendationView?.items ?? [];
 
@@ -118,6 +130,11 @@ export function StudentOnboardingResultsPanel({
             />
           </div>
         </SectionCard>
+
+        <RecommendationChatPanel
+          sessionKey={recommendationChatSessionKey}
+          onSubmitTurn={onSubmitRecommendationChatTurn}
+        />
       </div>
     </div>
   );
