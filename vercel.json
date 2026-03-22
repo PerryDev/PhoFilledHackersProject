@@ -1,5 +1,5 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "installCommand": "npm install",
-  "buildCommand": "npx turbo build --filter=student-onboarding..."
+  "buildCommand": "npm --workspace @etest/db run build && npm --workspace @etest/catalog run build && npm --workspace @etest/auth run build && npm --workspace student-onboarding run build"
 }
