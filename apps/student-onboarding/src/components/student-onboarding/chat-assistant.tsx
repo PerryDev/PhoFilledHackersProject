@@ -1,88 +1,48 @@
 // apps/student-onboarding/src/components/student-onboarding/chat-assistant.tsx
-// Chatbot intake UI for the onboarding workspace.
-// Keeps the assistant surface visible while persisting canonical intake state upstream.
+// LLM-driven intake chat UI for the onboarding workspace.
+// Keeps rendering client-side while routing each turn through the canonical backend.
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
-import { Bot, Compass, Send, SkipForward } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
+import { AlertCircle, Bot, Compass, Send, SkipForward } from "lucide-react";
 
-import {
-  copy,
-  onboardingSteps,
-  quickReplyLabels,
-  type Locale,
-  type ProfileField,
-} from "@/lib/onboarding-data";
+import { copy, type Locale } from "@/lib/onboarding-data";
 
-interface Message {
-  id: string;
-  sender: "bot" | "user";
-  text: string;
-  createdAt: string;
-  quickReplies?: string[];
-  skippable?: boolean;
-}
-
-interface PersistedIntakeState {
-  currentStepIndex: number;
+export interface ChatAssistantState {
   conversationDone: boolean;
+  progressCompletedCount?: number;
+  progressTotalCount?: number;
   messages: Array<{
     id: string;
     role: "assistant" | "student";
     text: string;
     createdAt: string;
   }>;
+  progress?: {
+    resolvedFieldCount: number;
+    totalFieldCount: number;
+  } | null;
 }
 
 interface ChatAssistantProps {
   locale: Locale;
   userName: string;
-  initialState?: PersistedIntakeState | null;
-  onAnswer: (field: ProfileField, value: string) => void;
-  onPersist: (state: PersistedIntakeState) => Promise<void> | void;
+  initialState?: ChatAssistantState | null;
+  onSubmitTurn: (message: string | null) => Promise<ChatAssistantState>;
   onProgressChange: (current: number, total: number) => void;
   onFinished: () => void;
 }
 
-function createMessage(
-  sender: Message["sender"],
-  text: string,
-): Message {
+function getProgress(state: ChatAssistantState | null | undefined) {
   return {
-    id: `${sender}-${Date.now()}-${Math.random()}`,
-    sender,
-    text,
-    createdAt: new Date().toISOString(),
-  };
-}
-
-function localizeQuickReplies(values: string[] | undefined, locale: Locale) {
-  return values?.map((value) => quickReplyLabels[value]?.[locale] ?? value);
-}
-
-function hydrateMessage(message: PersistedIntakeState["messages"][number]): Message {
-  return {
-    id: message.id,
-    sender: message.role === "assistant" ? "bot" : "user",
-    text: message.text,
-    createdAt: message.createdAt,
-  };
-}
-
-function toPersistedState(
-  messages: Message[],
-  currentStepIndex: number,
-  conversationDone: boolean,
-): PersistedIntakeState {
-  return {
-    currentStepIndex,
-    conversationDone,
-    messages: messages.map((message) => ({
-      id: message.id,
-      role: message.sender === "bot" ? "assistant" : "student",
-      text: message.text,
-      createdAt: message.createdAt,
-    })),
+    current:
+      state?.progress?.resolvedFieldCount ??
+      state?.progressCompletedCount ??
+      0,
+    total:
+      state?.progress?.totalFieldCount ??
+      state?.progressTotalCount ??
+      26,
   };
 }
 
@@ -90,166 +50,106 @@ export function ChatAssistant({
   locale,
   userName,
   initialState = null,
-  onAnswer,
-  onPersist,
+  onSubmitTurn,
   onProgressChange,
   onFinished,
 }: ChatAssistantProps) {
   const text = copy[locale];
-  const welcomeText = text.chatWelcome.replace("{name}", userName);
-  const [messages, setMessages] = useState<Message[]>(
-    initialState?.messages.map(hydrateMessage) ?? [],
-  );
-  const [currentStepIndex, setCurrentStepIndex] = useState(
-    initialState?.currentStepIndex ?? 0,
+  const [sessionState, setSessionState] = useState<ChatAssistantState | null>(
+    initialState,
   );
   const [inputValue, setInputValue] = useState("");
   const [isTyping, setIsTyping] = useState(!initialState?.messages.length);
-  const [conversationDone, setConversationDone] = useState(
-    initialState?.conversationDone ?? false,
-  );
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const bottomRef = useRef<HTMLDivElement>(null);
-  const initializedRef = useRef(initialState?.messages.length ? true : false);
+  const startedRef = useRef(initialState?.messages.length ? true : false);
+  const completedRef = useRef(initialState?.conversationDone ?? false);
+  const submittingRef = useRef(false);
 
   useEffect(() => {
-    if (initializedRef.current) {
-      onProgressChange(
-        conversationDone ? onboardingSteps.length : currentStepIndex,
-        onboardingSteps.length,
-      );
-      return;
+    setSessionState(initialState);
+    if (initialState?.messages.length) {
+      startedRef.current = true;
     }
+    if (initialState?.conversationDone) {
+      completedRef.current = true;
+    }
+  }, [initialState]);
 
-    const firstStep = onboardingSteps[0];
-    const timeoutId = window.setTimeout(() => {
-      const nextMessages = [
-        createMessage("bot", welcomeText),
-        createMessage("bot", firstStep.prompts[locale]),
-      ];
+  useEffect(() => {
+    const progress = getProgress(sessionState);
+    onProgressChange(progress.current, progress.total);
+  }, [onProgressChange, sessionState]);
 
-      initializedRef.current = true;
-      setIsTyping(false);
-      setMessages(nextMessages);
-      onProgressChange(0, onboardingSteps.length);
-      void onPersist(toPersistedState(nextMessages, 0, false));
-    }, 700);
-
-    return () => window.clearTimeout(timeoutId);
-  }, [
-    conversationDone,
-    currentStepIndex,
-    locale,
-    onPersist,
-    onProgressChange,
-    welcomeText,
-  ]);
+  useEffect(() => {
+    if (sessionState?.conversationDone && !completedRef.current) {
+      completedRef.current = true;
+      onFinished();
+    }
+  }, [onFinished, sessionState?.conversationDone]);
 
   useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
-  }, [messages, isTyping]);
+  }, [isTyping, sessionState]);
 
-  const renderedMessages = useMemo(() => {
-    return messages.map((message, index) => {
-      const isLastMessage = index === messages.length - 1;
-      if (
-        !isLastMessage ||
-        message.sender !== "bot" ||
-        conversationDone ||
-        !onboardingSteps[currentStepIndex]
-      ) {
-        return message;
-      }
-
-      return {
-        ...message,
-        quickReplies: localizeQuickReplies(
-          onboardingSteps[currentStepIndex]?.quickReplies?.en,
-          locale,
-        ),
-        skippable: onboardingSteps[currentStepIndex]?.skippable,
-      };
-    });
-  }, [conversationDone, currentStepIndex, locale, messages]);
-
-  function persistState(
-    nextMessages: Message[],
-    nextStepIndex: number,
-    nextConversationDone: boolean,
-  ) {
-    void onPersist(
-      toPersistedState(nextMessages, nextStepIndex, nextConversationDone),
-    );
-  }
-
-  function queueNextStep(nextIndex: number, existingMessages: Message[]) {
-    const nextStep = onboardingSteps[nextIndex];
-
-    if (!nextStep) {
-      setConversationDone(true);
-      setIsTyping(true);
-      onProgressChange(onboardingSteps.length, onboardingSteps.length);
-
-      window.setTimeout(() => {
-        const nextMessages = [
-          ...existingMessages,
-          createMessage("bot", text.chatDone),
-        ];
-        setIsTyping(false);
-        setMessages(nextMessages);
-        persistState(nextMessages, onboardingSteps.length, true);
-        onFinished();
-      }, 700);
+  useEffect(() => {
+    if (startedRef.current) {
       return;
     }
 
+    startedRef.current = true;
     setIsTyping(true);
-    window.setTimeout(() => {
-      const nextMessages = [
-        ...existingMessages,
-        createMessage("bot", nextStep.prompts[locale]),
-      ];
-      setIsTyping(false);
-      setCurrentStepIndex(nextIndex);
-      setMessages(nextMessages);
-      onProgressChange(nextIndex, onboardingSteps.length);
-      persistState(nextMessages, nextIndex, false);
-    }, 700);
-  }
+    void onSubmitTurn(null)
+      .then((nextState) => {
+        setSessionState(nextState);
+        setErrorMessage(null);
+      })
+      .catch((error: unknown) => {
+        setErrorMessage(
+          error instanceof Error
+            ? error.message
+            : "Unable to start the onboarding conversation.",
+        );
+      })
+      .finally(() => {
+        setIsTyping(false);
+      });
+  }, [onSubmitTurn, userName]);
 
-  function submitAnswer(answer: string) {
-    const step = onboardingSteps[currentStepIndex];
-
-    if (!step || !answer.trim() || conversationDone || isTyping) {
+  async function submitTurn(message: string | null) {
+    const trimmedMessage = message?.trim() ?? null;
+    if (
+      submittingRef.current ||
+      isTyping ||
+      sessionState?.conversationDone ||
+      trimmedMessage === ""
+    ) {
       return;
     }
 
-    const nextMessages = [
-      ...messages,
-      createMessage("user", answer.trim()),
-    ];
-    setMessages(nextMessages);
-    onAnswer(step.key, answer.trim());
+    submittingRef.current = true;
+    setIsTyping(true);
+    setErrorMessage(null);
     setInputValue("");
-    persistState(nextMessages, currentStepIndex, false);
-    queueNextStep(currentStepIndex + 1, nextMessages);
-  }
 
-  function skipCurrentStep() {
-    const step = onboardingSteps[currentStepIndex];
-
-    if (!step?.skippable || conversationDone || isTyping) {
-      return;
+    try {
+      const nextState = await onSubmitTurn(trimmedMessage);
+      setSessionState(nextState);
+    } catch (error: unknown) {
+      setErrorMessage(
+        error instanceof Error ? error.message : "Unable to send that message.",
+      );
+      if (trimmedMessage) {
+        setInputValue(trimmedMessage);
+      }
+    } finally {
+      submittingRef.current = false;
+      setIsTyping(false);
     }
-
-    const nextMessages = [...messages, createMessage("user", text.chatSkipped)];
-    setMessages(nextMessages);
-    persistState(nextMessages, currentStepIndex, false);
-    queueNextStep(currentStepIndex + 1, nextMessages);
   }
 
-  const lastBotMessage = [...renderedMessages]
-    .reverse()
-    .find((message) => message.sender === "bot");
+  const messages = sessionState?.messages ?? [];
+  const progress = getProgress(sessionState);
 
   return (
     <div className="flex h-full flex-col bg-card">
@@ -265,30 +165,30 @@ export function ChatAssistant({
           </div>
         </div>
         <div className="rounded-full bg-muted px-3 py-1 text-xs text-muted-foreground">
-          {Math.min(currentStepIndex + 1, onboardingSteps.length)}/{onboardingSteps.length}
+          {progress.current}/{progress.total}
         </div>
       </div>
 
       <div className="flex-1 overflow-y-auto">
         <div className="space-y-4 p-4">
-          {renderedMessages.map((message) => (
+          {messages.map((message) => (
             <div
               key={message.id}
-              className={`flex ${message.sender === "user" ? "justify-end" : "justify-start"}`}
+              className={`flex ${message.role === "student" ? "justify-end" : "justify-start"}`}
             >
               <div
                 className={`flex max-w-[85%] gap-2 ${
-                  message.sender === "user" ? "flex-row-reverse" : ""
+                  message.role === "student" ? "flex-row-reverse" : ""
                 }`}
               >
-                {message.sender === "bot" ? (
+                {message.role === "assistant" ? (
                   <div className="mt-1 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-primary/10">
                     <Bot className="h-4 w-4 text-primary" />
                   </div>
                 ) : null}
                 <div
                   className={`rounded-2xl px-4 py-2.5 text-sm ${
-                    message.sender === "user"
+                    message.role === "student"
                       ? "rounded-br-md bg-primary text-primary-foreground"
                       : "rounded-bl-md bg-muted text-foreground"
                   }`}
@@ -299,20 +199,10 @@ export function ChatAssistant({
             </div>
           ))}
 
-          {lastBotMessage?.quickReplies &&
-          !conversationDone &&
-          lastBotMessage === renderedMessages[renderedMessages.length - 1] ? (
-            <div className="flex flex-wrap gap-2 pl-9">
-              {lastBotMessage.quickReplies.map((reply) => (
-                <button
-                  type="button"
-                  key={reply}
-                  onClick={() => submitAnswer(reply)}
-                  className="cursor-pointer rounded-full border border-primary/30 bg-primary/5 px-3 py-1.5 text-xs text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
-                >
-                  {reply}
-                </button>
-              ))}
+          {errorMessage ? (
+            <div className="flex items-start gap-2 rounded-xl border border-destructive/20 bg-destructive/5 px-4 py-3 text-sm text-destructive">
+              <AlertCircle className="mt-0.5 h-4 w-4 shrink-0" />
+              <span>{errorMessage}</span>
             </div>
           ) : null}
 
@@ -335,21 +225,23 @@ export function ChatAssistant({
           className="flex items-center gap-2"
           onSubmit={(event) => {
             event.preventDefault();
-            submitAnswer(inputValue);
+            void submitTurn(inputValue.trim());
           }}
         >
           <input
             type="text"
             value={inputValue}
             onChange={(event) => setInputValue(event.target.value)}
-            placeholder={conversationDone ? text.chatComplete : text.chatPlaceholder}
-            disabled={conversationDone || isTyping}
+            placeholder={
+              sessionState?.conversationDone ? text.chatComplete : text.chatPlaceholder
+            }
+            disabled={sessionState?.conversationDone || isTyping}
             className="flex-1 rounded-lg bg-[var(--input-background)] px-4 py-2.5 text-sm outline-none disabled:opacity-50"
           />
-          {onboardingSteps[currentStepIndex]?.skippable && !conversationDone ? (
+          {!sessionState?.conversationDone ? (
             <button
               type="button"
-              onClick={skipCurrentStep}
+              onClick={() => void submitTurn("I prefer not to answer this question.")}
               className="flex cursor-pointer items-center gap-1 rounded-lg px-3 py-2 text-xs text-muted-foreground transition hover:bg-muted/50 hover:text-foreground"
             >
               <SkipForward className="h-3.5 w-3.5" />
@@ -358,7 +250,7 @@ export function ChatAssistant({
           ) : null}
           <button
             type="submit"
-            disabled={!inputValue.trim() || conversationDone || isTyping}
+            disabled={!inputValue.trim() || sessionState?.conversationDone || isTyping}
             className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-primary-foreground transition hover:bg-primary/90 disabled:opacity-50"
           >
             <Send className="h-4 w-4" />

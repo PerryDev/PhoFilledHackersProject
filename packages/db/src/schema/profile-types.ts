@@ -125,6 +125,24 @@ export const studentIntakeMessageRoles = ["assistant", "student"] as const;
 export type StudentIntakeMessageRole =
   (typeof studentIntakeMessageRoles)[number];
 
+export const studentIntakeFieldResolutionKinds = [
+  "filled",
+  "needs_clarification",
+  "unknown",
+  "declined",
+] as const;
+
+export type StudentIntakeFieldResolutionKind =
+  (typeof studentIntakeFieldResolutionKinds)[number];
+
+export const studentIntakeExplicitFieldStates = [
+  "unknown",
+  "declined",
+] as const;
+
+export type StudentIntakeExplicitFieldState =
+  (typeof studentIntakeExplicitFieldStates)[number];
+
 export interface StudentAcademicProfile {
   currentGpa100: number | null;
   projectedGpa100: number | null;
@@ -199,10 +217,23 @@ export interface StudentIntakeMessageRecord {
   createdAt: string;
 }
 
+export interface StudentIntakeFieldStatusRecord {
+  resolution: StudentIntakeFieldResolutionKind;
+  note?: string | null;
+  sourceMessageId?: string | null;
+}
+
+export type StudentIntakeFieldStatusMap = Record<string, StudentIntakeFieldStatusRecord>;
+
 export interface StudentIntakeStateRecord {
   userId: string;
   currentStepIndex: number;
   conversationDone: boolean;
+  previousResponseId: string | null;
+  fieldStatuses: StudentIntakeFieldStatusMap;
+  outstandingFields: string[];
+  progressCompletedCount: number;
+  progressTotalCount: number;
   messages: StudentIntakeMessageRecord[];
   createdAt: string;
   updatedAt: string;

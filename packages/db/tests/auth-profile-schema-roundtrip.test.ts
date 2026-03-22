@@ -309,3 +309,118 @@ test("auth rows and student profile snapshots round-trip through the schema", as
     await database.close();
   }
 });
+
+test("student profile sentinel values and caveat assumptions persist without normalization", async () => {
+  const database = await createCatalogTestDatabase();
+
+  try {
+    await database.db.insert(users).values({
+      id: "user_2",
+      name: "Ngoc Anh",
+      email: "ngoc.anh@example.com",
+      emailVerified: true,
+      image: null,
+    });
+
+    const [insertedProfile] = await database.db
+      .insert(studentProfiles)
+      .values({
+        userId: "user_2",
+        citizenshipCountry: "VN",
+        targetEntryTerm: "fall_2028",
+        academic: {
+          currentGpa100: null,
+          projectedGpa100: null,
+          curriculumStrength: "unknown",
+          classRankPercent: null,
+        },
+        testing: {
+          satTotal: null,
+          actComposite: null,
+          englishExamType: "unknown",
+          englishExamScore: null,
+          willSubmitTests: null,
+        },
+        preferences: {
+          intendedMajors: [],
+          preferredStates: [],
+          preferredLocationPreferences: [],
+          preferredCampusLocale: [],
+          preferredSchoolControl: [],
+          preferredUndergraduateSize: "unknown",
+        },
+        budget: {
+          annualBudgetUsd: null,
+          needsFinancialAid: null,
+          needsMeritAid: null,
+          budgetFlexibility: "unknown",
+        },
+        readiness: {
+          wantsEarlyRound: null,
+          hasTeacherRecommendationsReady: null,
+          hasCounselorDocumentsReady: null,
+          hasEssayDraftsStarted: null,
+        },
+      })
+      .returning();
+
+    const snapshotProfile = {
+      id: insertedProfile.id,
+      userId: insertedProfile.userId,
+      citizenshipCountry: insertedProfile.citizenshipCountry,
+      targetEntryTerm: insertedProfile.targetEntryTerm,
+      academic: insertedProfile.academic,
+      testing: insertedProfile.testing,
+      preferences: insertedProfile.preferences,
+      budget: insertedProfile.budget,
+      readiness: insertedProfile.readiness,
+      createdAt: insertedProfile.createdAt.toISOString(),
+      updatedAt: insertedProfile.updatedAt.toISOString(),
+    };
+
+    await database.db.insert(studentProfileSnapshots).values([
+      {
+        studentProfileId: insertedProfile.id,
+        snapshotKind: "current",
+        assumptions: [
+          "Student explicitly declined to estimate budget.",
+          "Treat unreadiness as intentional and revisit later.",
+        ],
+        profile: snapshotProfile,
+      },
+      {
+        studentProfileId: insertedProfile.id,
+        snapshotKind: "projected",
+        assumptions: [
+          "Projected state stays caveated until the student answers.",
+        ],
+        profile: snapshotProfile,
+      },
+    ]);
+
+    const storedProfile = await database.db.query.studentProfiles.findFirst({
+      where: eq(studentProfiles.id, insertedProfile.id),
+      with: {
+        snapshots: true,
+      },
+    });
+
+    assert.ok(storedProfile);
+    assert.equal(storedProfile?.academic.curriculumStrength, "unknown");
+    assert.equal(storedProfile?.testing.englishExamType, "unknown");
+    assert.equal(storedProfile?.preferences.preferredUndergraduateSize, "unknown");
+    assert.equal(storedProfile?.budget.budgetFlexibility, "unknown");
+    assert.deepEqual(storedProfile?.readiness, {
+      wantsEarlyRound: null,
+      hasTeacherRecommendationsReady: null,
+      hasCounselorDocumentsReady: null,
+      hasEssayDraftsStarted: null,
+    });
+    assert.deepEqual(storedProfile?.snapshots[0]?.assumptions, [
+      "Student explicitly declined to estimate budget.",
+      "Treat unreadiness as intentional and revisit later.",
+    ]);
+  } finally {
+    await database.close();
+  }
+});

@@ -18,6 +18,10 @@ import {
 import { createCatalogTestDatabase } from "../../db/src/testing/pglite.js";
 import { runRecommendationEngineForUser } from "../src/recommendation-engine.js";
 
+test.todo(
+  "intentional unknown or declined readiness fields are treated as caveated rather than missing",
+);
+
 test("engine persists a failed run when recommendation-blocking profile gaps remain", async () => {
   const database = await createCatalogTestDatabase();
 

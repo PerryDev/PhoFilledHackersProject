@@ -8,14 +8,20 @@ import {
   defaultStudentPreferenceProfile,
   defaultStudentReadinessProfile,
   defaultStudentTestingProfile,
+  studentIntakeExplicitFieldStates,
+  studentIntakeFieldResolutionKinds,
   studentIntakeSessions,
   studentProfileSnapshots,
   studentProfiles,
   studentLocationPreferenceKinds,
   type StudentAcademicProfile,
   type StudentBudgetProfile,
+  type StudentIntakeExplicitFieldState as DbStudentIntakeExplicitFieldState,
+  type StudentIntakeFieldResolutionKind as DbStudentIntakeFieldResolutionKind,
+  type StudentIntakeFieldStatusMap as DbStudentIntakeFieldStatusMap,
+  type StudentIntakeFieldStatusRecord as DbStudentIntakeFieldStatusRecord,
   type StudentIntakeMessageRecord,
-  type StudentIntakeStateRecord,
+  type StudentIntakeStateRecord as DbStudentIntakeStateRecord,
   type StudentPreferenceProfile,
   type StudentProfileRecord,
   type StudentProfileSnapshotKind,
@@ -25,6 +31,19 @@ import {
 import { and, eq } from "drizzle-orm";
 
 import { getAuthDb } from "./auth.js";
+
+export type StudentIntakeFieldResolutionKind =
+  DbStudentIntakeFieldResolutionKind;
+
+export type StudentIntakeExplicitFieldState =
+  DbStudentIntakeExplicitFieldState;
+
+export type StudentIntakeFieldStatusRecord =
+  DbStudentIntakeFieldStatusRecord;
+
+export type StudentIntakeFieldStatusMap = DbStudentIntakeFieldStatusMap;
+
+export type StudentIntakeStateRecord = DbStudentIntakeStateRecord;
 
 export interface StudentProfileInput {
   citizenshipCountry: string;
@@ -63,6 +82,11 @@ export interface StudentIntakeStateInput {
   currentStepIndex: number;
   conversationDone: boolean;
   messages: StudentIntakeMessageInput[];
+  previousResponseId?: string | null;
+  fieldStatuses?: StudentIntakeFieldStatusMap;
+  outstandingFields?: string[];
+  progressCompletedCount?: number;
+  progressTotalCount?: number;
 }
 
 export interface StudentProfileState {
@@ -78,6 +102,16 @@ export interface StudentProfileState {
   missingFields: StudentProfileMissingField[];
 }
 
+export interface StudentProfileResolvedField extends StudentProfileMissingField {
+  resolution: StudentIntakeExplicitFieldState;
+}
+
+export interface StudentProfileReadinessEvaluation {
+  missingFields: StudentProfileMissingField[];
+  resolvedWithCaveatFields: StudentProfileResolvedField[];
+  canRun: boolean;
+}
+
 function toStudentIntakeStateRecord(
   row: typeof studentIntakeSessions.$inferSelect,
 ): StudentIntakeStateRecord {
@@ -85,10 +119,85 @@ function toStudentIntakeStateRecord(
     userId: row.userId,
     currentStepIndex: row.currentStepIndex,
     conversationDone: row.conversationDone,
+    previousResponseId: row.previousResponseId ?? null,
+    fieldStatuses: normalizeStudentIntakeFieldStatuses(row.fieldStatuses),
+    outstandingFields: normalizeStringArray(row.outstandingFields),
+    progressCompletedCount: normalizeCount(row.progressCompletedCount),
+    progressTotalCount: normalizeCount(row.progressTotalCount),
     messages: row.messages,
     createdAt: toIsoString(row.createdAt),
     updatedAt: toIsoString(row.updatedAt),
   };
+}
+
+function isStudentIntakeFieldResolutionKind(
+  value: unknown,
+): value is StudentIntakeFieldResolutionKind {
+  return (
+    typeof value === "string" &&
+    studentIntakeFieldResolutionKinds.includes(
+      value as StudentIntakeFieldResolutionKind,
+    )
+  );
+}
+
+function isStudentIntakeExplicitFieldState(
+  value: unknown,
+): value is StudentIntakeExplicitFieldState {
+  return (
+    typeof value === "string" &&
+    studentIntakeExplicitFieldStates.includes(
+      value as StudentIntakeExplicitFieldState,
+    )
+  );
+}
+
+function normalizeStudentIntakeFieldStatuses(
+  value: unknown,
+): StudentIntakeFieldStatusMap {
+  if (!value || typeof value !== "object" || Array.isArray(value)) {
+    return {};
+  }
+
+  const statuses: StudentIntakeFieldStatusMap = {};
+
+  for (const [path, rawStatus] of Object.entries(value as Record<string, unknown>)) {
+    if (!path.trim() || !rawStatus || typeof rawStatus !== "object" || Array.isArray(rawStatus)) {
+      continue;
+    }
+
+    const record = rawStatus as Record<string, unknown>;
+    if (!isStudentIntakeFieldResolutionKind(record.resolution)) {
+      continue;
+    }
+
+    statuses[path.trim()] = {
+      resolution: record.resolution,
+      note: typeof record.note === "string" ? record.note.trim() || null : null,
+      sourceMessageId:
+        typeof record.sourceMessageId === "string"
+          ? record.sourceMessageId.trim() || null
+          : null,
+    };
+  }
+
+  return statuses;
+}
+
+function normalizeStringArray(value: unknown): string[] {
+  if (!Array.isArray(value)) {
+    return [];
+  }
+
+  return value
+    .map((entry) => (typeof entry === "string" ? entry.trim() : ""))
+    .filter(Boolean);
+}
+
+function normalizeCount(value: unknown): number {
+  return typeof value === "number" && Number.isFinite(value) && value >= 0
+    ? Math.trunc(value)
+    : 0;
 }
 
 function normalizeStudentPreferenceProfile(
@@ -153,6 +262,11 @@ function sanitizeStudentIntakeMessages(
 
 function toIsoString(value: Date | string) {
   return value instanceof Date ? value.toISOString() : value;
+}
+
+function isKnownRequiredText(value: string) {
+  const normalized = value.trim().toLowerCase();
+  return normalized.length > 0 && normalized !== "unknown" && normalized !== "declined";
 }
 
 function toStudentProfileRecord(
@@ -281,13 +395,13 @@ export function evaluateRecommendationMissingFields(input: {
     "current",
     "citizenshipCountry",
     "Citizenship country is required.",
-    !current.citizenshipCountry.trim(),
+    !isKnownRequiredText(current.citizenshipCountry),
   );
   add(
     "current",
     "targetEntryTerm",
     "Target entry term is required.",
-    !current.targetEntryTerm.trim(),
+    !isKnownRequiredText(current.targetEntryTerm),
   );
   add(
     "current",
@@ -420,6 +534,48 @@ export function evaluateRecommendationMissingFields(input: {
   return missingFields;
 }
 
+function lookupStudentIntakeFieldStatus(
+  fieldStatuses: StudentIntakeFieldStatusMap | undefined,
+  field: StudentProfileMissingField,
+) {
+  if (!fieldStatuses) {
+    return null;
+  }
+
+  return (
+    fieldStatuses[`${field.snapshotKind}.${field.path}`] ??
+    fieldStatuses[field.path] ??
+    null
+  );
+}
+
+function splitRecommendationReadinessFields(
+  missingFields: StudentProfileMissingField[],
+  fieldStatuses: StudentIntakeFieldStatusMap | undefined,
+) {
+  const resolvedWithCaveatFields: StudentProfileResolvedField[] = [];
+  const unresolvedFields: StudentProfileMissingField[] = [];
+
+  for (const field of missingFields) {
+    const fieldStatus = lookupStudentIntakeFieldStatus(fieldStatuses, field);
+
+    if (fieldStatus && isStudentIntakeExplicitFieldState(fieldStatus.resolution)) {
+      resolvedWithCaveatFields.push({
+        ...field,
+        resolution: fieldStatus.resolution,
+      });
+      continue;
+    }
+
+    unresolvedFields.push(field);
+  }
+
+  return {
+    missingFields: unresolvedFields,
+    resolvedWithCaveatFields,
+  };
+}
+
 export function toRecommendationMissingFieldPaths(
   missingFields: StudentProfileMissingField[],
 ) {
@@ -430,27 +586,42 @@ export function toRecommendationMissingFieldPaths(
 
 export function evaluateRecommendationRunReadinessFromDocument(
   document: StudentProfileDocument,
+  options?: {
+    fieldStatuses?: StudentIntakeFieldStatusMap;
+  },
 ) {
-  const missingFields = evaluateRecommendationMissingFields({
+  const readinessFields = evaluateRecommendationMissingFields({
     currentProfile: document.current.profile,
     projectedProfile: document.projected.profile,
     currentAssumptions: document.current.assumptions,
     projectedAssumptions: document.projected.assumptions,
   });
+  const { missingFields, resolvedWithCaveatFields } =
+    splitRecommendationReadinessFields(
+      readinessFields,
+      options?.fieldStatuses,
+    );
 
   return {
     missingFields,
+    resolvedWithCaveatFields,
     canRun: missingFields.length === 0,
   };
 }
 
 export function evaluateRecommendationRunReadinessFromState(
   state: Pick<StudentProfileState, "profile" | "snapshots">,
+  options?: {
+    fieldStatuses?: StudentIntakeFieldStatusMap;
+  },
 ) {
-  const missingFields = [
-    ...evaluateRecommendationRunReadinessFromDocument(
-      buildStudentProfileDocumentFromState(state),
-    ).missingFields,
+  const documentReadiness = evaluateRecommendationRunReadinessFromDocument(
+    buildStudentProfileDocumentFromState(state),
+    options,
+  );
+  const missingFields = [...documentReadiness.missingFields];
+  const resolvedWithCaveatFields = [
+    ...documentReadiness.resolvedWithCaveatFields,
   ];
 
   if (!state.profile) {
@@ -479,6 +650,7 @@ export function evaluateRecommendationRunReadinessFromState(
 
   return {
     missingFields,
+    resolvedWithCaveatFields,
     canRun: missingFields.length === 0,
   };
 }
@@ -570,10 +742,6 @@ export async function saveStudentProfileStateForUser(input: {
   projectedAssumptions: string[];
 }) {
   const authDb = await getAuthDb();
-  const existingProfile = await authDb.query.studentProfiles.findFirst({
-    where: eq(studentProfiles.userId, input.userId),
-  });
-
   const values = {
     userId: input.userId,
     citizenshipCountry: input.currentProfile.citizenshipCountry.trim(),
@@ -589,16 +757,14 @@ export async function saveStudentProfileStateForUser(input: {
     updatedAt: new Date(),
   };
 
-  const [savedProfile] = existingProfile
-    ? await authDb
-        .update(studentProfiles)
-        .set(values)
-        .where(eq(studentProfiles.id, existingProfile.id))
-        .returning()
-    : await authDb
-        .insert(studentProfiles)
-        .values(values)
-        .returning();
+  const [savedProfile] = await authDb
+    .insert(studentProfiles)
+    .values(values)
+    .onConflictDoUpdate({
+      target: studentProfiles.userId,
+      set: values,
+    })
+    .returning();
 
   const profileRecord = toStudentProfileRecord(savedProfile);
   const currentSnapshotProfile: StudentProfileRecord = {
@@ -649,30 +815,24 @@ async function upsertStudentProfileSnapshot(input: {
   profile: StudentProfileRecord;
 }) {
   const authDb = await getAuthDb();
-  const existingSnapshot = await authDb.query.studentProfileSnapshots.findFirst({
-    where: and(
-      eq(studentProfileSnapshots.studentProfileId, input.studentProfileId),
-      eq(studentProfileSnapshots.snapshotKind, input.snapshotKind),
-    ),
-  });
-
-  if (!existingSnapshot) {
-    await authDb.insert(studentProfileSnapshots).values({
+  await authDb
+    .insert(studentProfileSnapshots)
+    .values({
       studentProfileId: input.studentProfileId,
       snapshotKind: input.snapshotKind,
       assumptions: input.assumptions,
       profile: input.profile,
-    });
-    return;
-  }
-
-  await authDb
-    .update(studentProfileSnapshots)
-    .set({
-      assumptions: input.assumptions,
-      profile: input.profile,
     })
-    .where(eq(studentProfileSnapshots.id, existingSnapshot.id));
+    .onConflictDoUpdate({
+      target: [
+        studentProfileSnapshots.studentProfileId,
+        studentProfileSnapshots.snapshotKind,
+      ],
+      set: {
+        assumptions: input.assumptions,
+        profile: input.profile,
+      },
+    });
 }
 
 export async function getStudentIntakeStateForUser(
@@ -691,6 +851,11 @@ export async function saveStudentIntakeStateForUser(input: {
   currentStepIndex: number;
   conversationDone: boolean;
   messages: StudentIntakeMessageInput[];
+  previousResponseId?: string | null;
+  fieldStatuses?: StudentIntakeFieldStatusMap;
+  outstandingFields?: string[];
+  progressCompletedCount?: number;
+  progressTotalCount?: number;
 }): Promise<StudentIntakeStateRecord> {
   const authDb = await getAuthDb();
   const existingState = await authDb.query.studentIntakeSessions.findFirst({
@@ -701,16 +866,37 @@ export async function saveStudentIntakeStateForUser(input: {
     currentStepIndex: Math.max(0, Math.trunc(input.currentStepIndex)),
     conversationDone: input.conversationDone,
     messages: sanitizeStudentIntakeMessages(input.messages),
+    previousResponseId:
+      input.previousResponseId !== undefined
+        ? input.previousResponseId
+        : existingState?.previousResponseId ?? null,
+    fieldStatuses:
+      input.fieldStatuses !== undefined
+        ? normalizeStudentIntakeFieldStatuses(input.fieldStatuses)
+        : normalizeStudentIntakeFieldStatuses(existingState?.fieldStatuses),
+    outstandingFields:
+      input.outstandingFields !== undefined
+        ? normalizeStringArray(input.outstandingFields)
+        : normalizeStringArray(existingState?.outstandingFields),
+    progressCompletedCount:
+      input.progressCompletedCount !== undefined
+        ? normalizeCount(input.progressCompletedCount)
+        : normalizeCount(existingState?.progressCompletedCount),
+    progressTotalCount:
+      input.progressTotalCount !== undefined
+        ? normalizeCount(input.progressTotalCount)
+        : normalizeCount(existingState?.progressTotalCount),
     updatedAt: new Date(),
   };
 
-  const [savedState] = existingState
-    ? await authDb
-        .update(studentIntakeSessions)
-        .set(values)
-        .where(eq(studentIntakeSessions.id, existingState.id))
-        .returning()
-    : await authDb.insert(studentIntakeSessions).values(values).returning();
+  const [savedState] = await authDb
+    .insert(studentIntakeSessions)
+    .values(values)
+    .onConflictDoUpdate({
+      target: studentIntakeSessions.userId,
+      set: values,
+    })
+    .returning();
 
   return toStudentIntakeStateRecord(savedState);
 }

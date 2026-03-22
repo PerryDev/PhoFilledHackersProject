@@ -5,6 +5,7 @@
 import {
   getStudentIntakeStateForUser,
   saveStudentIntakeStateForUser,
+  type StudentIntakeFieldStatusMap,
   type StudentIntakeMessageInput,
 } from "@etest/auth";
 import { NextResponse } from "next/server";
@@ -15,6 +16,11 @@ type IntakeRoutePayload = {
   currentStepIndex: number;
   conversationDone: boolean;
   messages: StudentIntakeMessageInput[];
+  previousResponseId?: string | null;
+  fieldStatuses?: StudentIntakeFieldStatusMap;
+  outstandingFields?: string[];
+  progressCompletedCount?: number;
+  progressTotalCount?: number;
 };
 
 function isIntakePayload(value: unknown): value is IntakeRoutePayload {
@@ -57,6 +63,11 @@ export async function PUT(request: Request) {
     userId: session.user.id,
     currentStepIndex: body.currentStepIndex,
     conversationDone: body.conversationDone,
+    previousResponseId: body.previousResponseId,
+    fieldStatuses: body.fieldStatuses,
+    outstandingFields: body.outstandingFields,
+    progressCompletedCount: body.progressCompletedCount,
+    progressTotalCount: body.progressTotalCount,
     messages: body.messages,
   });
 

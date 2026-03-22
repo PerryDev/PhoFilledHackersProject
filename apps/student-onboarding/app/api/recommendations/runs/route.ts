@@ -2,7 +2,12 @@
 // Authenticated recommendation-run endpoint for the current student profile.
 // Orchestrates session lookup, readiness checks, and deterministic scoring.
 
-import { getAuthDb, getStudentProfileStateForUser } from "@etest/auth";
+import {
+  evaluateRecommendationRunReadinessFromState,
+  getAuthDb,
+  getStudentIntakeStateForUser,
+  getStudentProfileStateForUser,
+} from "@etest/auth";
 import {
   RecommendationEngineInputError,
   listRecommendationCandidateSchools,
@@ -21,16 +26,24 @@ export async function POST() {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
-  const [authDb, profileState] = await Promise.all([
+  const [authDb, profileState, intakeState] = await Promise.all([
     getAuthDb(),
     getStudentProfileStateForUser(session.user.id),
+    getStudentIntakeStateForUser(session.user.id),
   ]);
+  const readiness = evaluateRecommendationRunReadinessFromState(profileState, {
+    fieldStatuses: intakeState?.fieldStatuses,
+  });
+  const resolvedProfileState = {
+    ...profileState,
+    missingFields: readiness.missingFields,
+  };
 
   try {
     const runResult = await runRecommendationEngineForUser({
       db: authDb,
       userId: session.user.id,
-      profileState,
+      profileState: resolvedProfileState,
     });
     const candidateSchools = await listRecommendationCandidateSchools(authDb);
     const schoolByUniversityId = new Map(
@@ -50,6 +63,7 @@ export async function POST() {
         {
           error: error.message,
           missingFields: error.missingFields,
+          resolvedWithCaveatFields: readiness.resolvedWithCaveatFields,
         },
         { status: 400 },
       );

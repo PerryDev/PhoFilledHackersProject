@@ -3,7 +3,7 @@
 // Keeps the Make-derived split-screen flow as the primary UI while syncing supported data to the backend profile document.
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import dynamic from "next/dynamic";
 import { useRouter } from "next/navigation";
 
@@ -21,6 +21,7 @@ import {
   parseLocationPreferences,
 } from "@/lib/location-preferences";
 import {
+  buildStudentProfileDocumentFromState,
   type StudentProfile,
   type StudentProfileDocument,
   type StudentProfileMissingField,
@@ -33,7 +34,7 @@ import {
   type StudentProfileDraft,
   type ThemeMode,
 } from "@/lib/onboarding-data";
-import { ChatAssistant } from "./chat-assistant";
+import { ChatAssistant, type ChatAssistantState } from "./chat-assistant";
 import { GlobalHeader } from "./global-header";
 import { LiveProfile } from "./live-profile";
 
@@ -70,17 +71,6 @@ const StudentOnboardingSettingsPanel = dynamic(
 );
 
 type Viewer = Readonly<{ name: string; email: string }>;
-type IntakeMessage = Readonly<{
-  id: string;
-  role: "assistant" | "student";
-  text: string;
-  createdAt: string;
-}>;
-type IntakeState = Readonly<{
-  currentStepIndex: number;
-  conversationDone: boolean;
-  messages: IntakeMessage[];
-}>;
 type SaveResult = { ok: true } | { ok: false; error: string };
 type RunResult =
   | { ok: true; data: unknown }
@@ -93,12 +83,17 @@ type RunResult =
 type Props = Readonly<{
   viewer: Viewer;
   initialDocument: StudentProfileDocument;
-  initialIntakeState?: IntakeState | null;
+  initialIntakeState?: ChatAssistantState | null;
   initialRoute?: StudentOnboardingRoute;
   onSave?: (payload: { name: string; document: StudentProfileDocument }) => Promise<SaveResult>;
   onRunRecommendations?: () => Promise<RunResult>;
   onLogout?: () => Promise<void> | void;
 }>;
+
+type ChatTurnResponse = {
+  intakeState: ChatAssistantState;
+  profileState: Parameters<typeof buildStudentProfileDocumentFromState>[0];
+};
 
 const emptyDraft = (): StudentProfileDraft => ({ ...initialProfileDraft });
 
@@ -369,6 +364,9 @@ export function StudentOnboardingExperience({
   const [progressCurrent, setProgressCurrent] = useState(0);
   const [progressTotal, setProgressTotal] = useState(requiredProfileFields.length);
   const [document, setDocument] = useState(() => cloneStudentProfileDocument(initialDocument));
+  const [intakeState, setIntakeState] = useState<ChatAssistantState | null>(
+    initialIntakeState,
+  );
   const [dirty, setDirty] = useState(false);
   const [saving, setSaving] = useState(false);
   const [saveMessage, setSaveMessage] = useState<string | null>(null);
@@ -376,6 +374,7 @@ export function StudentOnboardingExperience({
   const [runningRecommendations, setRunningRecommendations] = useState(false);
   const [recommendationView, setRecommendationView] =
     useState<StudentOnboardingRecommendationView | null>(null);
+  const [isMobileViewport, setIsMobileViewport] = useState(false);
 
   const missingFields = useMemo(() => {
     return requiredProfileFields.filter((field) => !draftProfile[field].trim());
@@ -392,6 +391,24 @@ export function StudentOnboardingExperience({
   );
   const totalCount = Object.keys(draftProfile).length;
   const isComplete = missingFields.length === 0;
+
+  useEffect(() => {
+    if (typeof window === "undefined" || typeof window.matchMedia !== "function") {
+      return undefined;
+    }
+
+    const mediaQuery = window.matchMedia("(max-width: 767px)");
+    const syncViewport = () => {
+      setIsMobileViewport(mediaQuery.matches);
+    };
+
+    syncViewport();
+    mediaQuery.addEventListener("change", syncViewport);
+
+    return () => {
+      mediaQuery.removeEventListener("change", syncViewport);
+    };
+  }, []);
 
   function applyDraftField(field: ProfileField, value: string) {
     setDraftProfile((existing) => ({ ...existing, [field]: value }));
@@ -480,6 +497,19 @@ export function StudentOnboardingExperience({
     router.replace("/login");
   }
 
+  async function handleChatTurn(message: string | null) {
+    const result = await defaultSubmitIntakeTurn(message, locale);
+    const nextDocument = buildStudentProfileDocumentFromState(result.profileState);
+
+    setIntakeState(result.intakeState);
+    setDocument(nextDocument);
+    setDraftProfile(draftFromDocument(nextDocument, viewerName));
+    setDirty(false);
+    setSaveError(null);
+
+    return result.intakeState;
+  }
+
   return (
     <div className="flex min-h-screen flex-col">
       <GlobalHeader
@@ -501,20 +531,21 @@ export function StudentOnboardingExperience({
 
       {activeRoute === "chat" ? (
         <>
-          <div className="hidden min-h-0 flex-1 md:flex">
+          <div className={`${isMobileViewport ? "hidden" : "flex"} min-h-0 flex-1`}>
             <div className="w-[40%] min-w-[360px] border-r border-border">
-              <ChatAssistant
-                locale={locale}
-                userName={viewerName}
-                initialState={initialIntakeState}
-                onAnswer={applyDraftField}
-                onPersist={defaultSaveIntakeState}
-                onProgressChange={(current, total) => {
-                  setProgressCurrent(current);
-                  setProgressTotal(total);
-                }}
-                onFinished={() => undefined}
-              />
+              {!isMobileViewport ? (
+                <ChatAssistant
+                  locale={locale}
+                  userName={viewerName}
+                  initialState={intakeState}
+                  onSubmitTurn={handleChatTurn}
+                  onProgressChange={(current, total) => {
+                    setProgressCurrent(current);
+                    setProgressTotal(total);
+                  }}
+                  onFinished={() => undefined}
+                />
+              ) : null}
             </div>
             <div className="relative flex-1">
               <LiveProfile
@@ -529,19 +560,20 @@ export function StudentOnboardingExperience({
             </div>
           </div>
 
-          <div className="relative flex min-h-0 flex-1 flex-col md:hidden">
-            <ChatAssistant
-              locale={locale}
-              userName={viewerName}
-              initialState={initialIntakeState}
-              onAnswer={applyDraftField}
-              onPersist={defaultSaveIntakeState}
-              onProgressChange={(current, total) => {
-                setProgressCurrent(current);
-                setProgressTotal(total);
-              }}
-              onFinished={() => undefined}
-            />
+          <div className={`${isMobileViewport ? "flex" : "hidden"} relative min-h-0 flex-1 flex-col`}>
+            {isMobileViewport ? (
+              <ChatAssistant
+                locale={locale}
+                userName={viewerName}
+                initialState={intakeState}
+                onSubmitTurn={handleChatTurn}
+                onProgressChange={(current, total) => {
+                  setProgressCurrent(current);
+                  setProgressTotal(total);
+                }}
+                onFinished={() => undefined}
+              />
+            ) : null}
 
             <div className="fixed bottom-5 right-5 z-40 rounded-full bg-primary px-4 py-3 text-xs text-primary-foreground shadow-lg">
               {progressCurrent}/{progressTotal}
@@ -710,19 +742,29 @@ async function defaultRunRecommendations(): Promise<RunResult> {
   return { ok: true, data: body };
 }
 
-async function defaultSaveIntakeState(payload: IntakeState): Promise<void> {
-  await fetch("/api/profile/intake", {
-    method: "PUT",
+async function defaultSubmitIntakeTurn(
+  message: string | null,
+  locale: Locale,
+): Promise<ChatTurnResponse> {
+  const response = await fetch("/api/profile/intake/turn", {
+    method: "POST",
     headers: { "content-type": "application/json" },
-    body: JSON.stringify({
-      currentStepIndex: payload.currentStepIndex,
-      conversationDone: payload.conversationDone,
-      messages: payload.messages.map((message) => ({
-        id: message.id,
-        role: message.role,
-        text: message.text,
-        createdAt: message.createdAt,
-      })),
-    }),
+    body: JSON.stringify({ message, locale }),
   });
+  const body = (await response.json().catch(() => null)) as
+    | {
+        error?: string;
+        intakeState?: ChatAssistantState;
+        profileState?: ChatTurnResponse["profileState"];
+      }
+    | null;
+
+  if (!response.ok || !body?.intakeState || !body.profileState) {
+    throw new Error(body?.error ?? "Unable to continue the onboarding conversation.");
+  }
+
+  return {
+    intakeState: body.intakeState,
+    profileState: body.profileState,
+  };
 }

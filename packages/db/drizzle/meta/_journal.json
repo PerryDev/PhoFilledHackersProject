@@ -43,6 +43,13 @@
       "when": 1774136220037,
       "tag": "0005_vengeful_dakota_north",
       "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "7",
+      "when": 1774140000000,
+      "tag": "0006_llm_intake_session_metadata",
+      "breakpoints": true
     }
   ]
 }

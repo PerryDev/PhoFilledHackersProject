@@ -101,3 +101,65 @@ test("student intake sessions round-trip through the schema", async () => {
     await database.close();
   }
 });
+
+test("student intake sessions preserve richer LLM metadata inside message payloads", async () => {
+  const database = await createCatalogTestDatabase();
+
+  try {
+    await database.db.insert(users).values({
+      id: "user_2",
+      name: "Minh Anh",
+      email: "minh.anh-2@example.com",
+      emailVerified: true,
+      image: null,
+    });
+
+    const messages = [
+      {
+        id: "message_1",
+        role: "assistant",
+        text: "I can help fill in the next field.",
+        createdAt: "2026-03-22T00:00:00.000Z",
+        responseId: "resp_123",
+        nextFieldPath: "citizenshipCountry",
+        fieldStatuses: {
+          citizenshipCountry: "filled",
+        },
+      },
+      {
+        id: "message_2",
+        role: "student",
+        text: "I do not know yet.",
+        createdAt: "2026-03-22T00:00:05.000Z",
+        fieldPath: "budget.annualBudgetUsd",
+        fieldStatus: "unknown",
+        userIntent: "unknown",
+      },
+      {
+        id: "message_3",
+        role: "student",
+        text: "I decline to answer.",
+        createdAt: "2026-03-22T00:00:10.000Z",
+        fieldPath: "readiness.hasEssayDraftsStarted",
+        fieldStatus: "declined",
+        userIntent: "declined",
+      },
+    ] as const;
+
+    await database.db.insert(studentIntakeSessions).values({
+      userId: "user_2",
+      currentStepIndex: 0,
+      conversationDone: false,
+      messages: messages as never,
+    });
+
+    const storedSession = await database.db.query.studentIntakeSessions.findFirst({
+      where: eq(studentIntakeSessions.userId, "user_2"),
+    });
+
+    assert.ok(storedSession);
+    assert.deepEqual(storedSession?.messages, messages);
+  } finally {
+    await database.close();
+  }
+});

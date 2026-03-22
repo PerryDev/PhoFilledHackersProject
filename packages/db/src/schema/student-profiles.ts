@@ -24,6 +24,7 @@ import {
   studentProfileSnapshotKinds,
   type StudentAcademicProfile,
   type StudentBudgetProfile,
+  type StudentIntakeFieldStatusMap,
   type StudentIntakeMessageRecord,
   type StudentPreferenceProfile,
   type StudentProfileRecord,
@@ -247,6 +248,21 @@ export const studentIntakeSessions = pgTable(
       .references(() => users.id, { onDelete: "cascade" }),
     currentStepIndex: integer("current_step_index").notNull().default(0),
     conversationDone: boolean("conversation_done").notNull().default(false),
+    previousResponseId: text("previous_response_id"),
+    fieldStatuses: jsonb("field_statuses")
+      .$type<StudentIntakeFieldStatusMap>()
+      .notNull()
+      .default(sql`'{}'::jsonb`),
+    outstandingFields: jsonb("outstanding_fields")
+      .$type<string[]>()
+      .notNull()
+      .default(sql`'[]'::jsonb`),
+    progressCompletedCount: integer("progress_completed_count")
+      .notNull()
+      .default(0),
+    progressTotalCount: integer("progress_total_count")
+      .notNull()
+      .default(0),
     messages: jsonb("messages")
       .$type<StudentIntakeMessageRecord[]>()
       .notNull()
