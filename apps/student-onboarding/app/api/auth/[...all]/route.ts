@@ -5,6 +5,8 @@
 import { toNextJsHandler } from "better-auth/next-js";
 import { getAuth } from "@etest/auth";
 
+export const runtime = "nodejs";
+
 export async function GET(request: Request) {
   const { GET } = toNextJsHandler(await getAuth());
   return GET(request);

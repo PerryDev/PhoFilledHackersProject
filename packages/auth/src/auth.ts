@@ -47,15 +47,35 @@ function getDatabaseUrl() {
 }
 
 function getBaseUrl() {
-  return (
-    process.env.BETTER_AUTH_URL ??
-    process.env.NEXT_PUBLIC_APP_URL ??
-    "http://localhost:3000"
-  );
+  const explicitBaseUrl =
+    process.env.BETTER_AUTH_URL?.trim() ||
+    process.env.NEXT_PUBLIC_APP_URL?.trim();
+
+  if (explicitBaseUrl) {
+    return explicitBaseUrl;
+  }
+
+  const vercelUrl =
+    process.env.VERCEL_PROJECT_PRODUCTION_URL?.trim() ||
+    process.env.VERCEL_URL?.trim();
+
+  if (vercelUrl) {
+    return vercelUrl.startsWith("http") ? vercelUrl : `https://${vercelUrl}`;
+  }
+
+  return "http://localhost:3000";
 }
 
 function getTrustedOrigins() {
   const origins = new Set<string>();
+  const vercelCandidates = [
+    process.env.VERCEL_PROJECT_PRODUCTION_URL,
+    process.env.VERCEL_BRANCH_URL,
+    process.env.VERCEL_URL,
+  ]
+    .map((value) => value?.trim())
+    .filter(Boolean)
+    .map((value) => (value!.startsWith("http") ? value! : `https://${value}`));
   const configuredOrigins =
     process.env.BETTER_AUTH_TRUSTED_ORIGINS
       ?.split(",")
@@ -69,6 +89,7 @@ function getTrustedOrigins() {
     "http://localhost:3001",
     "http://127.0.0.1:3000",
     "http://127.0.0.1:3001",
+    ...vercelCandidates,
     ...configuredOrigins,
   ]) {
     if (!candidate) {
@@ -86,10 +107,17 @@ function getTrustedOrigins() {
 }
 
 function getSecret() {
-  return (
-    process.env.BETTER_AUTH_SECRET ??
-    "phofilledhackers-development-secret-001"
-  );
+  const configuredSecret = process.env.BETTER_AUTH_SECRET?.trim();
+
+  if (configuredSecret) {
+    return configuredSecret;
+  }
+
+  if (!isLocalDevelopment()) {
+    throw new Error("Missing BETTER_AUTH_SECRET.");
+  }
+
+  return "phofilledhackers-development-secret-001";
 }
 
 function isLocalDevelopment() {
@@ -112,20 +140,21 @@ function buildAuthOptions(db: AuthDb): BetterAuthOptions {
     baseURL: getBaseUrl(),
     trustedOrigins: getTrustedOrigins(),
     secret: getSecret(),
-        database: drizzleAdapter(db, {
-            provider: "pg",
-            schema: {
-                ...dbSchema,
-                user: dbSchema.users,
+    database: drizzleAdapter(db, {
+      provider: "pg",
+      schema: {
+        ...dbSchema,
+        user: dbSchema.users,
         session: dbSchema.sessions,
         account: dbSchema.accounts,
-                verification: dbSchema.verifications,
-            },
-        }),
-        emailAndPassword: {
-            enabled: true,
-        },
+        verification: dbSchema.verifications,
+      },
+    }),
+    emailAndPassword: {
+      enabled: true,
+    },
     advanced: {
+      useSecureCookies: !isLocalDevelopment(),
       disableOriginCheck: isLocalDevelopment(),
       database: {
         generateId: () => randomUUID(),
