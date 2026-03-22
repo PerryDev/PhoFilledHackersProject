@@ -99,10 +99,10 @@ const fieldLabel: Record<ProfileField, string> = {
   sat: "SAT/ACT",
   intendedMajors: "Intended Major(s)",
   extracurriculars: "Extracurriculars",
-  wantsEarlyRound: "Early Round Plan",
-  teacherRecommendationsReady: "Teacher Recommendations Ready",
-  counselorDocumentsReady: "Counselor Documents Ready",
-  essayDraftsStarted: "Essay Drafts Started",
+  wantsEarlyRound: "Wants Early Round",
+  teacherRecommendationsReady: "Has Teacher Recommendations Ready",
+  counselorDocumentsReady: "Has Counselor Documents Ready",
+  essayDraftsStarted: "Has Essay Drafts Started",
   annualBudget: "Annual Budget",
   scholarshipNeed: "Scholarship Need",
   geographyPreferences: "Location Preference",
@@ -267,45 +267,5 @@ export const applyChatPrompt = (
         ? `Updated ${changes.length} field${changes.length === 1 ? "" : "s"} in your profile.`
         : "I captured that note, but it did not match a tracked field yet.",
     changes,
-  };
-};
-
-export const buildRecommendationView = (
-  document: StudentOnboardingDocument,
-): StudentOnboardingRecommendationView => {
-  const major = document.current.profile.intendedMajors || "Undecided";
-  const budget = document.current.profile.annualBudget || "Not set";
-  const gpa = document.current.profile.gpa || "Not set";
-
-  return {
-    title: "Recommendation preview",
-    summary: `A local placeholder view based on ${major}. Replace this with backend results once the route layer is available.`,
-    items: [
-      {
-        label: "Academic fit",
-        value: gpa === "Not set" ? "Add GPA to refine this surface." : `Current GPA: ${gpa}`,
-        tone: gpa === "Not set" ? "warning" : "success",
-      },
-      {
-        label: "Budget lens",
-        value: `Budget profile: ${budget}`,
-        tone: budget === "Not set" ? "warning" : "neutral",
-      },
-      {
-        label: "Next action",
-        value: document.current.profile.essayDraftsStarted || "Complete essays and recommendations.",
-        tone: "neutral",
-      },
-    ],
-    rawPreview: JSON.stringify(
-      {
-        major,
-        budget,
-        gpa,
-        projectedGpa: document.projected.profile.gpa,
-      },
-      null,
-      2,
-    ),
   };
 };

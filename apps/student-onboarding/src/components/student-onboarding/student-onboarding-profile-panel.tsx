@@ -9,6 +9,7 @@ import {
   type StudentOnboardingDocument,
   type StudentOnboardingMissingField,
 } from "./student-onboarding-model";
+import { locationPreferenceLabels } from "@/lib/location-preferences";
 import type { StudentProfileDraft } from "@/lib/onboarding-data";
 
 type ProfilePanelProps = Readonly<{
@@ -37,15 +38,7 @@ const scholarshipOptions = [
   "Nice to have",
   "Not needed",
 ];
-const locationOptions = [
-  "US - East Coast",
-  "US - West Coast",
-  "US - Midwest",
-  "US - South",
-  "No preference",
-  "Canada",
-  "UK",
-];
+const locationOptions = Object.values(locationPreferenceLabels);
 const sizeOptions = ["Small (under 5,000)", "Medium (5,000-15,000)", "Large (15,000+)"];
 
 export function StudentOnboardingProfilePanel({
@@ -84,10 +77,10 @@ export function StudentOnboardingProfilePanel({
             <div className="grid gap-3 sm:grid-cols-2">
               <TextField label="Intended majors" value={current.intendedMajors} onChange={(value) => onChangeCurrent((profile) => ({ ...profile, intendedMajors: value }))} placeholder="Computer Science, Economics" />
               <TextField label="Extracurriculars" value={current.extracurriculars} onChange={(value) => onChangeCurrent((profile) => ({ ...profile, extracurriculars: value }))} placeholder="Robotics club, volunteering" />
-              <ChoiceField label="Early round plan" value={current.wantsEarlyRound} options={earlyRoundOptions} onChange={(value) => onChangeCurrent((profile) => ({ ...profile, wantsEarlyRound: value }))} />
-              <ChoiceField label="Teacher recommendations ready" value={current.teacherRecommendationsReady} options={yesNoOptions} onChange={(value) => onChangeCurrent((profile) => ({ ...profile, teacherRecommendationsReady: value }))} />
-              <ChoiceField label="Counselor documents ready" value={current.counselorDocumentsReady} options={yesNoOptions} onChange={(value) => onChangeCurrent((profile) => ({ ...profile, counselorDocumentsReady: value }))} />
-              <ChoiceField label="Essay drafts started" value={current.essayDraftsStarted} options={yesNoOptions} onChange={(value) => onChangeCurrent((profile) => ({ ...profile, essayDraftsStarted: value }))} />
+              <ChoiceField label="Wants early round" value={current.wantsEarlyRound} options={earlyRoundOptions} onChange={(value) => onChangeCurrent((profile) => ({ ...profile, wantsEarlyRound: value }))} />
+              <ChoiceField label="Has teacher recommendations ready" value={current.teacherRecommendationsReady} options={yesNoOptions} onChange={(value) => onChangeCurrent((profile) => ({ ...profile, teacherRecommendationsReady: value }))} />
+              <ChoiceField label="Has counselor documents ready" value={current.counselorDocumentsReady} options={yesNoOptions} onChange={(value) => onChangeCurrent((profile) => ({ ...profile, counselorDocumentsReady: value }))} />
+              <ChoiceField label="Has essay drafts started" value={current.essayDraftsStarted} options={yesNoOptions} onChange={(value) => onChangeCurrent((profile) => ({ ...profile, essayDraftsStarted: value }))} />
             </div>
           </ProfileGroup>
 
@@ -112,14 +105,14 @@ export function StudentOnboardingProfilePanel({
             <div className="grid gap-3 sm:grid-cols-2">
               <TextField label="Projected GPA" value={projected.gpa} onChange={(value) => onChangeProjected((profile) => ({ ...profile, gpa: value }))} placeholder="3.9/4.0" />
               <TextField label="Projected majors" value={projected.intendedMajors} onChange={(value) => onChangeProjected((profile) => ({ ...profile, intendedMajors: value }))} placeholder="Computer Science" />
-              <ChoiceField label="Projected early round plan" value={projected.wantsEarlyRound} options={earlyRoundOptions} onChange={(value) => onChangeProjected((profile) => ({ ...profile, wantsEarlyRound: value }))} />
-              <ChoiceField label="Projected teacher recommendations" value={projected.teacherRecommendationsReady} options={yesNoOptions} onChange={(value) => onChangeProjected((profile) => ({ ...profile, teacherRecommendationsReady: value }))} />
-              <ChoiceField label="Projected counselor documents" value={projected.counselorDocumentsReady} options={yesNoOptions} onChange={(value) => onChangeProjected((profile) => ({ ...profile, counselorDocumentsReady: value }))} />
-              <ChoiceField label="Projected essay drafts" value={projected.essayDraftsStarted} options={yesNoOptions} onChange={(value) => onChangeProjected((profile) => ({ ...profile, essayDraftsStarted: value }))} />
+              <ChoiceField label="Projected wants early round" value={projected.wantsEarlyRound} options={earlyRoundOptions} onChange={(value) => onChangeProjected((profile) => ({ ...profile, wantsEarlyRound: value }))} />
+              <ChoiceField label="Projected has teacher recommendations ready" value={projected.teacherRecommendationsReady} options={yesNoOptions} onChange={(value) => onChangeProjected((profile) => ({ ...profile, teacherRecommendationsReady: value }))} />
+              <ChoiceField label="Projected has counselor documents ready" value={projected.counselorDocumentsReady} options={yesNoOptions} onChange={(value) => onChangeProjected((profile) => ({ ...profile, counselorDocumentsReady: value }))} />
+              <ChoiceField label="Projected has essay drafts started" value={projected.essayDraftsStarted} options={yesNoOptions} onChange={(value) => onChangeProjected((profile) => ({ ...profile, essayDraftsStarted: value }))} />
             </div>
             <TagsField label="Projected assumptions" value={document.projected.assumptions} onChange={onChangeProjectedAssumptions} />
             <div className="rounded-2xl border border-dashed border-border bg-[var(--surface-soft,#f4f7fb)] p-4 text-sm text-muted-foreground">
-              Shared fields are mirrored from the current snapshot as you edit. This card keeps the projected state visible without introducing a second backend.
+              Shared fields are mirrored from the current snapshot as you edit, while this card keeps projected-only assumptions visible alongside the canonical saved profile.
             </div>
           </div>
         </SectionCard>

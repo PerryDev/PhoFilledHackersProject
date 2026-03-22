@@ -1,5 +1,5 @@
 // Review surface for the onboarding experience.
-// Keeps save-state and action guidance visible without backend wiring.
+// Keeps save-state and action guidance visible using canonical backend state.
 "use client";
 
 import { AlertTriangle, CheckCircle2, LogOut, Save, Sparkles, UserRound } from "lucide-react";
@@ -102,7 +102,7 @@ export function StudentOnboardingReviewPanel({
               This review surface reflects the canonical profile snapshots and recommendation controls.
             </p>
             <p>
-              Use the save action to send the current canonical document upstream once the data is complete.
+              Use the save action to persist the current canonical document before generating recommendations.
             </p>
           </div>
         </SectionCard>
@@ -203,7 +203,7 @@ export function StudentOnboardingSettingsPanel({
               The visible surfaces here now reflect backend-backed profile, intake, and recommendation state.
             </p>
             <div className="rounded-2xl border border-dashed border-border bg-white px-3 py-3 text-sm text-muted-foreground">
-              No counselor handoff or review-queue stubs remain in this panel.
+              This panel reflects backend-backed profile, intake, and recommendation data only.
             </div>
           </div>
         </SectionCard>

@@ -1,4 +1,4 @@
-// apps/web/src/components/student-onboarding/student-onboarding-review-panels.tsx
+// apps/student-onboarding/src/components/student-onboarding/student-onboarding-review-panels.tsx
 // Results, review, and lightweight settings panes for the onboarding flow.
 // Keeps save, recommendation, and session actions visible without adding API calls.
 
@@ -109,7 +109,7 @@ export function StudentOnboardingResultsPanel({
             </div>
           ) : (
             <div className="rounded-[1.35rem] border border-dashed border-border bg-white/80 p-5 text-sm text-muted-foreground">
-              The route layer can pass any recommendation payload back into this view. Until then, this surface stays ready with a stubbed empty state.
+              Run recommendations after the backend saves a profile to populate the shortlist and reasoning surface.
             </div>
           )}
 
@@ -230,10 +230,10 @@ export function StudentOnboardingReviewPanel({
         <SectionCard title="Assumptions and notes" icon={AlertTriangle}>
           <div className="space-y-3 text-sm text-muted-foreground">
             <p>
-              This surface intentionally keeps the backend boundary visible. The route layer is expected to own persistence and recommendation execution.
+              This surface reflects the canonical profile, intake, and recommendation state owned by the backend.
             </p>
             <p>
-              Use the save action to send the current canonical document upstream once the data is complete.
+              Use the save action to persist the current canonical document before generating recommendations.
             </p>
           </div>
         </SectionCard>
@@ -323,7 +323,7 @@ export function StudentOnboardingSettingsPanel({
         <SectionCard title="Backend-owned notes" icon={AlertTriangle}>
           <div className="space-y-3 text-sm text-muted-foreground">
             <p>This pane now documents the backend-backed surfaces only.</p>
-            <p>There are no alumni-handoff or review-queue placeholders left in this workspace.</p>
+            <p>This workspace only exposes profile, intake, and recommendation surfaces with real backend dependencies.</p>
           </div>
         </SectionCard>
       </div>

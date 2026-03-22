@@ -17,6 +17,10 @@ import {
   type StudentOnboardingRoute,
 } from "@/lib/student-onboarding";
 import {
+  formatLocationPreferences,
+  parseLocationPreferences,
+} from "@/lib/location-preferences";
+import {
   type StudentProfile,
   type StudentProfileDocument,
   type StudentProfileMissingField,
@@ -97,42 +101,6 @@ type Props = Readonly<{
 }>;
 
 const emptyDraft = (): StudentProfileDraft => ({ ...initialProfileDraft });
-
-const locationPreferenceLabels: Record<string, string> = {
-  us_east_coast: "US - East Coast",
-  us_west_coast: "US - West Coast",
-  us_midwest: "US - Midwest",
-  us_south: "US - South",
-  canada: "Canada",
-  uk: "UK",
-  no_preference: "No preference",
-};
-
-function parseLocationPreferences(value: string) {
-  const normalizedValues = value
-    .split(",")
-    .map((item) => item.trim())
-    .filter(Boolean);
-  const preferredStates: string[] = [];
-  const preferredLocationPreferences = new Set<string>();
-
-  for (const entry of normalizedValues) {
-    const lower = entry.toLowerCase();
-    if (lower === "us - east coast") preferredLocationPreferences.add("us_east_coast");
-    else if (lower === "us - west coast") preferredLocationPreferences.add("us_west_coast");
-    else if (lower === "us - midwest") preferredLocationPreferences.add("us_midwest");
-    else if (lower === "us - south") preferredLocationPreferences.add("us_south");
-    else if (lower === "canada") preferredLocationPreferences.add("canada");
-    else if (lower === "uk") preferredLocationPreferences.add("uk");
-    else if (lower === "no preference") preferredLocationPreferences.add("no_preference");
-    else if (/^[A-Za-z]{2}$/.test(entry)) preferredStates.push(entry.toUpperCase());
-  }
-
-  return {
-    preferredStates,
-    preferredLocationPreferences: [...preferredLocationPreferences],
-  };
-}
 
 function parseMoneyRange(value: string): number | null {
   const cleaned = value.replaceAll(",", "");
@@ -258,9 +226,10 @@ function draftFromDocument(document: StudentProfileDocument, viewerName: string)
           : "Not needed",
     geographyPreferences:
       current.preferences.preferredLocationPreferences.length > 0
-        ? current.preferences.preferredLocationPreferences
-            .map((entry) => locationPreferenceLabels[entry] ?? entry)
-            .join(", ")
+        ? formatLocationPreferences({
+            preferredStates: current.preferences.preferredStates,
+            preferredLocationPreferences: current.preferences.preferredLocationPreferences,
+          })
         : current.preferences.preferredStates.join(", "),
     campusSize:
       current.preferences.preferredUndergraduateSize === "unknown"
