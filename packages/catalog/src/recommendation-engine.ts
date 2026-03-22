@@ -6,6 +6,7 @@ import type * as dbSchema from "@etest/db";
 import {
   recommendationResults,
   recommendationRuns,
+  studentLocationPreferenceStateGroups,
   type BudgetFitLabel,
   type ConfidenceLevel,
   type DeadlinePressureLabel,
@@ -365,6 +366,12 @@ function scorePreferenceFit(
   }
 
   if (profile.preferences.preferredStates.includes(school.state)) {
+    score += scoringConfig.preferenceFit.stateMatchScore;
+  } else if (
+    profile.preferences.preferredLocationPreferences.some((kind) =>
+      studentLocationPreferenceStateGroups[kind]?.includes(school.state),
+    )
+  ) {
     score += scoringConfig.preferenceFit.stateMatchScore;
   }
 

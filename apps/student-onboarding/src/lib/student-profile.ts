@@ -2,7 +2,7 @@
 // Canonical student profile types and helpers for the web app slice.
 // Keeps the profile editor, session persistence, and missing-field checks aligned.
 
-import type { StudentProfileState } from "@etest/auth";
+import type { StudentLocationPreferenceKind, StudentProfileState } from "@etest/auth";
 
 export const curriculumStrengthOptions = [
   "baseline",
@@ -62,7 +62,7 @@ export interface StudentTestingProfile {
 export interface StudentPreferenceProfile {
   intendedMajors: string[];
   preferredStates: string[];
-  preferredLocationPreferences: string[];
+  preferredLocationPreferences: StudentLocationPreferenceKind[];
   preferredCampusLocale: string[];
   preferredSchoolControl: Array<"public" | "private_nonprofit">;
   preferredUndergraduateSize: PreferredUndergraduateSize;

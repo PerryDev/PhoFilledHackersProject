@@ -52,6 +52,51 @@ test("student intake sessions round-trip through the schema", async () => {
     assert.equal(storedSession?.messages.length, 2);
     assert.equal(storedSession?.messages[0].role, "assistant");
     assert.equal(storedSession?.messages[1].text, "I want to major in computer science.");
+
+    await database.db
+      .update(studentIntakeSessions)
+      .set({
+        currentStepIndex: 5,
+        conversationDone: true,
+        messages: [
+          ...storedSession.messages,
+          {
+            id: "message_3",
+            role: "assistant",
+            text: "Great, I have enough to save your progress.",
+            createdAt: "2026-03-22T00:00:10.500Z",
+          },
+        ],
+      })
+      .where(eq(studentIntakeSessions.userId, "user_1"));
+
+    const reloadedSession = await database.db.query.studentIntakeSessions.findFirst({
+      where: eq(studentIntakeSessions.userId, "user_1"),
+    });
+
+    assert.ok(reloadedSession);
+    assert.equal(reloadedSession.currentStepIndex, 5);
+    assert.equal(reloadedSession.conversationDone, true);
+    assert.deepEqual(reloadedSession.messages, [
+      {
+        id: "message_1",
+        role: "assistant",
+        text: "Welcome to the intake flow.",
+        createdAt: "2026-03-22T00:00:00.000Z",
+      },
+      {
+        id: "message_2",
+        role: "student",
+        text: "I want to major in computer science.",
+        createdAt: "2026-03-22T00:00:05.000Z",
+      },
+      {
+        id: "message_3",
+        role: "assistant",
+        text: "Great, I have enough to save your progress.",
+        createdAt: "2026-03-22T00:00:10.500Z",
+      },
+    ]);
   } finally {
     await database.close();
   }

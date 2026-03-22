@@ -47,6 +47,60 @@ export const studentLocationPreferenceKinds = [
 export type StudentLocationPreferenceKind =
   (typeof studentLocationPreferenceKinds)[number];
 
+export const studentLocationPreferenceLabels: Record<
+  StudentLocationPreferenceKind,
+  string
+> = {
+  us_east_coast: "US - East Coast",
+  us_west_coast: "US - West Coast",
+  us_midwest: "US - Midwest",
+  us_south: "US - South",
+  canada: "Canada",
+  uk: "UK",
+  no_preference: "No preference",
+};
+
+export const studentLocationPreferenceStateGroups: Partial<
+  Record<StudentLocationPreferenceKind, readonly string[]>
+> = {
+  us_east_coast: [
+    "CT",
+    "DC",
+    "DE",
+    "FL",
+    "GA",
+    "MA",
+    "MD",
+    "ME",
+    "NC",
+    "NH",
+    "NJ",
+    "NY",
+    "PA",
+    "RI",
+    "SC",
+    "VA",
+    "VT",
+    "WV",
+  ],
+  us_west_coast: ["AK", "AZ", "CA", "CO", "HI", "ID", "MT", "NV", "NM", "OR", "UT", "WA", "WY"],
+  us_midwest: [
+    "IA",
+    "IL",
+    "IN",
+    "KS",
+    "MI",
+    "MN",
+    "MO",
+    "ND",
+    "NE",
+    "OH",
+    "SD",
+    "WI",
+  ],
+  us_south: ["AL", "AR", "KY", "LA", "MS", "OK", "TN", "TX"],
+};
+
 export const budgetFlexibilities = [
   "low",
   "medium",

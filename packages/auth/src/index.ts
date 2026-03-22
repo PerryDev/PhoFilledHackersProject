@@ -3,6 +3,7 @@
 // Keeps the web app importing one canonical auth instance and helpers.
 
 export { getAuth, getAuthDb } from "./auth.js";
+export type { StudentLocationPreferenceKind } from "@etest/db";
 export {
   buildStudentProfileDocumentFromState,
   evaluateMissingStudentProfileFields,

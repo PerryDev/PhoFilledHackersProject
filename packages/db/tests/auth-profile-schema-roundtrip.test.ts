@@ -5,7 +5,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 
-import { eq } from "drizzle-orm";
+import { eq, and } from "drizzle-orm";
 
 import {
   accounts,
@@ -160,11 +160,142 @@ test("auth rows and student profile snapshots round-trip through the schema", as
     );
 
     assert.ok(projectedSnapshot);
+    assert.deepEqual(storedProfile.preferences.preferredLocationPreferences, [
+      "us_west_coast",
+      "us_east_coast",
+    ]);
+    assert.deepEqual(storedProfile.readiness, {
+      wantsEarlyRound: true,
+      hasTeacherRecommendationsReady: false,
+      hasCounselorDocumentsReady: false,
+      hasEssayDraftsStarted: true,
+    });
     assert.deepEqual(projectedSnapshot.assumptions, [
       "Raise GPA to 94",
       "Complete counselor documents",
     ]);
+    assert.deepEqual(projectedSnapshot.profile.preferences.preferredLocationPreferences, [
+      "us_west_coast",
+      "us_east_coast",
+    ]);
+    assert.equal(projectedSnapshot.profile.readiness.hasEssayDraftsStarted, true);
     assert.equal(projectedSnapshot.profile.targetEntryTerm, "fall_2027");
+
+    const reloadedCurrentProfile = {
+      ...snapshotProfile,
+      targetEntryTerm: "fall_2028",
+      academic: {
+        ...snapshotProfile.academic,
+        currentGpa100: 95,
+        projectedGpa100: 97,
+      },
+      testing: {
+        ...snapshotProfile.testing,
+        satTotal: 1520,
+      },
+      preferences: {
+        ...snapshotProfile.preferences,
+        intendedMajors: ["computer_science", "economics"],
+        preferredStates: ["NY"],
+        preferredLocationPreferences: ["us_east_coast"],
+      },
+      budget: {
+        ...snapshotProfile.budget,
+        annualBudgetUsd: 62000,
+      },
+      readiness: {
+        wantsEarlyRound: false,
+        hasTeacherRecommendationsReady: true,
+        hasCounselorDocumentsReady: true,
+        hasEssayDraftsStarted: true,
+      },
+    };
+    const reloadedProjectedProfile = {
+      ...reloadedCurrentProfile,
+      academic: {
+        ...reloadedCurrentProfile.academic,
+        projectedGpa100: 99,
+      },
+    };
+
+    await database.db
+      .update(studentProfiles)
+      .set({
+        targetEntryTerm: reloadedCurrentProfile.targetEntryTerm,
+        academic: reloadedCurrentProfile.academic,
+        testing: reloadedCurrentProfile.testing,
+        preferences: reloadedCurrentProfile.preferences,
+        budget: reloadedCurrentProfile.budget,
+        readiness: reloadedCurrentProfile.readiness,
+      })
+      .where(eq(studentProfiles.id, insertedProfile.id));
+
+    await database.db
+      .update(studentProfileSnapshots)
+      .set({
+        assumptions: ["Retook SAT", "Expanded school list"],
+        profile: reloadedCurrentProfile,
+      })
+      .where(
+        and(
+          eq(studentProfileSnapshots.studentProfileId, insertedProfile.id),
+          eq(studentProfileSnapshots.snapshotKind, "current"),
+        ),
+      );
+
+    await database.db
+      .update(studentProfileSnapshots)
+      .set({
+        assumptions: ["Reach 99 GPA", "Finalize essays early"],
+        profile: reloadedProjectedProfile,
+      })
+      .where(
+        and(
+          eq(studentProfileSnapshots.studentProfileId, insertedProfile.id),
+          eq(studentProfileSnapshots.snapshotKind, "projected"),
+        ),
+      );
+
+    const reloadedProfile = await database.db.query.studentProfiles.findFirst({
+      where: eq(studentProfiles.id, insertedProfile.id),
+      with: {
+        snapshots: true,
+      },
+    });
+
+    assert.ok(reloadedProfile);
+    assert.equal(reloadedProfile.targetEntryTerm, "fall_2028");
+    assert.equal(reloadedProfile.academic.currentGpa100, 95);
+    assert.equal(reloadedProfile.testing.satTotal, 1520);
+    assert.deepEqual(reloadedProfile.preferences.preferredStates, ["NY"]);
+    assert.deepEqual(
+      reloadedProfile.preferences.preferredLocationPreferences,
+      ["us_east_coast"],
+    );
+    assert.equal(reloadedProfile.snapshots.length, 2);
+
+    const reloadedCurrentSnapshot = reloadedProfile.snapshots.find(
+      (snapshot) => snapshot.snapshotKind === "current",
+    );
+    const reloadedProjectedSnapshot = reloadedProfile.snapshots.find(
+      (snapshot) => snapshot.snapshotKind === "projected",
+    );
+
+    assert.ok(reloadedCurrentSnapshot);
+    assert.ok(reloadedProjectedSnapshot);
+    assert.deepEqual(reloadedCurrentSnapshot.profile, reloadedCurrentProfile);
+    assert.deepEqual(reloadedCurrentSnapshot.assumptions, [
+      "Retook SAT",
+      "Expanded school list",
+    ]);
+    assert.deepEqual(
+      reloadedProjectedSnapshot.profile,
+      reloadedProjectedProfile,
+    );
+    assert.deepEqual(reloadedProjectedSnapshot.assumptions, [
+      "Reach 99 GPA",
+      "Finalize essays early",
+    ]);
 
     const storedIntake = await database.db.query.studentIntakeSessions.findFirst({
       where: eq(studentIntakeSessions.userId, "user_1"),

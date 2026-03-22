@@ -251,6 +251,71 @@ test("engine scoring config overrides can change tiers and outlooks", async () =
   }
 });
 
+test("engine scores region-based location preferences through the extension", async () => {
+  const database = await createCatalogTestDatabase();
+
+  try {
+    const seeded = await seedProfileState(database.db, {
+      userId: "user_region_pref",
+      currentProfile: buildCurrentSnapshotProfile({
+        preferredStates: [],
+        preferredLocationPreferences: ["us_east_coast"],
+      }),
+      projectedProfile: buildProjectedSnapshotProfile({
+        preferredStates: [],
+        preferredLocationPreferences: ["us_east_coast"],
+      }),
+      projectedAssumptions: ["Keep academic momentum"],
+    });
+
+    const [eastCoastUniversity, westCoastUniversity] = await database.db
+      .insert(universities)
+      .values([
+        buildUniversityInsert({
+        schoolName: "East Coast Match",
+        validationStatus: "publishable",
+        admissionRateOverall: 0.42,
+        satAverageOverall: 1290,
+        annualCost: 52000,
+        averageNetPriceUsd: 32000,
+        programFitTags: ["computer_science", "engineering"],
+        state: "MA",
+        }),
+        buildUniversityInsert({
+        schoolName: "West Coast Miss",
+        validationStatus: "publishable",
+        admissionRateOverall: 0.42,
+        satAverageOverall: 1290,
+        annualCost: 52000,
+        averageNetPriceUsd: 32000,
+        programFitTags: ["computer_science", "engineering"],
+        state: "CA",
+        }),
+      ])
+      .returning();
+
+    const result = await runRecommendationEngineForUser({
+      db: database.db,
+      userId: seeded.userId,
+      profileState: {
+        profile: {
+          id: seeded.profile.id,
+          userId: seeded.userId,
+        },
+        snapshots: seeded.snapshots,
+        missingFields: [],
+      },
+    });
+
+    assert.equal(result.results.length, 2);
+    assert.equal(result.results[0]?.universityId, eastCoastUniversity.id);
+    assert.equal(result.results[1]?.universityId, westCoastUniversity.id);
+    assert.ok(result.results[0].currentScore > result.results[1].currentScore);
+  } finally {
+    await database.close();
+  }
+});
+
 async function seedProfileState(
   db: Awaited<ReturnType<typeof createCatalogTestDatabase>>["db"],
   input: {
@@ -320,19 +385,31 @@ async function seedProfileState(
   };
 }
 
-function buildCurrentSnapshotProfile(input?: { classRankPercent?: number | null }) {
+function buildCurrentSnapshotProfile(input?: {
+  classRankPercent?: number | null;
+  preferredStates?: string[];
+  preferredLocationPreferences?: StudentProfileRecord["preferences"]["preferredLocationPreferences"];
+}) {
   return buildSnapshotProfile({
     currentGpa100: 91,
     projectedGpa100: 94,
     classRankPercent: input?.classRankPercent ?? 12,
+    preferredStates: input?.preferredStates,
+    preferredLocationPreferences: input?.preferredLocationPreferences,
   });
 }
 
-function buildProjectedSnapshotProfile(input?: { projectedGpa100?: number | null }) {
+function buildProjectedSnapshotProfile(input?: {
+  projectedGpa100?: number | null;
+  preferredStates?: string[];
+  preferredLocationPreferences?: StudentProfileRecord["preferences"]["preferredLocationPreferences"];
+}) {
   return buildSnapshotProfile({
     currentGpa100: 91,
     projectedGpa100: input?.projectedGpa100 ?? 95,
     classRankPercent: 12,
+    preferredStates: input?.preferredStates,
+    preferredLocationPreferences: input?.preferredLocationPreferences,
   });
 }
 
@@ -340,6 +417,8 @@ function buildSnapshotProfile(input: {
   currentGpa100: number | null;
   projectedGpa100: number | null;
   classRankPercent: number | null;
+  preferredStates?: string[];
+  preferredLocationPreferences?: StudentProfileRecord["preferences"]["preferredLocationPreferences"];
 }): StudentProfileRecord {
   return {
     id: "snapshot_profile",
@@ -361,7 +440,9 @@ function buildSnapshotProfile(input: {
     },
     preferences: {
       intendedMajors: ["computer_science"],
-      preferredStates: ["CA", "MA"],
+      preferredStates: input.preferredStates ?? ["CA", "MA"],
+      preferredLocationPreferences:
+        input.preferredLocationPreferences ?? [],
       preferredCampusLocale: ["urban", "suburban"],
       preferredSchoolControl: ["public", "private_nonprofit"],
       preferredUndergraduateSize: "medium",
@@ -391,11 +472,12 @@ function buildUniversityInsert(input: {
   annualCost: number;
   averageNetPriceUsd: number;
   programFitTags: Array<"computer_science" | "engineering">;
+  state?: string;
 }) {
   return {
     schoolName: input.schoolName,
     city: "Boston",
-    state: "MA",
+    state: input.state ?? "MA",
     officialAdmissionsUrl: `https://${input.schoolName.toLowerCase().replace(/\s+/g, "-")}.example.edu/admissions`,
     applicationRounds: ["regular_decision"],
     deadlinesByRound: { regular_decision: "2026-01-15" },
